@@ -1,0 +1,89 @@
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 70px;
+    height: 70px;
+    padding-top: 0;
+    color: #000;
+}
+
+.navbar-custom {
+  background-image: linear-gradient(to right, #ff0844 0%, #ffb199 100%);
+}
+
+.navbar-custom label, #hamburger{
+  display: none;
+}
+
+.navbar-custom ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-custom ul li{
+  display: inline-block;
+  padding-top: 6px;
+  box-sizing: border-box;
+}
+
+.navbar-custom ul li a{
+  color: #000000;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 770px){
+
+  .navbar-custom label{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    top: 3px;
+    right: 5px;
+    display: inline-block;
+    color: #fff;
+    border-style: solid;
+    border-width:thin;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  .navbar-custom ul li{
+    display: block;
+  }
+
+  .navbar-custom ul li {
+    border-top: 1px solid #333;
+  }
+
+  .navbar ul{
+    display: none;
+  }
+
+  .navbar input:checked ~ ul{
+    display: block;
+  }
+
+  .resize {
+    width: 225px;
+    height: auto;
+  }
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    border-style: solid;
+    border-width: thin;
+}
+
+span, a{
+    padding-top: 10px;
+}
+
+.glyphicon-log-out{
+  color: #000000;;
+}
