@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'Myriad Pro Semibold';
+    src: url('../fonts/MyriadPro-Semibold.otf');
+}
+body {
+    font-size: 16px;
+    font-family: Georgia,serif;
+    height: 100%;
+    background: #fcfeff;
+}
+a {
+    color: #008999;
+    text-decoration: none;
+    -webkit-transition: all 0.5ms ease ;
+    -moz-transition: all 0.5ms ease ;
+    -o-transition: all 0.5ms ease ;
+    transition: all 0.5ms ease;
+}
+a:hover {
+    text-decoration:underline;
+    color: #008999;
+}
+#header-top {
+    background-color: #b31b1b;
+    height: 62.4px;
+}
+.maristLogo {
+    position: relative;
+    margin: 5px 0 0 25px;
+    max-width: 192px;
+    max-height: 50px;
+}
+#main {
+    padding-bottom: 218px;
+}
+.content {
+   margin-top: 50px;
+}
+.base-wrapper {
+   border: 0;
+}
+
+#duo_iframe{
+   height: 400px;
+}
+
+.duo_page_container{
+    width:  75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-field {
+    color: #333;
+    border-radius: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.form-button {
+    padding: 11px 32px!important;
+    font-family: 'Myriad Pro Semibold',sans-serif;
+    font-size: 1.33em!important;
+    color: #fcfeff;
+    text-transform:capitalize;
+    background: #008999;
+    border: 1px solid #007c8c!important;
+    border-radius: 0!important;
+    font-weight: normal;
+    line-height: 20px;
+    -webkit-transition: background 0.5ms ease ;
+    -moz-transition: background 0.5ms ease ;
+    -o-transition: background 0.5ms ease ;
+    transition: background 0.5ms ease;
+}
+.form-button:hover {
+    background: #26afbf;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: Georgia, serif;
+    color: #fcfeff;
+    text-align: left;
+    height: 218px;
+}
+footer p {
+    line-height: 1.45;
+}
+#footer-bottom {
+    background-color: #404040;
+}
+#marist-info {
+    padding: 4em 0 1.5em 3.5em;
+}
+#marist-info img {
+    margin-bottom: 1.5em;
+}
+
+@media only screen and (max-width: 375px) {
+    #heading {
+        text-align: center;
+    }
+    #maristLogo {
+        margin: 5px 0 0 0px;
+    }
+    #footer {
+        position: relative;
+    }
+    #marist-info {
+    padding: 4em 0 1.5em 0em;
+    text-align: center;
+    }
+
+    .base-wrapper {
+       border: 0;
+    }
+
+    .duo_page_container{
+        width:  100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #duo_iframe{
+        height:  500px;
+    }
+}
+
+.column.one {
+
+}
+
+.column.two {
+    /*margin-right: 48px;*/
+}
+
+.form-element-wrapper {
+    text-align:  left;   
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.form-element {
+    width: 100%;
+    padding: 13px 12px;
+    font-size: 14px;
+    border: solid 1px #404040;
+    border-radius: 0;
+
+}
+
+.list-help {
+    margin-top: 40px;
+    list-style: none;
+}
+
+.list-help li {
+    margin-bottom: 10px;
+}
+
+.list-help-item a {
+    padding: 6px 0;
+}
+
+
+
+form {
+    width: 320px;
+    padding-bottom: 21px;
+    margin:auto;
+    font-family: "myriad-pro", sans-serif;
+}
+
+.form-element-wrapper {
+    text-align:  left;   
+    float:  left;
+    margin-bottom: 12px;
+}
+
+label {
+    font-weight: 500;
+    font-family: "myriad-pro",sans-serif;
+}
+
+.form-field-focus,
+.form-field:focus,
+input[type="text"]:focus {
+    color: #333333;
+    border-color: #26afbf;
+
+}
+
+.form-error {
+    padding: 0;
+    color: #B61601;
+}
+
+.list-help {
+    margin-top: 40px; /* offset padding on first anchor */
+    list-style: none;
+}
+.list-help-item a {
+    padding: 6px 0;
+}
+:focus {
+    outline-color: #26afbf!important;
+    outline: #26afbf auto 5px!important;
+}
+
+@media only screen and (max-width: 700px and min-width: 376px) {
+    .content {
+	width: 100%!important;
+        float: none;
+        margin: 50px auto;
+    }
+    #heading {
+        text-align:center;
+    }
+    .maristLogo {
+            margin: 5px 0 0 0px;
+    }
+    #marist-info {
+        padding: 4em .5em 1.5em .5em;
+	text-align: center;
+    }
+    #main {
+        padding-bottom: 50px;
+    }
+    form {
+        width: 100%;
+    }
+    .form-element-wrapper {
+        float: none;
+        width:100%!important;
+    }
+    .two ul {
+        -webkit-padding-start: 0px;
+    }
+    .column.two {
+        text-align:center;
+    }
+    .column.one {
+    	margin-right: 0px;
+    	padding-left: 15px;
+    }
+    .list-help {
+        margin-top: 0;
+        list-style: none;
+    }
+
+    #duo_iframe{
+       height: 500px;
+    }
+
+    .base-wrapper {
+       border: 0;
+    }
+
+
+    .duo_page_container{
+        width:  85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
