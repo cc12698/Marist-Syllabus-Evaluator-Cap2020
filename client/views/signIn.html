@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="/css/signin.css">
+
+	<script src="https://use.typekit.net/hzj5uwx.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<title>IDP Shibboleth V3 Login Form</title>
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+	<meta name="description" content="IDP Shibboleth V3 Login Form">
+	<meta name="author" content="Joseph Fischetti">
+
+</head>
+
+<body>
+    <div class="container-fluid" id="header">
+	<div class="row" id="header-top">
+        	<div id="heading" class="helper">
+                	<a href="https://www.marist.edu" alt="Marist College Website">
+                    		<img class="maristLogo" alt="Marist College Logo" src="/img/maristLogo.png" />
+                	</a>
+            	</div>
+        </div>
+
+ 	 	<div id="main">
+		<div class="content">
+			<div class="row column one">
+
+
+				<form action="/idp/profile/cas/login?execution=e1s1" method="post">
+
+
+
+					<div class="form-element-wrapper">
+						<label for="username">Login</label>
+						<input class="form-element form-field" id="username" name="j_username" type="text"
+							value="">
+					</div>
+
+					<div class="form-element-wrapper">
+						<label for="password">Password</label>
+						<input class="form-element form-field" id="password" name="j_password" type="password" value="">
+					</div>
+
+					<div class="form-element-wrapper">
+						<input type="checkbox" name="donotcache" value="1" id="donotcache">
+						<label for="donotcache">Don't Remember Me</label>
+					</div>
+
+
+					<div class="form-element-wrapper">
+						<button class="form-element form-button" type="submit" name="_eventId_proceed">
+						Submit
+						</button>
+					</div>
+
+					<p class="list-help-item"><a href="http://acctmgmt.it.marist.edu/"><span class="item-marker">&rsaquo;</span> Change your password</a>
+					</p>
+					<p class="list-help-item"><a href="http://www.marist.edu/it/helpdesk/"><span class="item-marker">&rsaquo;</span> Contact the helpdesk</a>
+					</p>
+
+				</form>
+			</div> <!-- end of row -->
+		</div>
+		</div>
+		<footer>
+			<div class="row" id="footer-bottom">
+				<div id="marist-info">
+					<a href="https://www.marist.edu" alt="Marist College Website">
+						<img src="/img/maristLogo.png"  alt="Marist College logo">
+					</a>
+					<p>Marist College, 3399 North Road, Poughkeepsie, NY 12601 | 845-575-3000
+					<br> &copy; Copyright 2020 Marist College. All Rights Reserved. Disclaimers | Privacy Policy</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
