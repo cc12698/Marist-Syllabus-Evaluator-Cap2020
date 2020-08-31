@@ -14,7 +14,7 @@ app.use(express.static("public"));
 
 
 app.get('/',function(req, res) {
-  res.render('../views/mainmenu');
+  res.render('../views/signIn.ejs');
 });
 
 app.get('/index', function(req, res){
