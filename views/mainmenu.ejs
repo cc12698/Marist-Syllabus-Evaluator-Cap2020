@@ -11,17 +11,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <body>
       <div>
-        <%- include('partials/headerLogin'); -%>
+        <%- include('partials/header'); -%>
       </div>
       <div id = "main">
         <div id = "selection" class = "grid-container">
           <a id='box1' tabindex='1' class="grid-item" href="index">
             <img src="/img/doc.png">
-            <span>Submit Syllabus</span>
+            <span>Upload Syllabus</span>
+          </a>
+          <a id='box3' tabindex='3' class="grid-item g_user g_admin usrAccess" href="">
+              <img src="img/createNew.png">
+              <span>Create a Syllabus</span>
           </a>
           <a id='box2' tabindex='2' class="grid-item g_user g_admin usrAccess" href="">
               <img src="img/examples.png">
-              <span>Example Syllabus</span>
+              <span>View Sample Syllabi</span>
+          </a>
+          <a id='box4' tabindex='4' class="grid-item" href="index">
+            <img src="/img/cloud.png">
+            <span>My Syllabi</span>
           </a>
         </div><!-- Grid Container -->
       </div>
