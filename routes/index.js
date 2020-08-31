@@ -10,11 +10,11 @@ app.set('view engine', 'ejs');
 
 const path = require('path');
 
-app.use(express.static("public")); 
+app.use(express.static("public"));
 
 
 app.get('/',function(req, res) {
-  res.render('../views/index');
+  res.render('../views/mainmenu');
 });
 
 app.get('/index', function(req, res){
@@ -35,6 +35,10 @@ app.get('/footer', function(req, res){
 
 app.get('/login', function(req, res){
   res.render('../views/signIn.ejs')
+})
+
+app.get('/mainmenu', function(req, res){
+  res.render('../views/mainmenu.ejs')
 })
 
 app.listen(1337,() => console.log("running on port 1337: http://localhost:1337/"));

@@ -1,0 +1,60 @@
+#main{
+  padding-bottom: 50px;
+}
+
+@font-face{                     /*The two fonts used are Proxima and Helvetica*/
+        font-family: Proxima;
+        src: url(../fonts/Proxima.otf);
+}
+
+#container{
+  min-height: 100%;
+  position: relative;
+}
+
+#container{
+  height: 100%;
+}
+
+.grid-container{
+  position: relative;
+  top: 15px;
+  max-width: 750px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns:repeat(auto-fill, 1fr);
+  grid-gap: 5px;
+  grid-auto-rows: minmax(40px, auto);
+  display: -ms-grid;
+  -ms-grid-columns: 1fr;
+}
+
+.grid-item{
+  text-align: left;
+  font-size: 19px;
+  white-space: normal;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  display: block;
+  background-color: #e6e6e6;
+  font-family: Helvetica;
+}
+
+.grid-item img{
+        width: 80px;
+        height: 80px;
+}
+
+span{
+  color: #000;
+}
+
+#box1{
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+#box2{
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
