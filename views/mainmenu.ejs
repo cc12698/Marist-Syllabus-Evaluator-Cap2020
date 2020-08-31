@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel = "stylesheet" type = "text/css" href = "/css/search.css">
+    <link rel = "stylesheet" type = "text/css" href = "/css/mainmenu.css">
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous">
     </script>
   </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <body>
       <div>
         <%- include('partials/headerLogin'); -%>
+      </div>
+      <div id = "main">
+        <div id = "selection" class = "grid-container">
+          <a id='box1' tabindex='1' class="grid-item" href="index">
+            <img src="/img/doc.png">
+            <span>Submit Syllabus</span>
+          </a>
+          <a id='box2' tabindex='2' class="grid-item g_user g_admin usrAccess" href="">
+              <img src="img/examples.png">
+              <span>Example Syllabus</span>
+          </a>
+        </div><!-- Grid Container -->
       </div>
     <%- include('partials/footer'); -%>
   </body>
