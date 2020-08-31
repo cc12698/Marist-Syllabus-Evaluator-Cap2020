@@ -7,14 +7,9 @@
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous">
     </script>
-    <script>
-      $(function(){
-          $("#header").load("/headerLogin");
-          $("#footer").load("/footer");
-        });
-    </script>
   </head>
   <body>
+<<<<<<< HEAD:client/views/index.html
     <div id="header"></div>
       <div>
         <dl id="requirements">
@@ -29,6 +24,17 @@
         </form>
     </div>
     <div id="footer"></div>
+=======
+      <div>
+        <%- include('headerLogin'); -%>
+      </div>
+
+      <form action="">
+        <input type="file" id="myFile" accpet="application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+        <input type="submit" id="sub Doc"/>
+      </form>
+    <%- include('footer'); -%>
+>>>>>>> 1a5952dd69678cd52d08245555dbb393f5d99721:views/index.ejs
   </body>
   <script type = "text/javascript" src= "/js/index.js"></script>
 </html>
