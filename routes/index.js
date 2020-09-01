@@ -35,11 +35,15 @@ app.get('/footer', function(req, res){
 
 app.get('/login', function(req, res){
   res.render('../views/signIn.ejs')
-})
+});
 
 app.get('/mainmenu', function(req, res){
   res.render('../views/mainmenu.ejs')
-})
+});
+
+var compPrep = require('./controllers/comparisonPrep');
+app.route('/api/comparison/sendData')
+  .post(compPrep.postComparison)
 
 app.listen(1337,() => console.log("running on port 1337: http://localhost:1337/"));
 //nodemon server/capping.js to run

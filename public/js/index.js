@@ -10,7 +10,7 @@ document.addEventListener('click', function(event){
 
 
 function sendDoc(data){
-  fetch('/api/sendDoc/doc',
+  fetch('/api/comparison/sendData',
     {
       method: "POST",
       headers:{
