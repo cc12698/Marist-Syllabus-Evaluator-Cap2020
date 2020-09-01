@@ -41,10 +41,9 @@ app.get('/mainmenu', function(req, res){
   res.render('../views/mainmenu.ejs')
 });
 
-app.get('/result' function(req, res){
-  var spawn = require("child_process").spawn;
-  var process = spawn('python', ["./"])
-});
+var compPrep = require('./controllers/comparisonPrep');
+app.route('/api/comparison/sendData')
+  .post(compPrep.postComparison)
 
 app.listen(1337,() => console.log("running on port 1337: http://localhost:1337/"));
 //nodemon server/capping.js to run
