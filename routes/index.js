@@ -1,10 +1,12 @@
 const express = require('express');
-const upload = require('express-fileupload');
+// const upload = require('express-fileupload');
 const app = express();
 const bodyParser = require('body-parser');
-// app.use(bodyParser.json({type:'application/json'}));
+app.use(bodyParser.json());
+const dm = require('../dataManager');
+var multer = require('multer');
 
-app.use(upload());
+// app.use(upload());
 
 app.set('view engine', 'ejs');
 
@@ -39,6 +41,17 @@ app.get('/login', function(req, res){
 
 app.get('/mainmenu', function(req, res){
   res.render('../views/mainmenu.ejs')
+});
+
+//upload a syllabus to be stored in 'uploads' folder
+app.post('/uploadSyllabus',function(req,res){
+    dm.upload(req,res,function(err) {
+        if(err) {
+            return res.end(err.toString());
+        }
+        console.log(req.file)
+        res.end("File is uploaded");
+    });
 });
 
 var compPrep = require('./controllers/comparisonPrep');
