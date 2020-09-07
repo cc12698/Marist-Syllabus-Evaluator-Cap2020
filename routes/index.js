@@ -6,7 +6,7 @@ app.use(bodyParser.json());
 const dm = require('../dataManager');
 var multer = require('multer');
 
-// app.use(upload());
+//app.use(upload());
 
 app.set('view engine', 'ejs');
 
