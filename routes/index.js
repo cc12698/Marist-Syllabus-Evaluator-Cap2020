@@ -44,15 +44,27 @@ app.get('/mainmenu', function(req, res){
 });
 
 //upload a syllabus to be stored in 'uploads' folder
-app.post('/uploadSyllabus',function(req,res){
-    dm.upload(req,res,function(err) {
-        if(err) {
-            return res.end(err.toString());
-        }
-        console.log(req.file)
-        res.end("File is uploaded");
+app.post('/uploadSyllabus', function (req,res) {
+  dm.uploadAsync
+    .then(() => {
+      console.log(req.file)
+      return res.end("File is uploaded");
+    })
+    .catch((err) => {
+      return res.end(err.toString());
     });
+
 });
+
+// app.post('/uploadSyllabus',function(req,res){
+//     dm.upload(req,res,function(err) {
+//         if(err) {
+//             return res.end(err.toString());
+//         }
+//         console.log(req.file)
+//         res.end("File is uploaded");
+//     });
+// });
 
 var compPrep = require('./controllers/comparisonPrep');
 app.route('/api/comparison/sendData')
