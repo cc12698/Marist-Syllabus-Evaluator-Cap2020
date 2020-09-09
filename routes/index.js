@@ -49,8 +49,8 @@ app.get('/results', function(req, res){
 });
 
 //upload a syllabus to be stored in 'uploads' folder\
-app.post('/uploadSyllabus',function(req,res){
-    dm.upload(req,res,function(err) {
+app.post('/uploadSyllabus', function(req,res){
+    dm.upload(req,res, function(err) {
         if(err) {
             return res.end(err.toString());
         }
@@ -58,7 +58,7 @@ app.post('/uploadSyllabus',function(req,res){
         res.end("File is uploaded");
     }).then(() => {
       compPrep.postComparison();
-    });
+    })
 });
 
 app.listen(1337,() => console.log("running on port 1337: http://localhost:1337/"));

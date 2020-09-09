@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 exports.postComparison = function(req, res){
-  console.log('fied');
+  console.log('fired');
   var directoryPath = path.normalize(__dirname + "/../../uploads");
   fs.readdir(directoryPath, function (err, files) {
     //handling error
