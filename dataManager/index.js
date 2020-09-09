@@ -2,8 +2,9 @@ const multer = require("multer")
 var fs = require('fs');
 
 //store the uploaded file in uploads
-var storage =   multer.diskStorage({
+var storage = multer.diskStorage({
   destination: function (req, file, callback) {
+    console.log("TEST");
     var dir = './uploads';
     if (!fs.existsSync(dir)){
         fs.mkdirSync(dir);
@@ -15,5 +16,16 @@ var storage =   multer.diskStorage({
   }
 });
 
-//get file from index.ejs and send to 'uploads'
-module.exports.upload = multer({ storage : storage}).single('myFile');
+module.exports.upload = multer({ storage: storage}).single('myFile');
+
+// get file from index.ejs and send to 'uploads'
+module.exports.uploadAsync = new Promise(function(resolve, reject) {
+    try{
+      multer({ storage: storage}).single('myFile');
+      resolve();
+    }
+    catch(err){
+      reject(err);
+    }
+
+});
