@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 const dm = require('../dataManager');
+const compPrep = require('./controllers/comparisonPrep');
 var multer = require('multer');
 
 //app.use(upload());
@@ -47,7 +48,7 @@ app.get('/results', function(req, res){
   res.render('../views/results.ejs')
 });
 
-//upload a syllabus to be stored in 'uploads' folder
+//upload a syllabus to be stored in 'uploads' folder\
 app.post('/uploadSyllabus',function(req,res){
     dm.upload(req,res,function(err) {
         if(err) {
@@ -55,12 +56,10 @@ app.post('/uploadSyllabus',function(req,res){
         }
         console.log(req.file)
         res.end("File is uploaded");
+    }).then(() => {
+      compPrep.postComparison();
     });
 });
-/*
-var compPrep = require('./controllers/comparisonPrep');
-app.route('/api/accessLog/result')
-  .get(compPrep.postComparison)
-*/
+
 app.listen(1337,() => console.log("running on port 1337: http://localhost:1337/"));
 //nodemon server/capping.js to run
