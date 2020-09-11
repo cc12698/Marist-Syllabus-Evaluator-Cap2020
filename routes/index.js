@@ -3,8 +3,12 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+const fileUpload = require('express-fileupload');
 const dm = require('../dataManager');
 var multer = require('multer');
+var fs = require('fs');
+
+app.use(fileUpload());
 
 // app.use(upload());
 
@@ -44,16 +48,37 @@ app.get('/mainmenu', function(req, res){
 });
 
 //upload a syllabus to be stored in 'uploads' folder
-app.post('/uploadSyllabus', function (req,res) {
-  dm.uploadAsync
-    .then(() => {
-      console.log(req.file)
-      return res.end("File is uploaded");
-    })
-    .catch((err) => {
-      return res.end(err.toString());
-    });
+app.post('/uploadSyllabus', async (req, res) => {
+    try {
+      if(!req.files) {
+          res.send({
+              status: false,
+              message: 'No file uploaded'
+          });
+      } else {
+          let uploadedFile = req.files.myFile;
 
+          var dir = './uploads/';
+          if (!fs.existsSync(dir)){
+              fs.mkdirSync(dir);
+          }
+
+          uploadedFile.mv(dir + uploadedFile.name);
+
+          //send response
+          res.send({
+              status: true,
+              message: 'File is uploaded',
+              data: {
+                  name: uploadedFile.name,
+                  mimetype: uploadedFile.mimetype,
+                  size: uploadedFile.size
+              }
+          });
+      }
+    } catch (err) {
+        res.status(500).send(err);
+    }
 });
 
 // app.post('/uploadSyllabus',function(req,res){
