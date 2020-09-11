@@ -5,6 +5,9 @@ pythonProcess.stdout.on('data', (data) => {
 });*/
 const fs = require('fs');
 const path = require('path');
+const mammoth = require("mammoth");
+const PDFParser = require("pdf2json");
+const uuid = require('uuid-random')
 
 exports.postComparison = function(req, res){
   console.log('fired');
@@ -16,14 +19,41 @@ exports.postComparison = function(req, res){
     }
     //listing all files using forEach
     files.forEach(function (file) {
+      var allowDoc =  /(\.doc|\.docx)$/i;
+      var allowPDF =  /(\.pdf)$/i;
       var filePath = "./uploads/" + file;
-      fs.readFile(filePath, function(err, data){
-        if (err) {
-          return console.error(err);
-       }
-       console.log("Asynchronous read: " + data.toString());
-      });
-      console.log(file);
+      if(allowDoc.exec(filePath)){
+        doc(filePath);
+      }
+      else if(allowPDF.exec(filePath)){
+        pdf(filePath);
+      }
     });
   });
+}
+
+async function doc(file){
+  mammoth.extractRawText({path: file})
+    .then(function(result){
+        var text = result.value; // The raw text
+        fs.writeFile('./uploads/'+ uuid() +'.txt', text, (err) => {
+          if (err) throw err;
+          console.log('The file has been saved!');
+        });
+    })
+}
+
+async function pdf(file){
+  var pdfParser = new PDFParser(this,1);
+
+  pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError));
+  pdfParser.on("pdfParser_dataReady", pdfData => {
+    console.log(pdfParser.getRawTextContent());
+    fs.writeFile('./uploads/'+ uuid() +'.txt', pdfParser.getRawTextContent(), (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+    });
+  });
+
+  pdfParser.loadPDF(file);
 }
