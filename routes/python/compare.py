@@ -1,6 +1,10 @@
 import sys
-def myfunction():
-  return "Hello World"
+import json
 
-print(myfunction())
+resp = {
+    "Response":200,
+    "Message": "Data from Python"
+}
+
+print(json.dumps(resp))
 sys.stdout.flush()

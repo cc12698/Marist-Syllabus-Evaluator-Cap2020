@@ -7,6 +7,7 @@ const fileUpload = require('express-fileupload');
 const dm = require('../dataManager');
 var multer = require('multer');
 var fs = require('fs');
+const  compPrep = require('./controllers/comparisonPrep');
 
 app.use(fileUpload());
 
@@ -75,6 +76,7 @@ app.post('/uploadSyllabus', async (req, res) => {
                   size: uploadedFile.size
               }
           });
+          const test = await compPrep.postComparison();
       }
     } catch (err) {
         res.status(500).send(err);
@@ -90,10 +92,6 @@ app.post('/uploadSyllabus', async (req, res) => {
 //         res.end("File is uploaded");
 //     });
 // });
-
-var compPrep = require('./controllers/comparisonPrep');
-app.route('/api/comparison/sendData')
-  .post(compPrep.postComparison)
 
 app.listen(1337,() => console.log("running on port 1337: http://localhost:1337/"));
 //nodemon server/capping.js to run
