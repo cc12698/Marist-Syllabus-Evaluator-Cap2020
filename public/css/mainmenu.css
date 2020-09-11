@@ -1,8 +1,9 @@
+/*
 #main{
   padding-bottom: 50px;
 }
 
-@font-face{                     /*The two fonts used are Proxima and Helvetica*/
+@font-face{
         font-family: Proxima;
         src: url(../fonts/Proxima.otf);
 }
@@ -48,6 +49,63 @@
 
 span{
   color: #000;
+}
+*/
+#main{
+	padding-bottom: 132px;
+}
+
+@font-face{ 			/*The two fonts used are Proxima and Helvetica*/
+	font-family: Proxima;
+	src: url(../fonts/Proxima.otf);
+}
+
+.grid-container{		/*See wiki for documentation*/
+	position: relative;
+	top: 65px;
+  max-width: 850px;
+	margin: 0 auto;
+  display: grid;
+	grid-column-gap: 40px;
+	grid-row-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	display: -ms-grid;
+	-ms-grid-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-item{			/*See wiki for documentation*/
+ 	text-align: center;
+  font-size: 19px;
+	white-space: nowrap;
+  border: 2px solid black;
+	border-radius: 6px;
+	max-width: 165px;
+	margin: 5px;
+	padding: 5px;
+	display: block;
+	background-color: #EBEBEB;
+	font-family: Helvetica;
+	text-decoration: none;
+ 	transition: transform .45s;
+	color: black;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.grid-item:hover{
+	transform: scale(1.15);
+	text-decoration: underline;
+}
+
+.grid-item:active{
+	background-color: #bfc0c9;
+}
+
+.grid-item img{
+  	width: 80px;
+  	height: 80px;
+}
+.caption{
+  display: block;
 }
 
 #box1{
