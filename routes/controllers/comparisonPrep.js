@@ -25,9 +25,5 @@ exports.postComparison = function(req, res){
       });
       console.log(file);
     });
-});
-
-
-  res.setHeader('Content-Type', 'application/JSON');
-  res.send();
+  });
 }
