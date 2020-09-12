@@ -6,28 +6,28 @@ logFile = "foundLog.txt"
 
 keywords = {    #list of regex commands ment to seach for items
                 "courseDes":      ["course description"] ,
-                "courseObj":      [] ,
-                "courseCred":     [] ,
+                "courseObj":      ["objective(.)*course"] ,
+                "courseCred":     ["[0-9](.)*credit"] ,
                 "preReq":         [] ,
                 "gradeDet":       ["grading:"] ,
-                "otherpolicies":  [] ,
+                "otherpolicies":  ["policy"] ,
                 "instrName":      [] ,
-                "instrContact":   [" (.)*" , "contact:" , "e(-| )mail:"] ,
-                "democonsistant": [] , # not sure if this can be checked with keywords
-                "assesMethod":    [] ,
-                "rubrics":        [] , # may be missing
+                "instrContact":   ["e(-| )mail:" , "contact:"] ,
+                "demoConsistant": [] , # not sure if this can be checked with keywords
+                "assesMethod":    ["grading(.)*method"] ,
+                "rubrics":        ["rubric"] , # may be missing
                 "biblio":         [] ,
                 "assignments":    ["assignments" , "bee"] ,
                 "taskCrit":       [] ,
-                "courseNum":      ["[0-9]{3}( )*(N|L|n|l)( )*[0-9]{3}" , "course( )*number" , "class( )*number" , "[0-9]{3}( )*(N|L|n|l)"] ,
+                "courseNum":      ["[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" , "course( )*number" , "class( )*number" , "[0-9]{3}( )*(N|L|n|l)"] ,
                 "format":         [] ,
                 "attenPol":       [] ,
-                "reqRead":        [] ,
-                "courseDes":      [] ,
-                "acadHonest":     [] ,
+                "reqRead":        ["required(.*)read" , "read(.*)required"] ,
+                "courseDes":      ["course description" , "class description"] ,
+                "acadHonest":     ["academic honesty"] ,
                 "teachAct":       [] ,
-                "accommod":       [] ,
-                "courseDes":      [] ,
+                "accommod":       ["Students with disabilities"] ,
+                "courseDes":      ["description"] ,
                 "diversity":      [] , # not technically req
             }
 
@@ -40,7 +40,7 @@ found = {   #empty dictionary of arrays to store any matches to analyize later
             "otherpolicies":  [] ,
             "instrName":      [] ,
             "instrContact":   [] ,
-            "democonsistant": [] , # not sure if this can be checked with keywords
+            "demoConsistant": [] , # not sure if this can be checked with keywords
             "assesMethod":    [] ,
             "rubrics":        [] , # may be missing
             "biblio":         [] ,
@@ -58,26 +58,32 @@ found = {   #empty dictionary of arrays to store any matches to analyize later
             "diversity":      [] , # not technically req
         }
 
+cmdIdex = 0
+
 def checkFileAnal():
     print("checking file...")
-    print(keywords["courseDes"][1])
+    print(keywords)
 
     o = open(logFile, "a")
-    o.write("\n\nOutput for " + "textFile") #text file will be the sylibus being evaluated
+    o.write("\n\n\n\nOutput for " + "textFile") #text file will be the sylibus being evaluated
 
     s = open(textFile , "r")
 
+    cmdIdex = 0
+
     for key in keywords: #loops through entire dictionary
-        o.write("\nResults for " + key)
+        o.write("\n\nResults for " + key + ":")
         for line in s: #loops through each line of sylibus
-            print(keywords[key])
+            cmdIdex = 0
             for i in keywords[key]: #loops through each regex search
-                print("loop")
-                result = re.search(keywords[key][i] , line) #searches line for regex command
-                if(result != "none"):
-                    print(result)
+                cmdList = keywords[key]
+                result = re.search(keywords[key][0] , line) #searches line for regex command
+                if(result != None):
                     found[key] = result
-                    o.write("Match to " + keywords[key][i] + " in line " + line + ": " + result + "\n")
+                    match = line[result.span()[0] : result.span()[1]]
+                    o.write("\nMatch to \"" + keywords[key][0] + "\" in line \"" + line[0 : -2] + "\": " + match)
+
+        s.seek(0) #sets file pointer back to the begining
 
     return found
 
@@ -91,5 +97,8 @@ def checkFileFast():
                 found[i] = line
 
     return found
+
+def getScore():
+    print("todo")
 
 checkFileAnal()
