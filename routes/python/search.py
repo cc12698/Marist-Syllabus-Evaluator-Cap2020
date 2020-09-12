@@ -82,27 +82,104 @@ def checkFileAnal():
                 result = re.search(i , line) #searches line for regex command
                 if(result != None):
                     matches += 1
-                    found[key] = result
+                    found[key].append(result)
                     match = line[result.span()[0] : result.span()[1]]
                     o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
 
         s.seek(0) #sets file pointer back to the begining
 
     print("file checked, " + str(matches) + " matches found")
+
+    score = getScore()
+    print("Score: " + score)
+    
     return found
 
+
 def checkFileFast():
-    found = len()
+    print("checking file...")
+    #print(keywords)
 
-    f = open(textFile , "r")
-    for i in keywords:
-        for line in f:
-            if keywords[i] in line:
-                found[i] = line
+    o = open(logFile, "a")
+    o.write("\n\n\n\nOutput for " + "textFile") #text file will be the sylibus being evaluated
 
+    s = open(textFile , "r")
+
+    matches = 0
+    cmdIdex = 0
+
+    for key in keywords: #loops through entire dictionary
+        o.write("\n\nResults for " + key + ":")
+        for line in s: #loops through each line of sylibus
+            cmdIdex = 0
+            for i in keywords[key]: #loops through each regex search
+                cmdList = keywords[key]
+                result = re.search(i , line) #searches line for regex command
+                if(result != None):
+                    matches += 1
+                    found[key] = result
+                    match = line[result.span()[0] : result.span()[1]]
+                    o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
+                    
+        s.seek(0) #sets file pointer back to the begining
+
+    print("file checked, " + str(matches) + " matches found")
     return found
 
 def getScore():
-    print("todo")
+    print("Score Calculateing")
 
+    neededItems = 0
+    foundItems = 0
+    score = ""
+
+    for key in keywords:
+        neededItems += 1
+        if(len(keywords[key]) != 0):
+            foundItems += 1
+
+    percent = foundItems / neededItems
+
+    if(percent >= 1):
+        score = "A+"
+        return "A+"
+    elif(percent >= .93):
+        socre = "A"
+        return "A"
+    elif(percent >= .89):
+        socre = "A-"
+        return "A-"
+    elif(percent >= .85):
+        socre = "B+"
+        return "B+"
+    elif(percent >= .82):
+        socre = "B"
+        return "B"
+    elif(percent >= .80):
+        socre = "B-"
+        return "B-"
+    elif(percent >= .77):
+        socre = "C+"
+        return "C+"
+    elif(percent >= .75):
+        socre = "C"
+        return "C"
+    elif(percent >= .72):
+        socre = "C-"
+        return "C-"
+    elif(percent >= .69):
+        socre = "D+"
+        return "D+"
+    elif(percent >= .65):
+        socre = "D"
+        return "D"
+    elif(percent >= .60):
+        socre = "D-"
+        return "D-"
+    else:
+        socre = "F"
+        return "F"
+    
+            
+        
 checkFileAnal()
