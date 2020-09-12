@@ -138,7 +138,7 @@ footer p {
 }
 
 .form-element-wrapper {
-    text-align:  left;   
+    text-align:  left;
     margin-bottom: 12px;
     width: 100%;
 }
@@ -167,7 +167,7 @@ footer p {
 
 
 
-form {
+.form {
     width: 320px;
     padding-bottom: 21px;
     margin:auto;
@@ -175,7 +175,7 @@ form {
 }
 
 .form-element-wrapper {
-    text-align:  left;   
+    text-align:  left;
     float:  left;
     margin-bottom: 12px;
 }
@@ -267,5 +267,3 @@ input[type="text"]:focus {
     }
 
 }
-
-
