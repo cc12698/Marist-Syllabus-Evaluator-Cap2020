@@ -107,3 +107,263 @@ Results for acadHonest:
 Results for otherpolicies:
 
 Results for instrName:
+
+
+
+Output for textFile
+
+Results for courseObj:
+
+Results for rubrics:
+
+Results for gradeDet:
+
+Results for courseNum:
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+
+Results for teachAct:
+
+Results for demoConsistant:
+
+Results for courseCred:
+
+Results for accommod:
+
+Results for preReq:
+
+Results for reqRead:
+
+Results for attenPol:
+
+Results for diversity:
+
+Results for format:
+
+Results for courseDes:
+
+Results for instrContact:
+
+Results for biblio:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for acadHonest:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+
+
+Output for textFile
+
+Results for courseObj:
+
+Results for rubrics:
+
+Results for gradeDet:
+
+Results for courseNum:
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+
+Results for teachAct:
+
+Results for demoConsistant:
+
+Results for courseCred:
+
+Results for accommod:
+
+Results for preReq:
+
+Results for reqRead:
+
+Results for attenPol:
+
+Results for diversity:
+
+Results for format:
+
+Results for courseDes:
+
+Results for instrContact:
+
+Results for biblio:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for acadHonest:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+
+
+Output for textFile
+
+Results for courseObj:
+
+Results for rubrics:
+
+Results for gradeDet:
+
+Results for courseNum:
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+
+Results for teachAct:
+
+Results for demoConsistant:
+
+Results for courseCred:
+
+Results for accommod:
+
+Results for preReq:
+
+Results for reqRead:
+
+Results for attenPol:
+
+Results for diversity:
+
+Results for format:
+
+Results for courseDes:
+
+Results for instrContact:
+
+Results for biblio:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for acadHonest:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+
+
+Output for textFile
+
+Results for courseObj:
+
+Results for rubrics:
+
+Results for gradeDet:
+
+Results for courseNum:
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L
+
+Results for teachAct:
+
+Results for demoConsistant:
+
+Results for courseCred:
+
+Results for accommod:
+
+Results for preReq:
+
+Results for reqRead:
+
+Results for attenPol:
+
+Results for diversity:
+
+Results for format:
+
+Results for courseDes:
+
+Results for instrContact:
+
+Results for biblio:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for acadHonest:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+
+
+Output for textFile
+
+Results for courseObj:
+
+Results for rubrics:
+
+Results for gradeDet:
+
+Results for courseNum:
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L_622
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "COM/MDIA 103L_622 || Digital Toolbox – Fall 202": 103L
+
+Results for teachAct:
+
+Results for demoConsistant:
+
+Results for courseCred:
+
+Results for accommod:
+
+Results for preReq:
+
+Results for reqRead:
+
+Results for attenPol:
+Match to "absent" in line "You will be marked absent if you show up 30 mins lat": absent
+Match to "attendance" in line "If you are late and miss attendance you need to tell me after clas": attendance
+Match to "absent" in line "It is also very important that you reach out to your classmates if you miss a class. With the way that this class flows it will be very difficult (and unfair to the rest of the class) for us to set aside time in class to go over what you missed because you were absent": absent
+
+Results for diversity:
+
+Results for format:
+
+Results for courseDes:
+
+Results for instrContact:
+
+Results for biblio:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for acadHonest:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "External hard drive USB 2.0 (at least 160 GB) OR Cloud Storage (Google Drive, Dropbox, etc": Dr

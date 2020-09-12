@@ -8,23 +8,23 @@ keywords = {    #list of regex commands ment to seach for items
                 "courseDes":      ["course description"] ,
                 "courseObj":      ["objective(.)*course"] ,
                 "courseCred":     ["[0-9](.)*credit"] ,
-                "preReq":         [] ,
+                "preReq":         ["pre(.)*requisite" , "pre(.)*req"] ,
                 "gradeDet":       ["grading:"] ,
                 "otherpolicies":  ["policy"] ,
-                "instrName":      [] ,
+                "instrName":      ["professor" , "Dr"] ,
                 "instrContact":   ["e(-| )mail:" , "contact:"] ,
                 "demoConsistant": [] , # not sure if this can be checked with keywords
                 "assesMethod":    ["grading(.)*method"] ,
                 "rubrics":        ["rubric"] , # may be missing
-                "biblio":         [] ,
+                "biblio":         ["bibliography"] ,
                 "assignments":    ["assignments" , "bee"] ,
                 "taskCrit":       [] ,
                 "courseNum":      ["[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" , "course( )*number" , "class( )*number" , "[0-9]{3}( )*(N|L|n|l)"] ,
                 "format":         [] ,
-                "attenPol":       [] ,
+                "attenPol":       ["attendance" , "attendance(.)policy" , "absent"] ,
                 "reqRead":        ["required(.*)read" , "read(.*)required"] ,
                 "courseDes":      ["course description" , "class description"] ,
-                "acadHonest":     ["academic honesty"] ,
+                "acadHonest":     ["academic honesty" , "cheating" , "plagiarism"] ,
                 "teachAct":       [] ,
                 "accommod":       ["Students with disabilities"] ,
                 "courseDes":      ["description"] ,
@@ -62,13 +62,14 @@ cmdIdex = 0
 
 def checkFileAnal():
     print("checking file...")
-    print(keywords)
+    #print(keywords)
 
     o = open(logFile, "a")
     o.write("\n\n\n\nOutput for " + "textFile") #text file will be the sylibus being evaluated
 
     s = open(textFile , "r")
 
+    matches = 0
     cmdIdex = 0
 
     for key in keywords: #loops through entire dictionary
@@ -76,15 +77,18 @@ def checkFileAnal():
         for line in s: #loops through each line of sylibus
             cmdIdex = 0
             for i in keywords[key]: #loops through each regex search
+                #print(i)
                 cmdList = keywords[key]
-                result = re.search(keywords[key][0] , line) #searches line for regex command
+                result = re.search(i , line) #searches line for regex command
                 if(result != None):
+                    matches += 1
                     found[key] = result
                     match = line[result.span()[0] : result.span()[1]]
-                    o.write("\nMatch to \"" + keywords[key][0] + "\" in line \"" + line[0 : -2] + "\": " + match)
+                    o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
 
         s.seek(0) #sets file pointer back to the begining
 
+    print("file checked, " + str(matches) + " matches found")
     return found
 
 def checkFileFast():
