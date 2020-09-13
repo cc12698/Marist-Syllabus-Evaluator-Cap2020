@@ -1,0 +1,9 @@
+applications:
+- domain: null
+  host: null
+  memory: 128M
+  name: syllabus-eval
+  command: npm run dev
+  random-route: true
+  routes:
+  - route: syllabus-eval.us-south.cf.appdomain.cloud
