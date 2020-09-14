@@ -1,8 +1,4 @@
-/*const spawn = require("child_process").spawn;
-const pythonProcess = spawn('python3',["../python/compare.py"]);
-pythonProcess.stdout.on('data', (data) => {
-  console.log(data.toString());
-});*/
+const { spawn } = require("child_process");
 const fs = require('fs');
 const path = require('path');
 const mammoth = require("mammoth");
@@ -26,6 +22,7 @@ exports.postComparison = function(req, res){
       var filePath = "./uploads/" + file;
       if(allowDoc.exec(filePath)){
         doc(filePath);
+        callSnek();
       }
       else if(allowPDF.exec(filePath)){
         pdf(filePath);
@@ -35,6 +32,20 @@ exports.postComparison = function(req, res){
       }
     });
   });
+}
+
+function callSnek(){
+  console.log('sssss');
+  var dataToSend;
+  const pythonProcess = spawn('python', ["../python/compare.py"]);
+  pythonProcess.stdout.on('data', (data) => {
+    dataToSend = data.toString();
+  });
+
+  pythonProcess.on('close', (code) => {
+   console.log(`child process close all stdio with code ${code}`);
+   console.log(dataToSend);
+   });
 }
 
 async function doc(file){
