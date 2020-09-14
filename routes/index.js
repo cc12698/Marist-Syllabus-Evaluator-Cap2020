@@ -93,5 +93,5 @@ app.post('/uploadSyllabus', async (req, res) => {
 //     });
 // });
 
-app.listen(1337,() => console.log("running on port 1337: http://localhost:1337/"));
+app.listen(8080,() => console.log("running on port 8080: http://localhost:8080/"));
 //nodemon server/capping.js to run

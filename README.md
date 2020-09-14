@@ -8,4 +8,4 @@
 
 ## Running Code
 1. Run `npm run dev`
-2. Open browser and visit http://localhost:1337/
+2. Open browser and visit http://localhost:8080/
