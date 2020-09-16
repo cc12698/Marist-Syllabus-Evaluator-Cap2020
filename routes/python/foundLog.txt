@@ -1,0 +1,64 @@
+
+
+
+
+Output for exampleText.txt on 2020-09-16 19:02:11
+
+Results for courseDes:
+Match to "description" in line "Course	Descriptio": Description
+
+Results for courseObj:
+
+Results for courseCred:
+Match to "[0-9](.)*credit" in line "ART/MDIA431	3D	Modeling	&	Visualization, 3	Credits,	Prerequisites:	ART/23": 431	3D	Modeling	&	Visualization, 3	Credit
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "ART/MDIA431	3D	Modeling	&	Visualization, 3	Credits,	Prerequisites:	ART/23": Prerequisite
+Match to "pre(.)*req" in line "ART/MDIA431	3D	Modeling	&	Visualization, 3	Credits,	Prerequisites:	ART/23": Prereq
+
+Results for gradeDet:
+Match to "assessment" in line "Assessment	and	Gradin": Assessment
+Match to "grading" in line "Assessment	and	Gradin": Grading
+Match to "assessment" in line "Assessment	will	be	based	on	perceived	insights	during	class	critiques	and	discussions,	a": Assessment
+Match to "assessment" in line "evaluate	comprehension	of	tools	and	materials	demonstrated	in	class.	Finally,	assessmen": assessment
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "Other	supplies	include:	Sketchbooks,	Notebooks,	external	hard	drives,	flash	drives,	et": dr
+Match to "Dr" in line "Please	invest	in	your	work	and	purchase	an	external	hard	drive	for	back	up	in	addition	to	": dr
+Match to "Dr" in line "USB	flash	drive	for	easy	transportation	and	transfer	of	digital	files": dr
+
+Results for instrContact:
+Match to "email(-|:)" in line "Email:	Matthew(dot)Frieburghaus(at)Marist(dot)ed": Email:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "Regular	and	on-time	attendance	 and	participation,	including	contribution	to	critiques	an": attendance
+
+Results for reqRead:
+Match to "Textbook" in line "Textbook/Supplie": Textbook
+Match to "ISBN" in line "(August	10,	2015), ISBN-13: 978-111905982": ISBN
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:

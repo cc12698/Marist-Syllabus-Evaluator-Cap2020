@@ -111,7 +111,7 @@ def checkFileAnal():
             for i in keywords[key]: #loops through each regex search
                 #print(i)
                 cmdList = keywords[key]
-                result = re.search(i , line) #searches line for regex command
+                result = re.search(i , line , re.IGNORECASE) #searches line for regex command
                 if(result != None):
                     matches += 1
                     found[key].append(result)
