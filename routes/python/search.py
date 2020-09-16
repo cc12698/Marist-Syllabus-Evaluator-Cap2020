@@ -6,14 +6,14 @@ textFile = "exampleText.txt"
 logFile = "foundLog.txt"
 
 keywords = {    #list of regex commands ment to seach for items
-                "courseDes":      ["course description"] ,
+                "courseDes":      ["course( )*description"] ,
                 "courseObj":      ["objective(.)*course"] ,
-                "courseCred":     ["[0-9](.)*credit"] ,
+                "courseCred":     ["[0-9](.)*credit"] , #need to investigate
                 "preReq":         ["pre(.)*requisite" , "pre(.)*req"] ,
-                "gradeDet":       ["grading:"] ,
+                "gradeDet":       ["grading:" , "[0-9]([0-9])*( )*points" , "assessment" , "grading"] ,
                 "otherpolicies":  ["policy"] ,
                 "instrName":      ["professor" , "Dr"] ,
-                "instrContact":   ["e(-| )mail:" , "contact:"] ,
+                "instrContact":   ["e(-| )mail:" , "contact:" , "email(-|:)"] ,
                 "demoConsistant": [] , # not sure if this can be checked with keywords
                 "assesMethod":    ["grading(.)*method"] ,
                 "rubrics":        ["rubric"] , # may be missing
@@ -23,7 +23,7 @@ keywords = {    #list of regex commands ment to seach for items
                 "courseNum":      ["[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" , "course( )*number" , "class( )*number" , "[0-9]{3}( )*(N|L|n|l)"] ,
                 "format":         [] ,
                 "attenPol":       ["attendance" , "attendance(.)policy" , "absent"] ,
-                "reqRead":        ["required(.*)read" , "read(.*)required"] ,
+                "reqRead":        ["required(.*)read" , "read(.*)required" , "Textbook" , "ISBN" , "test(.)*course"] ,
                 "courseDes":      ["course description" , "class description"] ,
                 "acadHonest":     ["academic honesty" , "cheating" , "plagiarism"] ,
                 "teachAct":       [] ,
@@ -167,14 +167,20 @@ def getScore():
 
     for key in keywords:
         neededItems += 1
-        if(len(keywords[key]) != 0):
+        if(len(found[key]) != 0):
             foundItems += 1
         else:
             missing.append(keyToName[key])
 
+    print("Missing elements:\n")
     print(missing)
+    print()
 
     percent = foundItems / neededItems
+
+    print("Total Items = " + str(neededItems))
+    print("Found Items = " + str(foundItems))
+    print("% found = " + str(percent))
 
     if(percent >= 1):
         score = "A+"
@@ -215,7 +221,5 @@ def getScore():
     else:
         socre = "F"
         return "F"
-
-
 
 checkFileAnal()
