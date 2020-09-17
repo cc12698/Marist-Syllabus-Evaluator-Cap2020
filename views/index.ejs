@@ -19,8 +19,21 @@
       </div>
 
       <form form action="/uploadSyllabus" enctype="multipart/form-data" method="POST">
-        <input type="file" name="myFile"accept=".doc,.docx,.pdf,.pages"/>
-        <input type="submit" value="submit" id="subDoc" href="results"/>
+        <div class="col-md-12 col-sm-12">
+          <div class="contain">
+            <input type="file" id="upload" name="myFile" accept=".doc,.docx,.pdf,.pages" >
+            <label for="upload"><img src="/img/UploadSyllabus.png" ></label>
+            <br>
+            <div id="upload-text">
+              <span ><strong>UPLOAD SYLLABUS HERE</strong></span>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 submit">
+          <input type="submit" value="submit" id="subDoc" href="results"/>
+        </div>
+
       </form>
     <%- include('partials/footer'); -%>
   </body>

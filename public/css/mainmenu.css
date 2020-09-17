@@ -146,3 +146,10 @@ div .col-sm-3{
   -ms-grid-row: 1;
   -ms-grid-column: 4;
 }
+
+.description{
+	text-align: center;
+	padding: 10px;
+	color: #707070;
+	font-size: 15px;
+}

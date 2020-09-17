@@ -16,3 +16,54 @@ h1, p, form{
   text-align: left;
   font-size: 150%;
 }
+
+label{
+  padding:20px;
+  z-index: 5;
+
+}
+
+
+#upload{
+  display: none;
+}
+
+.col-sm-12, .col-md-12{
+  padding-top: 20px;
+}
+.contain{
+  /* margin: auto; */
+  width: 300px;
+  height: 250px;
+  background-color: #EBEBEB;
+  text-align: center;
+}
+
+.contain:hover{
+  cursor: pointer;
+  background-color: #bfc0c9;
+}
+
+img{
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+img:hover{
+  cursor: pointer;
+}
+
+#upload-text{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+#subDoc{
+  /* margin-left: 18px;
+  margin-top: 10px; */
+}
+
+.submit{
+  padding-top: 40px;
+}
