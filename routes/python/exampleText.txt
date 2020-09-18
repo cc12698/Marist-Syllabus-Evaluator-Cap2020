@@ -1,248 +1,87 @@
-COM/MDIA 103L_622 || Digital Toolbox – Fall 2020
-
-Tuesday & Thursday 5:00pm – 6:15pm
-
-Lowell Thomas 158
-
-
-Robert Julian
-
-Email: robert.julian@marist.edu
-
-
-
-Course Summary
-
-
-This course is an introduction into the ever-changing Digital Media world.
-
-In this class, we will create a foundation for you in current digital media practices using Photoshop, Illustrator, Premiere, Audacity, Wordpress and InDesign.
-
-You will learn how to “manipulate” digital photos to fit your needs. Shoot/edit video, “manipulate” audio, and create a blog/website. We will also discuss proper digital file naming, organizing and storing, but most importantly you will learn to value how you present yourself online and how important it is to be a professional at all times.
-
-
-You are a brand.
-
-Everything that you post online is a reflection of your Brand. Who you are, what you do, your likes/dislikes, etc.
-
-In a way, your social media profiles are like a long digital diary that (whether you like it or not) will follow you around and will hopefully not haunt you.
-
-I mention this because I want you to learn Digital Media Production from the point of view of how you present yourself to the digital world and how these tools could better serve you as a digital media professional. As a brand.
-
-
-Course Goals:
-
-
-Facility with digital tools to convey your vision
-Exposure to a variety of digital media
-Understanding of digital media terms
-Understanding your brand
-Understand copyright protection and fair use.
-Become aware of how other brands use digital media
-Learn how to present yourself as a professional in the digital world
-Be resourceful and learn how to get the best possible content with what you have available.
-
-
-
-
-
-Required:
-
-iLearn Account (you already have)
-YouTube or Vimeo Account (free)
-Wordpress account (free)
-External hard drive USB 2.0 (at least 160 GB) OR Cloud Storage (Google Drive, Dropbox, etc)
-Headphones, ear buds
-
-
-Projects
-
-All projects need to be submitted on time. Let me repeat that, ALL PROJECTS NEED TO BE SUBMITTED ON TIME.
-
-Late projects are penalized one whole grade and must be received within one week of due date. If a project is not received then it will be graded a zero.
-
-If you submit your project on time but the project is incomplete or perhaps you took some “liberty” with the requirements then the project will be considered late and it will not receive a grade until it is re-submitted according to the requirements. If project is not received within a week? That’s a zero.
-
-
-It is very important that YOU SAVE OFTEN and you ALWAYS SAVE TO YOUR EXTERNAL DRIVE before you leave the lab.
-
-The computers are wiped clean often so there’s a good chance that all your great work will not be there when you come back.
-
-
-Photography/Video
-
-You can use the department’s cameras or you can use your own.
-
-Honestly, you can even use your phone, quality is obviously important but what I really want is for you to learn the concepts behind getting the best image possible with what is available to you.
-
-
-Attendance is mandatory.  Being on time is mandatory.  
-
-
-You will be marked absent if you show up 30 mins late
-If you are late and miss attendance you need to tell me after class
-With 6 unexcused absences, you are subject to failure
-
-
-We all get sick, we all have personal issues that can prevent us from attending class. That can happen to all of us, including me. But it is important that you notify us of any issue, especially those that you can foresee.
-
-It is also very important that you reach out to your classmates if you miss a class. With the way that this class flows it will be very difficult (and unfair to the rest of the class) for us to set aside time in class to go over what you missed because you were absent.
-
-
-Always feel free to contact me through the listed Marist Email.
-
-
-
-Plagiarism
-
-From the Marist College Student Handbook, “plagiarism may take the form of repeating another person’s sentences as your own, adopting a particularly apt phrase as your own, or paraphrasing someone else’s line of thinking in the development of a thesis as though it were your own.”  
-
-That applies to this class in terms of you taking someone else’s photograph, or website info, or text and submitting it as your own. It also means taking someone else’s project and submitting it as your own.
-
-Aside from being morally and ethically wrong, it is also illegal.
-
-
-
-
-Grading Scale
-
-A         93 – 100%                 C         77 – 79%                   F          0 – 59%
-
-A-        90 – 92%                   C         73 – 76%      
-
-B+       87 – 89%                   C -       70 – 72%
-
-B         83 – 86%                   D+       67 – 69%
-
-B-        80 – 82%                   D         60 – 66%
-
-
-
-
-Grading
-
-Main Projects = 50%
-
-Smaller Projects = 25%
-
-Attendance = 15%
-
-Participation = 10%
-
-
-
-
-Course Schedule   (subject to change)
-
-
-Week 1 – Aug 24th
-
-Intro to Course and Syllabus Review
-Hard drive formatting
-File Management
-iLearn
-
-Wordpress
-
-Week 2 – Aug 31st
-
-Wordpress
-Intro to Photoshop
-
-Photoshop Lab Session
-
-Week 3 – Sept 7th                                 
-
-Photoshop Lab Session
-
-Photoshop Lab Session [  Photoshop Project Due ]
-
-Week 4 – Sept 14th     
-
-Audio in the Digital World
-
-Audacity Lab Session
-
-Week 5 – Sept 21st                                            
-
-Recording Podcast/Interview
-Editing Audio
-
-Film Scoring
-Music Copyrights
-Fair Use                                       [ Audio Edit Project Due ]
-
-Week 6 – Oct 5th
-
-Intro to Digital Video
-
-Adobe Premiere
-
-
-
-Week 8 – Oct 12th
-
-In Class Adding Music
-Working with Audio in Video
-
-Premiere Lab Session
-
-
-Week 9 – Oct 19th    
-
-Premiere Lab Session Footage Assembly
-
-Premiere Lab Session – 1 minute short
-
-
-Week 10 – Oct 26th                          [ 1 minute Doc Project Due ]
-
-IIllustrator
-
-Illustrator Lab Session
-
-
-Week 11 – Nov 2nd
-
-Illustrator Lab Session
-
-Illustrator Lab Session
-
-
-Week 12 – Nov 9th    
-
-inDesign
-
-InDesign lab Session
-
-
-Week 13 – Nov 16th
-
-InDesign lab Session
-
-InDesign Lab Session - Personal Magazine Project
-
-
-
-Week 14 – Nov 23rd           [InDesign Project Due]
-
-ON CAMPUS INSTRUCTION ENDS
-
-Thanksgiving
-
-Week 15 – Nov 30th            [ Final Website Project Due ]
-
-Final Project Lab Session
-
-Final Project Lab Session
-
-
-FINALS
-
-
-
-
-
- 
-
- 
+ART/MDIA431	3D	Modeling	&	Visualization, 3	Credits,	Prerequisites:	ART/231
+Department	of	Art	&	Digital	Media
+Remote	- Monday/Thursday	12:30	- 1:45pm
+Matt	Frieburghaus
+Email:	Matthew(dot)Frieburghaus(at)Marist(dot)edu
+Virtual	Office	Hours: M	2-3pm,	T	11am - 2pm,	W	10-12pm
+Course	Description
+This	course	will	focus	on	the	principles	and	techniques	of	creating	3D	models	for
+visualization	and	animation.	Students	will	explore	the	processes	of	this	art	form,	including
+modeling,	texturing,	shading,	scene	creation,	and	rendering,	in	order	to	create	meaningful
+and	unique	visualizations.	Students	will	learn	to	output	digital	files	for	2D	prints	and	create
+3D	prints	from	digital	models.
+Outcomes	and	Methods
+Students	will	gain	knowledge	of	3D	development,	using	the	Autodesk	Maya	software.
+Students	will	become	familiar	with	current	issues	related	to	3D	graphics	through	projects
+and	class	discussion.	Students	will	begin	to	develop	a	greater	understanding	and
+appreciation	of	aesthetics	in	3D	representation.	Students	will	develop	a	body	of	work
+reflecting	the	processes	and	materials	covered	in	class.
+Each	unit	of	instruction	will	introduce	students	to	a	process	of	creating	3D	graphics.
+Students	will	also	learn	some	necessary	concepts	for	creating	animations	or	simple
+movement	of	3D	models.	Direct	studio	contact	between	student	and	teacher	will	reinforce
+other	methods	of	instruction.	This	course	is	not	intended	to	provide	mastery	of	3D
+development,	but	it	will	provide	students	with	a	full	range	of	knowledge	that	covers	the
+creative	process	in	a	3D	environment.
+Textbook/Supplies
+Todd	Palomar,	Mastering	Autodesk	Maya	2016:	Autodesk	Official	Press,	Sybex;	1	edition
+(August	10,	2015), ISBN-13: 978-1119059820
+Additional	texts	and	resources	will	be	introduced	in	class.
+Other	supplies	include:	Sketchbooks,	Notebooks,	external	hard	drives,	flash	drives,	etc
+Please	invest	in	your	work	and	purchase	an	external	hard	drive	for	back	up	in	addition	to	a
+USB	flash	drive	for	easy	transportation	and	transfer	of	digital	files.
+Requirements
+Regular	and	on-time	attendance	 and	participation,	including	contribution	to	critiques	and
+discussions	is	mandatory.	On-time	completion	of	projects	is	required.	You	will	be	expected
+to	describe	and	discuss	your	own	work	as	well	as	the	work	of	your	peers	in	forums	and
+critiques.
+Assessment	and	Grading
+Assessment	will	be	based	on	perceived	insights	during	class	critiques	and	discussions,	as
+well	as	individual	discussions	with	students	during	the	creation	of	their	projects.	Projects
+will	be	evaluated	using	three	categories	or	criteria:	Project	Guidelines,	Outcomes,	and
+Technical	ability.	The	guidelines	portion	of	your	grade	evaluates	the	proper	completion,
+due	date,	and	presentation	of	a	project.	The	outcomes	portion	of	a	grade	will	evaluate	the
+aesthetic	and	conceptual	properties	of	a	project.	The	technical	portion	of	a	grade	will
+evaluate	comprehension	of	tools	and	materials	demonstrated	in	class.	Finally,	assessment
+will	be	based	on	a	final	review	of	all	projects	completed	throughout	the	semester	along
+with	student	participation.	Grades	will	be	submitted	and	released	on	iLearn.
+Class	participation	=	10	points
+Project	1	Primitives	=	10	points
+Project	2	Nurbs	=	10	points
+Project	3	Character	=	20	points
+Project	4	B/W	Scene	and	Layout	=	25	points
+Final	Full	Scenes =	25	points
+Total	possible	points	=	100	points
+Schedule	(tentative)
+Week	1	(Monday	8/24) Introduction	to	course	and	3D	|	iLearn	and	course	structure	|
+Modeling	exercise	to	introduce	the	Maya	inteface,	tools,	and	processes
+(Thursday	8/27) Review	exercise	|	discuss	project	1	|	Tools	and	strategies	for	completing
+first	set	of	models
+Week	2	(Monday	8/31)		Additional	tools
+(Thursday	9/3) Review	production
+Week	3	(Monday	9/7) Project	1	(primitives)	due	(6	models)
+(Thursday	9/10) CV	tool,	creating	Nurbs	objects	|	deformations	and	conversions
+Week	4	(Monday	9/14) Editing	curves	|	lofts	and	extrudes
+(Thursday	9/17) Review	of	surface	tools
+Week	5	Monday	(9/21) Project	2	(nurbs)	due	(6	models)
+(Thursday	9/24) Intro	to	Project	3	- Modeling	hands
+Week	6	(Monday	9/28) Modeling	heads	and	facial	features
+(Thursday	10/1) Modeling	heads	and	facial	features
+Week	7	(Monday	10/5) Character	modeling
+(Thursday	10/8) Skeleton	and	binding	skin
+Week	8	(Monday	10/12) Rigging	skeletons	and	Weight	Maps
+(Thursday	10/15) Review	of	production
+Week	9	(Monday	10/19)		Project	3	(Character	model)	due |	Intro	to	Project	4
+(Thursday	10/22) Review	scene	sketches
+Week	10	(Monday	10/26)		Constructing	a	scene	|	Environments
+(Thursday	10/29) Camera	|	keying	positions
+Week	11	(Monday	11/2) Lighting	and	shadow	|	keying	positions
+(Thursday	11/5) Bump	and	transparency	maps
+Week	12	(Monday	11/9) Review	of	production
+(Thursday	11/12) Project	4	(b/w	shaded	scenes)	due
+Week	13	(Monday	11/16) Introduce	final	project	|	Advanced	Shading
+(Thursday	11/19)		Review	scene	sketches
+Week	14	(Monday	11/23) Advanced	Shading
+(Thursday	11/26) Thanksgiving	Holiday
+Week	15	(Monday	11/30) FX	and	Rendering
+(Thursday	12/3) Production	Review
+Final	Week	(Wednesday,	December	9,	1pm) Final	scenes	due
