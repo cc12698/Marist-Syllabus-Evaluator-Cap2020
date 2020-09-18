@@ -62,3 +62,396 @@ Results for teachAct:
 Results for accommod:
 
 Results for diversity:
+
+
+
+Output for exampleText.txt on 2020-09-18 10:53:53
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for exampleText.txt on 2020-09-18 10:58:00
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+Match to "contact:" in line "For additional technical support please contact: helpdesk@marist.ed": contact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for exampleText.txt on 2020-09-18 11:04:35
+
+Results for courseDes:
+Match to "description" in line "Course Description": Description
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "Course Prerequisites": Prerequisite
+Match to "pre(.)*req" in line "Course Prerequisites": Prereq
+
+Results for gradeDet:
+Match to "assessment" in line "Assessment": Assessment
+Match to "[0-9]([0-9])*( )*points" in line "You will be graded on 700 points that you can earn throughout the semester, the following show": 700 points
+Match to "[0-9]([0-9])*( )*points" in line "Class Participation 50 points 7": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Labs 100 points 14": 100 points
+Match to "[0-9]([0-9])*( )*points" in line "Project 100 points 14": 100 points
+Match to "[0-9]([0-9])*( )*points" in line "Mid-Term 200 points 29": 200 points
+Match to "[0-9]([0-9])*( )*points" in line "Final 250 points 36": 250 points
+Match to "assessment" in line "Department Goals, Objectives, and Assessment": Assessment
+Match to "assessment" in line "Marist College Department of Computing Technology Goals, Objectives, and Assessment are as follows for your reference": Assessment
+
+Results for otherpolicies:
+Match to "policy" in line "Attendance Policy": Policy
+
+Results for instrName:
+
+Results for instrContact:
+Match to "email(-|:)" in line "Email: brian.gormanly@marist.ed": Email:
+Match to "contact:" in line "For additional technical support please contact: helpdesk@marist.ed": contact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+Match to "assignments" in line "Any and all results of in-class and out-of-class assignments and examinations are data sources fo": assignments
+Match to "bee" in line "No makeup tests will be permitted after a test has been given. If you anticipate not being able t": bee
+Match to "assignments" in line "o You are encouraged to discuss course material, concepts and assignments wit": assignments
+Match to "bee" in line "All efforts have been made to ensure the iLearn system is compliant with Americans wit": bee
+Match to "assignments" in line "schedule accordingly when completing assignments with weekend due dates in this course": assignments
+
+Results for taskCrit:
+
+Results for courseNum:
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "CMPT 424N - Operating System": 424N
+Match to "course( )*number" in line "Please email me (brian.gormanly@marist.edu) include in your email subject the course numbe": course number
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "Attendance Policy": Attendance
+Match to "attendance(.)policy" in line "Attendance Policy": Attendance Policy
+Match to "attendance" in line "attendance and good grades. You will be expected to answer test questions based on topic": attendance
+Match to "attendance" in line "during class. Your class participation grade will be based on your attendance as well as you": attendance
+
+Results for reqRead:
+Match to "Textbook" in line "Textbooks (you can choose)": Textbook
+Match to "ISBN" in line "ISBN-13: 978-013359162": ISBN
+Match to "ISBN" in line "ISBN-10: 013359162": ISBN
+Match to "ISBN" in line "ISBN-13: 978-047012872": ISBN
+
+Results for acadHonest:
+Match to "academic honesty" in line "Academic Honesty": Academic Honesty
+Match to "cheating" in line "the definitions and consequences for cheating and plagiarism). Students assume ful": cheating
+Match to "plagiarism" in line "the definitions and consequences for cheating and plagiarism). Students assume ful": plagiarism
+Match to "cheating" in line "Collaboration vs. Cheating": Cheating
+Match to "plagiarism" in line "Plagiarism Prevention": Plagiarism
+Match to "academic honesty" in line "Marist College is committed to the fundamental values of preserving academic honesty as define": academic honesty
+Match to "plagiarism" in line "prevent plagiarism": plagiarism
+Match to "plagiarism" in line "information on how to properly cite sources and understand what is meant by plagiarism": plagiarism
+
+Results for teachAct:
+
+Results for accommod:
+Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class ar": Students with disabilities
+
+Results for diversity:
+
+
+
+Output for exampleText.txt on 2020-09-18 11:32:10
+
+Results for courseDes:
+Match to "description" in line "Course Description": Description
+
+Results for courseObj:
+Match to "course(.)*objective" in line "Course Objectives: ": Course Objective
+Match to "course(.)*objective" in line "Course Objective: 1, 2, 3, 4, 5, 8, ": Course Objective
+Match to "course(.)*objective" in line "Course Objective: 1, 2, 3, 6, 8, ": Course Objective
+Match to "course(.)*objective" in line "Midterm Exam. Applies to Course Objective: 1, 2, 3, 4, ": Course Objective
+Match to "course(.)*objective" in line "Final Exam. Applies to Course Objective: 5, 6, 7, 8, ": Course Objective
+Match to "course(.)*objective" in line "2 The reference number in brackets [ ] indicates the related course objective": course objective
+Match to "course(.)*objective" in line "Please refer to corresponding matching with this course goals and objectives in previous sections in this syllabus": course goals and objective
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "Course Prerequisites": Prerequisite
+Match to "pre(.)*req" in line "Course Prerequisites": Prereq
+
+Results for gradeDet:
+Match to "assessment" in line "Assessment": Assessment
+Match to "[0-9]([0-9])*( )*points" in line "You will be graded on 700 points that you can earn throughout the semester, the following show": 700 points
+Match to "[0-9]([0-9])*( )*points" in line "Class Participation 50 points 7": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Labs 100 points 14": 100 points
+Match to "[0-9]([0-9])*( )*points" in line "Project 100 points 14": 100 points
+Match to "[0-9]([0-9])*( )*points" in line "Mid-Term 200 points 29": 200 points
+Match to "[0-9]([0-9])*( )*points" in line "Final 250 points 36": 250 points
+Match to "assessment" in line "Department Goals, Objectives, and Assessment": Assessment
+Match to "assessment" in line "Marist College Department of Computing Technology Goals, Objectives, and Assessment are as follows for your reference": Assessment
+
+Results for otherpolicies:
+Match to "policies" in line "Policies": Policies
+Match to "policy" in line "Attendance Policy": Policy
+Match to "academic(.)*honesty" in line "Academic Honesty": Academic Honesty
+Match to "academic(.)*honesty" in line "Marist College is committed to the fundamental values of preserving academic honesty as define": academic honesty
+
+Results for instrName:
+
+Results for instrContact:
+Match to "email(-|:)" in line "Email: brian.gormanly@marist.ed": Email:
+Match to "@marist.edu" in line "Email: brian.gormanly@marist.ed": @marist.edu
+Match to "@marist.edu" in line "Please email me (brian.gormanly@marist.edu) include in your email subject the course numbe": @marist.edu
+Match to "@marist.edu" in line "accommodations@marist.edu as soon as possible to better ensure that such accommodations ar": @marist.edu
+Match to "contact:" in line "For additional technical support please contact: helpdesk@marist.ed": contact:
+Match to "@marist.edu" in line "For additional technical support please contact: helpdesk@marist.ed": @marist.edu
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+Match to "assignments" in line "Any and all results of in-class and out-of-class assignments and examinations are data sources fo": assignments
+Match to "bee" in line "No makeup tests will be permitted after a test has been given. If you anticipate not being able t": bee
+Match to "assignments" in line "o You are encouraged to discuss course material, concepts and assignments wit": assignments
+Match to "bee" in line "All efforts have been made to ensure the iLearn system is compliant with Americans wit": bee
+Match to "assignments" in line "schedule accordingly when completing assignments with weekend due dates in this course": assignments
+
+Results for taskCrit:
+
+Results for courseNum:
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "CMPT 424N - Operating System": 424N
+Match to "course( )*number" in line "Please email me (brian.gormanly@marist.edu) include in your email subject the course numbe": course number
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "Attendance Policy": Attendance
+Match to "attendance(.)policy" in line "Attendance Policy": Attendance Policy
+Match to "attendance" in line "attendance and good grades. You will be expected to answer test questions based on topic": attendance
+Match to "attendance" in line "during class. Your class participation grade will be based on your attendance as well as you": attendance
+
+Results for reqRead:
+Match to "Textbook" in line "Textbooks (you can choose)": Textbook
+Match to "ISBN" in line "ISBN-13: 978-013359162": ISBN
+Match to "ISBN" in line "ISBN-10: 013359162": ISBN
+Match to "ISBN" in line "ISBN-13: 978-047012872": ISBN
+
+Results for acadHonest:
+Match to "academic honesty" in line "Academic Honesty": Academic Honesty
+Match to "cheating" in line "the definitions and consequences for cheating and plagiarism). Students assume ful": cheating
+Match to "plagiarism" in line "the definitions and consequences for cheating and plagiarism). Students assume ful": plagiarism
+Match to "cheating" in line "Collaboration vs. Cheating": Cheating
+Match to "plagiarism" in line "Plagiarism Prevention": Plagiarism
+Match to "academic honesty" in line "Marist College is committed to the fundamental values of preserving academic honesty as define": academic honesty
+Match to "plagiarism" in line "prevent plagiarism": plagiarism
+Match to "plagiarism" in line "information on how to properly cite sources and understand what is meant by plagiarism": plagiarism
+
+Results for teachAct:
+
+Results for accommod:
+Match to "accommodations and accessibility" in line "Accommodations and Accessibility": Accommodations and Accessibility
+Match to "accommodations and accessibility" in line "The Marist College Office of Accommodations and Accessibility provides individualized support t": Accommodations and Accessibility
+Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class ar": Students with disabilities
+Match to "accommodations and accessibility" in line "encouraged to contact the Office of Accommodations and Accessibility at 575-3274, or via email a": Accommodations and Accessibility
+
+Results for diversity:
+
+
+
+Output for exampleText.txt on 2020-09-18 11:33:57
+
+Results for courseDes:
+Match to "course( )*description" in line "Course Description": Course Description
+Match to "course description" in line "Course Description": Course Description
+
+Results for courseObj:
+Match to "course(.)*objective" in line "Course Objectives: ": Course Objective
+Match to "course(.)*objective" in line "Course Objective: 1, 2, 3, 4, 5, 8, ": Course Objective
+Match to "course(.)*objective" in line "Course Objective: 1, 2, 3, 6, 8, ": Course Objective
+Match to "course(.)*objective" in line "Midterm Exam. Applies to Course Objective: 1, 2, 3, 4, ": Course Objective
+Match to "course(.)*objective" in line "Final Exam. Applies to Course Objective: 5, 6, 7, 8, ": Course Objective
+Match to "course(.)*objective" in line "2 The reference number in brackets [ ] indicates the related course objective": course objective
+Match to "course(.)*objective" in line "Please refer to corresponding matching with this course goals and objectives in previous sections in this syllabus": course goals and objective
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "Course Prerequisites": Prerequisite
+Match to "pre(.)*req" in line "Course Prerequisites": Prereq
+
+Results for gradeDet:
+Match to "assessment" in line "Assessment": Assessment
+Match to "[0-9]([0-9])*( )*points" in line "You will be graded on 700 points that you can earn throughout the semester, the following show": 700 points
+Match to "[0-9]([0-9])*( )*points" in line "Class Participation 50 points 7": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Labs 100 points 14": 100 points
+Match to "[0-9]([0-9])*( )*points" in line "Project 100 points 14": 100 points
+Match to "[0-9]([0-9])*( )*points" in line "Mid-Term 200 points 29": 200 points
+Match to "[0-9]([0-9])*( )*points" in line "Final 250 points 36": 250 points
+Match to "assessment" in line "Department Goals, Objectives, and Assessment": Assessment
+Match to "assessment" in line "Marist College Department of Computing Technology Goals, Objectives, and Assessment are as follows for your reference": Assessment
+
+Results for otherpolicies:
+Match to "policies" in line "Policies": Policies
+Match to "policy" in line "Attendance Policy": Policy
+Match to "academic(.)*honesty" in line "Academic Honesty": Academic Honesty
+Match to "academic(.)*honesty" in line "Marist College is committed to the fundamental values of preserving academic honesty as define": academic honesty
+
+Results for instrName:
+
+Results for instrContact:
+Match to "email(-|:)" in line "Email: brian.gormanly@marist.ed": Email:
+Match to "@marist.edu" in line "Email: brian.gormanly@marist.ed": @marist.edu
+Match to "@marist.edu" in line "Please email me (brian.gormanly@marist.edu) include in your email subject the course numbe": @marist.edu
+Match to "@marist.edu" in line "accommodations@marist.edu as soon as possible to better ensure that such accommodations ar": @marist.edu
+Match to "contact:" in line "For additional technical support please contact: helpdesk@marist.ed": contact:
+Match to "@marist.edu" in line "For additional technical support please contact: helpdesk@marist.ed": @marist.edu
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+Match to "assignments" in line "Any and all results of in-class and out-of-class assignments and examinations are data sources fo": assignments
+Match to "bee" in line "No makeup tests will be permitted after a test has been given. If you anticipate not being able t": bee
+Match to "assignments" in line "o You are encouraged to discuss course material, concepts and assignments wit": assignments
+Match to "bee" in line "All efforts have been made to ensure the iLearn system is compliant with Americans wit": bee
+Match to "assignments" in line "schedule accordingly when completing assignments with weekend due dates in this course": assignments
+
+Results for taskCrit:
+
+Results for courseNum:
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "CMPT 424N - Operating System": 424N
+Match to "course( )*number" in line "Please email me (brian.gormanly@marist.edu) include in your email subject the course numbe": course number
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "Attendance Policy": Attendance
+Match to "attendance(.)policy" in line "Attendance Policy": Attendance Policy
+Match to "attendance" in line "attendance and good grades. You will be expected to answer test questions based on topic": attendance
+Match to "attendance" in line "during class. Your class participation grade will be based on your attendance as well as you": attendance
+
+Results for reqRead:
+Match to "Textbook" in line "Textbooks (you can choose)": Textbook
+Match to "ISBN" in line "ISBN-13: 978-013359162": ISBN
+Match to "ISBN" in line "ISBN-10: 013359162": ISBN
+Match to "ISBN" in line "ISBN-13: 978-047012872": ISBN
+
+Results for acadHonest:
+Match to "academic honesty" in line "Academic Honesty": Academic Honesty
+Match to "cheating" in line "the definitions and consequences for cheating and plagiarism). Students assume ful": cheating
+Match to "plagiarism" in line "the definitions and consequences for cheating and plagiarism). Students assume ful": plagiarism
+Match to "cheating" in line "Collaboration vs. Cheating": Cheating
+Match to "plagiarism" in line "Plagiarism Prevention": Plagiarism
+Match to "academic honesty" in line "Marist College is committed to the fundamental values of preserving academic honesty as define": academic honesty
+Match to "plagiarism" in line "prevent plagiarism": plagiarism
+Match to "plagiarism" in line "information on how to properly cite sources and understand what is meant by plagiarism": plagiarism
+
+Results for teachAct:
+
+Results for accommod:
+Match to "accommodations and accessibility" in line "Accommodations and Accessibility": Accommodations and Accessibility
+Match to "accommodations and accessibility" in line "The Marist College Office of Accommodations and Accessibility provides individualized support t": Accommodations and Accessibility
+Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class ar": Students with disabilities
+Match to "accommodations and accessibility" in line "encouraged to contact the Office of Accommodations and Accessibility at 575-3274, or via email a": Accommodations and Accessibility
+
+Results for diversity:

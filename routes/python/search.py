@@ -6,14 +6,14 @@ textFile = "exampleText.txt"
 logFile = "foundLog.txt"
 
 keywords = {    #list of regex commands ment to seach for items
-                "courseDes":      ["course( )*description"] ,
-                "courseObj":      ["objective(.)*course"] ,
+                "courseDes":      ["course( )*description" , "course description" , "class description"] ,
+                "courseObj":      ["objective(.)*course" , "course(.)*objective"] ,
                 "courseCred":     ["[0-9](.)*credit"] , #need to investigate
                 "preReq":         ["pre(.)*requisite" , "pre(.)*req"] ,
                 "gradeDet":       ["grading:" , "[0-9]([0-9])*( )*points" , "assessment" , "grading"] ,
-                "otherpolicies":  ["policy"] ,
+                "otherpolicies":  ["policy" , "policies" , "academic(.)*honesty"] ,
                 "instrName":      ["professor" , "Dr"] ,
-                "instrContact":   ["e(-| )mail:" , "contact:" , "email(-|:)"] ,
+                "instrContact":   ["e(-| )mail:" , "contact:" , "email(-|:)" , "@marist.edu"] ,
                 "demoConsistant": [] , # not sure if this can be checked with keywords
                 "assesMethod":    ["grading(.)*method"] ,
                 "rubrics":        ["rubric"] , # may be missing
@@ -21,14 +21,12 @@ keywords = {    #list of regex commands ment to seach for items
                 "assignments":    ["assignments" , "bee"] ,
                 "taskCrit":       [] ,
                 "courseNum":      ["[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" , "course( )*number" , "class( )*number" , "[0-9]{3}( )*(N|L|n|l)"] ,
-                "format":         [] ,
+                "format":         ["remote(.)course" , "online(.)course" , "hybrid(.)course"] ,
                 "attenPol":       ["attendance" , "attendance(.)policy" , "absent"] ,
                 "reqRead":        ["required(.*)read" , "read(.*)required" , "Textbook" , "ISBN" , "test(.)*course"] ,
-                "courseDes":      ["course description" , "class description"] ,
                 "acadHonest":     ["academic honesty" , "cheating" , "plagiarism"] ,
-                "teachAct":       [] ,
-                "accommod":       ["Students with disabilities"] ,
-                "courseDes":      ["description"] ,
+                "teachAct":       ["Materials used in connection" , "subject to copyright protection"] ,
+                "accommod":       ["Students with disabilities" , "accommodations and accessibility"] ,
                 "diversity":      [] , # not technically req
             }
 
@@ -51,11 +49,9 @@ found = {   #empty dictionary of arrays to store any matches to analyize later
             "format":         [] ,
             "attenPol":       [] ,
             "reqRead":        [] ,
-            "courseDes":      [] ,
             "acadHonest":     [] ,
             "teachAct":       [] ,
             "accommod":       [] ,
-            "courseDes":      [] ,
             "diversity":      [] , # not technically req
         }
 
@@ -78,11 +74,9 @@ keyToName = {   #empty dictionary of arrays to store any matches to analyize lat
                 "format":         "Classroom format (lecture, lab, discussion" ,
                 "attenPol":       "Attendance policy" ,
                 "reqRead":        "Semester required reading" ,
-                "courseDes":      "Course description" ,
                 "acadHonest":     "Statement on academic honesty" ,
                 "teachAct":       "TEACH Act disclosure" ,
                 "accommod":       "Accommodations & Assesibilty Statement" ,
-                "courseDes":      "Course description" ,
                 "diversity":      "Statement on diversity" , # not technically req
         }
 
@@ -99,26 +93,29 @@ def checkFileAnal():
     o = open(logFile, "a")
     o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
-    s = open(textFile , "r")
+    s = open(textFile , "r" , encoding="utf8")
 
     matches = 0
     cmdIdex = 0
 
     for key in keywords: #loops through entire dictionary
         o.write("\n\nResults for " + key + ":")
-        for line in s: #loops through each line of sylibus
-            cmdIdex = 0
-            for i in keywords[key]: #loops through each regex search
-                #print(i)
-                cmdList = keywords[key]
-                result = re.search(i , line , re.IGNORECASE) #searches line for regex command
-                if(result != None):
-                    matches += 1
-                    found[key].append(result)
-                    match = line[result.span()[0] : result.span()[1]]
-                    o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
+        try:
+            for line in s: #loops through each line of sylibus
+                cmdIdex = 0
+                for i in keywords[key]: #loops through each regex search
+                    #print(i)
+                    cmdList = keywords[key]
+                    result = re.search(i , line , re.IGNORECASE) #searches line for regex command
+                    if(result != None):
+                        matches += 1
+                        found[key].append(result)
+                        match = line[result.span()[0] : result.span()[1]]
+                        o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
 
-        s.seek(0) #sets file pointer back to the begining
+            s.seek(0) #sets file pointer back to the begining
+        except:
+            print("ERROR LINE COULD NOT BE READ")
 
     print("file checked, " + str(matches) + " matches found")
 
