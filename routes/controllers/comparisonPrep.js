@@ -38,7 +38,7 @@ function callSnek(uuid){
   var dataToSend;
   var pyPath = path.normalize(path.join(__dirname, '/../python/compare.py'));
   var file = path.normalize(path.join(__dirname, '/../../uploads/'+ uuid +'.txt'));
-  file = file.split("//");
+  //file = file.split("//");
   console.log(file);
   var pythonProcess = spawn('python', [pyPath, file]);
   pythonProcess.stdout.on('data', (data) => {
