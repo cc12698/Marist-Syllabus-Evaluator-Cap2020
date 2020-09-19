@@ -13,16 +13,16 @@ exports.postComparison = function(req, res){
     if (err) {
         return console.log('Unable to scan directory: ' + err);
     }
+    var uuidCre = uuid();
     //listing all files using forEach
     files.forEach(function (file) {
       var allowDoc =  /(\.doc|\.docx)$/i;
       var allowPDF =  /(\.pdf)$/i;
       var allowPages =  /(\.pages)$/i;
       var filePath = "./uploads/" + file;
-      var uuidCre = uuid();
+
       if(allowDoc.exec(filePath)){
         doc(filePath, uuidCre);
-        callSnek(uuidCre);
       }
       else if(allowPDF.exec(filePath)){
         pdf(filePath);
@@ -31,6 +31,7 @@ exports.postComparison = function(req, res){
         pages(filePath)
       }
     });
+    callSnek(uuidCre);
   });
 }
 
@@ -38,7 +39,6 @@ function callSnek(uuid){
   var dataToSend;
   var pyPath = path.normalize(path.join(__dirname, '/../python/compare.py'));
   var file = path.normalize(path.join(__dirname, '/../../uploads/'+ uuid +'.txt'));
-  //file = file.split("//");
   console.log(file);
   var pythonProcess = spawn('python', [pyPath, file]);
   pythonProcess.stdout.on('data', (data) => {
