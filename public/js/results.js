@@ -1,4 +1,11 @@
-window.addEventListener('load', function(){
+var Chart = require('chart.js');
+var ctx = document.getElementById('myChart').getContext('2d');
+var myDoughnutChart = new Chart(ctx,{
+  type: 'doughnut',
+  data: data,
+  options: options
+});
+/*window.addEventListener('load', function(){
   screen();
 });
 
@@ -13,4 +20,4 @@ window.addEventListener('load', function(){
        logAdd(data);
      });
    });
- }
+ }*/

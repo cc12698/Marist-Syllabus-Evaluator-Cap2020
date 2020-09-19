@@ -1,8 +1,4 @@
-/*const spawn = require("child_process").spawn;
-const pythonProcess = spawn('python3',["../python/compare.py"]);
-pythonProcess.stdout.on('data', (data) => {
-  console.log(data.toString());
-});*/
+const spawn = require("child_process").spawn;
 const fs = require('fs');
 const path = require('path');
 const mammoth = require("mammoth");
@@ -11,21 +7,22 @@ const uuid = require('uuid-random')
 const yauzl = require("yauzl");
 
 exports.postComparison = function(req, res){
-  console.log('fired');
   var directoryPath = path.normalize(__dirname + "/../../uploads");
   fs.readdir(directoryPath, function (err, files) {
     //handling error
     if (err) {
         return console.log('Unable to scan directory: ' + err);
     }
+    var uuidCre = uuid();
     //listing all files using forEach
     files.forEach(function (file) {
       var allowDoc =  /(\.doc|\.docx)$/i;
       var allowPDF =  /(\.pdf)$/i;
       var allowPages =  /(\.pages)$/i;
       var filePath = "./uploads/" + file;
+
       if(allowDoc.exec(filePath)){
-        doc(filePath);
+        doc(filePath, uuidCre);
       }
       else if(allowPDF.exec(filePath)){
         pdf(filePath);
@@ -34,14 +31,35 @@ exports.postComparison = function(req, res){
         pages(filePath)
       }
     });
+    callSnek(uuidCre);
   });
 }
 
-async function doc(file){
+function callSnek(uuid){
+  var dataToSend;
+  var pyPath = path.normalize(path.join(__dirname, '/../python/compare.py'));
+  var file = path.normalize(path.join(__dirname, '/../../uploads/'+ uuid +'.txt'));
+  console.log(file);
+  var pythonProcess = spawn('python', [pyPath, file]);
+  pythonProcess.stdout.on('data', (data) => {
+    console.log('pipe data');
+    dataToSend = data.toString();
+  });
+
+  pythonProcess.stdout.on('end', function(){
+    console.log("test: " + dataToSend);
+  });
+
+  pythonProcess.on('close', (code) => {
+    console.log(`child process close all stdio with code ${code}`);
+  });
+}
+
+async function doc(file, uuid){
   mammoth.extractRawText({path: file})
     .then(function(result){
         var text = result.value; // The raw text
-        fs.writeFile('./uploads/'+ uuid() +'.txt', text, (err) => {
+        fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
           if (err) throw err;
           console.log('The file has been saved!');
         });

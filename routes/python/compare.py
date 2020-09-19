@@ -1,10 +1,5 @@
 import sys
-import json
-
-resp = {
-    "Response":200,
-    "Message": "Data from Python"
-}
-
-print(json.dumps(resp))
-sys.stdout.flush()
+print('#Hello from python#')
+print(sys.argv[1])
+#file = open(sys.argv[1], encoding="utf-8")
+#print(file.read())
