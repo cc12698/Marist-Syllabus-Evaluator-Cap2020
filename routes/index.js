@@ -48,6 +48,11 @@ app.get('/mainmenu', function(req, res){
   res.render('../views/mainmenu.ejs')
 });
 
+app.get('/result', function(req, res){
+  res.render('../views/results.ejs')
+});
+
+
 //upload a syllabus to be stored in 'uploads' folder
 app.post('/uploadSyllabus', async (req, res) => {
     try {
@@ -63,9 +68,7 @@ app.post('/uploadSyllabus', async (req, res) => {
           if (!fs.existsSync(dir)){
               fs.mkdirSync(dir);
           }
-
           uploadedFile.mv(dir + uploadedFile.name);
-
           //send response
           res.send({
               status: true,
@@ -83,15 +86,6 @@ app.post('/uploadSyllabus', async (req, res) => {
     }
 });
 
-// app.post('/uploadSyllabus',function(req,res){
-//     dm.upload(req,res,function(err) {
-//         if(err) {
-//             return res.end(err.toString());
-//         }
-//         console.log(req.file)
-//         res.end("File is uploaded");
-//     });
-// });
 
 app.listen(8080,() => console.log("running on port 8080: http://localhost:8080/"));
 //nodemon server/capping.js to run
