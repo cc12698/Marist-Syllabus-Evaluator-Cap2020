@@ -1,4 +1,4 @@
-const { spawn } = require("child_process");
+const spawn = require("child_process").spawn;
 const fs = require('fs');
 const path = require('path');
 const mammoth = require("mammoth");
@@ -7,7 +7,6 @@ const uuid = require('uuid-random')
 const yauzl = require("yauzl");
 
 exports.postComparison = function(req, res){
-  console.log('fired');
   var directoryPath = path.normalize(__dirname + "/../../uploads");
   fs.readdir(directoryPath, function (err, files) {
     //handling error
@@ -20,9 +19,10 @@ exports.postComparison = function(req, res){
       var allowPDF =  /(\.pdf)$/i;
       var allowPages =  /(\.pages)$/i;
       var filePath = "./uploads/" + file;
+      var uuidCre = uuid();
       if(allowDoc.exec(filePath)){
-        doc(filePath);
-        callSnek();
+        doc(filePath, uuidCre);
+        callSnek(uuidCre);
       }
       else if(allowPDF.exec(filePath)){
         pdf(filePath);
@@ -34,25 +34,31 @@ exports.postComparison = function(req, res){
   });
 }
 
-function callSnek(){
-  console.log('sssss');
+function callSnek(uuid){
   var dataToSend;
-  const pythonProcess = spawn('python', ["../python/compare.py"]);
+  var pyPath = path.normalize(path.join(__dirname, '/../python/compare.py'));
+  var file = '"' + path.join(__dirname, '/../../uploads/'+ uuid +'.txt') + '"';
+  console.log(file);
+  var pythonProcess = spawn('python', [pyPath, file]);
   pythonProcess.stdout.on('data', (data) => {
+    console.log('pipe data');
     dataToSend = data.toString();
   });
 
+  pythonProcess.stdout.on('end', function(){
+    console.log("test: " + dataToSend);
+  });
+
   pythonProcess.on('close', (code) => {
-   console.log(`child process close all stdio with code ${code}`);
-   console.log(dataToSend);
-   });
+    console.log(`child process close all stdio with code ${code}`);
+  });
 }
 
-async function doc(file){
+async function doc(file, uuid){
   mammoth.extractRawText({path: file})
     .then(function(result){
         var text = result.value; // The raw text
-        fs.writeFile('./uploads/'+ uuid() +'.txt', text, (err) => {
+        fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
           if (err) throw err;
           console.log('The file has been saved!');
         });
