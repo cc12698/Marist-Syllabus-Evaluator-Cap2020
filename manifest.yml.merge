@@ -5,6 +5,6 @@ applications:
   name: syllabus-eval
   buildpack: sdk-for-nodejs
   command: npm run dev
-  memory: 512M
+  memory: 128M
   domain: not-used.net
   host: not-used
