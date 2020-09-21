@@ -36,6 +36,10 @@ app.get('/headerLogin', function(req, res){
   res.render('../views/headerLogin.ejs')
 });
 
+app.get('/sampleSyllabi', function(req, res){
+  res.render('../views/sampleSyllabi.ejs')
+});
+
 app.get('/footer', function(req, res){
   res.render('../views/footer.ejs')
 });
