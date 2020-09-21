@@ -2,7 +2,7 @@ import sys
 import re
 import datetime
 
-textFile = "exampleText.txt"
+textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
 
 keywords = {    #list of regex commands ment to seach for items
@@ -93,13 +93,12 @@ cmdIdex = 0
 def checkFileAnal():
     print("checking file...")
     #print(keywords)
-
     now = datetime.datetime.now()
 
     o = open(logFile, "a")
     o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
-    s = open(textFile , "r")
+    s = open(textFile, encoding="utf-8")
 
     matches = 0
     cmdIdex = 0
@@ -135,7 +134,7 @@ def checkFileFast():
     o = open(logFile, "a")
     o.write("\n\n\n\nOutput for " + "textFile") #text file will be the sylibus being evaluated
 
-    s = open(textFile , "r")
+    s = open(textFile, encoding="utf-8")
 
     matches = 0
     cmdIdex = 0

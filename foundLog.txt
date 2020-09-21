@@ -1,0 +1,85 @@
+
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\7c680811-f525-4f4a-bee0-43eb3153b444.txt on 2020-09-20 20:57:16
+
+Results for courseDes:
+Match to "description" in line "When you hear stories of infantrymen who have gone into battle zones you hear consistently that the complexities of warfare quickly fade away, and that eventually you are simply fighting for the man on your left and the man on your right. You are fighting for them and they are fighting for you and eventually the battle or the war matters less and less until you just know that you are fighting together and it is that simple; and as long as he fights on, so must you. This is the most apt description of rowing that I can muster and it rings true for me because, ultimately, this sport has never been about races won and lost, medals that hung on your neck or shirts obtained from the loser. I have always been the most moved and the most captivated by the extraordinary efforts of the men and women around me. I have loved almost every athlete to ever row or cox for me like a son or a daughter because I KNOW that they are giving every ounce of their being AND that tiny little piece of their soul to the team and to me": description
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "The coaches and administrators are absolutely shattered for all of you. We all competed in college and we all know well, the sense of urgency, the sense of pride and purpose that goes into our yearly training. We who work in college athletics LOVE this sense of purpose, it is what drives us on a yearly basis to work odd hours and in terrible conditions to help sculp teams of competitors to bring to our prospective fields of competition. Because we know how hard you all work and how hard we push for you, we share in the loss of the spring season equally and it hurts us grievously to see talent left un-used, fitness unspent and competitive spirits left in the wind.": dr
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\65061381-1f39-4681-89f5-27d0706d0b08.txt on 2020-09-20 21:00:10
+
+Results for courseDes:
+Match to "description" in line "When you hear stories of infantrymen who have gone into battle zones you hear consistently that the complexities of warfare quickly fade away, and that eventually you are simply fighting for the man on your left and the man on your right. You are fighting for them and they are fighting for you and eventually the battle or the war matters less and less until you just know that you are fighting together and it is that simple; and as long as he fights on, so must you. This is the most apt description of rowing that I can muster and it rings true for me because, ultimately, this sport has never been about races won and lost, medals that hung on your neck or shirts obtained from the loser. I have always been the most moved and the most captivated by the extraordinary efforts of the men and women around me. I have loved almost every athlete to ever row or cox for me like a son or a daughter because I KNOW that they are giving every ounce of their being AND that tiny little piece of their soul to the team and to me": description
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "The coaches and administrators are absolutely shattered for all of you. We all competed in college and we all know well, the sense of urgency, the sense of pride and purpose that goes into our yearly training. We who work in college athletics LOVE this sense of purpose, it is what drives us on a yearly basis to work odd hours and in terrible conditions to help sculp teams of competitors to bring to our prospective fields of competition. Because we know how hard you all work and how hard we push for you, we share in the loss of the spring season equally and it hurts us grievously to see talent left un-used, fitness unspent and competitive spirits left in the wind.": dr
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\a86d4617-bbb3-45a8-9b0b-48a572bdecee.txt on 2020-09-20 21:00:29
+
+Results for courseDes:
+Match to "description" in line "When you hear stories of infantrymen who have gone into battle zones you hear consistently that the complexities of warfare quickly fade away, and that eventually you are simply fighting for the man on your left and the man on your right. You are fighting for them and they are fighting for you and eventually the battle or the war matters less and less until you just know that you are fighting together and it is that simple; and as long as he fights on, so must you. This is the most apt description of rowing that I can muster and it rings true for me because, ultimately, this sport has never been about races won and lost, medals that hung on your neck or shirts obtained from the loser. I have always been the most moved and the most captivated by the extraordinary efforts of the men and women around me. I have loved almost every athlete to ever row or cox for me like a son or a daughter because I KNOW that they are giving every ounce of their being AND that tiny little piece of their soul to the team and to me": description
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "The coaches and administrators are absolutely shattered for all of you. We all competed in college and we all know well, the sense of urgency, the sense of pride and purpose that goes into our yearly training. We who work in college athletics LOVE this sense of purpose, it is what drives us on a yearly basis to work odd hours and in terrible conditions to help sculp teams of competitors to bring to our prospective fields of competition. Because we know how hard you all work and how hard we push for you, we share in the loss of the spring season equally and it hurts us grievously to see talent left un-used, fitness unspent and competitive spirits left in the wind.": dr
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\84928d4e-3fa0-40a6-b5e9-f513697ea54e.txt on 2020-09-20 21:08:47
+
+Results for courseDes:
+Match to "description" in line "When you hear stories of infantrymen who have gone into battle zones you hear consistently that the complexities of warfare quickly fade away, and that eventually you are simply fighting for the man on your left and the man on your right. You are fighting for them and they are fighting for you and eventually the battle or the war matters less and less until you just know that you are fighting together and it is that simple; and as long as he fights on, so must you. This is the most apt description of rowing that I can muster and it rings true for me because, ultimately, this sport has never been about races won and lost, medals that hung on your neck or shirts obtained from the loser. I have always been the most moved and the most captivated by the extraordinary efforts of the men and women around me. I have loved almost every athlete to ever row or cox for me like a son or a daughter because I KNOW that they are giving every ounce of their being AND that tiny little piece of their soul to the team and to me": description
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "The coaches and administrators are absolutely shattered for all of you. We all competed in college and we all know well, the sense of urgency, the sense of pride and purpose that goes into our yearly training. We who work in college athletics LOVE this sense of purpose, it is what drives us on a yearly basis to work odd hours and in terrible conditions to help sculp teams of competitors to bring to our prospective fields of competition. Because we know how hard you all work and how hard we push for you, we share in the loss of the spring season equally and it hurts us grievously to see talent left un-used, fitness unspent and competitive spirits left in the wind.": dr
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\d04d3d89-862a-46a7-8a34-6c3713095403.txt on 2020-09-20 21:09:42

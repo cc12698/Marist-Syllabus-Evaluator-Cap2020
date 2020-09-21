@@ -1,5 +1,3 @@
-//window.addEventListener('load', function(){}
-
 Chart.pluginService.register({
    beforeDraw: function(chart) {
      if (chart.config.options.elements.center) {
