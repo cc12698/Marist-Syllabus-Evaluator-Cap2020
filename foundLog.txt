@@ -83,3 +83,461 @@ Match to "Dr" in line "The coaches and administrators are absolutely shattered f
 
 
 Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\d04d3d89-862a-46a7-8a34-6c3713095403.txt on 2020-09-20 21:09:42
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\92628c61-ce78-42c3-8c58-e0e749b77451.txt on 2020-09-21 09:48:17
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\315cf874-d836-4971-a1ff-ae1ec590f28d.txt on 2020-09-21 09:49:05
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "Our performance goals are still quite clear. We will be attending the NIRC regatta in early May and will face competition from a variety of schools among whom the most dangerous and most likely competitor is Hobart. Only a win in the V8 at this event will GUARANTEE a bid to the IRA for 2021. The only other pathway to the IRA is through a HIGHLY competitive regular season which incorporates wins against other IRA bubble competitors. Key schools in this group include MIT, Georgetown, Temple, Drexel, St. Joes and Holy Cross": Dr
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+Match to "bee" in line "In the past I have taken some time over the summer to write up what my expectations for the season and the year to come are with some analysis of where we ended the last year. 2020 has been totally lame and to say that we were all disappointed with the result is an understatement": bee
+Match to "bee" in line "Coming into the spring last year the V8 was looking at a potentially fantastic spring. Based on the numbers we had seen on land and on the water, we were not only on track for an IRA bid but Stratton and I felt that we could have been in the hunt for the 3rd final which would really have been something special. The 2V and the 3V were in strong positions to support this ranking and in particular we felt that the 2V group made some substantial gains at our winter camp in DeLand. The Frosh continued to infuse the crew with excitement all winter and we were amped to be heading into Clemson with serious momentum and a number of our competitors genuinely worried. Our main target for the NIRC win was Hobart who we beat by 3sec at HOCR. It is obviously impossible to tell who would have come out on top, but my personal opinion is that we found a new gear last fall that we hadn’t seen before, and we were going to have the tools to crush Hobart in the closing meters that we didn’t have in 2019": bee
+Match to "bee" in line "My final thought here is just the general sense of the teamsmanship and support that we need to provide for one another this fall. Never has it been more important to cheer eachother on, to push eachother, to grind for eachother. Never has it been more important to give a high five (elbow?) to offer some advice to a younger guy or to cut someone some slack who is trying to learn. Never has it been more important to be 100% invested in one another and in the process and to give each practice your full effort and attention. Last year’s seniors are proof that you do not get that many shots at the collegiate season and it is impossible to know when it will be “your year”. The only sure thing is that you must train and commit to the process like it’s going to be your year EVERY year. Last year’s crew had this in spades and they showed on the water that any crew can MAKE IT your year through hard work and commitment": bee
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\7bc0e7a9-f1b5-4a04-989f-9ed9b6b6f316.txt on 2020-09-21 09:50:45
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\7bc0e7a9-f1b5-4a04-989f-9ed9b6b6f316.txt on 2020-09-21 09:50:45
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\2f7cd3ee-4b37-49a6-87d1-12f6efe7a9dd.txt on 2020-09-21 09:51:19
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "Our performance goals are still quite clear. We will be attending the NIRC regatta in early May and will face competition from a variety of schools among whom the most dangerous and most likely competitor is Hobart. Only a win in the V8 at this event will GUARANTEE a bid to the IRA for 2021. The only other pathway to the IRA is through a HIGHLY competitive regular season which incorporates wins against other IRA bubble competitors. Key schools in this group include MIT, Georgetown, Temple, Drexel, St. Joes and Holy Cross": Dr
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+Match to "bee" in line "In the past I have taken some time over the summer to write up what my expectations for the season and the year to come are with some analysis of where we ended the last year. 2020 has been totally lame and to say that we were all disappointed with the result is an understatement": bee
+Match to "bee" in line "Coming into the spring last year the V8 was looking at a potentially fantastic spring. Based on the numbers we had seen on land and on the water, we were not only on track for an IRA bid but Stratton and I felt that we could have been in the hunt for the 3rd final which would really have been something special. The 2V and the 3V were in strong positions to support this ranking and in particular we felt that the 2V group made some substantial gains at our winter camp in DeLand. The Frosh continued to infuse the crew with excitement all winter and we were amped to be heading into Clemson with serious momentum and a number of our competitors genuinely worried. Our main target for the NIRC win was Hobart who we beat by 3sec at HOCR. It is obviously impossible to tell who would have come out on top, but my personal opinion is that we found a new gear last fall that we hadn’t seen before, and we were going to have the tools to crush Hobart in the closing meters that we didn’t have in 2019": bee
+Match to "bee" in line "My final thought here is just the general sense of the teamsmanship and support that we need to provide for one another this fall. Never has it been more important to cheer eachother on, to push eachother, to grind for eachother. Never has it been more important to give a high five (elbow?) to offer some advice to a younger guy or to cut someone some slack who is trying to learn. Never has it been more important to be 100% invested in one another and in the process and to give each practice your full effort and attention. Last year’s seniors are proof that you do not get that many shots at the collegiate season and it is impossible to know when it will be “your year”. The only sure thing is that you must train and commit to the process like it’s going to be your year EVERY year. Last year’s crew had this in spades and they showed on the water that any crew can MAKE IT your year through hard work and commitment": bee
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\2f7cd3ee-4b37-49a6-87d1-12f6efe7a9dd.txt on 2020-09-21 09:51:19
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "Our performance goals are still quite clear. We will be attending the NIRC regatta in early May and will face competition from a variety of schools among whom the most dangerous and most likely competitor is Hobart. Only a win in the V8 at this event will GUARANTEE a bid to the IRA for 2021. The only other pathway to the IRA is through a HIGHLY competitive regular season which incorporates wins against other IRA bubble competitors. Key schools in this group include MIT, Georgetown, Temple, Drexel, St. Joes and Holy Cross": Dr
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+Match to "bee" in line "In the past I have taken some time over the summer to write up what my expectations for the season and the year to come are with some analysis of where we ended the last year. 2020 has been totally lame and to say that we were all disappointed with the result is an understatement": bee
+Match to "bee" in line "Coming into the spring last year the V8 was looking at a potentially fantastic spring. Based on the numbers we had seen on land and on the water, we were not only on track for an IRA bid but Stratton and I felt that we could have been in the hunt for the 3rd final which would really have been something special. The 2V and the 3V were in strong positions to support this ranking and in particular we felt that the 2V group made some substantial gains at our winter camp in DeLand. The Frosh continued to infuse the crew with excitement all winter and we were amped to be heading into Clemson with serious momentum and a number of our competitors genuinely worried. Our main target for the NIRC win was Hobart who we beat by 3sec at HOCR. It is obviously impossible to tell who would have come out on top, but my personal opinion is that we found a new gear last fall that we hadn’t seen before, and we were going to have the tools to crush Hobart in the closing meters that we didn’t have in 2019": bee
+Match to "bee" in line "My final thought here is just the general sense of the teamsmanship and support that we need to provide for one another this fall. Never has it been more important to cheer eachother on, to push eachother, to grind for eachother. Never has it been more important to give a high five (elbow?) to offer some advice to a younger guy or to cut someone some slack who is trying to learn. Never has it been more important to be 100% invested in one another and in the process and to give each practice your full effort and attention. Last year’s seniors are proof that you do not get that many shots at the collegiate season and it is impossible to know when it will be “your year”. The only sure thing is that you must train and commit to the process like it’s going to be your year EVERY year. Last year’s crew had this in spades and they showed on the water that any crew can MAKE IT your year through hard work and commitment": bee
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\3405ec81-de49-41dd-85bc-58baed10f628.txt on 2020-09-21 10:55:40
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "Our performance goals are still quite clear. We will be attending the NIRC regatta in early May and will face competition from a variety of schools among whom the most dangerous and most likely competitor is Hobart. Only a win in the V8 at this event will GUARANTEE a bid to the IRA for 2021. The only other pathway to the IRA is through a HIGHLY competitive regular season which incorporates wins against other IRA bubble competitors. Key schools in this group include MIT, Georgetown, Temple, Drexel, St. Joes and Holy Cross": Dr
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+Match to "bee" in line "In the past I have taken some time over the summer to write up what my expectations for the season and the year to come are with some analysis of where we ended the last year. 2020 has been totally lame and to say that we were all disappointed with the result is an understatement": bee
+Match to "bee" in line "Coming into the spring last year the V8 was looking at a potentially fantastic spring. Based on the numbers we had seen on land and on the water, we were not only on track for an IRA bid but Stratton and I felt that we could have been in the hunt for the 3rd final which would really have been something special. The 2V and the 3V were in strong positions to support this ranking and in particular we felt that the 2V group made some substantial gains at our winter camp in DeLand. The Frosh continued to infuse the crew with excitement all winter and we were amped to be heading into Clemson with serious momentum and a number of our competitors genuinely worried. Our main target for the NIRC win was Hobart who we beat by 3sec at HOCR. It is obviously impossible to tell who would have come out on top, but my personal opinion is that we found a new gear last fall that we hadn’t seen before, and we were going to have the tools to crush Hobart in the closing meters that we didn’t have in 2019": bee
+Match to "bee" in line "My final thought here is just the general sense of the teamsmanship and support that we need to provide for one another this fall. Never has it been more important to cheer eachother on, to push eachother, to grind for eachother. Never has it been more important to give a high five (elbow?) to offer some advice to a younger guy or to cut someone some slack who is trying to learn. Never has it been more important to be 100% invested in one another and in the process and to give each practice your full effort and attention. Last year’s seniors are proof that you do not get that many shots at the collegiate season and it is impossible to know when it will be “your year”. The only sure thing is that you must train and commit to the process like it’s going to be your year EVERY year. Last year’s crew had this in spades and they showed on the water that any crew can MAKE IT your year through hard work and commitment": bee
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\74a69049-7158-4b5d-a352-b1140e9dcb86.txt on 2020-09-21 10:55:45
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "Our performance goals are still quite clear. We will be attending the NIRC regatta in early May and will face competition from a variety of schools among whom the most dangerous and most likely competitor is Hobart. Only a win in the V8 at this event will GUARANTEE a bid to the IRA for 2021. The only other pathway to the IRA is through a HIGHLY competitive regular season which incorporates wins against other IRA bubble competitors. Key schools in this group include MIT, Georgetown, Temple, Drexel, St. Joes and Holy Cross": Dr
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+Match to "bee" in line "In the past I have taken some time over the summer to write up what my expectations for the season and the year to come are with some analysis of where we ended the last year. 2020 has been totally lame and to say that we were all disappointed with the result is an understatement": bee
+Match to "bee" in line "Coming into the spring last year the V8 was looking at a potentially fantastic spring. Based on the numbers we had seen on land and on the water, we were not only on track for an IRA bid but Stratton and I felt that we could have been in the hunt for the 3rd final which would really have been something special. The 2V and the 3V were in strong positions to support this ranking and in particular we felt that the 2V group made some substantial gains at our winter camp in DeLand. The Frosh continued to infuse the crew with excitement all winter and we were amped to be heading into Clemson with serious momentum and a number of our competitors genuinely worried. Our main target for the NIRC win was Hobart who we beat by 3sec at HOCR. It is obviously impossible to tell who would have come out on top, but my personal opinion is that we found a new gear last fall that we hadn’t seen before, and we were going to have the tools to crush Hobart in the closing meters that we didn’t have in 2019": bee
+Match to "bee" in line "My final thought here is just the general sense of the teamsmanship and support that we need to provide for one another this fall. Never has it been more important to cheer eachother on, to push eachother, to grind for eachother. Never has it been more important to give a high five (elbow?) to offer some advice to a younger guy or to cut someone some slack who is trying to learn. Never has it been more important to be 100% invested in one another and in the process and to give each practice your full effort and attention. Last year’s seniors are proof that you do not get that many shots at the collegiate season and it is impossible to know when it will be “your year”. The only sure thing is that you must train and commit to the process like it’s going to be your year EVERY year. Last year’s crew had this in spades and they showed on the water that any crew can MAKE IT your year through hard work and commitment": bee
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\c6d4434a-aeff-4310-91dd-93c904d6ae97.txt on 2020-09-21 11:02:41
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "background helps the viewer draw attention to the characters in the middle ground. The objects ": dr
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\52f37674-797c-4b76-b054-c9e2cfa6370a.txt on 2020-09-21 11:03:01
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "background helps the viewer draw attention to the characters in the middle ground. The objects": dr
+
+Results for instrContact:
+
+Results for demoConsistant:
+
+Results for assesMethod:
+
+Results for rubrics:
+
+Results for biblio:
+
+Results for assignments:
+
+Results for taskCrit:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+Results for diversity:
