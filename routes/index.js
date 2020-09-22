@@ -8,6 +8,7 @@ const dm = require('../dataManager');
 var multer = require('multer');
 var fs = require('fs');
 const  compPrep = require('./controllers/comparisonPrep');
+const config = require('../config');
 
 app.use(fileUpload());
 
