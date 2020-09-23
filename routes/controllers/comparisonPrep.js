@@ -55,6 +55,8 @@ function callSnek(uuid){
   pythonProcess.on('close', (code) => {
     console.log(`child process close all stdio with code ${code}`);
   });
+
+  return dataToSend;
 }
 
 async function doc(file, uuid){
