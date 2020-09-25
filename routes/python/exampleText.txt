@@ -1,87 +1,196 @@
-ART/MDIA431	3D	Modeling	&	Visualization, 3	Credits,	Prerequisites:	ART/231
-Department	of	Art	&	Digital	Media
-Remote	- Monday/Thursday	12:30	- 1:45pm
-Matt	Frieburghaus
-Email:	Matthew(dot)Frieburghaus(at)Marist(dot)edu
-Virtual	Office	Hours: M	2-3pm,	T	11am - 2pm,	W	10-12pm
-Course	Description
-This	course	will	focus	on	the	principles	and	techniques	of	creating	3D	models	for
-visualization	and	animation.	Students	will	explore	the	processes	of	this	art	form,	including
-modeling,	texturing,	shading,	scene	creation,	and	rendering,	in	order	to	create	meaningful
-and	unique	visualizations.	Students	will	learn	to	output	digital	files	for	2D	prints	and	create
-3D	prints	from	digital	models.
-Outcomes	and	Methods
-Students	will	gain	knowledge	of	3D	development,	using	the	Autodesk	Maya	software.
-Students	will	become	familiar	with	current	issues	related	to	3D	graphics	through	projects
-and	class	discussion.	Students	will	begin	to	develop	a	greater	understanding	and
-appreciation	of	aesthetics	in	3D	representation.	Students	will	develop	a	body	of	work
-reflecting	the	processes	and	materials	covered	in	class.
-Each	unit	of	instruction	will	introduce	students	to	a	process	of	creating	3D	graphics.
-Students	will	also	learn	some	necessary	concepts	for	creating	animations	or	simple
-movement	of	3D	models.	Direct	studio	contact	between	student	and	teacher	will	reinforce
-other	methods	of	instruction.	This	course	is	not	intended	to	provide	mastery	of	3D
-development,	but	it	will	provide	students	with	a	full	range	of	knowledge	that	covers	the
-creative	process	in	a	3D	environment.
-Textbook/Supplies
-Todd	Palomar,	Mastering	Autodesk	Maya	2016:	Autodesk	Official	Press,	Sybex;	1	edition
-(August	10,	2015), ISBN-13: 978-1119059820
-Additional	texts	and	resources	will	be	introduced	in	class.
-Other	supplies	include:	Sketchbooks,	Notebooks,	external	hard	drives,	flash	drives,	etc
-Please	invest	in	your	work	and	purchase	an	external	hard	drive	for	back	up	in	addition	to	a
-USB	flash	drive	for	easy	transportation	and	transfer	of	digital	files.
-Requirements
-Regular	and	on-time	attendance	 and	participation,	including	contribution	to	critiques	and
-discussions	is	mandatory.	On-time	completion	of	projects	is	required.	You	will	be	expected
-to	describe	and	discuss	your	own	work	as	well	as	the	work	of	your	peers	in	forums	and
-critiques.
-Assessment	and	Grading
-Assessment	will	be	based	on	perceived	insights	during	class	critiques	and	discussions,	as
-well	as	individual	discussions	with	students	during	the	creation	of	their	projects.	Projects
-will	be	evaluated	using	three	categories	or	criteria:	Project	Guidelines,	Outcomes,	and
-Technical	ability.	The	guidelines	portion	of	your	grade	evaluates	the	proper	completion,
-due	date,	and	presentation	of	a	project.	The	outcomes	portion	of	a	grade	will	evaluate	the
-aesthetic	and	conceptual	properties	of	a	project.	The	technical	portion	of	a	grade	will
-evaluate	comprehension	of	tools	and	materials	demonstrated	in	class.	Finally,	assessment
-will	be	based	on	a	final	review	of	all	projects	completed	throughout	the	semester	along
-with	student	participation.	Grades	will	be	submitted	and	released	on	iLearn.
-Class	participation	=	10	points
-Project	1	Primitives	=	10	points
-Project	2	Nurbs	=	10	points
-Project	3	Character	=	20	points
-Project	4	B/W	Scene	and	Layout	=	25	points
-Final	Full	Scenes =	25	points
-Total	possible	points	=	100	points
-Schedule	(tentative)
-Week	1	(Monday	8/24) Introduction	to	course	and	3D	|	iLearn	and	course	structure	|
-Modeling	exercise	to	introduce	the	Maya	inteface,	tools,	and	processes
-(Thursday	8/27) Review	exercise	|	discuss	project	1	|	Tools	and	strategies	for	completing
-first	set	of	models
-Week	2	(Monday	8/31)		Additional	tools
-(Thursday	9/3) Review	production
-Week	3	(Monday	9/7) Project	1	(primitives)	due	(6	models)
-(Thursday	9/10) CV	tool,	creating	Nurbs	objects	|	deformations	and	conversions
-Week	4	(Monday	9/14) Editing	curves	|	lofts	and	extrudes
-(Thursday	9/17) Review	of	surface	tools
-Week	5	Monday	(9/21) Project	2	(nurbs)	due	(6	models)
-(Thursday	9/24) Intro	to	Project	3	- Modeling	hands
-Week	6	(Monday	9/28) Modeling	heads	and	facial	features
-(Thursday	10/1) Modeling	heads	and	facial	features
-Week	7	(Monday	10/5) Character	modeling
-(Thursday	10/8) Skeleton	and	binding	skin
-Week	8	(Monday	10/12) Rigging	skeletons	and	Weight	Maps
-(Thursday	10/15) Review	of	production
-Week	9	(Monday	10/19)		Project	3	(Character	model)	due |	Intro	to	Project	4
-(Thursday	10/22) Review	scene	sketches
-Week	10	(Monday	10/26)		Constructing	a	scene	|	Environments
-(Thursday	10/29) Camera	|	keying	positions
-Week	11	(Monday	11/2) Lighting	and	shadow	|	keying	positions
-(Thursday	11/5) Bump	and	transparency	maps
-Week	12	(Monday	11/9) Review	of	production
-(Thursday	11/12) Project	4	(b/w	shaded	scenes)	due
-Week	13	(Monday	11/16) Introduce	final	project	|	Advanced	Shading
-(Thursday	11/19)		Review	scene	sketches
-Week	14	(Monday	11/23) Advanced	Shading
-(Thursday	11/26) Thanksgiving	Holiday
-Week	15	(Monday	11/30) FX	and	Rendering
-(Thursday	12/3) Production	Review
-Final	Week	(Wednesday,	December	9,	1pm) Final	scenes	due
+Database Management
+CMPT 308N112
+Marist College, Fall 2018
+Course Information
+Instructor: Dr. Donald R. Schwartz
+Time: MTR 9:30-10:45 (HC0005)
+Office: HC 3019
+Phone: 845-575-3678
+Office Hours: MTR 1:20-2:00 and 3:15-4:15; other hours by appointment
+E-mail ID: Donald.Schwartz@Marist.edu
+Textbooks: • Database Management Systems Design, Implementation and Management, 12
+th edition,
+by Coronel & Morris, Cengage Learning, ISBN: 978-1-305-62748-2 (required).
+Course Objectives/Content:
+This course examines the theories and concepts employed in database management systems (DBMS). The
+function of various types of DBMS is described including their purpose, advantages, disadvantages, and
+applications in business. The course explores the following topics: DBMS architectures, data modeling, the
+relational model, database normalization, relational algebra, SQL, client/server systems, DB physical design,
+multiple user environments, database security. The students will work with a major DBMS to develop database
+projects.
+Each course learning objective is associated with a goal for the Computer Science Major, listed in square
+brackets. See the goals appendix at the end of this syllabus for reference.
+After completing this course, students should be able to:
+1. Explain the advantages and disadvantages of DBMSs, in general, and alternative DBMS architectures, in particular.
+[1 2]
+• Learning methods: classroom lecture and discussion, reading, case scenarios.
+• Evaluation: classroom discussion, exams
+2. Specify a database model (e.g., ER model, relational model, object model) given a description of the information
+system needs of an organization. [1 2 3]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases.
+• Evaluation: Classroom discussion, hands-on assignments, exams
+3. Design a relational database model so that it is consistent with at least 3NF/BCNF. [1 2]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases.
+• Evaluation: Classroom discussion, hands-on assignments, exams
+4. Use relational algebra to write database queries. [1 2]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases.
+• Evaluation: Classroom discussion, hands-on assignments, exams
+5. Use SQL to specify a database schema and to retrieve and update data. [1 2 4]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases with the aid of software tools.
+• Evaluation: Classroom discussion, hands-on assignments, exams
+6. Develop an understanding of DB physical design, multiple user environments, concurrency control, transaction
+management and database security. [1 2 3]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases with the aid of software tools.
+• Evaluation: Classroom discussion, hands-on assignments, exams.
+7. Develop a final DBMS project. [1 2 4 5 6]
+• Learning methods: classroom presentations, hands-on work, designing and implementing a real-world
+database.
+• Evaluation: Project deliverables (in-class presentation, project report and software deliverable)
+Prerequisite: CMPT 220
+Course Components:
+Projects, Labs, HW, Quizzes, Class Participation, Presentation, etc. 35%
+Test 1 20%
+Test 2 20%
+Comprehensive Final Exam 25%
+------
+Total 100%
+We will use Oracle 12c (and Microsoft Access) as our database management system environment(s).
+You will be given projects (both major projects and homework/lab assignments) to complete during the semester.
+The due date for each project will be clearly stated. If accepted, late projects will be penalized 10 percent per 24-
+hour period for a maximum of 2 days. Projects more than 2 days late will earn no credit. SOME
+PROJECTS WILL NOT BE ACCEPTED LATE! I will clearly identify those projects that will
+not be accepted late!
+You must complete EVERY assigned project. Your COURSE grade will be lowered by 5 points for each
+project you fail to submit.
+Most quizzes will be announced ahead of time; however, I do reserve the right to give pop quizzes as needed.
+“Need” generally means that you will get a pop quiz when class attendance/preparation/participation is not what
+it should be. Please come to class prepared to participate. Unless I explicitly state otherwise, you may not work
+on quizzes together.
+Assignments, handouts, etc., will be posted using iLearn. Assignments will be submitted using iLearn, too.
+Grading Scale:
+90 - 100 A
+88 - 89.99 A85 - 87.99 B+
+80 - 84.99 B
+78 - 79.99 B75 - 77.99 C+
+70 - 74.99 C
+68 - 69.99 C65 - 67.99 D+
+60 - 64.99 D
+0 - 59.99 F
+Academic Honesty Policy for this Course
+As a part this class, the faculty and staff will uphold and enforce the general policies of this institution on
+academic honesty and plagiarism. All examinations, lab/homework assignments, and projects are subject to the
+standards of academic honesty as described in the Student Handbook and/or other related publications.
+Furthermore, this course expects students to behave in a manner appropriate to Computer Science and
+Information Technology professionals. Professional ethics demand that (a) students embrace traditional “thou
+shall not cheat” behaviors, and also (b) they reject additional forms of dishonesty and abuse, which are uniquely
+possible working with computers.
+Collaboration vs. Cheating
+The extent to which team work is permissible depends solely on the instructor. Within the ground rules, the
+honesty of a student's behavior can usually be explored with the help of the two following guidelines:
+• Plagiarism is suspected if an assignment calling for independent design and implementation results in
+two or more solutions that differ only by simple mechanical transformations.
+• Cheating is suspected if an assignment calling for independent design and implementation results in a
+solution that cannot be explained to the instructor, in terms of either general method or specific
+techniques. If you are suspected of cheating, you will be asked to explain the work. If you cannot you
+will be ejected from the course with a failing grade, in addition to any other forms of recourse available
+to the instructor as specified by the Student Handbook.
+You are encouraged to discuss the course material, concepts, and lessons with other students in the class. This is
+important in learning. However, your quizzes and discussions must be your own work. If you are caught copying
+or otherwise submitting material that is not solely your work, you will fail the course and a letter will be sent to
+the department chair.
+The bottom line is that you are expected to conduct yourself as a person of integrity. You are expected to adhere
+to the highest standards of academic honesty. This means that plagiarism in any form is completely unacceptable.
+You are (or soon will be) a computing professional; I encourage you to consult the ACM code of ethics. See
+www.acm.org/constitution/code.html.
+Attendance:
+Attendance is required for every class period -- it is where most of the material that you need to know is
+presented. Although there is substantial overlap with the material in the book, additional material and techniques
+are presented in class. If you must miss class, YOU are responsible for finding out what you have missed. Roll
+will be taken as often as necessary and will always be taken on the days quizzes and exams are given. If you are
+late for class, you are considered absent. I consider missing more than 10% of the total number of class meetings
+to be excessive. I will deal with excessive absences appropriately. I reserve the right to lower your final course
+grade by 2 points for each day you miss in excess of the 10% (if I haven’t already dropped you from the course).
+In order for any absence to be excused (even if it’s because of a College-approved activity), you must email me a
+detailed summary of the class period(s) you missed, within one week of your return to class. Do not simply send
+me a scanned copy of someone else’s notes – I want to be sure that you have actually covered the missed
+material. In this class, you really learn by doing - so take the time to do your own work. Excessive absences
+WILL adversely affect your grade.
+Do not miss class on exam days! If you know ahead of time that you are going to miss an exam for a collegeapproved activity, let me know before the exam. If you do miss an exam, come talk to me as soon as you return
+to school. It is up to you to let me know if you’ve missed an exam – otherwise your grade on the missed exam
+will be a ZERO (0). No test grades will be dropped.
+Cell Phones:
+Please turn off all external communication devices before class starts. Each “ring”, “tone” or “beep” disturbs
+me!!! Texting during class is rude and disrespectful, and is guaranteed to lower your class participation grade, as
+well as lower the grade for whatever we’re working on at the time.
+ADA Statement:
+Students with disabilities who believe they may need accommodations in this class are encouraged to contact the
+Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at Accommodations
+and Accessibility as soon as possible to better ensure that such accommodations are implemented in a timely manner.
+Copyright Statement:
+Materials used in connection with the course may be subject to copyright protection.
+No tobacco products of any type are allowed during class!
+Please refrain from excessive use of perfumes, body sprays, Axe cologne, etc. They kill my sinuses!
+APPENDIX - PROGRAM GOALS
+1. Prepare students for employment in a technology field or for graduate study in a technology field.
+1.1. At the time of graduation, 100% of those students who seek employment in a technology-related job will
+be employed.
+1.2. At the time of graduation, 100% of those students who seek admission to graduate school will be
+admitted to at least one graduate program.
+2. Provide students with both theoretical knowledge and skills-based proficiencies in the five core
+technology competencies: programming, hardware, data communications, data management, and
+systems/software analysis and design.
+2.1. Programming
+2.1.1. At least 80% of courses in the CS major will require programming.
+2.1.2. At least 35% of courses in the ITS major will require programming.
+2.1.3. At graduation, 100% of CS students will demonstrate programming skills by scoring 5 (out of 7)
+or better on the project evaluation form.
+2.2. Hardware
+2.2.1. Each major will include one hardware architecture course appropriate to the major.
+2.2.2. Students in each major will complete the appropriate hardware architecture course with a grade
+of at least C.
+2.3. Data Communications
+2.3.1. Students will be required to complete at least one theoretical course in Data Communications and
+one practical (applied) course in Data Communications.
+2.3.2. At graduation, 100% of students will have demonstrated competency in the design and
+development of networks by earning a score of 85 or better on a networking final exam.
+2.4. Data Management
+2.4.1. Students will be required to complete at least one course in Database Management.
+2.4.2. At graduation, 100% of students will have demonstrated competency in the design and
+implementation of a database system as part of a software system by earning a score of 85 or
+better on a database course final exam.
+2.5. Systems/Software analysis and Design
+2.5.1. At least 20% of courses required for CS majors will include material and experience with the
+analysis and design of software systems.
+2.5.2. At least 50% of courses required for ITS majors will include material and experience with the
+analysis and design of information systems.
+2.5.3. At graduation, 100% of students will be able to complete a software/systems design and
+development project with a score of 5 (out of 7) or better on the project evaluation form.
+3. Provide students with fundamental knowledge of business administration and management so that
+graduates will be able to work effectively within businesses and organizations.
+3.1. All students will take at least one general business course.
+3.2. Students with an IS concentration will also study basic principles in accounting and economics.
+3.3. At graduation, 100% of students will be able to complete a software/systems design and
+development project with a score of 5 (out of 7) or better on the project evaluation form.
+4. Develop interpersonal skills for working effectively on teams.
+4.1. At least 35% of courses will require projects that are prepared by a team of students.
+4.2. At least 20% of courses will have at least 25% of course time devoted to small group work.
+4.3. At graduation, 100% of students will be able to contribute effectively to a team project by earning
+an average score of 4 (out of 5) or better on the peer evaluation.
+5. Develop effective written and oral communication skills.
+5.1. At least 35% of courses will require oral presentations, either by individuals or a team of
+individuals.
+5.2. At graduation, 100% of students will score 5 or better (out of 7) on evaluations of oral
+presentations.
+5.3. At least 35% of courses will require written documentation of project work.
+5.4. At graduation, 100% of students will be able to prepare the documentation of a project with a score
+of 5 (out of 7) or better.
+6. Educate students about the behavioral, social, and ethical aspects of technology.
+6.1. All courses that include a team project will include a discussion of appropriate ethical behavior
+when working with colleagues.
+6.2. All courses that involve programming will include a discussion of appropriate ethical behavior
+when developing software.

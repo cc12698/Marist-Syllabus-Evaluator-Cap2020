@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel = "stylesheet" type = "text/css" href = "/css/mainmenu.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 30%;
+        padding: 10px;
+        height: 150px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body>
+    <div class="row" id="header-top">
+            <div id="heading" class="helper">
+                    <a href="/mainmenu" alt="Marist College Website">
+                          <img class="maristLogo" alt="Marist College Logo" src="/img/maristLogo.png" />
+                    </a>
+
+                </div>
+
+      </div>
+
+      <h1>Create a syllabus</h1>
+      <h4>Fill in the information and at the end a pdf syllabus will download</h4>
+
+      <div id = "form">
+        <div class="row">
+          <div class="column" style="background-color:#EEEEEE;" margin: auto;>
+            <h4>Your name:</h4>
+          </div>
+          <div class="column" style="background-color:#FFFFFF;">
+            <input type="text" id="name" placeholder="Name">
+          </div>
+      </div>
+
+      <div id = "form">
+        <div class="row">
+          <div class="column" style="background-color:#E0DEDE;" margin: auto;>
+            <h4>Your course title:</h4>
+          </div>
+          <div class="column" style="background-color:#FFFFFF;">
+            <input type="text" id="courseTitle" placeholder="Course Title">
+          </div>
+      </div>
+
+    <script>
+      function createPDF(){
+        var doc = new jsPDF();
+
+        doc.text(document.getElementById("name").value, 10, 10)
+        doc.text(document.getElementById("course").value, 25, 25)
+
+        doc.save("courseSyl.pdf");
+      }
+    </script>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.matchHeight.js" type="text/javascript"></script>
+    <script type = "text/javascript" src= "/js/mainmenu.js"></script>
+  </body>
+</html>
