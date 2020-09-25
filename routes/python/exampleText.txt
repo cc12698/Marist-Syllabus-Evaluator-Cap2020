@@ -1,256 +1,196 @@
-CMPT 424N - Operating Systems
-Section 111 - Spring 2020
-Brian Gormanly
-Overview:
-Instructor: Brian Gormanly
-Lecture Location: Online
-Web: https://ilearn.marist.edu/portal/site/7e097398-925f-40a7-ba9d-ee5ed88ce20a
-Phone: 845-575-2673
-Email: brian.gormanly@marist.edu
-Office Hours: WebEx Every Wednesday between 2pm and 3pm EDT (will go longer if needed)
-or Contact me via email to set up a meeting outside this time via chat or webex. My webex link:
-https://facstaff-marist.webex.com/meet/brian.gormanly
-Course:
-Course Description:
-The goal of the course is to provide understanding and appreciation of a computer system’s
-components; their characteristics, functions, interactions and integration to enhance performance
-as well as the fundamental concepts of an Operating System viewed as a resource manager and
-issues that influence the design of Operating Systems. The course will include a project to enable
-students to gain some learning experience.
-Course Prerequisites:
-CMPT 221 - Software Development II
-Course Objectives: 1
-1. Develop a deep understanding and appreciation for one of the most complex and important
-pieces of software, a computer operating system. [1, 2]
-2. Demonstrate mastery of the subject matter by developing your own OS. [2]
-3. Better understand system design through analysis of core OS components and how they
-come together in a complete system and how these systems solve business problems. [1,
-2a, 2e, 3]
-4. Apply debugging skills to solve difficult problems in Computer Science such as scheduling
-and memory management. [1, 2]
-5. Reinforce CS concepts such as object oriented programming and concurrency by applying
-principles in practice [1, 2]
-6. Learn how computer organization influences high-level languages, and vice versa. [1, 2, 6]
-7. Develop communication skills in the area of computing technology. [1, 4, 5]
-8. Use critical thinking to make informed decisions in the selection of platforms for
-development. [1, 2, 3, 5, 6]
-1 The reference number in brackets [ ] indicates the department goal that is being met with the fulfillment of the
-objective. For the complete list of department goals please see the last page of this syllabus.
-9. Understand how a system API enables high level software (yours) to interact with
-computer hardware. [1, 2]
-Course Learning Measurements: 2
-Create an operating system that manages major operating system concepts such as
-concurrency, processes and threads, scheduling, deadlock, memory and disk. Applies to
-Course Objective: 1, 2, 3, 4, 5, 8, 9
-Write code to manage software and hardware interaction through a System API. Applies to
-Course Objective: 1, 2, 3, 6, 8, 9
-Reinforce learning with course labs and course discussion on lab results 1, 3, 4, 7, 8, 9
-Midterm Exam. Applies to Course Objective: 1, 2, 3, 4, 5
-Final Exam. Applies to Course Objective: 5, 6, 7, 8, 9
-Data for Research Disclosure:
-Any and all results of in-class and out-of-class assignments and examinations are data sources for
-research and may be used in published research. All such use will always be anonymous.
-Assessment:
- F D D+ C- C C+ B- B B+ A- A
- 0-59 60-66 67-69 70-72 73-76 77-79 80-82 83-86 87-89 90-94 95-100
-You will be graded on 700 points that you can earn throughout the semester, the following shows
-how the points are distributed across your work:
-Class Participation 50 points 7%
-Labs 100 points 14%
-Project 100 points 14%
-Mid-Term 200 points 29%
-Final 250 points 36%
-Required Materials:
-Textbooks (you can choose):
-Tanenbaum, Bos: “Modern Operating Systems (4th Edition)”, Pearson, 2014.
-ISBN-13: 978-0133591620
-ISBN-10: 013359162X
-Operating Systems Concepts Eighth Ed. or later, by Silberzchatz, Galvin and Gagne
-ISBN-13: 978-0470128725
-2 The reference number in brackets [ ] indicates the related course objective.
-Schedule:
-This schedule is a general guide to how I hope the semester will progress. Anything here is
-subject to change. Any changes will be discussed during class lectures.
-Week Topic Project
-1 Introduction, OS components and concepts Lab 0
-2 Operating System structures Lab 1
-3 Processes, threads and concurrency Lab 1
-4 Main memory part 1 Lab 2
-5 Scheduling Lab 2
-6 Scheduling cont. / Midterm review Project 1
-7 Midterm Project 1
-8 Project work Project 1
-SB
-9 Spring Break part 2
-10 Main memory Part 2
-11 File system concepts and implementation / Easter
-12 Virtual memory
-13 Synchronization / Transactions / Deadlock
-14 I/O Systems
-15 Final Exam Prep
-Policies:
-Late work:
-In exceptional cases, late work may be accepted, but will be graded late, with no credit guarantees.
-As soon as work is late you will lose 10% of the grade. For every 24 hours that passes after the
-due date you will lose an additional 10%. So if an assignment is due on a Tuesday at 3pm, and you
-turn it in the same Tuesday at 5pm, it will be 10% off. If you turn it in the next day (Wednesday) at
-4pm it will be 20% off.
-NOTE: After answers are posted, or graded work are handed back to the class, no late work will be
-accepted for credit (but will be graded somehow, sometime, if you seek feedback).
-Attendance Policy:
-Students are expected to attend every class, there is generally a strong correlation between good
-attendance and good grades. You will be expected to answer test questions based on topics
-discussed in class. Additionally, in class announcements are the official means of communication
-and missing class will not be a legitimate reason for failure to meet any requirements conveyed
-during class. Your class participation grade will be based on your attendance as well as your
-participation in class discussions, and teamwork.
-Quizzes:
-Quizzes will cover previous class lecture / reading material. Quizzes cover new material discussed
-since the last quiz. No makeup quizzes will be permitted at all! If you miss a quiz that quiz grade
-is entered as a 0.
-Tests:
-Tests will cover material up to the previous class lecture / reading material, the Final is not
-cumulative in this course and will be on all material in lectures and readings after the mid-term.
-No makeup tests will be permitted after a test has been given. If you anticipate not being able to
-make a scheduled test please see me well in advance of the test so we can schedule something
-before the test date.
-Labs:
-The labs in this course are the building blocks you will need to be prepared for the course project.
-They will reinforce the lecture material and ensure that you have a practical understanding of the
-tools and theory needed to build a software project. Your grade on your project will be
-significantly impacted by how much effort you put into the course labs.
-Projects:
-Project requirements will be provided during the semester. Projects help you gain hands on
-experience and confidence that will allow you to leverage technology to give you every advantage
-in your career and personal life. They will be graded against the criteria set in the project
-requirements. This course is project based and is intended to build both your skills working with
-other software engineers as a team as well as your individual skills.
-Communication:
-Please email me (brian.gormanly@marist.edu) include in your email subject the course number
-and name. I will usually be able to respond to your inquiry within 24 hours. Please see the office
-hours section at the top of this syllabus for information on setting up times to meet in person.
-Academic Honesty:
-▪ Students are expected to uphold the school’s standard of conduct relating to academic
-honesty (please refer to the Marist College Student handbook for detailed information on
-the definitions and consequences for cheating and plagiarism). Students assume full
-responsibility for the content and integrity of the academic work they submit. The guiding
-principle of academic integrity shall be that a student’s submitted work, examinations,
-reports, and projects must be that of the student’s own work. Students shall be guilty of
-violating the honor code if they:
-o Represent the work of others as their own.
-o Use or obtain unauthorized assistance in any academic work.
-o Give unauthorized assistance to other students.
-o Modify, without instructor approval, an examination, paper, record, or report for the
-purpose of obtaining additional credit.
-o Misrepresent the content of submitted work.
-Student’s are also expected to adhere to the ACM code of ethics while enrolled in this class
-(and hopefully after as well). Please take a few minutes to familiarize yourself with them.
-o https://www.acm.org/about-acm/acm-code-of-ethics-and-professional-conduct
-Collaboration vs. Cheating:
-o You are encouraged to discuss course material, concepts and assignments with
-other students in the class, these conversations are part of a healthy learning
-environment. All work you turn in, however, must be your own. If you are caught
-copying or submitting material that is not solely your work, you will fail the course
-and a letter will be sent to the department chair.
-Plagiarism Prevention:
-Marist College is committed to the fundamental values of preserving academic honesty as defined
-in the Student Handbook. The instructor reserves the right to utilize electronic means to help
-prevent plagiarism.
-Turnitin:
-In this course you are required to participate in the use of Turnitin (http://turnitin.com). Turnitin
-is a service used by Marist College faculty to compare a student's written work with its very large
-database of sources, student papers from other institutions, and the like, to check for originality.
-Work submitted to Turnitin will be used only for purposes of assessing originality, and will not be
-shared beyond Turnitin or used for any other purpose.
-Additional information about this system can be found at http://www.turnitin.com.
-IMPORTANT: Students are encouraged to review the resources at:
-http://www.turnitin.com/research_site/e_home.html which will provide you with the
-information on how to properly cite sources and understand what is meant by plagiarism.
-Accommodations and Accessibility:
-The Marist College Office of Accommodations and Accessibility provides individualized support to
-students in order to ensure access to a complete education. Information about Marist's support
-services can be found at http://www.marist.edu/accommodations-accessibility/.
-Students with disabilities who believe they may need accommodations in this class are
-encouraged to contact the Office of Accommodations and Accessibility at 575-3274, or via email at
-accommodations@marist.edu as soon as possible to better ensure that such accommodations are
-implemented in a timely fashion.
-All efforts have been made to ensure the iLearn system is compliant with Americans with
-Disabilities Act (ADA) regulations. Information about the accessibility of the system can be found
-at: http://tinyurl.com/28p59pq
-Support Links:
-Marist College provides a range of resources to help you get the most from your online
-educational experience:
-For access to iLearn support, click the links at the bottom of the iLearn login screen
-(http://ilearn.marist.edu). Here, you will find access to a brief web tutorial for an overview of
-iLearn tools, 1- or 2-page tips sheets for using specific tools, and a page of frequently asked
-questions for students.
-For additional technical support please contact: helpdesk@marist.edu
-Or call: 1-845-575-4357 (HELP)
-Important information about the Marist College Help Desk (including hours) is available at the
-Help Desk Website: http://www.marist.edu/it/helpdesk/
-Please note: the Help Desk is usually closed on weekends, so you will need to plan your
-schedule accordingly when completing assignments with weekend due dates in this course.
-Marist College also has a number of academic resources, including tutoring, writing assistance,
-and advising, and proofreading assistance. You are encouraged to visit
-http://www.marist.edu/academics/resources.html to learn more about these support tools.
-Department Goals, Objectives, and Assessment:
-Marist College Department of Computing Technology Goals, Objectives, and Assessment are as follows for your reference.
-Please refer to corresponding matching with this course goals and objectives in previous sections in this syllabus.
+Database Management
+CMPT 308N112
+Marist College, Fall 2018
+Course Information
+Instructor: Dr. Donald R. Schwartz
+Time: MTR 9:30-10:45 (HC0005)
+Office: HC 3019
+Phone: 845-575-3678
+Office Hours: MTR 1:20-2:00 and 3:15-4:15; other hours by appointment
+E-mail ID: Donald.Schwartz@Marist.edu
+Textbooks: • Database Management Systems Design, Implementation and Management, 12
+th edition,
+by Coronel & Morris, Cengage Learning, ISBN: 978-1-305-62748-2 (required).
+Course Objectives/Content:
+This course examines the theories and concepts employed in database management systems (DBMS). The
+function of various types of DBMS is described including their purpose, advantages, disadvantages, and
+applications in business. The course explores the following topics: DBMS architectures, data modeling, the
+relational model, database normalization, relational algebra, SQL, client/server systems, DB physical design,
+multiple user environments, database security. The students will work with a major DBMS to develop database
+projects.
+Each course learning objective is associated with a goal for the Computer Science Major, listed in square
+brackets. See the goals appendix at the end of this syllabus for reference.
+After completing this course, students should be able to:
+1. Explain the advantages and disadvantages of DBMSs, in general, and alternative DBMS architectures, in particular.
+[1 2]
+• Learning methods: classroom lecture and discussion, reading, case scenarios.
+• Evaluation: classroom discussion, exams
+2. Specify a database model (e.g., ER model, relational model, object model) given a description of the information
+system needs of an organization. [1 2 3]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases.
+• Evaluation: Classroom discussion, hands-on assignments, exams
+3. Design a relational database model so that it is consistent with at least 3NF/BCNF. [1 2]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases.
+• Evaluation: Classroom discussion, hands-on assignments, exams
+4. Use relational algebra to write database queries. [1 2]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases.
+• Evaluation: Classroom discussion, hands-on assignments, exams
+5. Use SQL to specify a database schema and to retrieve and update data. [1 2 4]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases with the aid of software tools.
+• Evaluation: Classroom discussion, hands-on assignments, exams
+6. Develop an understanding of DB physical design, multiple user environments, concurrency control, transaction
+management and database security. [1 2 3]
+• Learning methods: Reading, classroom lecture and discussion, hands-on work, solving problems and
+practical cases with the aid of software tools.
+• Evaluation: Classroom discussion, hands-on assignments, exams.
+7. Develop a final DBMS project. [1 2 4 5 6]
+• Learning methods: classroom presentations, hands-on work, designing and implementing a real-world
+database.
+• Evaluation: Project deliverables (in-class presentation, project report and software deliverable)
+Prerequisite: CMPT 220
+Course Components:
+Projects, Labs, HW, Quizzes, Class Participation, Presentation, etc. 35%
+Test 1 20%
+Test 2 20%
+Comprehensive Final Exam 25%
+------
+Total 100%
+We will use Oracle 12c (and Microsoft Access) as our database management system environment(s).
+You will be given projects (both major projects and homework/lab assignments) to complete during the semester.
+The due date for each project will be clearly stated. If accepted, late projects will be penalized 10 percent per 24-
+hour period for a maximum of 2 days. Projects more than 2 days late will earn no credit. SOME
+PROJECTS WILL NOT BE ACCEPTED LATE! I will clearly identify those projects that will
+not be accepted late!
+You must complete EVERY assigned project. Your COURSE grade will be lowered by 5 points for each
+project you fail to submit.
+Most quizzes will be announced ahead of time; however, I do reserve the right to give pop quizzes as needed.
+“Need” generally means that you will get a pop quiz when class attendance/preparation/participation is not what
+it should be. Please come to class prepared to participate. Unless I explicitly state otherwise, you may not work
+on quizzes together.
+Assignments, handouts, etc., will be posted using iLearn. Assignments will be submitted using iLearn, too.
+Grading Scale:
+90 - 100 A
+88 - 89.99 A85 - 87.99 B+
+80 - 84.99 B
+78 - 79.99 B75 - 77.99 C+
+70 - 74.99 C
+68 - 69.99 C65 - 67.99 D+
+60 - 64.99 D
+0 - 59.99 F
+Academic Honesty Policy for this Course
+As a part this class, the faculty and staff will uphold and enforce the general policies of this institution on
+academic honesty and plagiarism. All examinations, lab/homework assignments, and projects are subject to the
+standards of academic honesty as described in the Student Handbook and/or other related publications.
+Furthermore, this course expects students to behave in a manner appropriate to Computer Science and
+Information Technology professionals. Professional ethics demand that (a) students embrace traditional “thou
+shall not cheat” behaviors, and also (b) they reject additional forms of dishonesty and abuse, which are uniquely
+possible working with computers.
+Collaboration vs. Cheating
+The extent to which team work is permissible depends solely on the instructor. Within the ground rules, the
+honesty of a student's behavior can usually be explored with the help of the two following guidelines:
+• Plagiarism is suspected if an assignment calling for independent design and implementation results in
+two or more solutions that differ only by simple mechanical transformations.
+• Cheating is suspected if an assignment calling for independent design and implementation results in a
+solution that cannot be explained to the instructor, in terms of either general method or specific
+techniques. If you are suspected of cheating, you will be asked to explain the work. If you cannot you
+will be ejected from the course with a failing grade, in addition to any other forms of recourse available
+to the instructor as specified by the Student Handbook.
+You are encouraged to discuss the course material, concepts, and lessons with other students in the class. This is
+important in learning. However, your quizzes and discussions must be your own work. If you are caught copying
+or otherwise submitting material that is not solely your work, you will fail the course and a letter will be sent to
+the department chair.
+The bottom line is that you are expected to conduct yourself as a person of integrity. You are expected to adhere
+to the highest standards of academic honesty. This means that plagiarism in any form is completely unacceptable.
+You are (or soon will be) a computing professional; I encourage you to consult the ACM code of ethics. See
+www.acm.org/constitution/code.html.
+Attendance:
+Attendance is required for every class period -- it is where most of the material that you need to know is
+presented. Although there is substantial overlap with the material in the book, additional material and techniques
+are presented in class. If you must miss class, YOU are responsible for finding out what you have missed. Roll
+will be taken as often as necessary and will always be taken on the days quizzes and exams are given. If you are
+late for class, you are considered absent. I consider missing more than 10% of the total number of class meetings
+to be excessive. I will deal with excessive absences appropriately. I reserve the right to lower your final course
+grade by 2 points for each day you miss in excess of the 10% (if I haven’t already dropped you from the course).
+In order for any absence to be excused (even if it’s because of a College-approved activity), you must email me a
+detailed summary of the class period(s) you missed, within one week of your return to class. Do not simply send
+me a scanned copy of someone else’s notes – I want to be sure that you have actually covered the missed
+material. In this class, you really learn by doing - so take the time to do your own work. Excessive absences
+WILL adversely affect your grade.
+Do not miss class on exam days! If you know ahead of time that you are going to miss an exam for a collegeapproved activity, let me know before the exam. If you do miss an exam, come talk to me as soon as you return
+to school. It is up to you to let me know if you’ve missed an exam – otherwise your grade on the missed exam
+will be a ZERO (0). No test grades will be dropped.
+Cell Phones:
+Please turn off all external communication devices before class starts. Each “ring”, “tone” or “beep” disturbs
+me!!! Texting during class is rude and disrespectful, and is guaranteed to lower your class participation grade, as
+well as lower the grade for whatever we’re working on at the time.
+ADA Statement:
+Students with disabilities who believe they may need accommodations in this class are encouraged to contact the
+Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at Accommodations
+and Accessibility as soon as possible to better ensure that such accommodations are implemented in a timely manner.
+Copyright Statement:
+Materials used in connection with the course may be subject to copyright protection.
+No tobacco products of any type are allowed during class!
+Please refrain from excessive use of perfumes, body sprays, Axe cologne, etc. They kill my sinuses!
+APPENDIX - PROGRAM GOALS
 1. Prepare students for employment in a technology field or for graduate study in a technology field.
-1.1. At the time of graduation, 100% of those students who seek employment in a technology-related job will be employed.
-Measurement tool: Survey completed by graduating seniors.
-1.2. At the time of graduation, 100% of those students who seek admission to graduate school will be admitted to at least
-one graduate program. Measurement tool: Survey completed by graduating seniors.
-2. Provide students with both theoretical knowledge and skills-based proficiencies in the five core technology competencies:
-programming, hardware, data communications, data management, and systems/software analysis and design.
+1.1. At the time of graduation, 100% of those students who seek employment in a technology-related job will
+be employed.
+1.2. At the time of graduation, 100% of those students who seek admission to graduate school will be
+admitted to at least one graduate program.
+2. Provide students with both theoretical knowledge and skills-based proficiencies in the five core
+technology competencies: programming, hardware, data communications, data management, and
+systems/software analysis and design.
 2.1. Programming
 2.1.1. At least 80% of courses in the CS major will require programming.
 2.1.2. At least 35% of courses in the ITS major will require programming.
-2.1.3. At graduation, 100% of students will demonstrate programming skills with a grade of B or better.
-Measurement tool: Capping course project evaluation.
+2.1.3. At graduation, 100% of CS students will demonstrate programming skills by scoring 5 (out of 7)
+or better on the project evaluation form.
 2.2. Hardware
 2.2.1. Each major will include one hardware architecture course appropriate to the major.
-2.2.2. Students in each major will complete the appropriate hardware architecture course with a grade of at least C.
-Measurement tool: Course grade.
+2.2.2. Students in each major will complete the appropriate hardware architecture course with a grade
+of at least C.
 2.3. Data Communications
-2.3.1. Students will be required to complete at least one theoretical course in Data Communications and one
-practical (applied) course in Data Communications.
-2.3.2. At graduation, 100% of students will have demonstrated competency in the design and development of
-networks. Measurement tool: Course grade in applied networking course.
+2.3.1. Students will be required to complete at least one theoretical course in Data Communications and
+one practical (applied) course in Data Communications.
+2.3.2. At graduation, 100% of students will have demonstrated competency in the design and
+development of networks by earning a score of 85 or better on a networking final exam.
 2.4. Data Management
 2.4.1. Students will be required to complete at least one course in Database Management.
-2.4.2. At graduation, 100% of students will have demonstrated competency in the design and implementation of a
-database system as part of a software system. Measurement tool: Capping course project.
+2.4.2. At graduation, 100% of students will have demonstrated competency in the design and
+implementation of a database system as part of a software system by earning a score of 85 or
+better on a database course final exam.
 2.5. Systems/Software analysis and Design
-2.5.1. At least 20% of courses required for CS majors will include material and experience with the analysis and
-design of software systems.
-2.5.2. At least 50% of courses required for ITS majors will include material and experience with the analysis and
-design of information systems.
-2.5.3. At graduation, 100% of students will be able to complete a software/systems design and development project
-with a grade of B or better. Measurement tool: Faculty evaluation of capping course projects.
-3. Provide students with fundamental knowledge of business administration and management so that graduates will be able to work
-effectively within businesses and other organizations.
+2.5.1. At least 20% of courses required for CS majors will include material and experience with the
+analysis and design of software systems.
+2.5.2. At least 50% of courses required for ITS majors will include material and experience with the
+analysis and design of information systems.
+2.5.3. At graduation, 100% of students will be able to complete a software/systems design and
+development project with a score of 5 (out of 7) or better on the project evaluation form.
+3. Provide students with fundamental knowledge of business administration and management so that
+graduates will be able to work effectively within businesses and organizations.
 3.1. All students will take at least one general business course.
-3.2. Students with an IS concentration will also study basic principles of accounting and economics.
-3.3. At graduation, 100% of students will be able to complete a software/systems design and development project with a
-grade of B or better. Measurement tool: Faculty evaluation of capping course projects.
+3.2. Students with an IS concentration will also study basic principles in accounting and economics.
+3.3. At graduation, 100% of students will be able to complete a software/systems design and
+development project with a score of 5 (out of 7) or better on the project evaluation form.
 4. Develop interpersonal skills for working effectively on teams.
 4.1. At least 35% of courses will require projects that are prepared by a team of students.
 4.2. At least 20% of courses will have at least 25% of course time devoted to small group work.
-4.3. At graduation, 100% of students will be able to contribute effectively to a team project. Measurement tool: Student
-evaluations of team members in the capping course project.
+4.3. At graduation, 100% of students will be able to contribute effectively to a team project by earning
+an average score of 4 (out of 5) or better on the peer evaluation.
 5. Develop effective written and oral communication skills.
-5.1. At least 35% of courses will require oral presentations, either by individuals or a team of individuals.
-5.2. At graduation, 100% of students will score 5 or better (out of 7) on evaluations of oral presentations. Measurement
-tool: Faculty evaluations of capping course project presentations.
+5.1. At least 35% of courses will require oral presentations, either by individuals or a team of
+individuals.
+5.2. At graduation, 100% of students will score 5 or better (out of 7) on evaluations of oral
+presentations.
 5.3. At least 35% of courses will require written documentation of project work.
-5.4. At graduation, 100% of students will be able to prepare the documentation of a project with a grade of B or better.
-Measurement tool: Faculty evaluations of capping course project documentation .
+5.4. At graduation, 100% of students will be able to prepare the documentation of a project with a score
+of 5 (out of 7) or better.
 6. Educate students about the behavioral, social, and ethical aspects of technology.
-6.1. All courses that include a team project will include a discussion of appropriate ethical behavior when working with
-colleagues.
-6.2. All courses that involve programming will include a discussion of appropriate ethical behavior when developing
-software.
-6.3. All students will complete a 300-level ethics course as part of their core course requirements with a grade of B or
-better. This course will focus on the social and ethical impacts of technology on global society. Measurement tool:
-Course grades.
+6.1. All courses that include a team project will include a discussion of appropriate ethical behavior
+when working with colleagues.
+6.2. All courses that involve programming will include a discussion of appropriate ethical behavior
+when developing software.

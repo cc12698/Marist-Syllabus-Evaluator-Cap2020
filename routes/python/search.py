@@ -5,10 +5,16 @@ import datetime
 textFile = "exampleText.txt"
 logFile = "foundLog.txt"
 
+checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" ,
+           "otherpolicies" , "instrName" , "instrContact" , #"demoConsistant" ,
+           "assesMethod" , "assignments" , #"taskCrit" ,
+           "courseNum" , "format" , "attenPol" , "reqRead" , "acadHonest" ,
+           "teachAct" , "accommod" , ] #"diversity"]
+
 keywords = {    #list of regex commands ment to seach for items
                 "courseDes":      ["course( )*description" , "course description" , "class description"] ,
                 "courseObj":      ["objective(.)*course" , "course(.)*objective"] ,
-                "courseCred":     ["[0-9](.)*credit"] , #need to investigate
+                "courseCred":     ["[0-9]( )*credit"] , #need to investigate
                 "preReq":         ["pre(.)*requisite" , "pre(.)*req"] ,
                 "gradeDet":       ["grading:" , "[0-9]([0-9])*( )*points" , "assessment" , "grading"] ,
                 "otherpolicies":  ["policy" , "policies" , "academic(.)*honesty"] ,
@@ -27,7 +33,7 @@ keywords = {    #list of regex commands ment to seach for items
                 "acadHonest":     ["academic honesty" , "cheating" , "plagiarism"] ,
                 "teachAct":       ["Materials used in connection" , "subject to copyright protection"] ,
                 "accommod":       ["Students with disabilities" , "accommodations and accessibility"] ,
-                "diversity":      [] , # not technically req
+                "diversity":      ["diversity"] , # not technically req
             }
 
 found = {   #empty dictionary of arrays to store any matches to analyize later
@@ -99,23 +105,24 @@ def checkFileAnal():
     cmdIdex = 0
 
     for key in keywords: #loops through entire dictionary
-        o.write("\n\nResults for " + key + ":")
-        try:
-            for line in s: #loops through each line of sylibus
-                cmdIdex = 0
-                for i in keywords[key]: #loops through each regex search
-                    #print(i)
-                    cmdList = keywords[key]
-                    result = re.search(i , line , re.IGNORECASE) #searches line for regex command
-                    if(result != None):
-                        matches += 1
-                        found[key].append(result)
-                        match = line[result.span()[0] : result.span()[1]]
-                        o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
+        if key in checked:
+            o.write("\n\nResults for " + key + ":")
+            try:
+                for line in s: #loops through each line of sylibus
+                    cmdIdex = 0
+                    for i in keywords[key]: #loops through each regex search
+                        #print(i)
+                        cmdList = keywords[key]
+                        result = re.search(i , line , re.IGNORECASE) #searches line for regex command
+                        if(result != None):
+                            matches += 1
+                            found[key].append(result)
+                            match = line[result.span()[0] : result.span()[1]]
+                            o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
 
-            s.seek(0) #sets file pointer back to the begining
-        except:
-            print("ERROR LINE COULD NOT BE READ")
+                s.seek(0) #sets file pointer back to the begining
+            except:
+                print("ERROR LINE COULD NOT BE READ")
 
     print("file checked, " + str(matches) + " matches found")
 
@@ -163,11 +170,12 @@ def getScore():
     score = ""
 
     for key in keywords:
-        neededItems += 1
-        if(len(found[key]) != 0):
-            foundItems += 1
-        else:
-            missing.append(keyToName[key])
+        if key in checked:
+            neededItems += 1
+            if(len(found[key]) != 0):
+                foundItems += 1
+            else:
+                missing.append(keyToName[key])
 
     print("Missing elements:\n")
     print(missing)
