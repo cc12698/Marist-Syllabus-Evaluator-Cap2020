@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel = "stylesheet" type = "text/css" href = "/css/search.css">
     <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/css/dropzone.css">
     <link rel="stylesheet" href="/css/uploadSampleSyllabi.css">
     <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16">
     <script
@@ -19,12 +21,23 @@
       </div>
     </div>
 
-      <form enctype="multipart/form-data" method="POST" action="/uploadSampleSyl" >
-            <h4><u>Upload New Sample Syllabi</u></h4>
-          <input type="file" name="sample_syl" id = "sample_syl" onchange="getFileInfo()" required>
-          <input hidden id = "fileNameSyl" name = "fileNameSyl">
+      <form form action="/uploadSampleSyl" enctype="multipart/form-data" method="POST">
 
-          <input type="submit" value="submit">
+          <div class="contain">
+
+            <div class="drop-zone">
+              <input type="file" id="upload" name="sample_syl" accept=".doc,.docx,.pdf,.pages" class="drop-zone__input" onchange="getFileInfo()" required>
+              <input hidden id = "fileNameSyl" name = "fileNameSyl">
+            </div>
+          </div>
+          <div id="upload-text">
+            <span ><strong>UPLOAD SAMPLE SYLLABUS HERE</strong></span>
+          </div>
+
+        <div class="submit">
+          <input type="submit" value="submit" id="subDoc" href="results"/>
+        </div>
+
 
       </form>
     <%- include('partials/footer'); -%>
