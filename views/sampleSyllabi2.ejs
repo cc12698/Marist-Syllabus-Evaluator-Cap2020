@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/css/sampleSyllabi.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16">
+
+    <style media="screen">
+      .contain{
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row" id="header-top">
+      <div id="heading" class="helper">
+        <a href="/mainmenu" alt="Marist College Website">
+          <img class="maristLogo" alt="Marist College Logo" src="/img/maristLogo.png" />
+        </a>
+      </div>
+    </div>
+    <div class="contain">
+      <h4>Sample Syllabi</h4>
+      <% for(var i=0; i < syllabi.length; i++) { %>
+        <a href = "https://s3.us-south.cloud-object-storage.appdomain.cloud/sample-syl/<%= syllabi[i]['Key']%>" target="blank"><%= syllabi[i]['Key']%></a>
+        <br>
+      <% } %>
+    </div>
+
+
+    <%- include('partials/footer'); -%>
+  </body>
+    <script type = "text/javascript" src= "/js/sampleSyllabi.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>

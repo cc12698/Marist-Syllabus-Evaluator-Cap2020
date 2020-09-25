@@ -1,20 +1,28 @@
 const express = require('express');
 // const upload = require('express-fileupload');
-const app = express();
-const bodyParser = require('body-parser');
-app.use(bodyParser.json());
+var bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const dm = require('../dataManager');
 var multer = require('multer');
+const cors = require('cors');
+
 var fs = require('fs');
 const  compPrep = require('./controllers/comparisonPrep');
 const config = require('../config');
+var upload = multer({ dest: 'uploads/' })
+var rimraf = require("rimraf");
+
+const S3_BUCKET = process.env.S3_BUCKET;
+
+const app = express();
 
 app.use(fileUpload());
-
-// app.use(upload());
+app.use(cors());
 
 app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 const path = require('path');
 
@@ -57,6 +65,35 @@ app.get('/result', function(req, res){
   res.render('../views/results.ejs')
 });
 
+app.get('/uploadSampleSyllabi', function(req, res){
+  res.render('../views/uploadSampleSyllabi.ejs')
+});
+
+app.get('/sampleSyllabi2', function(req, res){
+  dm.getBucketContents(S3_BUCKET)
+    .then( (data) => {
+      let content = {};
+      content['syllabi'] = data;
+      // console.log(content);
+      res.render('../views/sampleSyllabi2.ejs', content)
+    })
+    .catch( (err) => {
+      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+      res.status(503).send(userErr);
+    });
+});
+
+app.get('/getSampleSyl', function (req,res,next) {
+  dm.getBucketContents(S3_BUCKET)
+    .then( (data) => {
+      res.status(200).json(data);
+    })
+    .catch( (err) => {
+      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+      res.status(503).send(userErr);
+    });
+});
+
 
 //upload a syllabus to be stored in 'uploads' folder
 app.post('/uploadSyllabus', async (req, res) => {
@@ -89,6 +126,47 @@ app.post('/uploadSyllabus', async (req, res) => {
     } catch (err) {
         res.status(500).send(err);
     }
+});
+
+app.post('/uploadSampleSyl', cors(), (req,res,next) => {
+    // console.log(req.body);
+    var dir;
+
+    upload.single(req.files.sample_syl);
+    try {
+      if(!req.files) {
+          res.send({
+              status: false,
+              message: 'No file uploaded'
+          });
+      } else {
+          let uploadedFile = req.files.sample_syl;
+
+          dir = './temp/';
+          if (!fs.existsSync(dir)){
+              fs.mkdirSync(dir);
+          }
+          uploadedFile.mv(dir + uploadedFile.name);
+          //send response
+      }
+    } catch (err) {
+        res.status(500).send(err);
+    }
+
+    var tempPath = './temp/' + req.body.fileNameSyl;
+
+    // console.log(tempPath);
+
+    try {
+      dm.uploadSampleSyl(tempPath, req.body.fileNameSyl);
+      rimraf(dir, function () { console.log("done"); });
+      res.send('Uploaded Successfully');
+
+    } catch (err) {
+        res.status(500).send(err);
+    }
+
+
 });
 
 

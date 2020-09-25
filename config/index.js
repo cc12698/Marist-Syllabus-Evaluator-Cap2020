@@ -15,8 +15,8 @@ config = {
 module.exports.cos = new AWS.S3(config);
 
 
-getBuckets();
-getBucketContents('sample-syl');
+// getBuckets();
+// getBucketContents('sample-syl');
 
 function getBuckets() {
     console.log('Retrieving list of buckets');
