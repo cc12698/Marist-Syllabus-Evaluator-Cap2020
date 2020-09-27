@@ -544,6 +544,7 @@ Results for diversity:
 
 
 
+<<<<<<< HEAD
 Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\b3148e1f-b90a-42af-b883-cd62b9f3082d.txt on 2020-09-21 16:47:44
 
 Results for courseDes:
@@ -819,3 +820,6 @@ Results for teachAct:
 Results for accommod:
 
 Results for diversity:
+=======
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/f5d54a86-e322-4b70-9166-37ade70e6502.txt on 2020-09-24 15:59:45
+>>>>>>> a8377d625c38f48219befe21781c12dafcbaa316
