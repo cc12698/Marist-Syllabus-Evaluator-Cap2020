@@ -28,7 +28,7 @@ module.exports.getBucketContents = (bucketName) => {
     });
 }
 
-module.exports.uploadSampleSyl = (filePath, fileName) => {
+module.exports.uploadSampleSyl = (filePath, fileName, mimetype) => {
   var fileName = fileName;
   var filePath = filePath;
   const uploadFile = () => {
@@ -38,6 +38,7 @@ module.exports.uploadSampleSyl = (filePath, fileName) => {
            Bucket: 'sample-syl', // pass your bucket name
            Key: fileName, // file will be saved
            Body: data,
+           ContentType: mimetype,
   };
   cos.upload(params, function(s3Err, data) {
   if (s3Err) throw s3Err

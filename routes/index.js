@@ -11,6 +11,7 @@ const  compPrep = require('./controllers/comparisonPrep');
 const config = require('../config');
 var upload = multer({ dest: 'uploads/' })
 var rimraf = require("rimraf");
+var mime = require('mime-types')
 
 const S3_BUCKET = process.env.S3_BUCKET;
 
@@ -131,6 +132,8 @@ app.post('/uploadSyllabus', async (req, res) => {
 app.post('/uploadSampleSyl', cors(), (req,res,next) => {
     // console.log(req.body);
     var dir;
+    // console.log(req.files.sample_syl);
+    var mimetype = mime.lookup(req.files.sample_syl.name);
 
     upload.single(req.files.sample_syl);
     try {
@@ -158,7 +161,7 @@ app.post('/uploadSampleSyl', cors(), (req,res,next) => {
     // console.log(tempPath);
 
     try {
-      dm.uploadSampleSyl(tempPath, req.body.fileNameSyl);
+      dm.uploadSampleSyl(tempPath, req.body.fileNameSyl, mimetype);
       rimraf(dir, function () { console.log("done"); });
       res.send('Uploaded Successfully');
 
