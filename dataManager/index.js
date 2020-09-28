@@ -51,3 +51,15 @@ module.exports.uploadSampleSyl = (filePath, fileName, mimetype) => {
   };
   uploadFile();
 }
+
+module.exports.deleteSyllabi = (fileName) => {
+    var params = {  Bucket: 'sample-syl', Key: fileName };
+    return cos.deleteObject(params)
+      .promise()
+    .then((data) => {
+        return data.Contents;
+    })
+    .catch((e) => {
+        console.log(e);
+    });
+}

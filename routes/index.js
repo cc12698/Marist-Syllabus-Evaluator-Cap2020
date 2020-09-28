@@ -70,6 +70,22 @@ app.get('/uploadSampleSyllabi', function(req, res){
   res.render('../views/uploadSampleSyllabi.ejs')
 });
 
+app.get('/sampleSyllabiAdmin', function(req, res){
+  dm.getBucketContents(S3_BUCKET)
+    .then( (data) => {
+      let content = {};
+      content['syllabi'] = data;
+      // console.log(content);
+      res.render('../views/sampleSyllabiAdmin.ejs', content)
+    })
+    .catch( (err) => {
+      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+      res.status(503).send(userErr);
+    });
+});
+
+
+
 app.get('/sampleSyllabi2', function(req, res){
   dm.getBucketContents(S3_BUCKET)
     .then( (data) => {
@@ -169,7 +185,28 @@ app.post('/uploadSampleSyl', cors(), (req,res,next) => {
         res.status(500).send(err);
     }
 
+});
 
+app.post('/deleteSampleSyl', cors(), (req,res,next) => {
+  dm.deleteSyllabi(req.body.filename)
+    .then(() => {
+      dm.getBucketContents(S3_BUCKET)
+        .then( (data) => {
+          // console.log(data);
+          let content = {};
+          content['syllabi'] = data;
+
+          res.render('../views/sampleSyllabi2.ejs', content)
+        })
+        .catch( (err) => {
+          var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+          res.status(503).send(userErr);
+        });
+    })
+    .catch( (err) => {
+      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+      res.status(503).send(userErr);
+    });
 });
 
 
