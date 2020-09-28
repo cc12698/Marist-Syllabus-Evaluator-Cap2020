@@ -5,7 +5,7 @@ const mammoth = require("mammoth");
 const PDFParser = require("pdf2json");
 const uuid = require('uuid-random')
 const yauzl = require("yauzl");
-
+const sentimentAnalyze = require("./sentimentAnalyzer");
 exports.postComparison = function(req, res){
   try{
     var directoryPath = path.normalize(__dirname + "/../../uploads");
@@ -66,7 +66,8 @@ async function doc(file, uuid){
         fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
           if (err) throw err;
           console.log('The file has been saved!');
-          callSnek(uuid);
+          //callSnek(uuid);
+          sentimentAnalyze.getAnalyzer(uuid);
         });
     })
 }
