@@ -9,6 +9,7 @@
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 
     <style>
       * {
@@ -63,19 +64,84 @@
             <h4>Your course title:</h4>
           </div>
           <div class="column" style="background-color:#FFFFFF;">
-            <input type="text" id="courseTitle" placeholder="Course Title">
+            <input type="text" id="courseName" placeholder="Course Title">
           </div>
       </div>
 
+      <div id = "form">
+        <div class="row">
+          <div class="column" style="background-color:#E0DEDE;" margin: auto;>
+            <h4>Your Marist e-mail:</h4>
+          </div>
+          <div class="column" style="background-color:#FFFFFF;">
+            <input type="text" id="insEmail" placeholder="Course Title">
+          </div>
+      </div>
+
+      <div id = "form">
+        <div class="row">
+          <div class="column" style="background-color:#E0DEDE;" margin: auto;>
+            <h4>Instructor phone number:</h4>
+            <h6>(optional)</h6>
+          </div>
+          <div class="column" style="background-color:#FFFFFF;">
+            <input type="text" id="insPhone" placeholder="Course Title">
+          </div>
+      </div>
+
+      <div id = "form">
+        <div class="row">
+          <div class="column" style="background-color:#EEEEEE;" margin: auto;>
+            <h4>Course Description:</h4>
+          </div>
+          <div class="column" style="background-color:#FFFFFF;">
+            <textarea id="courseDes" rows="4" cols="50"></textarea>
+          </div>
+      </div>
+
+
+
+      <div>
+        <button onclick="createPDF()" id=button>Create Syllabus</button>
+      </div>
+
     <script>
+
+      const lineLen = 100;
+      const lineNum = 20
+
+      var pdf = new jsPDF();
+
+      x = 10;
+      y = 10;
+
       function createPDF(){
-        var doc = new jsPDF();
 
-        doc.text(document.getElementById("name").value, 10, 10)
-        doc.text(document.getElementById("course").value, 25, 25)
+        InsName = document.getElementById("name").value;
+        courseName = document.getElementById("courseName").value;
+        courseDes = document.getElementById("courseDes").value;
 
-        doc.save("courseSyl.pdf");
+        write(InsName);
+        write(courseName);
+        skipLine();
+        write("Course Description:");
+        write(courseDes);
+        skipLine();
+
+        pdf.save("courseSyl.pdf");
       }
+
+      function write(s){
+        var lines = pdf.splitTextToSize(s , 180);
+        pdf.text(lines , x , y);
+
+        y += 6 * lines.length;
+      }
+
+      function skipLine(){
+        y += 6;
+      }
+
     </script>
 
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

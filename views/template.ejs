@@ -33,7 +33,7 @@
         var doc = new jsPDF();
 
         doc.text(document.getElementById("name").value, 10, 10)
-        doc.text(document.getElementById("course").value, 25, 25)
+        doc.text(document.getElementById("courseTitle").value, 25, 25)
 
         doc.save("courseSyl.pdf");
       }
