@@ -34,3 +34,15 @@ iframe{
 /* .col-xs-12{
   height: 500px;
 } */
+
+.syl{
+  padding-bottom: 10px;
+}
+
+.remove:hover{
+	background-color: #bfc0c9;
+}
+
+#admin{
+  color:red;
+}
