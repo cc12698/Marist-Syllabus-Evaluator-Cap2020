@@ -1,0 +1,118 @@
+
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\ed2732bf-4363-4b29-ac71-216d7c6882ff.txt on 2020-09-30 17:29:15
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "background helps the viewer draw attention to the characters in the middle ground. The objects": dr
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\34137a97-c6b5-4fce-9a9d-a68092d42600.txt on 2020-09-30 17:29:54
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "background helps the viewer draw attention to the characters in the middle ground. The objects": dr
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\79eb11d9-e07f-4ce4-a4d2-dc6f67505fe0.txt on 2020-09-30 17:32:37
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "background helps the viewer draw attention to the characters in the middle ground. The objects": dr
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
