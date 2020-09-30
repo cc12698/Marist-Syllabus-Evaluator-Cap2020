@@ -66,7 +66,7 @@ async function doc(file, uuid){
         fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
           if (err) throw err;
           console.log('The file has been saved!');
-          //callSnek(uuid);
+          callSnek(uuid);
           sentimentAnalyze.getAnalyzer(uuid);
         });
     })
@@ -81,6 +81,7 @@ async function pdf(file, uuid){
       if (err) throw err;
       console.log('The file has been saved!');
       callSnek(uuid);
+      sentimentAnalyze.getAnalyzer(uuid);
     });
   });
 
