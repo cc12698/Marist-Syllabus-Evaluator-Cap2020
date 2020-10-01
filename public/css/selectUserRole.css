@@ -1,0 +1,25 @@
+#main{
+  padding-left: 20px;
+}
+
+.button {
+    display: block;
+    width: 115px;
+    /* height: 25px; */
+    background: #4E9CAF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    /* line-height: 25px; */
+}
+
+
+.button:hover{
+  background: grey;
+  text-decoration: none;
+  color: #4E9CAF;
+}

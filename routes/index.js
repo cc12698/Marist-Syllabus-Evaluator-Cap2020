@@ -62,6 +62,14 @@ app.get('/mainmenu', function(req, res){
   res.render('../views/mainmenu.ejs')
 });
 
+app.get('/mainmenuAdmin', function(req, res){
+  res.render('../views/mainmenuAdmin.ejs')
+});
+
+app.get('/selectUserRole', function(req, res){
+  res.render('../views/selectUserRole.ejs')
+});
+
 app.get('/result', function(req, res){
   res.render('../views/results.ejs')
 });
