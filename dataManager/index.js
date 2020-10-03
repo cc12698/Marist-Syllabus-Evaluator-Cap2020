@@ -28,12 +28,12 @@ module.exports.getBucketContents = (bucketName) => {
     });
 }
 
-module.exports.uploadSampleSyl = (filePath, fileName, mimetype) => {
+module.exports.uploadSampleSyl = (filePath, fileName, mimetype, callback) => {
   var fileName = fileName;
   var filePath = filePath;
   const uploadFile = () => {
   fs.readFile(filePath, (err, data) => {
-  if (err) throw err;
+  if (err) callback(err);
   const params = {
            Bucket: 'sample-syl', // pass your bucket name
            Key: fileName, // file will be saved
@@ -44,7 +44,7 @@ module.exports.uploadSampleSyl = (filePath, fileName, mimetype) => {
   if (s3Err) throw s3Err
   console.log(`File uploaded successfully at ${data.Location}`)
   var location = data.Location;
-  return location;
+  return callback();
 
        });
     });

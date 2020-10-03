@@ -92,7 +92,19 @@ app.get('/sampleSyllabiAdmin', function(req, res){
     });
 });
 
-
+app.get('/modifySampleSyllabi', function(req, res){
+  dm.getBucketContents(S3_BUCKET)
+    .then( (data) => {
+      let content = {};
+      content['syllabi'] = data;
+      // console.log(content);
+      res.render('../views/modifySampleSyllabi.ejs', content)
+    })
+    .catch( (err) => {
+      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+      res.status(503).send(userErr);
+    });
+});
 
 app.get('/sampleSyllabi2', function(req, res){
   dm.getBucketContents(S3_BUCKET)
@@ -184,14 +196,23 @@ app.post('/uploadSampleSyl', cors(), (req,res,next) => {
 
     // console.log(tempPath);
 
-    try {
-      dm.uploadSampleSyl(tempPath, req.body.fileNameSyl, mimetype);
-      rimraf(dir, function () { console.log("done"); });
-      res.send('Uploaded Successfully');
-
-    } catch (err) {
-        res.status(500).send(err);
-    }
+    dm.uploadSampleSyl(tempPath, req.body.fileNameSyl, mimetype, function(error){
+      if(error){
+        res.status(500).send(error);
+      }
+      rimraf(dir, function () { console.log("done"); })
+      dm.getBucketContents(S3_BUCKET)
+        .then( (data) => {
+          let content = {};
+          content['syllabi'] = data;
+          // console.log(content);
+          res.redirect('modifySampleSyllabi');
+        })
+        .catch( (err) => {
+          var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+          res.status(503).send(userErr);
+        });
+    });
 
 });
 
