@@ -22,8 +22,7 @@ exports.getAnalyzer = async function(uuid){
 }
 
 function spellCheckFile(arr){
-  var mispelled = [];
-  var spellCheckArr = [];
+  var mispelled = [], spellCheckArr = [];
   var mispelledObj = new Object();
   for(var i = 0; i < arr.length; i++){
     var spellCheckerTest = spellChecker.isMisspelled(arr[i]);
