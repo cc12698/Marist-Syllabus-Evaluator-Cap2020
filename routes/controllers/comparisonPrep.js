@@ -30,7 +30,7 @@ exports.postComparison = function(req, res){
           pdf(filePath, uuidCre);
         }
         else if(allowPages.exec(filePath)){
-          pages(filePath)
+          pages(filePath, uuidCre);
         }
       });
     });
@@ -89,7 +89,9 @@ async function pdf(file, uuid){
   pdfParser.loadPDF(file);
 }
 
-async function pages(file){
+async function pages(file, uuid){
+  var script = path.join(__dirname, 'appleScriptCommand.txt');
+  console.log(script);
   applescript.execString(script, function(err, rtn){
     if(err) throw err;
   });
