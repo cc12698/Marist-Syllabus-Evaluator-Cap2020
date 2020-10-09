@@ -4,6 +4,7 @@ const config = require('../config');
 const AWS = require('aws-sdk');
 var cos = config.cos;
 var bodyParser = require('body-parser');
+const mysql = require('mysql');
 
 //store the uploaded file in uploads
 module.exports.storage = multer.diskStorage({
@@ -63,3 +64,15 @@ module.exports.deleteSyllabi = (fileName) => {
         console.log(e);
     });
 }
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'maristSylUser',
+  password: 'MaristSyllabusEvaluator2020!',
+  database: 'syleval'
+});
+
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Connected!');
+});

@@ -13,6 +13,8 @@ var upload = multer({ dest: 'uploads/' })
 var rimraf = require("rimraf");
 var mime = require('mime-types')
 
+const mysql = require('mysql');
+
 const S3_BUCKET = process.env.S3_BUCKET;
 
 const app = express();
