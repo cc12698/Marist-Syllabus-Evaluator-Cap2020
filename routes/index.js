@@ -11,7 +11,10 @@ const  compPrep = require('./controllers/comparisonPrep');
 const config = require('../config');
 var upload = multer({ dest: 'uploads/' })
 var rimraf = require("rimraf");
-var mime = require('mime-types')
+var mime = require('mime-types');
+
+const session = require('express-session');
+var userSession;
 
 const mysql = require('mysql');
 
@@ -19,13 +22,16 @@ const S3_BUCKET = process.env.S3_BUCKET;
 
 const app = express();
 
+
+app.use(session({secret: 'secret', saveUninitialized: true,resave: true}));
+
 app.use(fileUpload());
 app.use(cors());
 
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const path = require('path');
 
@@ -33,7 +39,12 @@ app.use(express.static("public"));
 
 
 app.get('/',function(req, res) {
-  res.render('../views/signIn.ejs');
+  userSession = req.session;
+  if(!userSession.username) {
+      return res.redirect('login');
+  }
+  res.render('../views/selectUserRole');
+
 });
 
 app.get('/index', function(req, res){
@@ -60,15 +71,31 @@ app.get('/login', function(req, res){
   res.render('../views/signIn.ejs')
 });
 
+app.post('/login', function(req,res){
+    userSession = req.session;
+    userSession.username = req.body.username;
+    res.redirect('selectUserRole');
+});
+
 app.get('/mainmenu', function(req, res){
+  userSession = req.session;
+  if(!userSession.username) {
+      return res.redirect('login');
+  }
   res.render('../views/mainmenu.ejs')
 });
 
 app.get('/mainmenuAdmin', function(req, res){
+  userSession = req.session;
+  if(!userSession.username) {
+      return res.redirect('login');
+  }
   res.render('../views/mainmenuAdmin.ejs')
 });
 
 app.get('/selectUserRole', function(req, res){
+  userSession = req.session;
+  // console.log(req.session.username);
   res.render('../views/selectUserRole.ejs')
 });
 
