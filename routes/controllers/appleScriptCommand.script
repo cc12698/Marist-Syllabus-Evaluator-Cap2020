@@ -1,5 +1,5 @@
 set export_file_extension to "pdf"
-set this_folder to ../uploads as string
+set this_folder to ..\Marist-Syllabus-Evaluator-Cap2020\uploads as string
 tell application "System Events"
 	set these_files to every file of folder this_folder
 end tell

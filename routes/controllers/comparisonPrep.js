@@ -90,9 +90,9 @@ async function pdf(file, uuid){
 }
 
 async function pages(file, uuid){
-  var script = path.join(__dirname, 'appleScriptCommand.txt');
+  var script = path.join(__dirname, 'appleScriptCommand.script');
   console.log(script);
-  applescript.execString(script, function(err, rtn){
+  applescript.execFile(script, function(err, rtn){
     if(err) throw err;
   });
 }
