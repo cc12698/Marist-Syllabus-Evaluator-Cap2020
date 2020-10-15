@@ -238,3 +238,63 @@ Results for acadHonest:
 Results for teachAct:
 
 Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\1477172d-f2c3-4ac0-b72b-8e4c09783e4a.txt on 2020-10-15 18:29:29
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+Match to "[0-9]([0-9])*( )*points" in line "a)	How many bits do we need to borrow from the host portion? (2 points": 2 points
+Match to "[0-9]([0-9])*( )*points" in line "b)	List the IP addresses of the first usable subnet. (4 points": 4 points
+Match to "[0-9]([0-9])*( )*points" in line "c)	How many usable hosts are there before and after subnetting? (4 points": 4 points
+Match to "[0-9]([0-9])*( )*points" in line "a)	What is the network ID? (2 points": 2 points
+Match to "[0-9]([0-9])*( )*points" in line "b)	What is the broadcast address? (2 points": 2 points
+Match to "[0-9]([0-9])*( )*points" in line "c)	How many hosts can this LAN support? (2 points": 2 points
+Match to "[0-9]([0-9])*( )*points" in line "Display the results for the first 15 rounds. Indicate the value of cwnd and ssthresh at each round (15 points)": 15 points
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "Which is a valid IP address on a 132.15.4.0/22 network?": dr
+Match to "Dr" in line "(b) At X, IP datagrams from X to Y will be transmitted with destination IP address of Y and encapsulated in an Ethernet frame with destination Ethernet address of Y": dr
+Match to "Dr" in line "(c) At X, IP datagrams from X to Y will be transmitted with destination IP address of Y and encapsulated in an Ethernet frame with destination Ethernet address of Gateway router of X": dr
+Match to "Dr" in line "CIDR Notation": DR
+Match to "Dr" in line "First Address in this LAN": dr
+Match to "Dr" in line "Last Address in this LAN": dr
+Match to "Dr" in line "First Address in this LAN": dr
+Match to "Dr" in line "Last Address in this LAN": dr
+Match to "Dr" in line "b)	List the IP addresses of the first usable subnet. (4 points": dr
+Match to "Dr" in line "Given the IP address 172.16.20.131/2": dr
+Match to "Dr" in line "b)	What is the broadcast address? (2 points": dr
+Match to "Dr" in line "Draw the figure of congestion window vs. transmission rounds (one round corresponds to one RTT). ": Dr
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "bee" in line "Suppose the sender window size is 4, and Host A sends 4 data segments to Host B, and the 2nd segment (sent from A) is lost. After re-transmissions, in the end, all 4 data segments have been correctly received by Host B. ": bee
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+Match to "Textbook" in line "This sample final exam is not exhaustive: there may be kinds of questions on the test that are not exhibited here. Therefore, you should not study only by doing these questions. These questions are here for you to think about and to trigger your own thoughtful inquiry into the material. Review your own notes, the lecture and lab notes, and the textbook reading in an inquisitive way: not only “do I understand this,” but “can I explain it,” and “can I use it.” Consider compiling your own summary of reference material, concepts and so forth. Work through problems on your own without reference to the course material to test whether you actually understand it": textbook
+Match to "test(.)*course" in line "This sample final exam is not exhaustive: there may be kinds of questions on the test that are not exhibited here. Therefore, you should not study only by doing these questions. These questions are here for you to think about and to trigger your own thoughtful inquiry into the material. Review your own notes, the lecture and lab notes, and the textbook reading in an inquisitive way: not only “do I understand this,” but “can I explain it,” and “can I use it.” Consider compiling your own summary of reference material, concepts and so forth. Work through problems on your own without reference to the course material to test whether you actually understand it": test that are not exhibited here. Therefore, you should not study only by doing these questions. These questions are here for you to think about and to trigger your own thoughtful inquiry into the material. Review your own notes, the lecture and lab notes, and the textbook reading in an inquisitive way: not only “do I understand this,” but “can I explain it,” and “can I use it.” Consider compiling your own summary of reference material, concepts and so forth. Work through problems on your own without reference to the course
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
