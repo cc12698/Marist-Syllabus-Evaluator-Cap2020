@@ -7,6 +7,7 @@ const PDFParser = require("pdf2json");
 const uuid = require('uuid-random')
 const yauzl = require("yauzl");
 const sentimentAnalyze = require("./sentimentAnalyzer");
+const CloudConvert = require('cloudconvert');
 exports.postComparison = function(req, res){
   try{
     var directoryPath = path.normalize(__dirname + "/../../uploads");
@@ -90,9 +91,46 @@ async function pdf(file, uuid){
 }
 
 async function pages(file, uuid){
-  var script = path.join(__dirname, 'appleScriptCommand.script');
-  console.log(script);
-  applescript.execFile(script, function(err, rtn){
-    if(err) throw err;
+  const cloudConvert = new CloudConvert('eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2NiZDkxMTcxYjdiY2M1MGUwMDhkNTg2YmI1ZWVkOGNjZjRkYzg5ZjkyYjc0YTlkZjdkNGY0ODExMTI5Yzk5OWM3NjU4NjlkYjk3OWVkZTYiLCJpYXQiOjE2MDI3MjE3ODEsIm5iZiI6MTYwMjcyMTc4MSwiZXhwIjo0NzU4Mzk1MzgxLCJzdWIiOiI0NTg0NTczMyIsInNjb3BlcyI6WyJ1c2VyLnJlYWQiLCJ1c2VyLndyaXRlIiwidGFzay5yZWFkIiwidGFzay53cml0ZSIsIndlYmhvb2sucmVhZCIsIndlYmhvb2sud3JpdGUiLCJwcmVzZXQucmVhZCIsInByZXNldC53cml0ZSJdfQ.Sa_mCj4F6P7n1TmfSREGOX_fiT2wUXBg8k93_ZmxU_CSPzDhU7s_4yW-UGZ1LfaB-PmZBgSM-6Ayh4ozOTGSeUjcrmyVfoobypCSZkMRhrFL2AOPamC93_q1YIS0QVSKMrQ6cjhp9f8K_LjC_kLdhS9hW8Bn0etYsJ4lqstvfbUeU6Ipr9H3ld4-p9kFbGH2R-8cpv0Lfx37_bBRjp__AUxDb3Lg18tfdiWGpJhIZFI2sCdHvhx7gjebQ8JgZ1sWDV9QKj8j1oWwPXv-VpOUx7UQ8k_xfNaYuOx_Uc-YQkdOhQe0t-t5bPcsh1Pf0s_uFIzN53QD_1zyJsxbzt_w0YqkwsUSqLjRzzAKQgHX27dUjJfgALrwbRrIHMhLCBLUt4fRoJPEKcC1ZD87PH_4li6QqaNdD48ky9vngI39j66W2ua-OQusWwrRm0Gn_DbSZKBYktu_SerkANAijp4YQV7Mped_AMRiFeB-6fLQtK81Tun-d9YDNsLnZtJWsl0J9NQ4URTM__LmmdtNwqkjT5sUH91qo_xrdRYsyjUHh3bflZRAgDIR-DcinWBtkL9jPDnJrZl_ItwLjDEuoANkGei98eENkeSaPGza-m6OcnKnmf7q1VbT-S-9CKqxQ7i1esq9XhIwdqD_xTtgF7JymFLGSvCntvvcXgaMh_XrEw4');
+
+  let job = await cloudConvert.jobs.create({
+      "tasks": {
+          "import": {
+              "operation": "import/upload"
+          },
+          "task": {
+              "operation": "convert",
+              "input_format": "pages",
+              "output_format": "txt",
+              "engine": "iwork",
+              "input": [
+                  "import"
+              ],
+              "engine_version": "1.0"
+          },
+          "export": {
+              "operation": "export/url",
+              "input": [
+                  "task"
+              ],
+              "inline": false,
+              "archive_multiple_files": false
+          }
+      }
+  });
+
+  job = await cloudConvert.jobs.wait(job.id);
+  const exportTask = job.tasks.filter(task => task.operation === 'export/url' && task.status === 'finished')[0];
+  const file = exportTask.result.files[0];
+
+  const writeStream = fs.createWriteStream('./out/' + file.filename);
+
+  http.get(file.url, function(response) {
+      response.pipe(writeStream);
+  });
+
+  await new Promise((resolve, reject) => {
+      writeStream.on('finish', resolve);
+      writeStream.on('error', reject);
   });
 }
