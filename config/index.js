@@ -14,6 +14,11 @@ config = {
 
 module.exports.cos = new AWS.S3(config);
 
+module.exports = {
+    dbConnections: process.env.DB_CONNECTIONS || 10,
+    dbConnectURL: process.env.DB_CONNECT_URL
+};
+
 
 // getBuckets();
 // getBucketContents('sample-syl');

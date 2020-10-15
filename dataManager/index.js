@@ -1,10 +1,11 @@
 const multer = require("multer")
 var fs = require('fs');
 const config = require('../config');
+const db2 = require('../db');
 const AWS = require('aws-sdk');
 var cos = config.cos;
 var bodyParser = require('body-parser');
-const mysql = require('mysql');
+var util = require('util');
 
 //store the uploaded file in uploads
 module.exports.storage = multer.diskStorage({
@@ -13,9 +14,125 @@ module.exports.storage = multer.diskStorage({
   }
 });
 
+/** ***************************************************
+** Given an @param(sql) SQL query run in the database
+** and return the result set
+** DBM Code:  DBM-G06
+** *************************************************** */
+module.exports.query = (sql,options) => {
+    return new Promise( (resolve,reject) => {
+        db2.pool.open(db2.cn, (err,conn) => {
+            if (err) {
+                let msg = 'DBM-G06: Error connecting to the database in dataManager.query(): ' + err;
+                logger.error(msg);
+                notifySlack( msg);
+                reject(new Error('DBM-G06: Error connecting to the database.'));
+            } else {
+                let stmt = conn.prepareSync(sql);
+                stmt.execute([],function (err, result) {
+                    if (err) {
+                        let msg = err;
+                        logger.error(msg);
+                        notifySlack( msg);
+                        reject(new Error('DBM-G06: Error retrieving data from the database.'));
+                        // return false;
+                    } else {
+                        var data = result.fetchAllSync(options);
+                        result.closeSync();
+                        stmt.closeSync();
+                        resolve(data);
+                    }
+                    conn.close(function(err){});
+                });
+            }
+        });
+    });
+};
+
+/** ***************************************************
+** Given an @param(sql) SQL query and @param(values)
+** an array of values run this query as a paramaterized
+** query in the database and return the result set
+** DBM Code:  DBM-G07
+** *************************************************** */
+module.exports.queryWithParams = (sql,values,options) => {
+    return new Promise( (resolve,reject) => {
+        db2.pool.open(db2.cn, (err,conn) => {
+            if (err) {
+                let msg = err;
+                logger.error(msg);
+                reject(new Error('DBM-G07: Error connecting to the database.'));
+                // return false;
+            } else {
+
+                let stmt = conn.prepareSync(sql);
+
+                stmt.execute(values,function (err, result) {
+                    if (err) {
+                        let msg = err;
+                        logger.error(msg);
+                        reject(new Error('DBM-G07: Error retrieving data from the database.'));
+                        // return false;
+                    } else {
+                        var data = result.fetchAllSync(options);
+                        result.closeSync();
+                        stmt.closeSync();
+                        resolve(data);
+                        conn.close(function(err){});
+                    }
+                });
+
+            }
+        });
+    });
+};
+
+module.exports.post = ( sql, parameters ) => {
+
+    return new Promise( (resolve,reject) => {
+
+        db2.pool.open(db2.cn, (err,conn) => {
+            if (err) {
+                logger.error('DBM-P05: Error connecting to the database in databaseManager.put(): ' + err);
+                reject(new Error('DBM-P05: Error connecting to the database.'));
+            } else {
+                try {
+
+                    let stmt = conn.prepareSync(sql);
+                    let result = stmt.executeSync( parameters );
+                    let data = result.fetchAllSync();
+                    stmt.closeSync();
+                    conn.closeSync();
+                    resolve(data);
+                } catch(e) {
+                    conn.closeSync();
+                    logger.error('DBM-P05: Error updating the database in dataManager.put(): ' + e);
+                    reject(new Error('DBM-P05: Error updating the database.'));
+                }
+
+
+            }
+        });
+    });
+};
+
+
+module.exports.getUsers = () => {
+    let sql = 'SELECT * FROM user';
+
+    return this.queryWithParams(sql);
+};
+
+module.exports.getUserInfo = (username) => {
+    let sql = 'SELECT * FROM user WHERE upper(username) = ?';
+
+    return this.queryWithParams(sql, [username.toUpperCase()]).then();
+};
+
 // get file from index.ejs and send to 'uploads'
 module.exports.upload = multer({ storage: module.exports.storage}).single('sample_syl');
 
+// retrieve the files from the COS bucket
 module.exports.getBucketContents = (bucketName) => {
     // logger.info(`Retrieving bucket contents from: ${bucketName}`);
     return cos.listObjects(
@@ -65,14 +182,5 @@ module.exports.deleteSyllabi = (fileName) => {
     });
 }
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'maristSylUser',
-  password: 'MaristSyllabusEvaluator2020!',
-  database: 'syleval'
-});
 
-connection.connect((err) => {
-  if (err) throw err;
-  console.log('Connected!');
-});
+// module.exports.getUserInfo('emily.doran1');
