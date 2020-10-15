@@ -267,3 +267,40 @@ input[type="text"]:focus {
     }
 
 }
+
+a.btn-style, button.btn-style {
+    padding: 11px 32px;
+    font-family: 'Myriad Pro Semibold', sans-serif;
+    font-size: 1.33em;
+    color: #FFF;
+    text-transform: capitalize;
+    background: #006e7a;
+    border: 1px solid #007c8c;
+    border-radius:0 !important
+}
+
+.btn-style:hover {
+    color: #fcfeff;
+    text-decoration: none;
+    background:#1a8894;
+}
+
+.aui .btn-style, .aui .btn-style:link {
+    color: #fcfeff;
+    text-decoration: none;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition:all .5s ease
+}
+
+button:focus {
+    outline:0
+}
+
+.right-align{
+  padding-top: 20px;
+  padding-right: 50px;
+  float: right;
+}

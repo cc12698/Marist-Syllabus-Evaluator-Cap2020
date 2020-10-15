@@ -11,19 +11,25 @@ const  compPrep = require('./controllers/comparisonPrep');
 const config = require('../config');
 var upload = multer({ dest: 'uploads/' })
 var rimraf = require("rimraf");
-var mime = require('mime-types')
+var mime = require('mime-types');
+
+const session = require('express-session');
+var userSession;
 
 const S3_BUCKET = process.env.S3_BUCKET;
 
 const app = express();
+
+
+app.use(session({secret: 'secret', saveUninitialized: true,resave: true}));
 
 app.use(fileUpload());
 app.use(cors());
 
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const path = require('path');
 
@@ -31,7 +37,21 @@ app.use(express.static("public"));
 
 
 app.get('/',function(req, res) {
-  res.render('../views/signIn.ejs');
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      req.session.redirectTo = '/';
+      res.redirect('/login');
+  }
+  else{
+    if(userSession.role == 'admin'){
+      res.redirect('/mainmenuAdmin');
+    }
+    else{
+      res.redirect('/mainmenu');
+    }
+  }
+  // res.render('../views/selectUserRole');
+
 });
 
 app.get('/index', function(req, res){
@@ -47,7 +67,14 @@ app.get('/headerLogin', function(req, res){
 });
 
 app.get('/sampleSyllabi', function(req, res){
-  res.render('../views/sampleSyllabi.ejs')
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      req.session.redirectTo = '/mainmenu';
+      res.redirect('/login');
+  }
+  else{
+    res.render('../views/sampleSyllabi.ejs')
+  }
 });
 
 app.get('/footer', function(req, res){
@@ -55,18 +82,73 @@ app.get('/footer', function(req, res){
 });
 
 app.get('/login', function(req, res){
-  res.render('../views/signIn.ejs')
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      res.render('../views/signIn.ejs');
+  }
+  else{
+    res.redirect('/');
+  }
+});
+
+// get user info from DB
+app.post('/login', function(req,res){
+  userSession = req.session;
+  dm.getUserInfo(req.body.username).then( (data) => {
+    // console.log(data[0].USER_ROLE);
+    if(data.length == 0){
+      res.redirect('unauthorized');
+    }
+    userSession.username = data[0].username;
+    userSession.role = data[0].USER_ROLE;
+    var redirectTo = req.session.redirectTo ? req.session.redirectTo : '/';
+    delete req.session.redirectTo;
+    // is authenticated ?
+    res.redirect(redirectTo);
+  })
+  .catch( (err) => {
+    var userErr = { 'code': 503, 'message':'An error has occurred retrieving user from database.'};
+    res.status(503).send(userErr);
+  });
 });
 
 app.get('/mainmenu', function(req, res){
-  res.render('../views/mainmenu.ejs')
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      req.session.redirectTo = '/mainmenu';
+      res.redirect('/login');
+  }
+  else if(userSession.role == 'user'){
+      res.render('../views/mainmenu.ejs');
+  }
+  else if(userSession.role == 'admin'){
+      res.render('../views/mainmenuAdmin.ejs');
+  }
+  else{
+    res.redirect('unauthorized');
+  }
+  // res.render('../views/mainmenu.ejs')
 });
 
+// the main menu page *admins only*
 app.get('/mainmenuAdmin', function(req, res){
-  res.render('../views/mainmenuAdmin.ejs')
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      req.session.redirectTo = '/mainmenuAdmin';
+      res.redirect('/login');
+  }
+  else if(userSession.role == 'admin'){
+      res.render('../views/mainmenuAdmin.ejs');
+  }
+  else{
+    res.redirect('unauthorized');
+  }
 });
 
+// select your user role - testing purposes only
 app.get('/selectUserRole', function(req, res){
+  userSession = req.session;
+  // console.log(req.session.username);
   res.render('../views/selectUserRole.ejs')
 });
 
@@ -74,38 +156,49 @@ app.get('/result', function(req, res){
   res.render('../views/results.ejs')
 });
 
-app.get('/uploadSampleSyllabi', function(req, res){
-  res.render('../views/uploadSampleSyllabi.ejs')
+// unauthorized page
+app.get('/unauthorized', function(req, res){
+  res.render('../views/unauthorized.ejs')
 });
 
-app.get('/sampleSyllabiAdmin', function(req, res){
-  dm.getBucketContents(S3_BUCKET)
-    .then( (data) => {
-      let content = {};
-      content['syllabi'] = data;
-      // console.log(content);
-      res.render('../views/sampleSyllabiAdmin.ejs', content)
-    })
-    .catch( (err) => {
-      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
-      res.status(503).send(userErr);
+// logout page
+app.get('/logout', function(req, res){
+  req.session.destroy((err) => {
+        if(err) {
+            return console.log(err);
+        }
+        res.render('../views/logout.ejs')
     });
+
 });
 
+// the page to modify the selection of sample syllabi *admins only*
 app.get('/modifySampleSyllabi', function(req, res){
-  dm.getBucketContents(S3_BUCKET)
-    .then( (data) => {
-      let content = {};
-      content['syllabi'] = data;
-      // console.log(content);
-      res.render('../views/modifySampleSyllabi.ejs', content)
-    })
-    .catch( (err) => {
-      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
-      res.status(503).send(userErr);
-    });
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      req.session.redirectTo = '/modifySampleSyllabi';
+      res.redirect('/login');
+  }
+  else if(userSession.role == 'admin'){
+    dm.getBucketContents(S3_BUCKET)
+      .then( (data) => {
+        let content = {};
+        content['syllabi'] = data;
+        // console.log(content);
+        res.render('../views/modifySampleSyllabi.ejs', content)
+      })
+      .catch( (err) => {
+        var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+        res.status(503).send(userErr);
+      });
+  }
+  else{
+    res.redirect('unauthorized');
+  }
+
 });
 
+// revised sample syllabi page
 app.get('/sampleSyllabi2', function(req, res){
   dm.getBucketContents(S3_BUCKET)
     .then( (data) => {
@@ -120,17 +213,23 @@ app.get('/sampleSyllabi2', function(req, res){
     });
 });
 
-app.get('/getSampleSyl', function (req,res,next) {
-  dm.getBucketContents(S3_BUCKET)
-    .then( (data) => {
-      res.status(200).json(data);
-    })
-    .catch( (err) => {
-      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
-      res.status(503).send(userErr);
-    });
-});
+// testing function to get user info from db upon login
+app.get('/user', function(req, res){
+  userSession = req.session;
+  if(!userSession.username) {
+      return res.redirect('login');
+  }
 
+  dm.getUserInfo(userSession.username).then( (data) => {
+    userSession.role = data[0].userrole;
+    res.status(200).json(data);
+  })
+  .catch( (err) => {
+    var userErr = { 'code': 503, 'message':'An error has occurred retrieving user from database.'};
+    res.status(503).send(userErr);
+  });
+
+});
 
 //upload a syllabus to be stored in 'uploads' folder
 app.post('/uploadSyllabus', async (req, res) => {
@@ -238,6 +337,18 @@ app.post('/deleteSampleSyl', cors(), (req,res,next) => {
     });
 });
 
+app.get('/getUsers', function (req,res,next){
+
+    dm.getUsers()
+        .then( (data) => {
+            res.status(200).json(data);
+        })
+        .catch( err => {
+            var userErr = { 'code': 503, 'message':'An error has occurred accessing the database.'};
+            res.status(503).send(userErr);
+        });
+
+});
 
 app.listen(8080,() => console.log("running on port 8080: http://localhost:8080/"));
 //nodemon server/capping.js to run
