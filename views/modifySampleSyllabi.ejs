@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel = "stylesheet" type = "text/css" href = "/css/search.css">
     <link rel="stylesheet" href="/css/signin.css">
-    <link rel="stylesheet" href="/css/dropzone.css">
     <link rel="stylesheet" href="/css/uploadSampleSyllabi.css">
-      <link rel="stylesheet" href="/css/sampleSyllabi.css">
+    <link rel="stylesheet" href="/css/modifySampleSyllabi.css">
+    <link rel="stylesheet" href="/css/sampleSyllabi.css">
     <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16">
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
@@ -24,46 +23,51 @@
   <body>
     <div class="row" id="header-top">
       <div id="heading" class="helper">
-        <a href="/mainmenuAdmin" alt="Marist College Website">
-          <img class="maristLogo" alt="Marist College Logo" src="/img/maristLogo.png" />
-        </a>
+          <a href="/" alt="Marist College Website">
+            <img class="maristLogo" alt="Marist College Logo" src="/img/maristLogo.png" />
+          </a>
+          <div class="right-align">
+            <a href="/logout" class="btn-style"><strong>Logout</strong></a>
+          </div>
+        </div>
       </div>
-    </div>
 
     <form form action="/uploadSampleSyl" enctype="multipart/form-data" method="POST">
 
         <div class="contain">
-          <h4><span id= "admin"><i>(Admin Only)</i></span> Edit Sample Syllabi</h4>
+          <h4><u><span id= "admin"><i>(Admin Only)</i></span> Edit Selection of Sample Syllabi</u></h4>
 
-          <div class="drop-zone">
-            <input type="file" id="upload" name="sample_syl" accept=".doc,.docx,.pdf,.pages" class="drop-zone__input" onchange="getFileInfo()" required>
+          <p ><strong>UPLOAD NEW SAMPLE SYLLABUS</strong></p>
+
+          <div class="">
+            <!-- <input type="file" id="upload" name="sample_syl" accept=".doc,.docx,.pdf,.pages" class="drop-zone__input" onchange="getFileInfo()" required> -->
+            <input type="file" name="sample_syl" id="file" class="inputfile" accept=".doc,.docx,.pdf,.pages"/>
+            <label for="file"><span>Choose a File<span></label>
             <input hidden id = "fileNameSyl" name = "fileNameSyl">
+            <input type="submit" value="Upload" id="subDoc" href="results"/>
+
           </div>
-        </div>
-        <div id="upload-text">
-          <span ><strong>UPLOAD SAMPLE SYLLABUS HERE</strong></span>
         </div>
 
       <div class="submit">
-        <input type="submit" value="Upload" id="subDoc" href="results"/>
       </div>
 
     </form>
 
     <div class="contain2">
-      <h4><u>Current Sample Syllabi</u></h4>
+      <p ><strong>CURRENT SAMPLE SYLLABI</strong></p>
       <% for(var i=0; i < syllabi.length; i++) { %>
         <div class="syl">
-          <button class="remove" name="<%= syllabi[i]['Key']%>">Remove</button>
-          <a href = "https://s3.us-south.cloud-object-storage.appdomain.cloud/sample-syl/<%= syllabi[i]['Key']%>" target="blank"><%= syllabi[i]['Key']%></a>
+          <button class="remove" name="<%= syllabi[i]['Key']%>">x</button>
+          <a href = "https://s3.us-south.cloud-object-storage.appdomain.cloud/sample-syl/<%= syllabi[i]['Key']%>" target="blank" class="samplesyl"><%= syllabi[i]['Key']%></a>
         </div>
       <% } %>
 
     </div>
     <%- include('partials/footer'); -%>
   </body>
-  <script type = "text/javascript" src= "/js/uploadSampleSyllabi.js"></script>
   <script src="js/jquery.matchHeight.js" type="text/javascript"></script>
-  <script src="/js/dropzone.js"></script>
   <script type = "text/javascript" src= "/js/sampleSyllabiAdmin.js"></script>
+  <script type = "text/javascript" src= "/js/modifySampleSyllabi.js"></script>
+
 </html>
