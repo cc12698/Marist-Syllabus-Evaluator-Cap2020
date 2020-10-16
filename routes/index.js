@@ -94,7 +94,9 @@ app.get('/login', function(req, res){
 // get user info from DB
 app.post('/login', function(req,res){
   userSession = req.session;
-  dm.getUserInfo(req.body.username).then( (data) => {
+  var username = req.body.username.split('@');
+  username = username[0];
+  dm.getUserInfo(username).then( (data) => {
     // console.log(data[0].USER_ROLE);
     if(data.length == 0){
       res.redirect('unauthorized');
