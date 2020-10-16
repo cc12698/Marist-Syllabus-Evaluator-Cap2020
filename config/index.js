@@ -14,16 +14,18 @@ config = {
 
 module.exports.cos = new AWS.S3(config);
 
+
 module.exports = {
     dbConnections: process.env.DB_CONNECTIONS || 10,
     dbConnectURL: process.env.DB_CONNECT_URL
 };
 
 
-// getBuckets();
+getBuckets();
 // getBucketContents('sample-syl');
 
 function getBuckets() {
+    module.exports.cos = new AWS.S3(config);
     console.log('Retrieving list of buckets');
     return module.exports.cos.listBuckets()
     .promise()
