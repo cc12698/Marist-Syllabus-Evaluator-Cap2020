@@ -3,7 +3,7 @@ require('dotenv').config();
 const AWS = require('aws-sdk');
 var util = require('util');
 
-config = {
+var config = {
     endpoint: process.env.ENDPOINT,
     apiKeyId: process.env.API_KEY_ID,
     ibmAuthEndpoint: process.env.IBM_AUTH_ENDPOINT,
@@ -12,20 +12,22 @@ config = {
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 };
 
-module.exports.cos = new AWS.S3(config);
-
-
 module.exports = {
     dbConnections: process.env.DB_CONNECTIONS || 10,
     dbConnectURL: process.env.DB_CONNECT_URL
 };
 
 
-getBuckets();
+// getBuckets();
+
+createCosConnection();
+
+function createCosConnection() {
+  module.exports.cos = new AWS.S3(config);
+}
 // getBucketContents('sample-syl');
 
 function getBuckets() {
-    module.exports.cos = new AWS.S3(config);
     console.log('Retrieving list of buckets');
     return module.exports.cos.listBuckets()
     .promise()

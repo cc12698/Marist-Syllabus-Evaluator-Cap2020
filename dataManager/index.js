@@ -134,7 +134,7 @@ module.exports.upload = multer({ storage: module.exports.storage}).single('sampl
 
 // retrieve the files from the COS bucket
 module.exports.getBucketContents = (bucketName) => {
-    console.log(`Retrieving bucket contents from: ${bucketName}`);
+    // console.log(`Retrieving bucket contents from: ${bucketName}`);
     return cos.listObjects(
         {Bucket: bucketName},
     ).promise()
