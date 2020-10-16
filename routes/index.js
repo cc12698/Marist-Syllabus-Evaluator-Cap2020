@@ -169,7 +169,7 @@ app.get('/logout', function(req, res){
         if(err) {
             return console.log(err);
         }
-        res.render('../views/logout.ejs')
+        res.render('../views/logout.ejs');
     });
 
 });
