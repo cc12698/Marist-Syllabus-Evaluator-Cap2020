@@ -366,5 +366,31 @@ app.get('/getChecklist', function (req,res,next){
 
 });
 
+// get all of the checklist items for testing
+// revised sample syllabi page
+app.get('/checklistSample', function(req, res){
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      req.session.redirectTo = '/checklistSample';
+      res.redirect('/login');
+  }
+  else if(userSession.role == 'admin'){
+    dm.getChecklist()
+      .then( (data) => {
+        let content = {};
+        content['checklist'] = data;
+        // console.log(content);
+        res.render('../views/checklistSample.ejs', content)
+      })
+      .catch( (err) => {
+        var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+        res.status(503).send(userErr);
+      });
+    }
+    else{
+      res.redirect('unauthorized');
+    }
+});
+
 app.listen(8080,() => console.log("running on port 8080: http://localhost:8080/"));
 //nodemon server/capping.js to run
