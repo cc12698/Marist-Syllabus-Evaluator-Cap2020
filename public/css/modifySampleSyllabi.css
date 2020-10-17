@@ -9,15 +9,16 @@
 
 .inputfile + label {
     font-weight: 700;
-    color: white;
-    background-color: grey;
+    background-color: lightgrey;
+		color: black;
+		font-size: 20px;
     display: inline-block;
     border-radius: 5px;
 }
 
 .inputfile:focus + label,
 .inputfile + label:hover {
-    opacity: 0.6;
+    background-color: #bfc0c9;
 }
 
 .inputfile + label {
@@ -30,6 +31,9 @@
 }
 
 .remove {
+	padding-top:5px;
+	padding-left: 20px;
+	padding-right: 20px;
   font-weight: 700;
   background-color: lightgrey;
   border: none;
@@ -41,6 +45,10 @@
   border-radius: 5px;
 }
 
+.remove:hover{
+	background-color: #bfc0c9;
+}
+
 .samplesyl{
   padding-left: 20px;
 	color: black;
@@ -50,12 +58,32 @@
 }
 
 label{
-  padding: 10px;
+  padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .syl{
-	width: 25%;
+	width: 400px;
 	background-color: lightgrey;
 	margin-bottom: 2px;
 	border-radius: 5px
+}
+
+#subDoc{
+	border: none;
+	background-color: black;
+	font-weight: bold;
+	display: inline-block;
+	border-radius: 5px;
+	color: white;
+
+	margin-left: 5px;
+	position: relative;
+	top: 4px;
+}
+
+#subDoc:hover{
+	opacity: 0.6;
 }

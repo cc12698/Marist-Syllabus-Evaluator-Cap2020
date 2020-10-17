@@ -36,13 +36,18 @@ iframe{
 } */
 
 .syl{
-  padding-bottom: 10px;
+	width: 400px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+	background-color: lightgrey;
+	margin-bottom: 2px;
+	border-radius: 5px
 }
 
-.remove:hover{
-	background-color: #bfc0c9;
-}
-
-#admin{
-  color:#b31b1b;
+.samplesyl{
+  padding-left: 20px;
+	color: black;
+	text-decoration: underline;
+	font-weight: 500;
+	word-wrap: break-word;
 }

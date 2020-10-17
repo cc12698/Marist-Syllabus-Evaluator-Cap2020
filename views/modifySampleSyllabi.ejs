@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="/css/signin.css">
     <link rel="stylesheet" href="/css/uploadSampleSyllabi.css">
     <link rel="stylesheet" href="/css/modifySampleSyllabi.css">
-    <link rel="stylesheet" href="/css/sampleSyllabi.css">
     <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16">
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
@@ -14,7 +13,7 @@
 
     <style media="screen">
       .contain2{
-        padding: 10px;
+        padding-left: 10px;
       }
     </style>
 
@@ -35,14 +34,12 @@
     <form form action="/uploadSampleSyl" enctype="multipart/form-data" method="POST">
 
         <div class="contain">
-          <h4><u><span id= "admin"><i>(Admin Only)</i></span> Edit Selection of Sample Syllabi</u></h4>
-
-          <p ><strong>UPLOAD NEW SAMPLE SYLLABUS</strong></p>
+          <h4><u>Edit Selection of Sample Syllabi</u></h4>
 
           <div class="">
             <!-- <input type="file" id="upload" name="sample_syl" accept=".doc,.docx,.pdf,.pages" class="drop-zone__input" onchange="getFileInfo()" required> -->
             <input type="file" name="sample_syl" id="file" class="inputfile" accept=".doc,.docx,.pdf,.pages"/>
-            <label for="file"><span>Choose a File<span></label>
+            <label class="add" for="file"><span>ADD<span></label>
             <input hidden id = "fileNameSyl" name = "fileNameSyl">
             <input type="submit" value="Upload" id="subDoc" href="results"/>
 
@@ -55,7 +52,6 @@
     </form>
 
     <div class="contain2">
-      <p ><strong>CURRENT SAMPLE SYLLABI</strong></p>
       <% for(var i=0; i < syllabi.length; i++) { %>
         <div class="syl">
           <button class="remove" name="<%= syllabi[i]['Key']%>">x</button>

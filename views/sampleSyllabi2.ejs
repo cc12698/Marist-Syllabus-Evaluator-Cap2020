@@ -5,12 +5,6 @@
     <link rel="stylesheet" href="/css/sampleSyllabi.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16">
-
-    <style media="screen">
-      .contain{
-        padding: 10px;
-      }
-    </style>
     <meta name="google" value="notranslate">
   </head>
   <body>
@@ -24,14 +18,32 @@
           </div>
         </div>
       </div>
-    <div class="contain">
-      <h4>Sample Syllabi</h4>
-      <% for(var i=0; i < syllabi.length; i++) { %>
-        <a href = "https://s3.us-south.cloud-object-storage.appdomain.cloud/sample-syl/<%= syllabi[i]['Key']%>" target="blank"><%= syllabi[i]['Key']%></a>
-        <br>
-      <% } %>
+    <div class="col-sm-4 col-md-4 col-xs-12">
+      <div id="doc1">
+        <iframe src="https://s3.us-south.cloud-object-storage.appdomain.cloud/sample-syl/MATH_205-111_Syllabus.pdf" ></iframe>
+      </div>
+      <div class="description">
+        <span><strong>SAMPLE MATH SYLLABUS</strong></span>
+      </div>
     </div>
 
+    <div class="col-sm-4 col-md-4 col-xs-12">
+      <div id="doc2" >
+        <iframe src="https://s3.us-south.cloud-object-storage.appdomain.cloud/sample-syl/ENG_220L_112.pdf" type="application/pdf"></iframe>
+      </div>
+      <div class="description">
+        <span><strong>SAMPLE ENGLISH SYLLABUS</strong></span>
+      </div>
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-xs-12">
+      <div id="doc3">
+        <iframe src="https://s3.us-south.cloud-object-storage.appdomain.cloud/sample-syl/Music.pdf" type="application/pdf"></iframe>
+      </div>
+      <div class="description">
+        <span><strong>SAMPLE MUSIC SYLLABUS</strong></span>
+      </div>
+    </div>
 
     <%- include('partials/footer'); -%>
   </body>

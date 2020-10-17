@@ -129,6 +129,13 @@ module.exports.getUserInfo = (username) => {
     return this.queryWithParams(sql, [username.toUpperCase()]).then();
 };
 
+// get all the items in the checklist
+module.exports.getChecklist = () => {
+    let sql = 'SELECT * FROM checklist';
+
+    return this.queryWithParams(sql);
+};
+
 // get file from index.ejs and send to 'uploads'
 module.exports.upload = multer({ storage: module.exports.storage}).single('sample_syl');
 
