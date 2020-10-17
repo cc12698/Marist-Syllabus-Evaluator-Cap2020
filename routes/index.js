@@ -66,14 +66,14 @@ app.get('/headerLogin', function(req, res){
   res.render('../views/headerLogin.ejs')
 });
 
-app.get('/sampleSyllabi', function(req, res){
+app.get('/sampleSyllabi2', function(req, res){
   userSession = req.session;
   if(!userSession.username && !userSession.role) {
       req.session.redirectTo = '/mainmenu';
       res.redirect('/login');
   }
   else{
-    res.render('../views/sampleSyllabi.ejs')
+    res.render('../views/sampleSyllabi2.ejs')
   }
 });
 
@@ -201,13 +201,13 @@ app.get('/modifySampleSyllabi', function(req, res){
 });
 
 // revised sample syllabi page
-app.get('/sampleSyllabi2', function(req, res){
+app.get('/sampleSyllabi', function(req, res){
   dm.getBucketContents(S3_BUCKET)
     .then( (data) => {
       let content = {};
       content['syllabi'] = data;
       // console.log(content);
-      res.render('../views/sampleSyllabi2.ejs', content)
+      res.render('../views/sampleSyllabi.ejs', content)
     })
     .catch( (err) => {
       var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
@@ -326,7 +326,7 @@ app.post('/deleteSampleSyl', cors(), (req,res,next) => {
           let content = {};
           content['syllabi'] = data;
 
-          res.render('../views/sampleSyllabi2.ejs', content)
+          res.render('../views/sampleSyllabi.ejs', content)
         })
         .catch( (err) => {
           var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
@@ -342,6 +342,20 @@ app.post('/deleteSampleSyl', cors(), (req,res,next) => {
 app.get('/getUsers', function (req,res,next){
 
     dm.getUsers()
+        .then( (data) => {
+            res.status(200).json(data);
+        })
+        .catch( err => {
+            var userErr = { 'code': 503, 'message':'An error has occurred accessing the database.'};
+            res.status(503).send(userErr);
+        });
+
+});
+
+// get all of the checklist items for testing
+app.get('/getChecklist', function (req,res,next){
+
+    dm.getChecklist()
         .then( (data) => {
             res.status(200).json(data);
         })
