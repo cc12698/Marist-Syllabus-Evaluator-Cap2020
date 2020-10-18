@@ -60,7 +60,7 @@ module.exports.queryWithParams = (sql,values,options) => {
         db2.pool.open(db2.cn, (err,conn) => {
             if (err) {
                 let msg = err;
-                logger.error(msg);
+                console.log(msg);
                 reject(new Error('DBM-G07: Error connecting to the database.'));
                 // return false;
             } else {
@@ -70,7 +70,7 @@ module.exports.queryWithParams = (sql,values,options) => {
                 stmt.execute(values,function (err, result) {
                     if (err) {
                         let msg = err;
-                        logger.error(msg);
+                        console.log(msg);
                         reject(new Error('DBM-G07: Error retrieving data from the database.'));
                         // return false;
                     } else {
@@ -93,7 +93,7 @@ module.exports.post = ( sql, parameters ) => {
 
         db2.pool.open(db2.cn, (err,conn) => {
             if (err) {
-                logger.error('DBM-P05: Error connecting to the database in databaseManager.put(): ' + err);
+                console.log('DBM-P05: Error connecting to the database in databaseManager.put(): ' + err);
                 reject(new Error('DBM-P05: Error connecting to the database.'));
             } else {
                 try {
@@ -106,7 +106,7 @@ module.exports.post = ( sql, parameters ) => {
                     resolve(data);
                 } catch(e) {
                     conn.closeSync();
-                    logger.error('DBM-P05: Error updating the database in dataManager.put(): ' + e);
+                    console.log('DBM-P05: Error updating the database in dataManager.put(): ' + e);
                     reject(new Error('DBM-P05: Error updating the database.'));
                 }
 
