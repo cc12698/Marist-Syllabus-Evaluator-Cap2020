@@ -163,6 +163,11 @@ app.get('/unauthorized', function(req, res){
   res.render('../views/unauthorized.ejs')
 });
 
+// help page
+app.get('/help', function(req, res){
+  res.render('../views/help.ejs')
+});
+
 // logout page
 app.get('/logout', function(req, res){
   req.session.destroy((err) => {
