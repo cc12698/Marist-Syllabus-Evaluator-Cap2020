@@ -250,7 +250,7 @@ app.post('/uploadSyllabus', async (req, res) => {
           }
           uploadedFile.mv(dir + uploadedFile.name);
           //send response
-          res.send({
+          /*res.send({
               status: true,
               message: 'File is uploaded',
               data: {
@@ -258,7 +258,8 @@ app.post('/uploadSyllabus', async (req, res) => {
                   mimetype: uploadedFile.mimetype,
                   size: uploadedFile.size
               }
-          });
+          });*/
+          res.redirect('/result');
           const test = await compPrep.postComparison();
       }
     } catch (err) {
