@@ -1,6 +1,7 @@
 function getCheckedUnchecked(){
-  getCheckedCheckboxesFor();
-  getUncheckedCheckboxesFor();
+  $('#checked').val() = getCheckedCheckboxesFor();
+  $('#unchecked').val() = getUncheckedCheckboxesFor();
+  alert($('#checked').val());
 }
 // on submit returns what checkboxes are checked
 function getCheckedCheckboxesFor() {

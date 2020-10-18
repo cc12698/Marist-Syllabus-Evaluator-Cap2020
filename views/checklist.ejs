@@ -17,18 +17,20 @@
     <%- include('partials/header'); -%>
     <div class="contain">
       <h4>Checklist Items</h4>
-      <% for(var i=0; i < checklist.length; i++) { %>
-          <%if (checklist[i]['CHECKED'] == 1) { %>
-            <input type="checkbox" class="checklist_item" id="<%= checklist[i]['ITEM_NAME']%>" name="<%= checklist[i]['ITEM_NAME']%>"
-            value="<%= checklist[i]['ITEM_NAME']%>" checked>
-            <label for="<%= checklist[i]['ITEM_NAME']%>"><%= checklist[i]['ITEM_NAME']%></label><br>
-          <% } else{ %>
-            <input type="checkbox" class="checklist_item" id="<%= checklist[i]['ITEM_NAME']%>" name="<%= checklist[i]['ITEM_NAME']%>"
-            value="<%= checklist[i]['ITEM_NAME']%>" >
-            <label for="<%= checklist[i]['ITEM_NAME']%>"><%= checklist[i]['ITEM_NAME']%></label><br>
-          <% } %>
-      <% } %>
-      <input type="button" onclick= "getCheckedUnchecked()" value="Update">
+      <form class="checklist_update" action="/updateChecklist" method="POST">
+        <% for(var i=0; i < checklist.length; i++) { %>
+            <%if (checklist[i]['CHECKED'] == 1) { %>
+              <input type="checkbox" class="checklist_item" id="<%= checklist[i]['ITEM_NAME']%>" name="<%= checklist[i]['ITEM_NAME']%>"
+              value="<%= checklist[i]['ITEM_NAME']%>" checked>
+              <label for="<%= checklist[i]['ITEM_NAME']%>"><%= checklist[i]['ITEM_NAME']%></label><br>
+            <% } else{ %>
+              <input type="checkbox" class="checklist_item" id="<%= checklist[i]['ITEM_NAME']%>" name="<%= checklist[i]['ITEM_NAME']%>"
+              value="<%= checklist[i]['ITEM_NAME']%>" >
+              <label for="<%= checklist[i]['ITEM_NAME']%>"><%= checklist[i]['ITEM_NAME']%></label><br>
+            <% } %>
+        <% } %>
+        <input type="submit" onclick= "getCheckedUnchecked()" value="Update">
+      </form>
     </div>
     <%- include('partials/footer'); -%>
   </body>

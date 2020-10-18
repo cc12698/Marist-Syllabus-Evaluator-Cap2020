@@ -189,5 +189,48 @@ module.exports.deleteSyllabi = (fileName) => {
     });
 }
 
+module.exports.updateChecklist = ( doc ) => {
+    return new Promise( (resolve,reject) => {
+
+      db2.pool.open(db2.cn, (err,conn) => {
+          if (err) {
+              logger.error('DBM-P04: Error connecting to the database in databaseManager.updateChecklist(): ' + err);
+              reject(new Error('DBM-P04: Error connecting to the database.'));
+          } else {
+              try {
+                  conn.beginTransactionSync();
+                  var stmt1 = conn.prepareSync("update checklist set checked = false where checked = true");
+                  var result1 = stmt1.executeSync();
+                  stmt1.executeSync;
+                  result1.fetchAllSync();
+                  stmt1.closeSync();
+
+                  var stmt2 = conn.prepareSync("update checklist set checked = true where item_name = ?");
+
+                  // logger.info('success');
+                  for(var i = 0; i < doc.ITEMS.length; i++){
+                    var result = stmt2.executeSync([doc.ITEMS[i]]);
+                    stmt2.executeSync;
+                    result.fetchAllSync();
+                  }
+
+                  stmt2.closeSync();
+                  conn.commitTransactionSync();
+                  conn.closeSync();
+                  resolve(doc);
+              } catch(e) {
+                  conn.rollbackTransactionSync();
+                  conn.closeSync();
+                  logger.error('DBM-P04: Error posting to the database in dataManager.updateChecklist(): ' + e);
+                  reject(new Error('DBM-P04: Error posting to the database.'));
+              }
+              conn.close(function(err){});
+
+          }
+      });
+    });
+
+};
+
 
 // module.exports.getUserInfo('emily.doran1');
