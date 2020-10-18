@@ -196,11 +196,11 @@
         write(courseDes , "light");
         skipLine();
 
-        pdf.save("courseSyl.pdf");
+        pdf.save(InsName + "_" + courseName + "_syllabus.pdf");
 
         docx.Packer.toBlob(doc).then(blob => {
           console.log(blob);
-          saveAs(blob, "example.docx");
+          saveAs(blob, (InsName + "_" + courseName + "_syllabus.docx"));
           console.log("Document created successfully");
         });
       }
