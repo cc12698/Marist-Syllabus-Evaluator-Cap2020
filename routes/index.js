@@ -373,7 +373,6 @@ app.get('/getChecklist', function (req,res,next){
 });
 
 // get all of the checklist items for testing
-// revised sample syllabi page
 app.get('/checklist', function(req, res){
   userSession = req.session;
   if(!userSession.username && !userSession.role) {
@@ -396,6 +395,22 @@ app.get('/checklist', function(req, res){
     else{
       res.redirect('unauthorized');
     }
+});
+
+// update DB checklist
+app.post('/updateChecklist', function(req,res){
+  let keys = Object.keys(req.body);
+  let doc = {
+      'ITEMS': keys
+  };
+  dm.updateChecklist(doc)
+      .then(() => {
+        res.redirect('checklist');
+      })
+      .catch( err => {
+        var userErr = { 'code': 503, 'message':'An error has occurred accessing the database.'};
+      });
+
 });
 
 app.listen(8080,() => console.log("running on port 8080: http://localhost:8080/"));
