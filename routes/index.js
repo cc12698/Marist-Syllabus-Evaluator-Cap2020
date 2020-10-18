@@ -368,10 +368,10 @@ app.get('/getChecklist', function (req,res,next){
 
 // get all of the checklist items for testing
 // revised sample syllabi page
-app.get('/checklistSample', function(req, res){
+app.get('/checklist', function(req, res){
   userSession = req.session;
   if(!userSession.username && !userSession.role) {
-      req.session.redirectTo = '/checklistSample';
+      req.session.redirectTo = '/checklist';
       res.redirect('/login');
   }
   else if(userSession.role == 'admin'){
@@ -380,7 +380,7 @@ app.get('/checklistSample', function(req, res){
         let content = {};
         content['checklist'] = data;
         // console.log(content);
-        res.render('../views/checklistSample.ejs', content)
+        res.render('../views/checklist.ejs', content)
       })
       .catch( (err) => {
         var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
