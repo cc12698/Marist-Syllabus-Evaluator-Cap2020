@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="/css/signin.css">
-    <link rel="stylesheet" href="/css/sampleSyllabi.css">
+    <link rel="stylesheet" href="/css/checklist.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16">
 
@@ -28,19 +28,19 @@
       <h4>Checklist Items</h4>
       <% for(var i=0; i < checklist.length; i++) { %>
           <%if (checklist[i]['CHECKED'] == 1) { %>
-            <input type="checkbox" id="<%= checklist[i]['ITEM_NAME']%>" name="checkListItem"
+            <input type="checkbox" class="checklist_item" id="<%= checklist[i]['ITEM_NAME']%>" name="<%= checklist[i]['ITEM_NAME']%>"
             value="<%= checklist[i]['ITEM_NAME']%>" checked>
             <label for="<%= checklist[i]['ITEM_NAME']%>"><%= checklist[i]['ITEM_NAME']%></label><br>
           <% } else{ %>
-            <input type="checkbox" id="<%= checklist[i]['ITEM_NAME']%>" name="checkListItem"
+            <input type="checkbox" class="checklist_item" id="<%= checklist[i]['ITEM_NAME']%>" name="<%= checklist[i]['ITEM_NAME']%>"
             value="<%= checklist[i]['ITEM_NAME']%>" >
             <label for="<%= checklist[i]['ITEM_NAME']%>"><%= checklist[i]['ITEM_NAME']%></label><br>
           <% } %>
       <% } %>
-      <input type="button" onclick= getCheckedCheckboxesFor('checkListItem');" value="Get Values" />
+      <input type="button" onclick= "getCheckedCheckboxesFor('checkListItem')" value="Get Values">
     </div>
     <%- include('partials/footer'); -%>
   </body>
-    <script type = "text/javascript" src= "/js/sampleSyllabi.js"></script>
+    <script type = "text/javascript" src= "/js/checklist.js"></script>
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </html>
