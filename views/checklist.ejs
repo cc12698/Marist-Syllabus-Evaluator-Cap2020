@@ -28,7 +28,7 @@
             <label for="<%= checklist[i]['ITEM_NAME']%>"><%= checklist[i]['ITEM_NAME']%></label><br>
           <% } %>
       <% } %>
-      <input type="button" onclick= "getCheckedCheckboxesFor('checkListItem')" value="Get Values">
+      <input type="button" onclick= "getCheckedUnchecked()" value="Update">
     </div>
     <%- include('partials/footer'); -%>
   </body>
