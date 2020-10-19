@@ -68,6 +68,7 @@ function updateThumbnail(dropZoneElement, file) {
   // First time - there is no thumbnail element, so lets create it
   if (!thumbnailElement) {
     $(".drop-zone").css('background-image', 'none');
+    $("#dragdrop").hide();
     thumbnailElement = document.createElement("div");
     thumbnailElement.classList.add("drop-zone__thumb");
     dropZoneElement.appendChild(thumbnailElement);
