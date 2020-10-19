@@ -1,0 +1,48 @@
+.contain{
+  width: 400px;
+  margin: auto;
+}
+.form-contain{
+  background-color: lightgrey;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+#header{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#btn{
+  position: relative;
+  left: 0px;
+  bottom: 27px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: 1px solid #A0A0A0;
+  background-color: lightgrey;
+}
+
+#btn:hover{
+  background-color: #A0A0A0;
+}
+
+#update{
+  position: relative;
+  margin-top: 5px;
+  left: 100px;
+  font-weight: bold;
+  border: 1px solid #A0A0A0;
+  background-color: lightgrey;
+}
+
+#update:hover{
+  background-color: #A0A0A0;
+}
+
+label{
+  padding-left: 15px;
+}
