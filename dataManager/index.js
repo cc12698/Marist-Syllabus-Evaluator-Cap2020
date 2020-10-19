@@ -164,6 +164,7 @@ module.exports.uploadSampleSyl = (filePath, fileName, mimetype, callback) => {
            Key: fileName, // file will be saved
            Body: data,
            ContentType: mimetype,
+           ACL: 'public-read'
   };
   cos.upload(params, function(s3Err, data) {
   if (s3Err) throw s3Err
@@ -232,5 +233,27 @@ module.exports.updateChecklist = ( doc ) => {
 
 };
 
+// Create a new bucket for each user
+module.exports.createBucket = (bucketName)  => {
+    console.log(`Creating new bucket: ${bucketName}`);
+    return module.exports.cos.createBucket({
+        Bucket: bucketName,
+        ACL: 'public-read-write',
+        CreateBucketConfiguration: {
+          LocationConstraint: 'us-south-standard'
+        },
+    }).promise()
+    .then((() => {
+        console.log(`Bucket: ${bucketName} created!`);
+    }))
+    .catch((e) => {
+        console.error(`ERROR: ${e.code} - ${e.message}\n`);
+    });
+}
 
-// module.exports.getUserInfo('emily.doran1');
+// Add User to DB - First Time Logging in
+module.exports.addUser = ( doc ) => {
+    var sql = "INSERT into USER (USER_ID, USERNAME, USER_ROLE) VALUES (USER_SEQ.NEXTVAL, ?, 'user')";
+
+    return this.post( sql, [doc.USERNAME]);
+};
