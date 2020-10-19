@@ -159,3 +159,109 @@ Results for acadHonest:
 Results for teachAct:
 
 Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\function uuid() {
+    var b = uuidBin();
+    return hexBytes[b[0]] + hexBytes[b[1]] +
+      hexBytes[b[2]] + hexBytes[b[3]] + '-' +
+      hexBytes[b[4]] + hexBytes[b[5]] + '-' +
+      hexBytes[b[6]] + hexBytes[b[7]] + '-' +
+      hexBytes[b[8]] + hexBytes[b[9]] + '-' +
+      hexBytes[b[10]] + hexBytes[b[11]] +
+      hexBytes[b[12]] + hexBytes[b[13]] +
+      hexBytes[b[14]] + hexBytes[b[15]]
+    ;
+  }.txt on 2020-10-18 18:06:35
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\0fd34b27-355e-4025-91e2-2e3c0564c386.txt on 2020-10-18 18:06:35
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\function uuid() {
+    var b = uuidBin();
+    return hexBytes[b[0]] + hexBytes[b[1]] +
+      hexBytes[b[2]] + hexBytes[b[3]] + '-' +
+      hexBytes[b[4]] + hexBytes[b[5]] + '-' +
+      hexBytes[b[6]] + hexBytes[b[7]] + '-' +
+      hexBytes[b[8]] + hexBytes[b[9]] + '-' +
+      hexBytes[b[10]] + hexBytes[b[11]] +
+      hexBytes[b[12]] + hexBytes[b[13]] +
+      hexBytes[b[14]] + hexBytes[b[15]]
+    ;
+  }.txt on 2020-10-18 18:39:22
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\0f87cc41-280e-4cc3-aa01-a0452784de34.txt on 2020-10-18 18:39:22
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:

@@ -9,9 +9,11 @@ const yauzl = require("yauzl");
 const sentimentAnalyze = require("./sentimentAnalyzer");
 const CloudConvert = require('cloudconvert');
 const https = require('https');
-exports.postComparison = function(req, res){
+exports.postComparison = async function(req, res){
   try{
     var directoryPath = path.normalize(__dirname + "/../../uploads");
+    var data = new Object();
+    var py, sentiment;
     fs.readdir(directoryPath, function (err, files) {
       //handling error
       if (err) {
@@ -26,16 +28,21 @@ exports.postComparison = function(req, res){
         var filePath = "./uploads/" + file;
 
         if(allowDoc.exec(filePath)){
-          doc(filePath, uuidCre);
+          await doc(filePath, uuidCre);
+          py = await callSnek(uuid);
+          sentiment = await sentimentAnalyze.getAnalyzer(uuid);
         }
         else if(allowPDF.exec(filePath)){
-          pdf(filePath, uuidCre);
+          await pdf(filePath, uuidCre);
         }
         else if(allowPages.exec(filePath)){
-          pages(filePath, uuidCre);
+          await pages(filePath, uuidCre);
         }
       });
     });
+    data.py = py;
+    data.sentiment = sentiment;
+    console.log(data);
   }catch(err){
     console.log('err: ' + err);
   }
@@ -69,8 +76,7 @@ async function doc(file, uuid){
         fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
           if (err) throw err;
           console.log('The file has been saved!');
-          callSnek(uuid);
-          sentimentAnalyze.getAnalyzer(uuid);
+
         });
     })
 }
