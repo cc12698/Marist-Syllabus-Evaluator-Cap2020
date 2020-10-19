@@ -99,14 +99,27 @@ app.post('/login', function(req,res){
   dm.getUserInfo(username).then( (data) => {
     // console.log(data[0].USER_ROLE);
     if(data.length == 0){
-      res.redirect('unauthorized');
+      let doc = {
+          'USERNAME': username
+      };
+      dm.addUser(doc).then( () => {
+        userSession.username = username;
+        userSession.role = 'user'
+        var redirectTo = req.session.redirectTo ? req.session.redirectTo : '/';
+        delete req.session.redirectTo;
+        // is authenticated ?
+        res.redirect(redirectTo);
+      })
     }
-    userSession.username = data[0].username;
-    userSession.role = data[0].USER_ROLE;
-    var redirectTo = req.session.redirectTo ? req.session.redirectTo : '/';
-    delete req.session.redirectTo;
-    // is authenticated ?
-    res.redirect(redirectTo);
+    else{
+      userSession.username = data[0].username;
+      userSession.role = data[0].USER_ROLE;
+      var redirectTo = req.session.redirectTo ? req.session.redirectTo : '/';
+      delete req.session.redirectTo;
+      // is authenticated ?
+      res.redirect(redirectTo);
+    }
+
   })
   .catch( (err) => {
     var userErr = { 'code': 503, 'message':'An error has occurred retrieving user from database.'};
