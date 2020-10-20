@@ -36,18 +36,35 @@ iframe{
 } */
 
 .syl{
-	width: 400px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+	width: 450px;
 	background-color: lightgrey;
 	margin-bottom: 2px;
-	border-radius: 5px
+	border-radius: 5px;
+	font-size: 16px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	font-weight: 700;
 }
 
 .samplesyl{
   padding-left: 20px;
 	color: black;
 	text-decoration: underline;
-	font-weight: 500;
 	word-wrap: break-word;
+}
+
+.contain{
+	width: 450px;
+	margin: auto;
+}
+
+.header{
+	font-size: 32px;
+	font-weight: 600;
+	display: inline-block;
+	text-align: center;
+}
+
+.center-head{
+	text-align: center;
 }

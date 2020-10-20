@@ -16,7 +16,10 @@
   <body>
     <%- include('partials/header'); -%>
     <div class="contain">
-      <h4>Sample Syllabi</h4>
+      <div class="center-head">
+        <span class="header">SAMPLE SYLLABI</span>
+      </div>
+
       <% for(var i=0; i < syllabi.length; i++) { %>
         <div class="syl">
           <a href = "https://s3.us-south.cloud-object-storage.appdomain.cloud/sample-syl/<%= syllabi[i]['Key']%>" target="blank" class="samplesyl"><%= syllabi[i]['Key']%></a>
