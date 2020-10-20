@@ -1,9 +1,16 @@
 import sys
 import re
 import datetime
+import DB2
 
 textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
+
+conn = DB2.connect(dsn='sample', uid='db2inst1', pwd='ibmdb2')
+curs = conn.cursor()
+curs.execute('select checked from checked where checked != null' % (id),)
+curs.close()
+conn.close()
 
 checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" ,
            "otherpolicies" , "instrName" , "instrContact" , #"demoConsistant" ,
@@ -227,5 +234,16 @@ def getScore():
     else:
         socre = "F"
         return "F"
+
+class Output:
+    def __init__(self , score , missing):
+        self.score = score
+        self.missing = missing
+
+def makeOutput():
+    output = Output(score , missing)
+    print(str(output))
+    sys.stdout.flush()
+    
 
 checkFileAnal()
