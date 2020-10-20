@@ -9,6 +9,10 @@
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://unpkg.com/jsdocx"></script>
+    <script src="https://unpkg.com/docx@5.0.2/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
 
     <style>
       * {
@@ -63,19 +67,192 @@
             <h4>Your course title:</h4>
           </div>
           <div class="column" style="background-color:#FFFFFF;">
-            <input type="text" id="courseTitle" placeholder="Course Title">
+            <input type="text" id="courseName" placeholder="Course Title">
           </div>
       </div>
 
-    <script>
+      <div id = "form">
+        <div class="row">
+          <div class="column" style="background-color:#E0DEDE;" margin: auto;>
+            <h4>Your Marist e-mail:</h4>
+          </div>
+          <div class="column" style="background-color:#FFFFFF;">
+            <input type="text" id="insEmail" placeholder="">
+          </div>
+      </div>
+
+      <div id = "form">
+        <div class="row">
+          <div class="column" style="background-color:#E0DEDE;" margin: auto;>
+            <h4>Instructor phone number:</h4>
+            <h6>(optional)</h6>
+          </div>
+          <div class="column" style="background-color:#FFFFFF;">
+            <input type="text" id="insPhone" placeholder="">
+          </div>
+      </div>
+
+      <div id = "form">
+        <div class="row">
+          <div class="column" style="background-color:#EEEEEE;" margin: auto;>
+            <h4>Course Description:</h4>
+          </div>
+          <div class="column" style="background-color:#FFFFFF;">
+            <textarea id="courseDes" rows="4" cols="50"></textarea>
+          </div>
+      </div>
+
+
+
+      <div>
+        <button onclick="createPDF()" id=button>Create Syllabus</button>
+      </div>
+
+    <script >
+
+      //const docx = require("docx");
+
+      const lineLen = 100;
+      const lineNum = 20;
+
+      const pdf = new jsPDF();
+      const doc = new docx.Document();
+
+      var x = 10;
+      var y = 10;
+
+      var font = "times";
+
+      parts = [];
+
       function createPDF(){
-        var doc = new jsPDF();
 
-        doc.text(document.getElementById("name").value, 10, 10)
-        doc.text(document.getElementById("course").value, 25, 25)
+        InsName = document.getElementById("name").value;
+        courseName = document.getElementById("courseName").value;
+        courseDes = document.getElementById("courseDes").value;
+        insEmail = document.getElementById("insEmail").value;
+        insPhone = document.getElementById("insPhone").value;
 
-        doc.save("courseSyl.pdf");
+        doc.addSection({
+          properties: {},
+          children: [
+            new docx.Paragraph({
+              children: [
+                  new docx.TextRun({
+                    text: courseName,
+                    bold: true,
+                  }),
+                  new docx.TextRun("  " + InsName),
+                  new docx.TextRun("").break(),
+                  new docx.TextRun("").break(),
+                  new docx.TextRun({
+                    text: "Instructor Contact",
+                    bold: true,
+                  }),
+                  new docx.TextRun("").break(),
+                  new docx.TextRun({
+                    text: "E-mail: ",
+                    bold: true,
+                  }),
+                  new docx.TextRun(insEmail),
+                  new docx.TextRun("").break(),
+                  new docx.TextRun({
+                    text: "Phone: ",
+                    bold: true,
+                  }),
+                  new docx.TextRun(insPhone),
+                  new docx.TextRun("").break(),
+                  new docx.TextRun("").break(),
+                  new docx.TextRun({
+                    text: "Course Description",
+                    bold: true,
+                  }),
+                  new docx.TextRun("").break(),
+                  new docx.TextRun(courseDes),
+                  new docx.TextRun({
+                      text: "Foo Bar",
+                      bold: true,
+                    }),
+                    new docx.TextRun({
+                      text: "\tGithub is the best",
+                      bold: true,
+                    }),
+                  ],
+                }),
+              ],
+            });
+
+
+        pdf.setFont("times" , "light")
+
+        //write(InsName , "bold");
+        write(courseName + "  " + InsName , "bold");
+        skipLine();
+        write("Instructor Contact:" , "bold");
+        write(("E-mail: " + insEmail) , "light");
+        write("Phone: " + insPhone , "light");
+        skipLine();
+        write("Course Description:" , "bold");
+        write(courseDes , "light");
+        skipLine();
+
+        pdf.save(InsName + "_" + courseName + "_syllabus.pdf");
+
+        docx.Packer.toBlob(doc).then(blob => {
+          console.log(blob);
+          saveAs(blob, (InsName + "_" + courseName + "_syllabus.docx"));
+          console.log("Document created successfully");
+        });
       }
+
+      function write(s , style){
+        //for pdf
+        if(style == "light"){
+          pdf.setFont(font , "light")
+        }
+        else if(style == "bold"){
+          pdf.setFont(font , "bold")
+        }
+
+        var lines = pdf.splitTextToSize(s , 180);
+        pdf.text(lines , x , y);
+
+        y += 6 * lines.length;
+
+/*
+        //for word
+        if(style == "light"){
+          console.log("light section added");
+          doc.addSection({
+            properties: {},
+            children: [
+              new docx.Paragraph({
+                text: s
+                }),
+              ],
+            });
+          }
+
+        else if(style == "bold"){
+          console.log("bold section added");
+          doc.addSection({
+            properties: {},
+            children: [
+              new docx.Paragraph({
+                children: [
+                  new docx.TextRun(s),
+                  ],
+                }),
+              ],
+            });
+        }
+*/
+      }
+
+      function skipLine(){
+        y += 6;
+      }
+
     </script>
 
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
