@@ -145,6 +145,19 @@ app.get('/mainmenu', function(req, res){
   // res.render('../views/mainmenu.ejs')
 });
 
+app.get('/template', function(req, res){
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      req.session.redirectTo = '/template';
+      res.redirect('/login');
+  }
+  else {
+      res.render('../views/template.ejs');
+  }
+
+  // res.render('../views/mainmenu.ejs')
+});
+
 // the main menu page *admins only*
 app.get('/mainmenuAdmin', function(req, res){
   userSession = req.session;
