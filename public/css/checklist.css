@@ -1,7 +1,9 @@
 .contain{
-  width: 410px;
+  width: 510px;
   margin: auto;
+  word-break: break-word;
 }
+
 .form-contain{
   background-color: lightgrey;
   border-radius: 3px;
@@ -19,7 +21,7 @@
 #btn{
   position: relative;
   left: 0px;
-  bottom: 27px;
+  bottom: 24px;
   margin-bottom: 10px;
   font-weight: bold;
   border: 1px solid #A0A0A0;
@@ -28,6 +30,10 @@
 
 #btn:hover{
   background-color: #A0A0A0;
+}
+
+.header-center{
+  text-align: center;
 }
 
 #update{
@@ -45,4 +51,26 @@
 
 label{
   padding-left: 15px;
+  display: unset;
+
+}
+
+.label-item{
+  display: unset;
+
+}
+
+@media only screen and (max-width: 510px) {
+  .contain{
+    width: 370px;
+    margin: auto;
+  }
+
+  #update{
+    margin-top: 4px;
+  }
+
+  #btn{
+    bottom:24px;
+  }
 }

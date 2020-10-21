@@ -116,3 +116,16 @@ form{
 	display: inline-block;
 	text-align: center;
 }
+
+@media only screen and (max-width: 450px) {
+  .contain{
+    width: 370px;
+    margin: auto;
+  }
+
+  .syl{
+  	width: 370px;
+		word-wrap: break-word;
+  }
+
+}
