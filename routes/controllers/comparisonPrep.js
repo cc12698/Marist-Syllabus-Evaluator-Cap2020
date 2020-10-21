@@ -9,18 +9,26 @@ const yauzl = require("yauzl");
 const sentimentAnalyze = require("./sentimentAnalyzer");
 const CloudConvert = require('cloudconvert');
 const https = require('https');
+
 exports.postComparison = async function(req, res){
+  var uuid = await createText();
+  console.log(uuid);
+  const py = await callSnek(uuid);
+  const sent = await sentimentAnalyze.getAnalyzer(uuid);
+  console.log(sent, py)
+}
+
+function createText(){
   try{
     var directoryPath = path.normalize(__dirname + "/../../uploads");
-    var data = new Object();
-    var py, sentiment;
+    var uuidCre = uuid();
     fs.readdir(directoryPath, function (err, files) {
       //handling error
       if (err) {
           return console.log('Unable to scan directory: ' + err);
       }
-      var uuidCre = uuid();
       //listing all files using forEach
+
       files.forEach(function (file) {
         var allowDoc =  /(\.doc|\.docx)$/i;
         var allowPDF =  /(\.pdf)$/i;
@@ -28,21 +36,17 @@ exports.postComparison = async function(req, res){
         var filePath = "./uploads/" + file;
 
         if(allowDoc.exec(filePath)){
-          await doc(filePath, uuidCre);
-          py = await callSnek(uuid);
-          sentiment = await sentimentAnalyze.getAnalyzer(uuid);
+          doc(filePath, uuidCre);
         }
         else if(allowPDF.exec(filePath)){
-          await pdf(filePath, uuidCre);
+          pdf(filePath, uuidCre);
         }
         else if(allowPages.exec(filePath)){
-          await pages(filePath, uuidCre);
+          pages(filePath, uuidCre);
         }
       });
     });
-    data.py = py;
-    data.sentiment = sentiment;
-    console.log(data);
+    return uuidCre;
   }catch(err){
     console.log('err: ' + err);
   }
@@ -54,12 +58,12 @@ function callSnek(uuid){
   var file = path.normalize(path.join(__dirname, '/../../uploads/'+ uuid +'.txt'));
   var pythonProcess = spawn('python', [pyPath, file]);
   pythonProcess.stdout.on('data', (data) => {
-    console.log('pipe data');
+    //console.log('pipe data');
     dataToSend = data.toString();
   });
 
   pythonProcess.stdout.on('end', function(){
-    console.log("test: " + dataToSend);
+    //console.log("test: " + dataToSend);
   });
 
   pythonProcess.on('close', (code) => {
@@ -76,9 +80,8 @@ async function doc(file, uuid){
         fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
           if (err) throw err;
           console.log('The file has been saved!');
-
         });
-    })
+    });
 }
 
 async function pdf(file, uuid){
