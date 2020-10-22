@@ -2,7 +2,6 @@
 <html>
   <head>
     <link rel="stylesheet" href="/css/signin.css">
-    <link rel="stylesheet" href="/css/uploadSampleSyllabi.css">
     <link rel="stylesheet" href="/css/modifySampleSyllabi.css">
     <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16">
     <script
@@ -11,43 +10,29 @@
       crossorigin="anonymous">
     </script>
 
-    <style media="screen">
-      .contain2{
-        padding-left: 10px;
-      }
-    </style>
-
     <meta name="google" value="notranslate">
   </head>
   <body>
     <%- include('partials/header'); -%>
-    <form form action="/uploadSampleSyl" enctype="multipart/form-data" method="POST">
-
-        <div class="contain">
-          <h4><u>Edit Selection of Sample Syllabi</u></h4>
-
-          <div class="">
-            <!-- <input type="file" id="upload" name="sample_syl" accept=".doc,.docx,.pdf,.pages" class="drop-zone__input" onchange="getFileInfo()" required> -->
-            <input type="file" name="sample_syl" id="file" class="inputfile" accept=".doc,.docx,.pdf,.pages"/>
-            <label class="add" for="file"><span>ADD<span></label>
-            <input hidden id = "fileNameSyl" name = "fileNameSyl">
-            <input type="submit" value="Upload" id="subDoc" href="results"/>
-
-          </div>
-        </div>
-
-      <div class="submit">
+    <div class="contain">
+      <div class="center-head">
+        <span class="edit-header">EDIT SAMPLE SYLLABI</span>
       </div>
 
-    </form>
-
-    <div class="contain2">
       <% for(var i=0; i < syllabi.length; i++) { %>
         <div class="syl">
           <button class="remove" name="<%= syllabi[i]['Key']%>">x</button>
           <a href = "https://s3.us-south.cloud-object-storage.appdomain.cloud/sample-syl/<%= syllabi[i]['Key']%>" target="blank" class="samplesyl"><%= syllabi[i]['Key']%></a>
         </div>
       <% } %>
+      <form form action="/uploadSampleSyl" enctype="multipart/form-data" method="POST">
+        <!-- <input type="file" id="upload" name="sample_syl" accept=".doc,.docx,.pdf,.pages" class="drop-zone__input" onchange="getFileInfo()" required> -->
+        <input type="file" name="sample_syl" id="file" class="inputfile" accept=".doc,.docx,.pdf,.pages"/>
+        <label class="add" for="file"><span>ADD<span></label>
+        <input hidden id = "fileNameSyl" name = "fileNameSyl">
+        <input type="submit" value="UPLOAD" id="subDoc" href="results"/>
+
+      </form>
 
     </div>
     <%- include('partials/footer'); -%>

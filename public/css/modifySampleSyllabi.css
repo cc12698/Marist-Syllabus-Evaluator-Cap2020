@@ -11,9 +11,23 @@
     font-weight: 700;
     background-color: lightgrey;
 		color: black;
-		font-size: 20px;
+		font-size: 18px;
     display: inline-block;
     border-radius: 5px;
+}
+
+#subDoc{
+    font-weight: 700;
+    background-color: grey;
+		color: black;
+		font-size: 18px;
+    display: inline-block;
+    border-radius: 5px;
+		border: none;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
 }
 
 .inputfile:focus + label,
@@ -31,7 +45,9 @@
 }
 
 .remove {
-	padding-top:5px;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-size: 18px;
 	padding-left: 20px;
 	padding-right: 20px;
   font-weight: 700;
@@ -43,6 +59,7 @@
   display: inline-block;
   cursor: pointer;
   border-radius: 5px;
+	height: 38px;
 }
 
 .remove:hover{
@@ -50,10 +67,10 @@
 }
 
 .samplesyl{
-  padding-left: 20px;
+  /* padding-left: 20px; */
 	color: black;
 	text-decoration: underline;
-	font-weight: 500;
+	font-weight: 700;
 	word-wrap: break-word;
 }
 
@@ -64,26 +81,51 @@ label{
 	padding-right: 15px;
 }
 
-.syl{
-	width: 400px;
-	background-color: lightgrey;
-	margin-bottom: 2px;
-	border-radius: 5px
+form{
+	padding-top: 5px;
 }
 
-#subDoc{
-	border: none;
-	background-color: black;
-	font-weight: bold;
-	display: inline-block;
+.syl{
+	width: 450px;
+	background-color: lightgrey;
+	margin-bottom: 2px;
 	border-radius: 5px;
-	color: white;
-
-	margin-left: 5px;
-	position: relative;
-	top: 4px;
+	font-size: 16px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-weight: 700;
 }
 
 #subDoc:hover{
 	opacity: 0.6;
+}
+
+.contain{
+	width: 450px;
+	margin: auto;
+}
+
+.center-head{
+	padding-top: 10px;
+	text-align: center;
+}
+
+.edit-header{
+	font-size: 32px;
+	font-weight: 600;
+	display: inline-block;
+	text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+  .contain{
+    width: 370px;
+    margin: auto;
+  }
+
+  .syl{
+  	width: 370px;
+		word-wrap: break-word;
+  }
+
 }

@@ -103,17 +103,25 @@ app.post('/login', function(req,res){
           'USERNAME': username
       };
       dm.addUser(doc).then( () => {
-        userSession.username = username;
-        userSession.role = 'user'
-        var redirectTo = req.session.redirectTo ? req.session.redirectTo : '/';
-        delete req.session.redirectTo;
-        // is authenticated ?
-        res.redirect(redirectTo);
+        dm.getUserInfo(username).then( (data) => {
+          var bucketName = 'user-syl-' + data[0].USER_ID;
+          dm.createBucket(bucketName).then( () => {
+            userSession.username = data[0].username;
+            userSession.role = data[0].USER_ROLE;
+            userSession.userid = data[0].USER_ID;
+            var redirectTo = req.session.redirectTo ? req.session.redirectTo : '/';
+            delete req.session.redirectTo;
+            // is authenticated ?
+            res.redirect(redirectTo);
+          });
+        })
       })
     }
     else{
       userSession.username = data[0].username;
       userSession.role = data[0].USER_ROLE;
+      userSession.userid = data[0].USER_ID;
+
       var redirectTo = req.session.redirectTo ? req.session.redirectTo : '/';
       delete req.session.redirectTo;
       // is authenticated ?
@@ -142,6 +150,19 @@ app.get('/mainmenu', function(req, res){
   else{
     res.redirect('unauthorized');
   }
+  // res.render('../views/mainmenu.ejs')
+});
+
+app.get('/template', function(req, res){
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      req.session.redirectTo = '/template';
+      res.redirect('/login');
+  }
+  else {
+      res.render('../views/template.ejs');
+  }
+
   // res.render('../views/mainmenu.ejs')
 });
 
@@ -218,6 +239,33 @@ app.get('/modifySampleSyllabi', function(req, res){
 
 });
 
+// the page to modify the selection of user saved syllabi
+app.get('/userSyllabi', function(req, res){
+  userSession = req.session;
+  if(!userSession.username && !userSession.role) {
+      req.session.redirectTo = '/userSyllabi';
+      res.redirect('/login');
+  }
+  else {
+    var bucketName = 'user-syl-' + userSession.userid;
+    dm.getBucketContents(bucketName)
+      .then( (data) => {
+        let content = {};
+        content['syllabi'] = data;
+        content['user'] = userSession;
+        content['user']['bucketName'] = bucketName;
+        // console.log(content['user']);
+        // console.log(content);
+        res.render('../views/userSyllabi.ejs', content)
+      })
+      .catch( (err) => {
+        var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+        res.status(503).send(userErr);
+      });
+  }
+
+});
+
 // revised sample syllabi page
 app.get('/sampleSyllabi', function(req, res){
   dm.getBucketContents(S3_BUCKET)
@@ -267,6 +315,21 @@ app.post('/uploadSyllabus', async (req, res) => {
               fs.mkdirSync(dir);
           }
           uploadedFile.mv(dir + uploadedFile.name);
+
+          var mimetype = mime.lookup(uploadedFile.name);
+
+          var tempPath = './uploads/' + uploadedFile.name;
+          var bucketName = 'user-syl-' + userSession.userid;
+          dm.uploadUserSyl(bucketName, tempPath, uploadedFile.name, mimetype, function(error){
+            if(error){
+              res.status(500).send(error);
+            }
+
+          });
+          const test = await compPrep.postComparison();
+          res.redirect('/result');
+
+
           //send response
           /*res.send({
               status: true,
@@ -277,8 +340,7 @@ app.post('/uploadSyllabus', async (req, res) => {
                   size: uploadedFile.size
               }
           });*/
-          res.redirect('/result');
-          const test = await compPrep.postComparison();
+
       }
     } catch (err) {
         res.status(500).send(err);
@@ -346,6 +408,32 @@ app.post('/deleteSampleSyl', cors(), (req,res,next) => {
           content['syllabi'] = data;
 
           res.render('../views/sampleSyllabi.ejs', content)
+        })
+        .catch( (err) => {
+          var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+          res.status(503).send(userErr);
+        });
+    })
+    .catch( (err) => {
+      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+      res.status(503).send(userErr);
+    });
+});
+
+// Delete a User Saved Syllabus
+app.post('/deleteUserSyl', cors(), (req,res,next) => {
+  var bucketName = 'user-syl-' + userSession.userid;
+  dm.deleteUserSyllabi(bucketName, req.body.filename)
+    .then(() => {
+      dm.getBucketContents(bucketName)
+        .then( (data) => {
+          let content = {};
+          content['syllabi'] = data;
+          content['user'] = userSession;
+          content['user']['bucketName'] = bucketName;
+          // console.log(content['user']);
+          // console.log(content);
+          res.render('../views/userSyllabi.ejs', content)
         })
         .catch( (err) => {
           var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};

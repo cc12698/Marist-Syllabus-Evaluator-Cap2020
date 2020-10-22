@@ -12,11 +12,11 @@ checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" ,
            "teachAct" , "accommod" , ] #"diversity"]
 
 keywords = {    #list of regex commands ment to seach for items
-                "courseDes":      ["course( )*description" , "course description" , "class description"] ,
-                "courseObj":      ["objective(.)*course" , "course(.)*objective"] ,
-                "courseCred":     ["[0-9]( )*credit"] , #need to investigate
+                "courseDes":      ["course( )*description" , "course description" , "class description" , "course overview"] ,
+                "courseObj":      ["objective(.)*course" , "course(.)*objective" , "course(.)*expectations" , "expectations(.)*course" , "learning outcomes" , "learning objectives"] ,
+                "courseCred":     ["[0-9]( )*credit" , "number of credits"] , #need to investigate
                 "preReq":         ["pre(.)*requisite" , "pre(.)*req"] ,
-                "gradeDet":       ["grading:" , "[0-9]([0-9])*( )*points" , "assessment" , "grading"] ,
+                "gradeDet":       ["grading:" , "[0-9]([0-9])*( )*points" , "assessment" , "grading" , "evaluation" , "grade allocation"] ,
                 "otherpolicies":  ["policy" , "policies" , "academic(.)*honesty"] ,
                 "instrName":      ["professor" , "Dr"] ,
                 "instrContact":   ["e(-| )mail:" , "contact:" , "email(-|:)" , "@marist.edu"] ,
@@ -27,9 +27,9 @@ keywords = {    #list of regex commands ment to seach for items
                 "assignments":    ["assignments" , "bee"] ,
                 "taskCrit":       [] ,
                 "courseNum":      ["[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" , "course( )*number" , "class( )*number" , "[0-9]{3}( )*(N|L|n|l)"] ,
-                "format":         ["remote(.)course" , "online(.)course" , "hybrid(.)course"] ,
+                "format":         ["remote(.)course" , "online(.)course" , "hybrid(.)course" , "zoom" , "webex" , "in(-| |.)person)"] ,
                 "attenPol":       ["attendance" , "attendance(.)policy" , "absent"] ,
-                "reqRead":        ["required(.*)read" , "read(.*)required" , "Textbook" , "ISBN" , "test(.)*course"] ,
+                "reqRead":        ["required(.*)read" , "read(.*)required" , "Textbook" , "ISBN" , "test(.)*course" , "doi" , "course materials" , "required(.)*text" , "text(.)*required"] ,
                 "acadHonest":     ["academic honesty" , "cheating" , "plagiarism"] ,
                 "teachAct":       ["Materials used in connection" , "subject to copyright protection"] ,
                 "accommod":       ["Students with disabilities" , "accommodations and accessibility"] ,
