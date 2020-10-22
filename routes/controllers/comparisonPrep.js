@@ -9,13 +9,14 @@ const yauzl = require("yauzl");
 const sentimentAnalyze = require("./sentimentAnalyzer");
 const CloudConvert = require('cloudconvert');
 const https = require('https');
+const WordExtractor = require("word-extractor");
 
 exports.postComparison = async function(req, res){
   var uuid = await createText();
-  console.log(uuid);
-  const py = await callSnek(uuid);
-  const sent = await sentimentAnalyze.getAnalyzer(uuid);
-  console.log(sent, py)
+  //console.log(uuid);
+  //const py = await callSnek(uuid);
+  //const sent = await sentimentAnalyze.getAnalyzer(uuid);
+  //console.log(sent, py)
 }
 
 function createText(){
@@ -30,12 +31,16 @@ function createText(){
       //listing all files using forEach
 
       files.forEach(function (file) {
-        var allowDoc =  /(\.doc|\.docx)$/i;
+        var allowDocx =  /(\.docx)$/i;
+        var allowDoc =  /(\.doc)$/i;
         var allowPDF =  /(\.pdf)$/i;
         var allowPages =  /(\.pages)$/i;
         var filePath = "./uploads/" + file;
 
-        if(allowDoc.exec(filePath)){
+        if(allowDocx.exec(filePath)){
+          docx(filePath, uuidCre);
+        }
+        else if(allowDoc.exec(filePath)){
           doc(filePath, uuidCre);
         }
         else if(allowPDF.exec(filePath)){
@@ -63,7 +68,7 @@ function callSnek(uuid){
   });
 
   pythonProcess.stdout.on('end', function(){
-    //console.log("test: " + dataToSend);
+    console.log("test: " + dataToSend);
   });
 
   pythonProcess.on('close', (code) => {
@@ -73,15 +78,31 @@ function callSnek(uuid){
   return dataToSend;
 }
 
-async function doc(file, uuid){
+async function docx(file, uuid){
   mammoth.extractRawText({path: file})
     .then(function(result){
         var text = result.value; // The raw text
         fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
           if (err) throw err;
           console.log('The file has been saved!');
+          callSnek(uuid);
+          sentimentAnalyze.getAnalyzer(uuid);
         });
     });
+}
+
+async function doc(file, uuid){
+  var extractor = new WordExtractor();
+  var extracted = extractor.extract(file);
+  extracted.then(function(result) {
+    var text = result.getBody();
+    fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+      callSnek(uuid);
+      sentimentAnalyze.getAnalyzer(uuid);
+    });
+  });
 }
 
 async function pdf(file, uuid){

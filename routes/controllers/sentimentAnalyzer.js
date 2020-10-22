@@ -16,6 +16,7 @@ exports.getAnalyzer = async function(uuid){
     //if it is a positiver number it is positive
     //greater the number the more positive it is and vice versa
     data.output = analyzer.getSentiment(arr)
+    console.log(data);
     return data;
   }catch(error){
     console.log(error);
