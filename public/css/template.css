@@ -36,16 +36,18 @@
   margin-top: 20px;
 }
 
-#button{
+.button{
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   background-color: lightgrey;
   border: 1px solid #A0A0A0;
   font-weight: 600;
 }
 
-#button:hover{
+.button:hover{
   background-color: #A0A0A0;
 }
