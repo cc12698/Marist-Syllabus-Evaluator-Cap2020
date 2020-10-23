@@ -108,6 +108,15 @@ def checkFileAnal():
 
     s = open(textFile, encoding="utf-8")
 
+    for line in s:
+        result = re.search("@marist.edu" , line , re.IGNORECASE)
+
+    if(result != None):
+        result = result[result.index(".") + 1:result.index("@")]
+        
+    keywords.get("instrName").push(result)
+
+    s.seek(0)
 
     matches = 0
     cmdIdex = 0
