@@ -8,14 +8,16 @@ var spellChecker = require('spellchecker');
 
 exports.getAnalyzer = async function(uuid){
   try{
+    var data = new Object;
     var arr = await txtToArray(uuid);
-    var sc = await spellCheckFile(arr);
+    data.sc = await spellCheckFile(arr);
+
     //if the number returned comes back negative it is a negative Statement
     //if it is a positiver number it is positive
     //greater the number the more positive it is and vice versa
-    var output = analyzer.getSentiment(arr)
-    console.log(output, sc);
-    return output;
+    data.output = analyzer.getSentiment(arr)
+    console.log(data);
+    return data;
   }catch(error){
     console.log(error);
   }

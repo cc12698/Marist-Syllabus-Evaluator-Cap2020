@@ -12,3 +12,15 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+function getResults(){
+    fetch('/api/getResults/').then(function(response){
+      if(response.status != 200){
+        console.log('problem with ajax call!' + response.status + "msg: " + response.value);
+        return;
+    }
+    response.text().then(function(data){
+      console.log("received back: " + data);
+    });
+  });
+}

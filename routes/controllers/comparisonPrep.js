@@ -9,23 +9,38 @@ const yauzl = require("yauzl");
 const sentimentAnalyze = require("./sentimentAnalyzer");
 const CloudConvert = require('cloudconvert');
 const https = require('https');
-exports.postComparison = function(req, res){
+const WordExtractor = require("word-extractor");
+
+exports.postComparison = async function(req, res){
+  var uuid = await createText();
+  //console.log(uuid);
+  //const py = await callSnek(uuid);
+  //const sent = await sentimentAnalyze.getAnalyzer(uuid);
+  //console.log(sent, py)
+}
+
+function createText(){
   try{
     var directoryPath = path.normalize(__dirname + "/../../uploads");
+    var uuidCre = uuid();
     fs.readdir(directoryPath, function (err, files) {
       //handling error
       if (err) {
           return console.log('Unable to scan directory: ' + err);
       }
-      var uuidCre = uuid();
       //listing all files using forEach
+
       files.forEach(function (file) {
-        var allowDoc =  /(\.doc|\.docx)$/i;
+        var allowDocx =  /(\.docx)$/i;
+        var allowDoc =  /(\.doc)$/i;
         var allowPDF =  /(\.pdf)$/i;
         var allowPages =  /(\.pages)$/i;
         var filePath = "./uploads/" + file;
 
-        if(allowDoc.exec(filePath)){
+        if(allowDocx.exec(filePath)){
+          docx(filePath, uuidCre);
+        }
+        else if(allowDoc.exec(filePath)){
           doc(filePath, uuidCre);
         }
         else if(allowPDF.exec(filePath)){
@@ -36,6 +51,7 @@ exports.postComparison = function(req, res){
         }
       });
     });
+    return uuidCre;
   }catch(err){
     console.log('err: ' + err);
   }
@@ -47,7 +63,7 @@ function callSnek(uuid){
   var file = path.normalize(path.join(__dirname, '/../../uploads/'+ uuid +'.txt'));
   var pythonProcess = spawn('python', [pyPath, file]);
   pythonProcess.stdout.on('data', (data) => {
-    console.log('pipe data');
+    //console.log('pipe data');
     dataToSend = data.toString();
   });
 
@@ -62,7 +78,7 @@ function callSnek(uuid){
   return dataToSend;
 }
 
-async function doc(file, uuid){
+async function docx(file, uuid){
   mammoth.extractRawText({path: file})
     .then(function(result){
         var text = result.value; // The raw text
@@ -72,7 +88,21 @@ async function doc(file, uuid){
           callSnek(uuid);
           sentimentAnalyze.getAnalyzer(uuid);
         });
-    })
+    });
+}
+
+async function doc(file, uuid){
+  var extractor = new WordExtractor();
+  var extracted = extractor.extract(file);
+  extracted.then(function(result) {
+    var text = result.getBody();
+    fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+      callSnek(uuid);
+      sentimentAnalyze.getAnalyzer(uuid);
+    });
+  });
 }
 
 async function pdf(file, uuid){
