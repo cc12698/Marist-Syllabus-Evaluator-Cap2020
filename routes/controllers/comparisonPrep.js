@@ -11,15 +11,16 @@ const CloudConvert = require('cloudconvert');
 const https = require('https');
 const WordExtractor = require("word-extractor");
 
-exports.postComparison = async function(req, res){
-  var uuid = await createText();
+exports.getResults = async function(req, res){
+  var getDir = getPath(path.normalize(__dirname + "/../../uploads"));
+  console.log(getDir);
   //console.log(uuid);
   //const py = await callSnek(uuid);
   //const sent = await sentimentAnalyze.getAnalyzer(uuid);
   //console.log(sent, py)
 }
 
-function createText(){
+exports.postComparison = async function(req, res){
   try{
     var directoryPath = path.normalize(__dirname + "/../../uploads");
     var uuidCre = uuid();
@@ -164,4 +165,10 @@ async function pages(file, uuid){
   });
   callSnek(uuid);
   sentimentAnalyze.getAnalyzer(uuid);
+}
+
+function getPath(path){
+  new Promise((resolve, reject) => {
+    return fs.readdir(path, (err, filenames) => err != null ? reject(err) : resolve(filenames))
+  });
 }
