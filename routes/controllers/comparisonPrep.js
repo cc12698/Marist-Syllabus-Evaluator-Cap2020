@@ -12,8 +12,9 @@ const https = require('https');
 const WordExtractor = require("word-extractor");
 
 exports.getResults = async function(req, res){
+  console.log('HELLO FRIEND');
   var getDir = getPath(path.normalize(__dirname + "/../../uploads"));
-  console.log(getDir);
+  console.log(getDir)
   //console.log(uuid);
   //const py = await callSnek(uuid);
   //const sent = await sentimentAnalyze.getAnalyzer(uuid);
@@ -21,43 +22,50 @@ exports.getResults = async function(req, res){
 }
 
 exports.postComparison = async function(req, res){
+  const uuidConvert = await makeTXT();
+  console.log(uuidConvert);
+}
+
+function makeTXT(){
   try{
     var directoryPath = path.normalize(__dirname + "/../../uploads");
-    var uuidCre = uuid();
-    fs.readdir(directoryPath, function (err, files) {
-      //handling error
-      if (err) {
-          return console.log('Unable to scan directory: ' + err);
-      }
-      //listing all files using forEach
+    return new Promise((resolve, reject) => {
+      fs.readdir(directoryPath, async function (err, files) {
+        var uuidCre = uuid();
+        var path  = './uploads/'+ uuidCre +'.txt';
+        //listing all files using forEach
+        for(const file of files){
+          var allowDocx =  /(\.docx)$/i;
+          var allowDoc =  /(\.doc)$/i;
+          var allowPDF =  /(\.pdf)$/i;
+          var allowPages =  /(\.pages)$/i;
+          var filePath = "./uploads/" + file;
 
-      files.forEach(function (file) {
-        var allowDocx =  /(\.docx)$/i;
-        var allowDoc =  /(\.doc)$/i;
-        var allowPDF =  /(\.pdf)$/i;
-        var allowPages =  /(\.pages)$/i;
-        var filePath = "./uploads/" + file;
-
-        if(allowDocx.exec(filePath)){
-          docx(filePath, uuidCre);
-        }
-        else if(allowDoc.exec(filePath)){
-          doc(filePath, uuidCre);
-        }
-        else if(allowPDF.exec(filePath)){
-          pdf(filePath, uuidCre);
-        }
-        else if(allowPages.exec(filePath)){
-          pages(filePath, uuidCre);
+          if(allowDocx.exec(filePath)){
+            var result = await docx(filePath);
+            var text = result.value; // The raw text
+            fs.writeFile(path, text, (err) => {
+              if (err) throw err;
+              console.log('The file has been saved!');
+              return err ? reject(err) : resolve(path);
+            });
+          }
+          else if(allowDoc.exec(filePath)){
+            doc(filePath, uuidCre);
+          }
+          else if(allowPDF.exec(filePath)){
+            pdf(filePath, uuidCre);
+          }
+          else if(allowPages.exec(filePath)){
+            pages(filePath, uuidCre);
+          }
         }
       });
-    });
-    return uuidCre;
+    })
   }catch(err){
     console.log('err: ' + err);
   }
 }
-
 function callSnek(uuid){
   var dataToSend;
   var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
@@ -79,17 +87,8 @@ function callSnek(uuid){
   return dataToSend;
 }
 
-async function docx(file, uuid){
-  mammoth.extractRawText({path: file})
-    .then(function(result){
-        var text = result.value; // The raw text
-        fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
-          if (err) throw err;
-          console.log('The file has been saved!');
-          callSnek(uuid);
-          sentimentAnalyze.getAnalyzer(uuid);
-        });
-    });
+async function docx(file){
+  return mammoth.extractRawText({path: file})
 }
 
 async function doc(file, uuid){

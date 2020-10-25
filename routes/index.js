@@ -327,9 +327,7 @@ app.post('/uploadSyllabus', async (req, res) => {
 
           });
           const test = await compPrep.postComparison();
-          const getRes = await compPrep.getResults();
           res.redirect('/result');
-
 
           //send response
           /*res.send({

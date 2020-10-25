@@ -616,3 +616,264 @@ Match to "cheating" in line "Cheating will not be tolerated. All homework assign
 Results for teachAct:
 
 Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\11344ef8-bec8-494b-afa6-a7201ac53efe.txt on 2020-10-24 19:47:13
+
+Results for courseDes:
+Match to "course( )*description" in line "Course Descriptio": Course Description
+Match to "course description" in line "Course Descriptio": Course Description
+
+Results for courseObj:
+Match to "course(.)*objective" in line "Course Objective": Course Objective
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "Prerequisite": Prerequisite
+Match to "pre(.)*req" in line "Prerequisite": Prereq
+Match to "pre(.)*req" in line "In-class presentations will require you to identify issues, formulate algorithms and evaluate the solution. You must also demonstrate that you know the basic principles, skills, tools, and the dynamic issues related to algorithms": presentations will req
+
+Results for gradeDet:
+Match to "grading" in line "Your letter grade will be determined according to the department grading scale": grading
+Match to "[0-9]([0-9])*( )*points" in line "Presentation Scoring Rubric (Total 50 points)": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Organization: Information is presented in a logical sequence. (10 points": 10 points
+Match to "[0-9]([0-9])*( )*points" in line "Content: Presentation contains accurate information. Material included is relevant to the topic assigned. (30 points": 30 points
+Match to "[0-9]([0-9])*( )*points" in line "Presentation: Delivery is poised, controlled, and smooth. Information was well communicated. (10 points": 10 points
+Match to "grading" in line "If you feel there has been a grading mistake, you can discuss it with me the week during which the grade is posted or the following week unless we both agree to other arrangements. After that, the grade is final and will not be changed": grading
+
+Results for otherpolicies:
+Match to "policy" in line "E-mail Policy": Policy
+Match to "policy" in line "Electronic mail or "e-mail" is considered an official method for communication in this course because it delivers information in a convenient, timely, cost effective and environmentally aware manner. Students are expected to check their official Marist e-mail on a frequent and consistent basis in order to remain informed of university-related communications. The instructor recommends checking email daily. Students are responsible for the consequences of not reading, in a timely fashion, university-related communications sent to their official Marist student e-mail account. Due to school policy, the instructor will NOT reply to student e-mails from non-Marist accounts. Students are required to use Marist e-mail accounts to contact the instructor/staff at school": policy
+Match to "policy" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": policy
+
+Results for instrName:
+Match to "Dr" in line "Instructor: Dr. Bowu Zhan": Dr
+Match to "Dr" in line "One of the lowest assignments will be dropped when calculating the final grade. The lowest score is not dropped if that would result in dropping all scores in the assignment category": dr
+Match to "Dr" in line "One of the lowest quizzes will be dropped when calculating the final grade. The lowest score is not dropped if that would result in dropping all scores in the quiz category": dr
+
+Results for instrContact:
+Match to "email(-|:)" in line "Email: bowu.zhang@marist.ed": Email:
+Match to "@marist.edu" in line "Email: bowu.zhang@marist.ed": @marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "assignments" in line "In this course, students will learn core concepts in algorithms, data structures, and problem-solving techniques. Students will be exposed to classic problems in computer science (such as searching and sorting), classic data structures (hashmap and trees) and classic optimization problems (such as the Knapsack Problem). Students will be encouraged to write clean, efficient code for their assignments.": assignments
+Match to "assignments" in line "Java: The course will make strong use of Java, especially in the assignments. See FAQ (at the end of syllabus) for more details": assignments
+Match to "assignments" in line "Assignments: 40": Assignments
+Match to "assignments" in line "Assignment": Assignments
+Match to "assignments" in line "You'll be given assignments that reinforce the material we're covering in class": assignments
+Match to "assignments" in line "You should expect to spend several hours (minimum) working on these assignments. Do not wait until the night they are due to get started or ask questions": assignments
+Match to "assignments" in line "All assignments are due by midnight of the due date provided. Your assignments must be uploaded to iLearn (ilearn.marist.edu) before due date. It is your responsibility to make sure that all files have been uploaded to the correct folder and that all files are included": assignments
+Match to "bee" in line "All assignments are due by midnight of the due date provided. Your assignments must be uploaded to iLearn (ilearn.marist.edu) before due date. It is your responsibility to make sure that all files have been uploaded to the correct folder and that all files are included": bee
+Match to "assignments" in line "You are not permitted to work together on these assignments. All code should be your own - it's important that you understand the code you have submitted. Work submitted that is not your own will receive a grade of 0. Providing your work to other students is not permitted, and will result in a grade of 0 for both the provider and the beneficiary. The only way to learn the material is by doing your own work": assignments
+Match to "assignments" in line "For each day your assignment is late, 10% will be deducted from your score. Assignments will NOT be accepted after one week.": Assignments
+Match to "assignments" in line "One of the lowest assignments will be dropped when calculating the final grade. The lowest score is not dropped if that would result in dropping all scores in the assignment category": assignments
+Match to "assignments" in line "Completing the reading assignments, carefully listening to the lectures and doing th": assignments
+Match to "assignments" in line "Homework and additional problems on your own is the best way to understand the material. Students who miss more than two lectures without permission from the instructor should expect to receive a failing grade in the course. You are responsible for all the topics covered in class. While I attempt to put most material on iLearn for your convenience, you are responsible for all material presented in class as well as announcements, assignments, and quizzes. In case you might miss a lecture, make a friend now!": assignments
+Match to "assignments" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": assignments
+Match to "bee" in line "If you feel there has been a grading mistake, you can discuss it with me the week during which the grade is posted or the following week unless we both agree to other arrangements. After that, the grade is final and will not be changed": bee
+Match to "assignments" in line "A: You will need a working knowledge of objects in Java to handle the programming assignments. And you will need the skill-level that comes with completing CMPT 120, CMPT 220, CMPT 221. However, if you have had considerable programming experience or other programming courses, you ought to be able to take this course. Talk to me about it": assignments
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "Attendance": Attendance
+Match to "attendance" in line "Attendance in lecture is required.": Attendance
+
+Results for reqRead:
+Match to "course materials" in line "Course Material": Course Materials
+Match to "Textbook" in line "Recommended Textbook": Textbook
+Match to "ISBN" in line "ISBN-10: 026203384": ISBN
+Match to "ISBN" in line "ISBN-13: 978-026203384": ISBN
+Match to "doi" in line "You are not permitted to work together on these assignments. All code should be your own - it's important that you understand the code you have submitted. Work submitted that is not your own will receive a grade of 0. Providing your work to other students is not permitted, and will result in a grade of 0 for both the provider and the beneficiary. The only way to learn the material is by doing your own work": doi
+Match to "doi" in line "Occasional bonus points will be offered throughout the semester. These will typically require doing a little extra work on an assignment. Other extra credit (to improve your grade alone) is not available": doi
+Match to "doi" in line "Completing the reading assignments, carefully listening to the lectures and doing th": doi
+Match to "read(.*)required" in line "Electronic mail or "e-mail" is considered an official method for communication in this course because it delivers information in a convenient, timely, cost effective and environmentally aware manner. Students are expected to check their official Marist e-mail on a frequent and consistent basis in order to remain informed of university-related communications. The instructor recommends checking email daily. Students are responsible for the consequences of not reading, in a timely fashion, university-related communications sent to their official Marist student e-mail account. Due to school policy, the instructor will NOT reply to student e-mails from non-Marist accounts. Students are required to use Marist e-mail accounts to contact the instructor/staff at school": reading, in a timely fashion, university-related communications sent to their official Marist student e-mail account. Due to school policy, the instructor will NOT reply to student e-mails from non-Marist accounts. Students are required
+Match to "doi" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": doi
+
+Results for acadHonest:
+Match to "cheating" in line "Cheatin": Cheating
+Match to "cheating" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": Cheating
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\9fe9d866-7dc1-4cd7-968c-0457f12a5f60.txt on 2020-10-24 19:47:45
+
+Results for courseDes:
+Match to "course( )*description" in line "Course Descriptio": Course Description
+Match to "course description" in line "Course Descriptio": Course Description
+
+Results for courseObj:
+Match to "course(.)*objective" in line "Course Objective": Course Objective
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "Prerequisite": Prerequisite
+Match to "pre(.)*req" in line "Prerequisite": Prereq
+Match to "pre(.)*req" in line "In-class presentations will require you to identify issues, formulate algorithms and evaluate the solution. You must also demonstrate that you know the basic principles, skills, tools, and the dynamic issues related to algorithms": presentations will req
+
+Results for gradeDet:
+Match to "grading" in line "Your letter grade will be determined according to the department grading scale": grading
+Match to "[0-9]([0-9])*( )*points" in line "Presentation Scoring Rubric (Total 50 points)": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Organization: Information is presented in a logical sequence. (10 points": 10 points
+Match to "[0-9]([0-9])*( )*points" in line "Content: Presentation contains accurate information. Material included is relevant to the topic assigned. (30 points": 30 points
+Match to "[0-9]([0-9])*( )*points" in line "Presentation: Delivery is poised, controlled, and smooth. Information was well communicated. (10 points": 10 points
+Match to "grading" in line "If you feel there has been a grading mistake, you can discuss it with me the week during which the grade is posted or the following week unless we both agree to other arrangements. After that, the grade is final and will not be changed": grading
+
+Results for otherpolicies:
+Match to "policy" in line "E-mail Policy": Policy
+Match to "policy" in line "Electronic mail or "e-mail" is considered an official method for communication in this course because it delivers information in a convenient, timely, cost effective and environmentally aware manner. Students are expected to check their official Marist e-mail on a frequent and consistent basis in order to remain informed of university-related communications. The instructor recommends checking email daily. Students are responsible for the consequences of not reading, in a timely fashion, university-related communications sent to their official Marist student e-mail account. Due to school policy, the instructor will NOT reply to student e-mails from non-Marist accounts. Students are required to use Marist e-mail accounts to contact the instructor/staff at school": policy
+Match to "policy" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": policy
+
+Results for instrName:
+Match to "Dr" in line "Instructor: Dr. Bowu Zhan": Dr
+Match to "Dr" in line "One of the lowest assignments will be dropped when calculating the final grade. The lowest score is not dropped if that would result in dropping all scores in the assignment category": dr
+Match to "Dr" in line "One of the lowest quizzes will be dropped when calculating the final grade. The lowest score is not dropped if that would result in dropping all scores in the quiz category": dr
+
+Results for instrContact:
+Match to "email(-|:)" in line "Email: bowu.zhang@marist.ed": Email:
+Match to "@marist.edu" in line "Email: bowu.zhang@marist.ed": @marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "assignments" in line "In this course, students will learn core concepts in algorithms, data structures, and problem-solving techniques. Students will be exposed to classic problems in computer science (such as searching and sorting), classic data structures (hashmap and trees) and classic optimization problems (such as the Knapsack Problem). Students will be encouraged to write clean, efficient code for their assignments.": assignments
+Match to "assignments" in line "Java: The course will make strong use of Java, especially in the assignments. See FAQ (at the end of syllabus) for more details": assignments
+Match to "assignments" in line "Assignments: 40": Assignments
+Match to "assignments" in line "Assignment": Assignments
+Match to "assignments" in line "You'll be given assignments that reinforce the material we're covering in class": assignments
+Match to "assignments" in line "You should expect to spend several hours (minimum) working on these assignments. Do not wait until the night they are due to get started or ask questions": assignments
+Match to "assignments" in line "All assignments are due by midnight of the due date provided. Your assignments must be uploaded to iLearn (ilearn.marist.edu) before due date. It is your responsibility to make sure that all files have been uploaded to the correct folder and that all files are included": assignments
+Match to "bee" in line "All assignments are due by midnight of the due date provided. Your assignments must be uploaded to iLearn (ilearn.marist.edu) before due date. It is your responsibility to make sure that all files have been uploaded to the correct folder and that all files are included": bee
+Match to "assignments" in line "You are not permitted to work together on these assignments. All code should be your own - it's important that you understand the code you have submitted. Work submitted that is not your own will receive a grade of 0. Providing your work to other students is not permitted, and will result in a grade of 0 for both the provider and the beneficiary. The only way to learn the material is by doing your own work": assignments
+Match to "assignments" in line "For each day your assignment is late, 10% will be deducted from your score. Assignments will NOT be accepted after one week.": Assignments
+Match to "assignments" in line "One of the lowest assignments will be dropped when calculating the final grade. The lowest score is not dropped if that would result in dropping all scores in the assignment category": assignments
+Match to "assignments" in line "Completing the reading assignments, carefully listening to the lectures and doing th": assignments
+Match to "assignments" in line "Homework and additional problems on your own is the best way to understand the material. Students who miss more than two lectures without permission from the instructor should expect to receive a failing grade in the course. You are responsible for all the topics covered in class. While I attempt to put most material on iLearn for your convenience, you are responsible for all material presented in class as well as announcements, assignments, and quizzes. In case you might miss a lecture, make a friend now!": assignments
+Match to "assignments" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": assignments
+Match to "bee" in line "If you feel there has been a grading mistake, you can discuss it with me the week during which the grade is posted or the following week unless we both agree to other arrangements. After that, the grade is final and will not be changed": bee
+Match to "assignments" in line "A: You will need a working knowledge of objects in Java to handle the programming assignments. And you will need the skill-level that comes with completing CMPT 120, CMPT 220, CMPT 221. However, if you have had considerable programming experience or other programming courses, you ought to be able to take this course. Talk to me about it": assignments
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "Attendance": Attendance
+Match to "attendance" in line "Attendance in lecture is required.": Attendance
+
+Results for reqRead:
+Match to "course materials" in line "Course Material": Course Materials
+Match to "Textbook" in line "Recommended Textbook": Textbook
+Match to "ISBN" in line "ISBN-10: 026203384": ISBN
+Match to "ISBN" in line "ISBN-13: 978-026203384": ISBN
+Match to "doi" in line "You are not permitted to work together on these assignments. All code should be your own - it's important that you understand the code you have submitted. Work submitted that is not your own will receive a grade of 0. Providing your work to other students is not permitted, and will result in a grade of 0 for both the provider and the beneficiary. The only way to learn the material is by doing your own work": doi
+Match to "doi" in line "Occasional bonus points will be offered throughout the semester. These will typically require doing a little extra work on an assignment. Other extra credit (to improve your grade alone) is not available": doi
+Match to "doi" in line "Completing the reading assignments, carefully listening to the lectures and doing th": doi
+Match to "read(.*)required" in line "Electronic mail or "e-mail" is considered an official method for communication in this course because it delivers information in a convenient, timely, cost effective and environmentally aware manner. Students are expected to check their official Marist e-mail on a frequent and consistent basis in order to remain informed of university-related communications. The instructor recommends checking email daily. Students are responsible for the consequences of not reading, in a timely fashion, university-related communications sent to their official Marist student e-mail account. Due to school policy, the instructor will NOT reply to student e-mails from non-Marist accounts. Students are required to use Marist e-mail accounts to contact the instructor/staff at school": reading, in a timely fashion, university-related communications sent to their official Marist student e-mail account. Due to school policy, the instructor will NOT reply to student e-mails from non-Marist accounts. Students are required
+Match to "doi" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": doi
+
+Results for acadHonest:
+Match to "cheating" in line "Cheatin": Cheating
+Match to "cheating" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": Cheating
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\8cec99b3-ee44-44cc-ba8b-6724a5a25346.txt on 2020-10-24 19:48:32
+
+Results for courseDes:
+Match to "course( )*description" in line "Course Descriptio": Course Description
+Match to "course description" in line "Course Descriptio": Course Description
+
+Results for courseObj:
+Match to "course(.)*objective" in line "Course Objective": Course Objective
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "Prerequisite": Prerequisite
+Match to "pre(.)*req" in line "Prerequisite": Prereq
+Match to "pre(.)*req" in line "In-class presentations will require you to identify issues, formulate algorithms and evaluate the solution. You must also demonstrate that you know the basic principles, skills, tools, and the dynamic issues related to algorithms": presentations will req
+
+Results for gradeDet:
+Match to "grading" in line "Your letter grade will be determined according to the department grading scale": grading
+Match to "[0-9]([0-9])*( )*points" in line "Presentation Scoring Rubric (Total 50 points)": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Organization: Information is presented in a logical sequence. (10 points": 10 points
+Match to "[0-9]([0-9])*( )*points" in line "Content: Presentation contains accurate information. Material included is relevant to the topic assigned. (30 points": 30 points
+Match to "[0-9]([0-9])*( )*points" in line "Presentation: Delivery is poised, controlled, and smooth. Information was well communicated. (10 points": 10 points
+Match to "grading" in line "If you feel there has been a grading mistake, you can discuss it with me the week during which the grade is posted or the following week unless we both agree to other arrangements. After that, the grade is final and will not be changed": grading
+
+Results for otherpolicies:
+Match to "policy" in line "E-mail Policy": Policy
+Match to "policy" in line "Electronic mail or "e-mail" is considered an official method for communication in this course because it delivers information in a convenient, timely, cost effective and environmentally aware manner. Students are expected to check their official Marist e-mail on a frequent and consistent basis in order to remain informed of university-related communications. The instructor recommends checking email daily. Students are responsible for the consequences of not reading, in a timely fashion, university-related communications sent to their official Marist student e-mail account. Due to school policy, the instructor will NOT reply to student e-mails from non-Marist accounts. Students are required to use Marist e-mail accounts to contact the instructor/staff at school": policy
+Match to "policy" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": policy
+
+Results for instrName:
+Match to "Dr" in line "Instructor: Dr. Bowu Zhan": Dr
+Match to "Dr" in line "One of the lowest assignments will be dropped when calculating the final grade. The lowest score is not dropped if that would result in dropping all scores in the assignment category": dr
+Match to "Dr" in line "One of the lowest quizzes will be dropped when calculating the final grade. The lowest score is not dropped if that would result in dropping all scores in the quiz category": dr
+
+Results for instrContact:
+Match to "email(-|:)" in line "Email: bowu.zhang@marist.ed": Email:
+Match to "@marist.edu" in line "Email: bowu.zhang@marist.ed": @marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "assignments" in line "In this course, students will learn core concepts in algorithms, data structures, and problem-solving techniques. Students will be exposed to classic problems in computer science (such as searching and sorting), classic data structures (hashmap and trees) and classic optimization problems (such as the Knapsack Problem). Students will be encouraged to write clean, efficient code for their assignments.": assignments
+Match to "assignments" in line "Java: The course will make strong use of Java, especially in the assignments. See FAQ (at the end of syllabus) for more details": assignments
+Match to "assignments" in line "Assignments: 40": Assignments
+Match to "assignments" in line "Assignment": Assignments
+Match to "assignments" in line "You'll be given assignments that reinforce the material we're covering in class": assignments
+Match to "assignments" in line "You should expect to spend several hours (minimum) working on these assignments. Do not wait until the night they are due to get started or ask questions": assignments
+Match to "assignments" in line "All assignments are due by midnight of the due date provided. Your assignments must be uploaded to iLearn (ilearn.marist.edu) before due date. It is your responsibility to make sure that all files have been uploaded to the correct folder and that all files are included": assignments
+Match to "bee" in line "All assignments are due by midnight of the due date provided. Your assignments must be uploaded to iLearn (ilearn.marist.edu) before due date. It is your responsibility to make sure that all files have been uploaded to the correct folder and that all files are included": bee
+Match to "assignments" in line "You are not permitted to work together on these assignments. All code should be your own - it's important that you understand the code you have submitted. Work submitted that is not your own will receive a grade of 0. Providing your work to other students is not permitted, and will result in a grade of 0 for both the provider and the beneficiary. The only way to learn the material is by doing your own work": assignments
+Match to "assignments" in line "For each day your assignment is late, 10% will be deducted from your score. Assignments will NOT be accepted after one week.": Assignments
+Match to "assignments" in line "One of the lowest assignments will be dropped when calculating the final grade. The lowest score is not dropped if that would result in dropping all scores in the assignment category": assignments
+Match to "assignments" in line "Completing the reading assignments, carefully listening to the lectures and doing th": assignments
+Match to "assignments" in line "Homework and additional problems on your own is the best way to understand the material. Students who miss more than two lectures without permission from the instructor should expect to receive a failing grade in the course. You are responsible for all the topics covered in class. While I attempt to put most material on iLearn for your convenience, you are responsible for all material presented in class as well as announcements, assignments, and quizzes. In case you might miss a lecture, make a friend now!": assignments
+Match to "assignments" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": assignments
+Match to "bee" in line "If you feel there has been a grading mistake, you can discuss it with me the week during which the grade is posted or the following week unless we both agree to other arrangements. After that, the grade is final and will not be changed": bee
+Match to "assignments" in line "A: You will need a working knowledge of objects in Java to handle the programming assignments. And you will need the skill-level that comes with completing CMPT 120, CMPT 220, CMPT 221. However, if you have had considerable programming experience or other programming courses, you ought to be able to take this course. Talk to me about it": assignments
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "Attendance": Attendance
+Match to "attendance" in line "Attendance in lecture is required.": Attendance
+
+Results for reqRead:
+Match to "course materials" in line "Course Material": Course Materials
+Match to "Textbook" in line "Recommended Textbook": Textbook
+Match to "ISBN" in line "ISBN-10: 026203384": ISBN
+Match to "ISBN" in line "ISBN-13: 978-026203384": ISBN
+Match to "doi" in line "You are not permitted to work together on these assignments. All code should be your own - it's important that you understand the code you have submitted. Work submitted that is not your own will receive a grade of 0. Providing your work to other students is not permitted, and will result in a grade of 0 for both the provider and the beneficiary. The only way to learn the material is by doing your own work": doi
+Match to "doi" in line "Occasional bonus points will be offered throughout the semester. These will typically require doing a little extra work on an assignment. Other extra credit (to improve your grade alone) is not available": doi
+Match to "doi" in line "Completing the reading assignments, carefully listening to the lectures and doing th": doi
+Match to "read(.*)required" in line "Electronic mail or "e-mail" is considered an official method for communication in this course because it delivers information in a convenient, timely, cost effective and environmentally aware manner. Students are expected to check their official Marist e-mail on a frequent and consistent basis in order to remain informed of university-related communications. The instructor recommends checking email daily. Students are responsible for the consequences of not reading, in a timely fashion, university-related communications sent to their official Marist student e-mail account. Due to school policy, the instructor will NOT reply to student e-mails from non-Marist accounts. Students are required to use Marist e-mail accounts to contact the instructor/staff at school": reading, in a timely fashion, university-related communications sent to their official Marist student e-mail account. Due to school policy, the instructor will NOT reply to student e-mails from non-Marist accounts. Students are required
+Match to "doi" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": doi
+
+Results for acadHonest:
+Match to "cheating" in line "Cheatin": Cheating
+Match to "cheating" in line "Cheating will not be tolerated. All homework assignments, and exams are to be done individually. Third-party code cannot be used unless you explicitly cite the use of a library. If you have problems in understanding the material or doing an assignment, please schedule an appointment to see me. If you chance cheating and get caught, you will be reported to the office of student conduct and to the dean. The violation will go on your record and your punishment will, at the least, be a reduced grade but may include failing the course or suspension from the university. It's not worth it. Be sure you read the Marist policy on academic integrity. It is your responsibility to ensure that your passwords are well-guarded, all files and directories protected, and printouts do not fall into other hands": Cheating
+
+Results for teachAct:
+
+Results for accommod:
