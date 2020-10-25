@@ -1,9 +1,16 @@
 import sys
 import re
 import datetime
+import DB2
 
 textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
+
+#conn = DB2.connect(dsn='sample', uid='db2inst1', pwd='ibmdb2')
+#curs = conn.cursor()
+#curs.execute('select checked from checked where checked != null' % (id),)
+#curs.close()
+#conn.close()
 
 checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" ,
            "otherpolicies" , "instrName" , "instrContact" , #"demoConsistant" ,
@@ -76,7 +83,7 @@ keyToName = {   #empty dictionary of arrays to store any matches to analyize lat
                 "biblio":         "Bibliographic resources/ Other resourcesincluding audio-visual aids" ,
                 "assignments":    "Assignments: Term papers, assignment synopses, examinations, etc." ,
                 "taskCrit":       "Demonstrate that the course meets time on task criteria,college-level, rigor, and credit granted only to those meeting these objectives" ,
-                "courseNum":      "Coursenumbermust be designated as L (liberal arts) or N (non-liberal arts)." ,
+                "courseNum":      "Course number must be designated as L (liberal arts) or N (non-liberal arts)." ,
                 "format":         "Classroom format (lecture, lab, discussion" ,
                 "attenPol":       "Attendance policy" ,
                 "reqRead":        "Semester required reading" ,
@@ -101,6 +108,15 @@ def checkFileAnal():
 
     s = open(textFile, encoding="utf-8")
 
+    for line in s:
+        result = re.search("@marist.edu" , line , re.IGNORECASE)
+
+    if(result != None):
+        result = result[result.index(".") + 1:result.index("@")]
+        
+    keywords.get("instrName").push(result)
+
+    s.seek(0)
 
     matches = 0
     cmdIdex = 0
@@ -228,4 +244,14 @@ def getScore():
         socre = "F"
         return "F"
 
+class Output:
+    def __init__(self , score , missing):
+        self.score = score
+        self.missing = missing
+
+def makeOutput():
+    output = Output(score , missing)
+    print(str(output))
+    sys.stdout.flush()
+    
 checkFileAnal()
