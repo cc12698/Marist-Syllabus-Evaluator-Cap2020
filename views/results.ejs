@@ -12,18 +12,20 @@
     <meta name="google" value="notranslate">
   </head>
   <body>
-
-        <%- include('partials/header'); -%>
-
-      <p>Results</p>
-      <div class = "score">
-        <p>grade</p>
+      <%- include('partials/header'); -%>
+      <div class = "center">
+        <div class = "score">
+          Grade:
+        </div>
+        <div class = "letGrade">
+            A
+        </div>
       </div>
-      <button id = "" class="collapsible">Mis-spelled Words</button>
-      <div class="content"><p>test</p></div>
-      <button id = "" class="collapsible">Sentiment Analysis</button>
+      <button class="collapsible">Mis-spelled Words</button>
       <div class="content"></div>
-      <button id = "courseDes" class="collapsible true resultShow">Course Description</button>
+      <button class="collapsible">Sentiment Analysis</button>
+      <div class="content"></div>
+      <button class="collapsible">Course Description</button>
       <div class="content"></div>
     <%- include('partials/footer'); -%>
   </body>

@@ -21,3 +21,18 @@
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
 }
+
+.score{
+  display:inline-block;
+  /*width:200px;*/
+  font-size: 350%;
+}
+
+.letGrade{
+  display: inline-block;
+  font-size: 350%;
+}
+
+.center{
+  text-align: center;
+}

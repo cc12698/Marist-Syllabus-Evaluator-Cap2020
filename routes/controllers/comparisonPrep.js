@@ -1,6 +1,5 @@
 const spawn = require("child_process").spawn;
 const fs = require('fs');
-const applescript = require('applescript');
 const path = require('path');
 const mammoth = require("mammoth");
 const PDFParser = require("pdf2json");
@@ -11,19 +10,10 @@ const CloudConvert = require('cloudconvert');
 const https = require('https');
 const WordExtractor = require("word-extractor");
 
-exports.getResults = async function(req, res){
-  console.log('HELLO FRIEND');
-  var getDir = getPath(path.normalize(__dirname + "/../../uploads"));
-  console.log(getDir)
-  //console.log(uuid);
-  //const py = await callSnek(uuid);
-  //const sent = await sentimentAnalyze.getAnalyzer(uuid);
-  //console.log(sent, py)
-}
-
 exports.postComparison = async function(req, res){
   const uuidConvert = await makeTXT();
-  console.log(uuidConvert);
+  const sent = await sentimentAnalyze.getAnalyzer(uuidConvert);
+  console.log(sent);
 }
 
 function makeTXT(){
@@ -66,26 +56,8 @@ function makeTXT(){
     console.log('err: ' + err);
   }
 }
-function callSnek(uuid){
-  var dataToSend;
-  var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
-  var file = path.normalize(path.join(__dirname, '/../../uploads/'+ uuid +'.txt'));
-  var pythonProcess = spawn('python', [pyPath, file]);
-  pythonProcess.stdout.on('data', (data) => {
-    //console.log('pipe data');
-    dataToSend = data.toString();
-  });
 
-  pythonProcess.stdout.on('end', function(){
-    console.log("test: " + dataToSend);
-  });
 
-  pythonProcess.on('close', (code) => {
-    console.log(`child process close all stdio with code ${code}`);
-  });
-
-  return dataToSend;
-}
 
 async function docx(file){
   return mammoth.extractRawText({path: file})
@@ -99,8 +71,6 @@ async function doc(file, uuid){
     fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
       if (err) throw err;
       console.log('The file has been saved!');
-      callSnek(uuid);
-      sentimentAnalyze.getAnalyzer(uuid);
     });
   });
 }
@@ -113,8 +83,6 @@ async function pdf(file, uuid){
     fs.writeFile('./uploads/'+ uuid +'.txt', pdfParser.getRawTextContent(), (err) => {
       if (err) throw err;
       console.log('The file has been saved!');
-      callSnek(uuid);
-      sentimentAnalyze.getAnalyzer(uuid);
     });
   });
 
@@ -162,8 +130,6 @@ async function pages(file, uuid){
       writeStream.on('finish', resolve);
       writeStream.on('error', reject);
   });
-  callSnek(uuid);
-  sentimentAnalyze.getAnalyzer(uuid);
 }
 
 function getPath(path){

@@ -877,3 +877,527 @@ Match to "cheating" in line "Cheating will not be tolerated. All homework assign
 Results for teachAct:
 
 Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\routes\.function uuid() {
+    var b = uuidBin();
+    return hexBytes[b[0]] + hexBytes[b[1]] +
+      hexBytes[b[2]] + hexBytes[b[3]] + '-' +
+      hexBytes[b[4]] + hexBytes[b[5]] + '-' +
+      hexBytes[b[6]] + hexBytes[b[7]] + '-' +
+      hexBytes[b[8]] + hexBytes[b[9]] + '-' +
+      hexBytes[b[10]] + hexBytes[b[11]] +
+      hexBytes[b[12]] + hexBytes[b[13]] +
+      hexBytes[b[14]] + hexBytes[b[15]]
+    ;
+  } on 2020-10-25 12:29:35
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\1568fd97-4081-466d-b4b8-39e2767fbf34.txt on 2020-10-25 12:31:06
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\bbd06d5c-c87c-4d82-b9f6-c5fd3bf44a1a.txt on 2020-10-25 13:39:27
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\be9dda3d-d096-4e61-bd34-9595411d03c3.txt on 2020-10-25 13:43:46
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\80896eb9-6ad0-4108-a814-28bf7235312a.txt on 2020-10-25 13:44:52
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\0621f31f-94d2-400c-8b1f-194093c8457b.txt on 2020-10-25 13:48:31
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\f47342a2-1f6b-45be-ac7a-e31688e792a8.txt on 2020-10-25 13:58:42
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads");
+    return new Promise((resolve, reject) => {
+      fs.readdir(directoryPath, async function (err, files) {
+        var uuidCre = uuid();
+        var path  = '.\uploads\'+ uuidCre +'.txt';
+        \listing all files using forEach
+        for(const file of files){
+          var allowDocx =  \(\.docx)$\i;
+          var allowDoc =  \(\.doc)$\i;
+          var allowPDF =  \(\.pdf)$\i;
+          var allowPages =  \(\.pages)$\i;
+          var filePath = ".\uploads\" + file;
+
+          if(allowDocx.exec(filePath)){
+            var result = await docx(filePath);
+            var text = result.value; \ The raw text
+            fs.writeFile(path, text, (err) => {
+              if (err) throw err;
+              console.log('The file has been saved!');
+              return err ? reject(err) : resolve(path);
+            });
+          }
+          else if(allowDoc.exec(filePath)){
+            doc(filePath, uuidCre);
+          }
+          else if(allowPDF.exec(filePath)){
+            pdf(filePath, uuidCre);
+          }
+          else if(allowPages.exec(filePath)){
+            pages(filePath, uuidCre);
+          }
+        }
+      });
+    })
+  }catch(err){
+    console.log('err: ' + err);
+  }
+} on 2020-10-25 14:08:41
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\2e8ac4df-0192-450d-abba-35911bd963bf.txt on 2020-10-25 14:10:58
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\99fb9b97-00cd-4264-b160-4ddd2ad865a3.txt on 2020-10-25 14:11:22
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\e882ffce-c337-4162-bce2-c3380baae5fb.txt on 2020-10-25 14:18:46
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\a787ed14-b809-4b5f-9cbc-9ce4888b8bf0.txt on 2020-10-25 14:19:32
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\962888f0-4a93-4fa7-bea5-5d7ba9797254.txt on 2020-10-25 14:27:41
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\8ec7c520-fd68-4b4d-a6c5-4d8edc3e83df.txt on 2020-10-25 14:37:38
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\1982efda-7115-439e-a054-a4d9986f90be.txt on 2020-10-26 16:59:02
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\90b27422-1915-4c0f-8948-29d3d0833fd2.txt on 2020-10-26 17:13:56
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\1b01e9e5-396e-4f04-8057-ae054f8134e2.txt on 2020-10-27 19:28:42
