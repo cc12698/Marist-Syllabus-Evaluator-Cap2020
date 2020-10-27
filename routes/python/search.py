@@ -1,12 +1,14 @@
 import sys
 import re
 import datetime
-import DB2
+import json
+import ibm_db
 
-textFile = sys.argv[1]#"exampleText.txt"
+textFile = "exampleText.txt"#sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
 
-#conn = DB2.connect(dsn='sample', uid='db2inst1', pwd='ibmdb2')
+imb_db.connect("DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-dal09-08.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=gvg60726;PWD=rxwrr+gl4dzjhdcg;", "", "")
+#conn = DB2.connect(dsn='sample', uid='gvg60726', pwd='rxwrr+gl4dzjhdcg')
 #curs = conn.cursor()
 #curs.execute('select checked from checked where checked != null' % (id),)
 #curs.close()
@@ -114,7 +116,7 @@ def checkFileAnal():
     if(result != None):
         result = result[result.index(".") + 1:result.index("@")]
         
-    keywords.get("instrName").push(result)
+    keywords.get("instrName").append(result)
 
     s.seek(0)
 
@@ -251,7 +253,9 @@ class Output:
 
 def makeOutput():
     output = Output(score , missing)
-    print(str(output))
+    jsonOutput = json.dumps(output)
+    #print(str(output))
+    print(jsonOutput)
     sys.stdout.flush()
     
 checkFileAnal()

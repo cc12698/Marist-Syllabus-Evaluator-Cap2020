@@ -921,3 +921,99 @@ Match to "subject to copyright protection" in line "Materials used in connection
 Results for accommod:
 Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact th": Students with disabilities
 Match to "accommodations and accessibility" in line "Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at Accommodation": Accommodations and Accessibility
+
+
+
+Output for exampleText.txt on 2020-10-26 20:06:21
+
+Results for courseDes:
+
+Results for courseObj:
+Match to "course(.)*objective" in line "Course Objectives/Content": Course Objective
+Match to "course(.)*objective" in line "Each course learning objective is associated with a goal for the Computer Science Major, listed in squar": course learning objective
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "Prerequisite: CMPT 22": Prerequisite
+Match to "pre(.)*req" in line "Prerequisite: CMPT 22": Prereq
+
+Results for gradeDet:
+Match to "evaluation" in line "• Evaluation: classroom discussion, exam": Evaluation
+Match to "evaluation" in line "• Evaluation: Classroom discussion, hands-on assignments, exam": Evaluation
+Match to "evaluation" in line "• Evaluation: Classroom discussion, hands-on assignments, exam": Evaluation
+Match to "evaluation" in line "• Evaluation: Classroom discussion, hands-on assignments, exam": Evaluation
+Match to "evaluation" in line "• Evaluation: Classroom discussion, hands-on assignments, exam": Evaluation
+Match to "evaluation" in line "• Evaluation: Classroom discussion, hands-on assignments, exams": Evaluation
+Match to "evaluation" in line "• Evaluation: Project deliverables (in-class presentation, project report and software deliverable": Evaluation
+Match to "[0-9]([0-9])*( )*points" in line "You must complete EVERY assigned project. Your COURSE grade will be lowered by 5 points for eac": 5 points
+Match to "grading" in line "Grading Scale": Grading
+Match to "[0-9]([0-9])*( )*points" in line "grade by 2 points for each day you miss in excess of the 10% (if I haven’t already dropped you from the course)": 2 points
+Match to "evaluation" in line "or better on the project evaluation form": evaluation
+Match to "evaluation" in line "development project with a score of 5 (out of 7) or better on the project evaluation form": evaluation
+Match to "evaluation" in line "development project with a score of 5 (out of 7) or better on the project evaluation form": evaluation
+Match to "evaluation" in line "an average score of 4 (out of 5) or better on the peer evaluation": evaluation
+Match to "evaluation" in line "5.2. At graduation, 100% of students will score 5 or better (out of 7) on evaluations of ora": evaluation
+
+Results for otherpolicies:
+Match to "policy" in line "Academic Honesty Policy for this Cours": Policy
+Match to "academic(.)*honesty" in line "Academic Honesty Policy for this Cours": Academic Honesty
+Match to "policies" in line "As a part this class, the faculty and staff will uphold and enforce the general policies of this institution o": policies
+Match to "academic(.)*honesty" in line "academic honesty and plagiarism. All examinations, lab/homework assignments, and projects are subject to th": academic honesty
+Match to "academic(.)*honesty" in line "standards of academic honesty as described in the Student Handbook and/or other related publications": academic honesty
+Match to "academic(.)*honesty" in line "to the highest standards of academic honesty. This means that plagiarism in any form is completely unacceptable": academic honesty
+
+Results for instrName:
+
+Results for instrContact:
+Match to "@marist.edu" in line "E-mail ID: Donald.Schwartz@Marist.ed": @Marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "assignments" in line "• Evaluation: Classroom discussion, hands-on assignments, exam": assignments
+Match to "assignments" in line "• Evaluation: Classroom discussion, hands-on assignments, exam": assignments
+Match to "assignments" in line "• Evaluation: Classroom discussion, hands-on assignments, exam": assignments
+Match to "assignments" in line "• Evaluation: Classroom discussion, hands-on assignments, exam": assignments
+Match to "assignments" in line "• Evaluation: Classroom discussion, hands-on assignments, exams": assignments
+Match to "assignments" in line "You will be given projects (both major projects and homework/lab assignments) to complete during the semester": assignments
+Match to "assignments" in line "Assignments, handouts, etc., will be posted using iLearn. Assignments will be submitted using iLearn, too": Assignments
+Match to "assignments" in line "academic honesty and plagiarism. All examinations, lab/homework assignments, and projects are subject to th": assignments
+Match to "bee" in line "Please turn off all external communication devices before class starts. Each “ring”, “tone” or “beep” disturb": bee
+
+Results for courseNum:
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "CMPT 308N11": 308N112
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "CMPT 308N11": 308N
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "“Need” generally means that you will get a pop quiz when class attendance/preparation/participation is not wha": attendance
+Match to "attendance" in line "Attendance": Attendance
+Match to "attendance" in line "Attendance is required for every class period -- it is where most of the material that you need to know i": Attendance
+Match to "absent" in line "late for class, you are considered absent. I consider missing more than 10% of the total number of class meeting": absent
+
+Results for reqRead:
+Match to "Textbook" in line "Textbooks: • Database Management Systems Design, Implementation and Management, 1": Textbook
+Match to "ISBN" in line "by Coronel & Morris, Cengage Learning, ISBN: 978-1-305-62748-2 (required)": ISBN
+Match to "doi" in line "material. In this class, you really learn by doing - so take the time to do your own work. Excessive absence": doi
+
+Results for acadHonest:
+Match to "academic honesty" in line "Academic Honesty Policy for this Cours": Academic Honesty
+Match to "academic honesty" in line "academic honesty and plagiarism. All examinations, lab/homework assignments, and projects are subject to th": academic honesty
+Match to "plagiarism" in line "academic honesty and plagiarism. All examinations, lab/homework assignments, and projects are subject to th": plagiarism
+Match to "academic honesty" in line "standards of academic honesty as described in the Student Handbook and/or other related publications": academic honesty
+Match to "cheating" in line "Collaboration vs. Cheatin": Cheating
+Match to "plagiarism" in line "• Plagiarism is suspected if an assignment calling for independent design and implementation results i": Plagiarism
+Match to "cheating" in line "• Cheating is suspected if an assignment calling for independent design and implementation results in ": Cheating
+Match to "cheating" in line "techniques. If you are suspected of cheating, you will be asked to explain the work. If you cannot yo": cheating
+Match to "academic honesty" in line "to the highest standards of academic honesty. This means that plagiarism in any form is completely unacceptable": academic honesty
+Match to "plagiarism" in line "to the highest standards of academic honesty. This means that plagiarism in any form is completely unacceptable": plagiarism
+
+Results for teachAct:
+Match to "Materials used in connection" in line "Materials used in connection with the course may be subject to copyright protection": Materials used in connection
+Match to "subject to copyright protection" in line "Materials used in connection with the course may be subject to copyright protection": subject to copyright protection
+
+Results for accommod:
+Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact th": Students with disabilities
+Match to "accommodations and accessibility" in line "Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at Accommodation": Accommodations and Accessibility
