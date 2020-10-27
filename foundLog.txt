@@ -616,3 +616,404 @@ Match to "cheating" in line "Cheating will not be tolerated. All homework assign
 Results for teachAct:
 
 Results for accommod:
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/96be97a8-afe9-43b0-a998-5550f498c64f.txt on 2020-10-22 16:11:55
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/79dd03d5-69ea-418d-a8f1-83aea8ee7066.txt on 2020-10-23 14:27:10
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/ad3f29e2-e860-4424-bc79-4218cca5b8a7.txt on 2020-10-23 14:41:24
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/ad3f29e2-e860-4424-bc79-4218cca5b8a7.txt on 2020-10-23 14:41:26
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/5e27b710-9065-47dc-b9ab-d51a4fa8d4f5.txt on 2020-10-23 14:51:38
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/5e27b710-9065-47dc-b9ab-d51a4fa8d4f5.txt on 2020-10-23 14:51:39
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/8f530018-8b33-4fb7-b3d7-7faf8d2c2b1c.txt on 2020-10-23 14:59:13
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/2eb04740-3264-410b-9941-531b8999b87b.txt on 2020-10-23 15:00:23
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/2eb04740-3264-410b-9941-531b8999b87b.txt on 2020-10-23 15:00:25
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/945616c3-bb9b-4cef-b2ef-598170abb8cc.txt on 2020-10-23 15:15:37
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "M 10/16Watch and take notes on the TED talk, “Enough with the Fear of Fat.” In your journal, respond to the following: In her talk, Drinkwater says that in her struggles to accept herself she learned that “living outside what the mainstream considers normal can be a frustrating and isolating place.” Do you think that it is difficult for people to live outside of the mainstream? Why or why not? Explain and assess Drinkwater’s solution. Is her solution applicable to other groups beyond people of size": Dr
+Match to "Dr" in line "We will be participating in a forum on migration with Dr. O’Sullivan’s FYS class during the class period": Dr
+Match to "Dr" in line "Week 14: Organizing and Draftin": Dr
+Match to "Dr" in line "W 11/29First draft of Identity Research Paper due. Bring in 2 hard copies to class (3 if you’d like my feedback)": dr
+Match to "Dr" in line "M 12/4Final draft of Identity Research Paper due. Turn in a hard copy and upload a copy to iLearn": dr
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/945616c3-bb9b-4cef-b2ef-598170abb8cc.txt on 2020-10-23 15:15:37
+
+Results for courseDes:
+Match to "course( )*description" in line "Course Description: This course is often a first course in economics. As such, the material will begin with an explanation of economics as a social science. The structure of an economy will be discussed, with particular emphasis on how markets operate. The focus of the course will be on the market behavior of consumers and firms (producers) as individual participants": Course Description
+Match to "course description" in line "Course Description: This course is often a first course in economics. As such, the material will begin with an explanation of economics as a social science. The structure of an economy will be discussed, with particular emphasis on how markets operate. The focus of the course will be on the market behavior of consumers and firms (producers) as individual participants": Course Description
+
+Results for courseObj:
+Match to "objective(.)*course" in line "Course Objectives: Upon successful completion of this course, you should be able to": Objectives: Upon successful completion of this course
+Match to "course(.)*objective" in line "Course Objectives: Upon successful completion of this course, you should be able to": Course Objective
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+Match to "grading" in line "Grading Polic": Grading
+Match to "evaluation" in line "Marist Academic Integrity Statement: Marist College is a learning community dedicated to helping students develop the intellect, character, and skills required for enlightened, ethical, and productive lives in the global community of the 21st century. Students are expected to pursue excellence in their education while being honest about their work and fair to other members of the learning community. All work presented to instructors for evaluation must reflect their own ideas and effort, and must properly acknowledge any contributions of others. Students should expect this honesty and fairness in others as well. As members of the Marist learning community, all students should adhere to the principles of academic integrity as set forth in the Marist Academic Integrity Policy (2016).": evaluation
+Match to "[0-9]([0-9])*( )*points" in line "Attendance/Participation: This category is worth 5% of your overall grade. More than four absences from class will automatically result in -10 points per each. After 2 lates, you will automatically lose -5 points per each late.  Attendance is expected and it is your responsibility for any material covered in class. If you miss a class, it is your responsibility to catch up on the material on your own. I will not be re-teaching material due to class absences.  Material covered in class is imperative to your success on exams and homework. Students receive a participation grade for class, so to receive full credit, students need to participate in class discussions or will receive zero points. Excessive absences (over 30%) will result in an automatic failure for the course": 10 points
+Match to "[0-9]([0-9])*( )*points" in line "Exams/Quiz: There will be two in-class exams. The in-class exams will consist of 40 multiple choice and/or true false. Each exam is challenging and you will need to be prepared for each. There will be one quiz online (open-book) during the semester (18-20 questions) through connect which is multiple choice & fill-ins/graphs. You are allowed to use a basic or scientific calculator for the second exam. It is your responsibility to bring your own to class, no sharing is allowed. No personal electronic devices (including and not limited to cell phones, computers, tablets, etc.) are allowed during an exam.  If you are more than 5 minutes late to any exam, you will automatically lose 10 points off. There will be NO MAKE-UPS for any missed exams, unless with provided documentation (ex. doctors note), at my convenience. A make-up exam will ONLY be given if the student has an excused absence that is supported with appropriate documentation. If a student misses an exam, it is imperative that they contact me ASAP. We will review each exam in class either the next or following class which will be your opportunity to ask questions. We will not be revisiting exams after we review exam material during our class time, there will be no individual review after this point.": 10 points
+
+Results for otherpolicies:
+Match to "policy" in line "Grading Polic": Policy
+Match to "policy" in line "Marist Academic Integrity Statement: Marist College is a learning community dedicated to helping students develop the intellect, character, and skills required for enlightened, ethical, and productive lives in the global community of the 21st century. Students are expected to pursue excellence in their education while being honest about their work and fair to other members of the learning community. All work presented to instructors for evaluation must reflect their own ideas and effort, and must properly acknowledge any contributions of others. Students should expect this honesty and fairness in others as well. As members of the Marist learning community, all students should adhere to the principles of academic integrity as set forth in the Marist Academic Integrity Policy (2016).": Policy
+Match to "academic(.)*honesty" in line "Marist Academic Integrity Statement: Marist College is a learning community dedicated to helping students develop the intellect, character, and skills required for enlightened, ethical, and productive lives in the global community of the 21st century. Students are expected to pursue excellence in their education while being honest about their work and fair to other members of the learning community. All work presented to instructors for evaluation must reflect their own ideas and effort, and must properly acknowledge any contributions of others. Students should expect this honesty and fairness in others as well. As members of the Marist learning community, all students should adhere to the principles of academic integrity as set forth in the Marist Academic Integrity Policy (2016).": Academic Integrity Statement: Marist College is a learning community dedicated to helping students develop the intellect, character, and skills required for enlightened, ethical, and productive lives in the global community of the 21st century. Students are expected to pursue excellence in their education while being honest about their work and fair to other members of the learning community. All work presented to instructors for evaluation must reflect their own ideas and effort, and must properly acknowledge any contributions of others. Students should expect this honesty
+Match to "policy" in line "Communication Policy: Email is the best way to contact me. I will respond to you as soon as I can but please use in moderation from Monday through Friday only (no weekends please). Any emails sent after 8pm, or on the weekends and/or holiday will be addressed on the following work day. Keep an open line of communication with me and follow up with any email that is sent. If an assignment is submitted as an email attachment, I will reply that I have received the submitted work. If a reply is not received from me, check with me or resubmit it. It is the students responsibility to ensure that I successfully receive any submitted work": Policy
+Match to "policy" in line "Phone policy:  All phones should be on silent, no texting, or talking. Violations may affect grade": policy
+Match to "policy" in line "Fri., September 28th		 TOPIC: Chapter10: International Trade Policy": Policy
+
+Results for instrName:
+Match to "professor" in line "ECON103L-114                                                                 Professor L.  Imperiale   ": Professor
+Match to "Dr" in line "Communication Policy: Email is the best way to contact me. I will respond to you as soon as I can but please use in moderation from Monday through Friday only (no weekends please). Any emails sent after 8pm, or on the weekends and/or holiday will be addressed on the following work day. Keep an open line of communication with me and follow up with any email that is sent. If an assignment is submitted as an email attachment, I will reply that I have received the submitted work. If a reply is not received from me, check with me or resubmit it. It is the students responsibility to ensure that I successfully receive any submitted work": dr
+Match to "Dr" in line "CLASS CANCELLATIONS: In the event of inclement weather, Marist may close the college which will be done by Marist text/email alert, and/or on the local radio stations.  If I have an emergency and need to cancel class, I will make an announcement beforehand if possible, or I will send all my students a message through ILEARN.  I drive far and commute, so if I need to cancel our class due to weather, it will be done by ILEARN I will send an email announcement before our class so make sure you ALWAYS to check your Marist email before you leave and I will also post on ILEARN under the announcement tab.  If class is cancelled for any reason on a scheduled exam day, the exam will take place in our following class.  Also, all homeworks and assignments are still due according to the class schedule even with a cancelation so make sure to submit on time so you do not lose late points. Any hard copies of work that are due are still due by our next class meeting.  Any modifications to our class schedule will be emailed to you before our next class meeting and if you have any questions, please contact me.": dr
+Match to "professor" in line "Turnitin: Use of Turnitin is mandated for this course. Turnitin is a service used by Marist College faculty to compare a student's written work with its very large database of sources, student papers from other institutions, and the like, to check for originality. Work submitted to Turnitin will be used only for purposes of assessing originality, and will not be shared beyond Turnitin or used for any other purpose. Students must submit all assignments to Turnitin through the regular iLearn submission process. Students who wish to remove their personal identifying information (name, student identification number, etc.) from the submitted file may do so but must notify their professor ahead of submission. Work submitted through iLearn in this course will not be reviewed by the Professor or maintained by the College unless and until the Turnitin process is completed..                                             ": professor
+Match to "Dr" in line "Diversity & Inclusion Statement: In this course, we will challenge each others thinking while working collaboratively to ensure that the classroom is a space of safety and bravery. Our classroom offers an environment where individuals of varying opinions, experiences, and backgrounds are able to be free to learn without fear of being silenced. Evidence of these efforts will manifest in readings, lectures/class discussion, seminars, and group projects. Aspects of diversity include, but are not limited to, race, ethnicity, color, nationality, sex, gender, gender identity, gender expression, class, sexual orientation, religion, age, ability, and veteran status. Students who would like to be identified in a manner other than what is indicated on the course roster can contact me privately via phone, email, web conference or face-to-face meeting to indicate name, pronoun and any other preferences they may have. Dr. Tia Gayno": Dr
+
+Results for instrContact:
+Match to "email(-|:)" in line "Email:  laurenwcw@aol.com , Lauren.imperiale@marist.ed": Email:
+Match to "@marist.edu" in line "Email:  laurenwcw@aol.com , Lauren.imperiale@marist.ed": @marist.edu
+Match to "@marist.edu" in line "ADA Statement: Students with disabilities who believe they may need accommodations in this class are encouraged to contact the Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner": @marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "bee" in line "Specific Goals: This course is designed to provide the student with a basic understanding of economic theories that have been developed to explain consumer and producer behavior.": bee
+Match to "assignments" in line "Homework Assignments: Homeworks will be assigned online via Connect(you must purchase) on the class schedule. Each homework is due by the specified due date (Wednesdays for our class) at midnight.  It if your responsibility to follow the class schedule and submit homeworks on time. You are allowed two tries for each connect homework assignment; only the highest score will be counted as your grade per assignment. Homeworks are to be completed on your own time, do not email me for answers on the due date as this is your responsibility to complete. All connect homeworks, as well as essays, reports are due by midnight on the specified due date, no exceptions.  -10% off per date late. DO NOT EMAIL ME WITH EXCUSES. Marist offers free tutoring. If you are struggling with the homeworks or material please use this as a resource for help, info will be posted on ILEARN. Sometimes essays and writing assignments will be assigned.": Assignments
+Match to "assignments" in line "CLASS CANCELLATIONS: In the event of inclement weather, Marist may close the college which will be done by Marist text/email alert, and/or on the local radio stations.  If I have an emergency and need to cancel class, I will make an announcement beforehand if possible, or I will send all my students a message through ILEARN.  I drive far and commute, so if I need to cancel our class due to weather, it will be done by ILEARN I will send an email announcement before our class so make sure you ALWAYS to check your Marist email before you leave and I will also post on ILEARN under the announcement tab.  If class is cancelled for any reason on a scheduled exam day, the exam will take place in our following class.  Also, all homeworks and assignments are still due according to the class schedule even with a cancelation so make sure to submit on time so you do not lose late points. Any hard copies of work that are due are still due by our next class meeting.  Any modifications to our class schedule will be emailed to you before our next class meeting and if you have any questions, please contact me.": assignments
+Match to "assignments" in line "Turnitin: Use of Turnitin is mandated for this course. Turnitin is a service used by Marist College faculty to compare a student's written work with its very large database of sources, student papers from other institutions, and the like, to check for originality. Work submitted to Turnitin will be used only for purposes of assessing originality, and will not be shared beyond Turnitin or used for any other purpose. Students must submit all assignments to Turnitin through the regular iLearn submission process. Students who wish to remove their personal identifying information (name, student identification number, etc.) from the submitted file may do so but must notify their professor ahead of submission. Work submitted through iLearn in this course will not be reviewed by the Professor or maintained by the College unless and until the Turnitin process is completed..                                             ": assignments
+
+Results for courseNum:
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "ECON103L-114                                                                 Professor L.  Imperiale   ": 103L
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "Attendance/participation               5": Attendance
+Match to "attendance" in line "Attendance/Participation: This category is worth 5% of your overall grade. More than four absences from class will automatically result in -10 points per each. After 2 lates, you will automatically lose -5 points per each late.  Attendance is expected and it is your responsibility for any material covered in class. If you miss a class, it is your responsibility to catch up on the material on your own. I will not be re-teaching material due to class absences.  Material covered in class is imperative to your success on exams and homework. Students receive a participation grade for class, so to receive full credit, students need to participate in class discussions or will receive zero points. Excessive absences (over 30%) will result in an automatic failure for the course": Attendance
+
+Results for reqRead:
+Match to "required(.*)read" in line "Required and Recommended Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required to purchase the combo package of textbook with connect-plus access card which can be purchased at the Marist College Bookstore.  Materials used in connection with the course may be subject to copyright protection. STEP 2: Sign-up for Connect Access-IMPORTANT:  Once you purchase our textbook and connect access, you will sign-up for our class connect by an online link that will be found under our resource tab on ILEARN.  You can also purchase connect access separately only through our class link if need be which is on ILEARN under the resource tab. ": Required and Recommended Read
+Match to "read(.*)required" in line "Required and Recommended Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required to purchase the combo package of textbook with connect-plus access card which can be purchased at the Marist College Bookstore.  Materials used in connection with the course may be subject to copyright protection. STEP 2: Sign-up for Connect Access-IMPORTANT:  Once you purchase our textbook and connect access, you will sign-up for our class connect by an online link that will be found under our resource tab on ILEARN.  You can also purchase connect access separately only through our class link if need be which is on ILEARN under the resource tab. ": Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required
+Match to "Textbook" in line "Required and Recommended Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required to purchase the combo package of textbook with connect-plus access card which can be purchased at the Marist College Bookstore.  Materials used in connection with the course may be subject to copyright protection. STEP 2: Sign-up for Connect Access-IMPORTANT:  Once you purchase our textbook and connect access, you will sign-up for our class connect by an online link that will be found under our resource tab on ILEARN.  You can also purchase connect access separately only through our class link if need be which is on ILEARN under the resource tab. ": Textbook
+Match to "ISBN" in line "Required and Recommended Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required to purchase the combo package of textbook with connect-plus access card which can be purchased at the Marist College Bookstore.  Materials used in connection with the course may be subject to copyright protection. STEP 2: Sign-up for Connect Access-IMPORTANT:  Once you purchase our textbook and connect access, you will sign-up for our class connect by an online link that will be found under our resource tab on ILEARN.  You can also purchase connect access separately only through our class link if need be which is on ILEARN under the resource tab. ": ISBN
+Match to "required(.)*text" in line "Required and Recommended Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required to purchase the combo package of textbook with connect-plus access card which can be purchased at the Marist College Bookstore.  Materials used in connection with the course may be subject to copyright protection. STEP 2: Sign-up for Connect Access-IMPORTANT:  Once you purchase our textbook and connect access, you will sign-up for our class connect by an online link that will be found under our resource tab on ILEARN.  You can also purchase connect access separately only through our class link if need be which is on ILEARN under the resource tab. ": Required and Recommended Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required to purchase the combo package of textbook with connect-plus access card which can be purchased at the Marist College Bookstore.  Materials used in connection with the course may be subject to copyright protection. STEP 2: Sign-up for Connect Access-IMPORTANT:  Once you purchase our text
+Match to "text(.)*required" in line "Required and Recommended Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required to purchase the combo package of textbook with connect-plus access card which can be purchased at the Marist College Bookstore.  Materials used in connection with the course may be subject to copyright protection. STEP 2: Sign-up for Connect Access-IMPORTANT:  Once you purchase our textbook and connect access, you will sign-up for our class connect by an online link that will be found under our resource tab on ILEARN.  You can also purchase connect access separately only through our class link if need be which is on ILEARN under the resource tab. ": Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required
+Match to "required(.*)read" in line "Required Skills: The student should be very comfortable with two-dimensional graphs and basic algebra. I may occasionally provide supplementary materials that pertain to the topics that are covered in class to be read so that we may discuss it together in class": Required Skills: The student should be very comfortable with two-dimensional graphs and basic algebra. I may occasionally provide supplementary materials that pertain to the topics that are covered in class to be read
+Match to "Textbook" in line "Notes and Final Project: All PowerPoint lecture notes for the chapters will be posted on ILearn under resource tab. Besides my notes, you are also responsible to read all material covered in the indicated chapters in your textbook prior to our class meetings. Since economics is best learned by doing, we may work on problems together in smaller groups worksheets,no makeups if missed. The final exam is a three part take-home project, instructions will be provided at a later date,due at the end of the semester. No late projects will be accepted & all work must be submitted by our last day of class (Friday, Dec 7th, 2018) for credit": textbook
+Match to "doi" in line "Notes and Final Project: All PowerPoint lecture notes for the chapters will be posted on ILearn under resource tab. Besides my notes, you are also responsible to read all material covered in the indicated chapters in your textbook prior to our class meetings. Since economics is best learned by doing, we may work on problems together in smaller groups worksheets,no makeups if missed. The final exam is a three part take-home project, instructions will be provided at a later date,due at the end of the semester. No late projects will be accepted & all work must be submitted by our last day of class (Friday, Dec 7th, 2018) for credit": doi
+
+Results for acadHonest:
+
+Results for teachAct:
+Match to "Materials used in connection" in line "Required and Recommended Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required to purchase the combo package of textbook with connect-plus access card which can be purchased at the Marist College Bookstore.  Materials used in connection with the course may be subject to copyright protection. STEP 2: Sign-up for Connect Access-IMPORTANT:  Once you purchase our textbook and connect access, you will sign-up for our class connect by an online link that will be found under our resource tab on ILEARN.  You can also purchase connect access separately only through our class link if need be which is on ILEARN under the resource tab. ": Materials used in connection
+Match to "subject to copyright protection" in line "Required and Recommended Reading: Required Combo Package: Textbook is Economics by David C. Colander, McGraw-Hill/Irwin Publishing Company, 10th Edition with the connect plus access card. Connect is Mandatory for this class homeworks and is a separate purchase .  ISBN #9781309089590.  It is required to purchase the combo package of textbook with connect-plus access card which can be purchased at the Marist College Bookstore.  Materials used in connection with the course may be subject to copyright protection. STEP 2: Sign-up for Connect Access-IMPORTANT:  Once you purchase our textbook and connect access, you will sign-up for our class connect by an online link that will be found under our resource tab on ILEARN.  You can also purchase connect access separately only through our class link if need be which is on ILEARN under the resource tab. ": subject to copyright protection
+
+Results for accommod:
+Match to "Students with disabilities" in line "ADA Statement: Students with disabilities who believe they may need accommodations in this class are encouraged to contact the Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner": Students with disabilities
+Match to "accommodations and accessibility" in line "ADA Statement: Students with disabilities who believe they may need accommodations in this class are encouraged to contact the Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner": Accommodations and Accessibility
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/945616c3-bb9b-4cef-b2ef-598170abb8cc.txt on 2020-10-23 15:15:39
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*req" in line "Advocate(s) will always be given the opportunity to present a nomination before it is not passed.  However, if the Board requires an advocate to attend the meeting and the advocate can not be contacted to present then this will result in the nomination being deferred to a later meeting in the current TLRB cycle or not passing if there is no subsequent meeting in the TLRB cycle.": present a nomination before it is not passed.  However, if the Board req
+Match to "pre(.)*req" in line "If a verbal presentation of the candidate is required, then the primary advocate will be invited to join the TLRB meeting.  The TLRB PM will notify only the primary advocate that they may join.  The primary advocate may forward that request to a secondary advocate, if there is one": presentation of the candidate is required, then the primary advocate will be invited to join the TLRB meeting.  The TLRB PM will notify only the primary advocate that they may join.  The primary advocate may forward that req
+
+Results for gradeDet:
+Match to "evaluation" in line "Preparing for evaluation	 PAGEREF _Toc319931372 \h 8": evaluation
+Match to "evaluation" in line "Evaluation and Voting	 PAGEREF _Toc319931373 \h 8": Evaluation
+Match to "assessment" in line "Reviewing nominations prior to board assessment and alerting the Watson Group TLRB Chair of packages that do not meet the standards expected for completeness and quality.": assessment
+Match to "assessment" in line "Moving nominations to the correct status to enable smooth operation of the TLRB process, including marking ready for assessment, returning to submitter and archiving.": assessment
+Match to "evaluation" in line "Providing Board evaluations to nominating managers and advocates prior to meetings.": evaluation
+Match to "evaluation" in line "Evaluations are held in the STSM and Certified B10 Tool and archives are kept.": Evaluation
+Match to "evaluation" in line "Preparing for evaluatio": evaluation
+Match to "evaluation" in line "Evaluation and Votin": Evaluation
+Match to "evaluation" in line "Written feedback is required for any evaluations resulting in an Overall Score of 3, 4 or 5.": evaluation
+Match to "evaluation" in line "All evaluations and feedback is provided on an anonymous basis to the advocates prior to the meeting by the TLRB PM.": evaluation
+Match to "evaluation" in line "Voting is conducted electronically prior to the TLRB meeting.  The overall scores within the evaluations are used to assess the candidate.": evaluation
+Match to "evaluation" in line "The TLRB PM will consolidate the results of the evaluations in the meeting agenda and determine who the advocate(s) are for each nomination.": evaluation
+Match to "evaluation" in line "The TLRB PM informs the advocate(s) for nominees of the evaluations, the order in which their candidate will be discussed and the likelihood of whether advocate(s) will be called to present to the TLRB.": evaluation
+Match to "evaluation" in line "The meetings are used to review the nominations and evaluation results.  There are three possible outcomes": evaluation
+Match to "evaluation" in line "All feedback within the evaluations and within the minutes will be provided to the sponsor and advocate(s) for the nomination.": evaluation
+Match to "evaluation" in line "When a nomination is returned to the submitter, the evaluations are archived. ": evaluation
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "Prepare a note for the Watson Group Development and Delivery VP  to send to All Hands.  This note will provide a summary of the appointments and will include the Key Citation from the nomination.  The draft note will be sent to the Watson Development VPs TA (if applicable) for preparation and sending. Copies of the notes are stored in a secure area (private document) of the Watson Group Operations team room for reference and for reuse. ": dr
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "bee" in line "PASSED/NOT PASSED. The advocate(s) will be asked to leave the call. The Board will provide their electronic vote if they have yet to do so or, if they have already voted, may change their existing vote.  Note that if a nomination has been previously deferred this cycle and returned to the submitter for rework, the prior votes are archived.  Archived votes can not be changed and stand unless the TLRB Board member creates a new electronic vote which supersedes the prior archived vote. Depending on the outcome of the vote, will determine if the result.": bee
+Match to "bee" in line "Inform the sponsor and advocate(s) of the result. Note that final approval has not yet been confirmed by the Watson Group GM and no action should be taken by the sponsor or nominees to represent to anyone that this nomination is successful.": bee
+Match to "bee" in line "Area	Comments		Acquisition Career Path Overview	Provide an overview of technical career path and IP practices in the acquisition company to help the board members calibrate a candidates achievements. 		Promotion Nomination Letter		No change		Proposed Assignment					No change		Personal Summary - Education					No change		Personal Summary - Promotions 	Indicate some metric on employees level even if it doesnt map to IBM.  This will help board members evaluate candidates across the acquisition group. No change necessary.		Personal Summary - Performance 	Indicate some metric on employees level even if it doesnt map to IBM. This will help board members evaluate candidates across the acquisition group. No change necessary		Personal Summary - Potential			No changes		Personal Summary - Awards/Recognitions	Participation in standards or industry activities do not fit into this category as requested. Standards or Industry activity should be logged in  Summary of Key Accomplishments section. No change necessary.		Summary of Key Accomplishments	Make sure the board can understand the nature and importance of contributions to the success of the acquired company.		Professional Activities  - Patents, Publishing	Customer Facing Efforts and Industry Leadership should be under Professional Activities (Customer References and Best Practices; Customer Insight/Advocacy; Customer Focus Activities). No change necessary. But feel free to add other forms of IP that has been reused.		Professional Activities  - Professional and Industry Activities - Standards organization participation	No Change		Professional Activities  - Conferences 		No Change		Professional Activities  - Mentoring			No change		Supporting Letters of Promotion	Should have letter from key IBM DE in the brand/LOB, who is intimately involved with the acquisition. 	": bee
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "The Watson Group TLRB PM will schedule an education session to which the sponsor and advocates (if known) will be invited.  The candidates may also be invited to attend at the request of the sponsor or advocates.   Attendance, whilst not considered mandatory, is strongly recommended by the Watson Group TLRB Chair.  Attendance will be on record": Attendance
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/075845bd-9678-443f-9b1c-018be5ae6f27.txt on 2020-10-25 16:24:09
+
+Results for courseDes:
+Match to "course( )*description" in line "Course Description": Course Description
+Match to "course description" in line "Course Description": Course Description
+
+Results for courseObj:
+Match to "course(.)*objective" in line "Course Objective": Course Objective
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+Match to "assessment" in line "Assessment methods: Assignments, three exams": Assessment
+Match to "assessment" in line "Assessment methods: Assignments, three exams, project": Assessment
+Match to "assessment" in line "Assessment methods: project": Assessment
+Match to "assessment" in line " Assessment methods: projec": Assessment
+Match to "assessment" in line "Assessment methods: Final exam.": Assessment
+Match to "assessment" in line "Assessment methods: Final exa": Assessment
+Match to "grading:" in line "Grading": Grading:
+Match to "grading" in line "Grading": Grading
+Match to "evaluation" in line "Evaluation of the deliverables:": Evaluation
+
+Results for otherpolicies:
+Match to "policies" in line "Class Policie": Policies
+Match to "academic(.)*honesty" in line "Academic honest": Academic honesty
+Match to "academic(.)*honesty" in line "Academic Dishonesty": Academic Dishonesty
+Match to "academic(.)*honesty" in line "Students are expected to uphold the school’s standard of conduct relating to academic honesty (please refer to the Marist College Student handbook for detailed information on the definitions and consequences for cheating and plagiarism).  Students assume full responsibility for the content and integrity of the academic work they submit.  The guiding principle of academic integrity shall be that a student’s submitted work, examinations, reports, and projects must be that of the student’s own work.  Students shall be guilty of violating the honor code if they": academic honesty
+Match to "academic(.)*honesty" in line "Marist College is committed to the fundamental values of preserving academic honesty as defined in the Student Handbook (page 152).  The instructor reserves the right to utilize electronic means to help prevent plagiarism.  Students agree that by taking this course all assignments are subject to submission for textual similarity review to Turnitin.com.  Assignments submitted to Turnitin.com will be included as source documents in Turnitin.com’s restricted access database solely for the purpose of detecting plagiarism in such documents.  Additional information about this system can be found at http://www.turnitin.com": academic honesty
+
+Results for instrName:
+
+Results for instrContact:
+Match to "email(-|:)" in line "Email: I am always available via": Email:
+Match to "@marist.edu" in line "ian.becker@marist.ed": @marist.edu
+Match to "@marist.edu" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact the Office of Special Services at 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely fashion": @marist.edu
+Match to "contact:" in line "For additional technical support please contact: helpdesk@marist.eduOr call: 1-845-575-4357 (HELP) Important information about the Marist College Help Desk (including hours) is available at the Help Desk Website: http://www.marist.edu/it/helpdesk/Please note: the Help Desk is usually closed on weekends, so you will need to plan your schedule accordingly when completing assignments with weekend due dates in this course.": contact:
+Match to "@marist.edu" in line "For additional technical support please contact: helpdesk@marist.eduOr call: 1-845-575-4357 (HELP) Important information about the Marist College Help Desk (including hours) is available at the Help Desk Website: http://www.marist.edu/it/helpdesk/Please note: the Help Desk is usually closed on weekends, so you will need to plan your schedule accordingly when completing assignments with weekend due dates in this course.": @marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "assignments" in line "Learning techniques: lecture notes, textbook readings, assignment": assignments
+Match to "assignments" in line "Assessment methods: Assignments, three exams": Assignments
+Match to "assignments" in line " Learning techniques: lecture notes, textbook readings, assignment": assignments
+Match to "assignments" in line "Assessment methods: Assignments, three exams, project": Assignments
+Match to "assignments" in line "Learning techniques: Assignments, project": Assignments
+Match to "assignments" in line "Individual assignments 30": assignments
+Match to "assignments" in line "Assignments are designed to help you master concepts taught in this course. You must hand in something on the date an assignment is due. However, you may redo an assignment once to improve your understanding of the material and your grade.  Resubmissions are due no later than two weeks after you receive the grade on your first attempt.   (In most cases, you won’t receive the file(s) you submitted but will get detailed comments, and sometimes a hint sheet.)": Assignments
+Match to "assignments" in line "Assignments will be posted in iLearn. They are to be submitted through the iLearn assignment tool as attachments only": Assignments
+Match to "assignments" in line "Marist College is committed to the fundamental values of preserving academic honesty as defined in the Student Handbook (page 152).  The instructor reserves the right to utilize electronic means to help prevent plagiarism.  Students agree that by taking this course all assignments are subject to submission for textual similarity review to Turnitin.com.  Assignments submitted to Turnitin.com will be included as source documents in Turnitin.com’s restricted access database solely for the purpose of detecting plagiarism in such documents.  Additional information about this system can be found at http://www.turnitin.com": assignments
+Match to "bee" in line "ADA Statement: All efforts have been made to ensure the iLearn system is compliant with Americans with Disabilities Act (ADA) regulations. Information about the accessibility of the system can be found at: http://tinyurl.com/28p59p": bee
+Match to "assignments" in line "For additional technical support please contact: helpdesk@marist.eduOr call: 1-845-575-4357 (HELP) Important information about the Marist College Help Desk (including hours) is available at the Help Desk Website: http://www.marist.edu/it/helpdesk/Please note: the Help Desk is usually closed on weekends, so you will need to plan your schedule accordingly when completing assignments with weekend due dates in this course.": assignments
+
+Results for courseNum:
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "CMPT308N11": 308N111
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "CMPT308N11": 308N
+Match to "course( )*number" in line "Students are required to use their Marist email for this course.  Use of personal e-mail (AOL, yahoo, or other) outside the course must contain your full name. ALWAYS use the “Subject:” line and put an appropriately descriptive subject concerning the content and purpose of the email, please include the course number. Please allow 24 hours on weekdays, and 48 hours on the weekend for a response to your message": course number
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "The Marist College Academic Learning Center hosts a proofreading site in iLearn. On the proofreading site, you can submit your academic papers for review before you turn them into me for this class. To access the site, click My Workspace in your Quicklinks bar at the top of this screen. Then, click Membership in the left hand navigation bar. At the top of the screen, click Joinable Sites and scroll to join PROOF_001N_001.": 001N_001
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "The Marist College Academic Learning Center hosts a proofreading site in iLearn. On the proofreading site, you can submit your academic papers for review before you turn them into me for this class. To access the site, click My Workspace in your Quicklinks bar at the top of this screen. Then, click Membership in the left hand navigation bar. At the top of the screen, click Joinable Sites and scroll to join PROOF_001N_001.": 001N
+
+Results for format:
+
+Results for attenPol:
+Match to "absent" in line "Displays no sign of life, or absent for entire class.  Usually cannot answer questions posed by instructor": absent
+
+Results for reqRead:
+Match to "Textbook" in line "Learning techniques: lecture notes, textbook readings, assignment": textbook
+Match to "Textbook" in line " Learning techniques: lecture notes, textbook readings, assignment": textbook
+Match to "Textbook" in line "Learning techniques: lecture notes, textbook readings, assignment": textbook
+Match to "course materials" in line "Required Course Material": Course Materials
+Match to "ISBN" in line "ISBN 978013479227": ISBN
+
+Results for acadHonest:
+Match to "academic honesty" in line "Academic honest": Academic honesty
+Match to "academic honesty" in line "Students are expected to uphold the school’s standard of conduct relating to academic honesty (please refer to the Marist College Student handbook for detailed information on the definitions and consequences for cheating and plagiarism).  Students assume full responsibility for the content and integrity of the academic work they submit.  The guiding principle of academic integrity shall be that a student’s submitted work, examinations, reports, and projects must be that of the student’s own work.  Students shall be guilty of violating the honor code if they": academic honesty
+Match to "cheating" in line "Students are expected to uphold the school’s standard of conduct relating to academic honesty (please refer to the Marist College Student handbook for detailed information on the definitions and consequences for cheating and plagiarism).  Students assume full responsibility for the content and integrity of the academic work they submit.  The guiding principle of academic integrity shall be that a student’s submitted work, examinations, reports, and projects must be that of the student’s own work.  Students shall be guilty of violating the honor code if they": cheating
+Match to "plagiarism" in line "Students are expected to uphold the school’s standard of conduct relating to academic honesty (please refer to the Marist College Student handbook for detailed information on the definitions and consequences for cheating and plagiarism).  Students assume full responsibility for the content and integrity of the academic work they submit.  The guiding principle of academic integrity shall be that a student’s submitted work, examinations, reports, and projects must be that of the student’s own work.  Students shall be guilty of violating the honor code if they": plagiarism
+Match to "cheating" in line "Evidence of cheating or plagiarism (e.g., presentation or written submission of other’s ideas or work without proper citation) will result in a grade of “F” for that particular assignment.  An incident of plagiarism or cheating will result in a grade of “F” for this course.  If a student is unclear about whether a particular situation may constitute an honor code violation, the student should meet with the instructor to discuss the situation.  ": cheating
+Match to "plagiarism" in line "Evidence of cheating or plagiarism (e.g., presentation or written submission of other’s ideas or work without proper citation) will result in a grade of “F” for that particular assignment.  An incident of plagiarism or cheating will result in a grade of “F” for this course.  If a student is unclear about whether a particular situation may constitute an honor code violation, the student should meet with the instructor to discuss the situation.  ": plagiarism
+Match to "plagiarism" in line "Plagiarism Prevention": Plagiarism
+Match to "academic honesty" in line "Marist College is committed to the fundamental values of preserving academic honesty as defined in the Student Handbook (page 152).  The instructor reserves the right to utilize electronic means to help prevent plagiarism.  Students agree that by taking this course all assignments are subject to submission for textual similarity review to Turnitin.com.  Assignments submitted to Turnitin.com will be included as source documents in Turnitin.com’s restricted access database solely for the purpose of detecting plagiarism in such documents.  Additional information about this system can be found at http://www.turnitin.com": academic honesty
+Match to "plagiarism" in line "Marist College is committed to the fundamental values of preserving academic honesty as defined in the Student Handbook (page 152).  The instructor reserves the right to utilize electronic means to help prevent plagiarism.  Students agree that by taking this course all assignments are subject to submission for textual similarity review to Turnitin.com.  Assignments submitted to Turnitin.com will be included as source documents in Turnitin.com’s restricted access database solely for the purpose of detecting plagiarism in such documents.  Additional information about this system can be found at http://www.turnitin.com": plagiarism
+Match to "plagiarism" in line "Students are encouraged to review the resources at: http://www.turnitin.com/research_site/e_home.html which will provide you with the information on how to properly cite sources and understand what is meant by plagiarism": plagiarism
+
+Results for teachAct:
+
+Results for accommod:
+Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact the Office of Special Services at 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely fashion": Students with disabilities
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/e5447c90-11f5-440a-8b8c-a24346a81d9f.txt on 2020-10-25 16:35:19
+
+Results for courseDes:
+Match to "course overview" in line "Course Overvie": Course Overview
+
+Results for courseObj:
+Match to "course(.)*objective" in line "Course Learning Objectiv": Course Learning Objective
+Match to "learning objectives" in line "The knowledge learning objectives 1-3 will be assessed through examinations.  The written skills objective (4) assessed based on the submission of a business plan. Objective 5 will be assessed based on an actual presentation": learning objectives
+
+Results for courseCred:
+Match to "[0-9]( )*credit" in line "This is considered to be a 3 credit course.": 3 credit
+
+Results for preReq:
+
+Results for gradeDet:
+Match to "evaluation" in line "Student Evaluatio": Evaluation
+Match to "grading" in line "components. Where appropriate, rubrics will be available for grading.": grading
+Match to "[0-9]([0-9])*( )*points" in line "Exam 1				150 point": 150 points
+Match to "[0-9]([0-9])*( )*points" in line "Exam 2  				150 point": 150 points
+Match to "[0-9]([0-9])*( )*points" in line "Final Exam			150 point": 150 points
+Match to "[0-9]([0-9])*( )*points" in line "Homework/Participation		  50 point": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Business Plan Part 1 		  50 point": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Business Plan Part 2 		  50 point": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Business Plan Part 3 		  50 point": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Business Plan Part 4 		  50 point": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Team Participation  		        50 points  ": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Class participation 		        50 point": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Final Complete Business Plan      150 point": 150 points
+Match to "[0-9]([0-9])*( )*points" in line "Business Plan Presentation 	        50 point": 50 points
+Match to "[0-9]([0-9])*( )*points" in line "Total			    1,000 points": 000 points
+Match to "evaluation" in line "Marist College is a learning community dedicated to helping students develop the intellect, character, and skills required for enlightened, ethical, and productive lives in the global community of the 21st century. Students are expected to pursue excellence in their education while being honest about their work and fair to other members of the learning community. All work presented to instructors for evaluation must reflect their own ideas and effort, and must properly acknowledge any contributions of others. Students should expect this honesty and fairness in others as well": evaluation
+
+Results for otherpolicies:
+Match to "policies" in line "Please refer to the Marist Catalogue for policies and descriptions of plagiarism and academic dishonesty": policies
+Match to "academic(.)*honesty" in line "Please refer to the Marist Catalogue for policies and descriptions of plagiarism and academic dishonesty": academic dishonesty
+Match to "policy" in line "Grievance Polic": Policy
+Match to "academic(.)*honesty" in line "Statement of Academic Integrity (Academic Honesty)": Academic Integrity (Academic Honesty
+Match to "academic(.)*honesty" in line "Marist College is committed to the fundamental values of preserving academic honesty as defined in the Student Handbook (page 152). The instructor reserves the right to utilize electronic means to help prevent plagiarism. All assignments are subject to submission for textual similarity review to Turnitin.com. Assignments submitted to Turnitin.com will be included as source documents in Turnitin.com’s restricted access database solely for the purpose of detecting plagiarism in such documents. Additional information about this system can be found at http://www.turnitin.com": academic honesty
+
+Results for instrName:
+Match to "Dr" in line "Marist College supports the spirit and intent of the Americans with Disabilities Act. Accessibility questions or concerns may be addressed by calling the Marist College ADA phone line at 845-575-4ADA or contact Eva Jackson, Director for Employee Relations, at Eva.Jackson@marist.edu. ": dr
+
+Results for instrContact:
+Match to "e(-| )mail:" in line "E-mail: rena.hill@Marist.ed": E-mail:
+Match to "@marist.edu" in line "E-mail: rena.hill@Marist.ed": @Marist.edu
+Match to "@marist.edu" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to co0ntrac the Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner.": @marist.edu
+Match to "@marist.edu" in line "Marist College supports the spirit and intent of the Americans with Disabilities Act. Accessibility questions or concerns may be addressed by calling the Marist College ADA phone line at 845-575-4ADA or contact Eva Jackson, Director for Employee Relations, at Eva.Jackson@marist.edu. ": @marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "assignments" in line "A mix of teaching methods and assignments will be used in this course including traditional lecture, discussion, case analysis, presentations, exercises, and exams": assignments
+Match to "assignments" in line "All assignments should be grammatically correct (and free of spelling errors).  If this is not the case, your grade on the assignment may be reduced up to 20 percent.  You are encouraged to take advantage of the Marist Writing Center and/or proofreading services.": assignments
+Match to "assignments" in line "Written assignments must be submitted to the ilearn program set up for this course.  Written submissions must adhere to the “Elements of a Paper/Report” guidelines. Guideline details can also be found on iLearn": assignments
+Match to "assignments" in line "Course Schedule for Assignments has several dates that have TBD (To be determined) listed.  The date and times for meeting with the client’s staff will be announced.  Meeting should not take more than one hour. Will send an email and give a handout in class. Attendance is required.": Assignments
+Match to "assignments" in line "Students are expected to attend all classes. Your participation grade will reflect the quality and quantity of your participation in class discussions, your participation within your team, and the assignments": assignments
+Match to "assignments" in line "Marist College is committed to the fundamental values of preserving academic honesty as defined in the Student Handbook (page 152). The instructor reserves the right to utilize electronic means to help prevent plagiarism. All assignments are subject to submission for textual similarity review to Turnitin.com. Assignments submitted to Turnitin.com will be included as source documents in Turnitin.com’s restricted access database solely for the purpose of detecting plagiarism in such documents. Additional information about this system can be found at http://www.turnitin.com": assignments
+
+Results for courseNum:
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "Bus 100N-Section XX": 100N
+
+Results for format:
+
+Results for attenPol:
+Match to "absent" in line "Make-up exams will not be offered. If you are absent for an exam, the value of the final exam will include the value of the missed exam. Final exam make-ups will not be offered": absent
+Match to "attendance" in line "Course Schedule for Assignments has several dates that have TBD (To be determined) listed.  The date and times for meeting with the client’s staff will be announced.  Meeting should not take more than one hour. Will send an email and give a handout in class. Attendance is required.": Attendance
+Match to "attendance" in line "Participation and Class Attendanc": Attendance
+
+Results for reqRead:
+Match to "ISBN" in line "ISBN: 978013488742": ISBN
+
+Results for acadHonest:
+Match to "plagiarism" in line "Please refer to the Marist Catalogue for policies and descriptions of plagiarism and academic dishonesty": plagiarism
+Match to "academic honesty" in line "Statement of Academic Integrity (Academic Honesty)": Academic Honesty
+Match to "plagiarism" in line "Plagiarism Prevention:              ": Plagiarism
+Match to "academic honesty" in line "Marist College is committed to the fundamental values of preserving academic honesty as defined in the Student Handbook (page 152). The instructor reserves the right to utilize electronic means to help prevent plagiarism. All assignments are subject to submission for textual similarity review to Turnitin.com. Assignments submitted to Turnitin.com will be included as source documents in Turnitin.com’s restricted access database solely for the purpose of detecting plagiarism in such documents. Additional information about this system can be found at http://www.turnitin.com": academic honesty
+Match to "plagiarism" in line "Marist College is committed to the fundamental values of preserving academic honesty as defined in the Student Handbook (page 152). The instructor reserves the right to utilize electronic means to help prevent plagiarism. All assignments are subject to submission for textual similarity review to Turnitin.com. Assignments submitted to Turnitin.com will be included as source documents in Turnitin.com’s restricted access database solely for the purpose of detecting plagiarism in such documents. Additional information about this system can be found at http://www.turnitin.com": plagiarism
+
+Results for teachAct:
+Match to "Materials used in connection" in line "	Materials used in connection with the course may be subject to copyright protection": Materials used in connection
+Match to "subject to copyright protection" in line "	Materials used in connection with the course may be subject to copyright protection": subject to copyright protection
+
+Results for accommod:
+Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to co0ntrac the Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner.": Students with disabilities
+Match to "accommodations and accessibility" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to co0ntrac the Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner.": Accommodations and Accessibility
