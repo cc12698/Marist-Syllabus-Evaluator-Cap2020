@@ -5,6 +5,8 @@ const fileUpload = require('express-fileupload');
 const dm = require('../dataManager');
 var multer = require('multer');
 const cors = require('cors');
+// const cas = require('../cas');
+var CASAuthentication = require('node-cas-authentication');
 
 var fs = require('fs');
 const  compPrep = require('./controllers/comparisonPrep');
@@ -19,7 +21,6 @@ var userSession;
 const S3_BUCKET = process.env.S3_BUCKET;
 
 const app = express();
-
 
 app.use(session({secret: 'secret', saveUninitialized: true,resave: true}));
 
@@ -36,7 +37,7 @@ const path = require('path');
 app.use(express.static("public"));
 
 
-app.get('/',function(req, res) {
+app.get('/', function(req, res) {
   userSession = req.session;
   if(!userSession.username && !userSession.role) {
       req.session.redirectTo = '/';
@@ -118,7 +119,7 @@ app.post('/login', function(req,res){
       })
     }
     else{
-      userSession.username = data[0].username;
+      userSession.username = data[0].USERNAME;
       userSession.role = data[0].USER_ROLE;
       userSession.userid = data[0].USER_ID;
 
@@ -513,6 +514,14 @@ app.post('/updateChecklist', function(req,res){
       });
 
 });
+
+// app.get( '/api', dm.casInst.bounce_redirect, function ( req, res ) {
+//   res.json( { success: true } );
+// });
+
+// app.get( '/api/user', function ( req, res ) {
+//   res.json( { session: req.session } );
+// });
 
 app.listen(8080,() => console.log("running on port 8080: http://localhost:8080/"));
 //nodemon server/capping.js to run
