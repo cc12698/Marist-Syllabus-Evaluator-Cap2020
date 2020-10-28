@@ -300,8 +300,8 @@ module.exports.addUser = ( doc ) => {
     return this.post( sql, [doc.USERNAME]);
 };
 
-module.exports.casInst = new CASAuthentication({
-    cas_url     : cas.cas_url,
-    service_url : cas.service_url,
-    return_to   : cas.return_to
-});
+// module.exports.casInst = new CASAuthentication({
+//     cas_url     : cas.cas_url,
+//     service_url : cas.service_url,
+//     return_to   : cas.return_to
+// });

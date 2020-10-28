@@ -515,13 +515,13 @@ app.post('/updateChecklist', function(req,res){
 
 });
 
-app.get( '/api', dm.casInst.bounce_redirect, function ( req, res ) {
-  res.json( { success: true } );
-});
+// app.get( '/api', dm.casInst.bounce_redirect, function ( req, res ) {
+//   res.json( { success: true } );
+// });
 
-app.get( '/api/user', function ( req, res ) {
-  res.json( { session: req.session } );
-});
+// app.get( '/api/user', function ( req, res ) {
+//   res.json( { session: req.session } );
+// });
 
 app.listen(8080,() => console.log("running on port 8080: http://localhost:8080/"));
 //nodemon server/capping.js to run
