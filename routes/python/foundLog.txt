@@ -1017,3 +1017,75 @@ Match to "subject to copyright protection" in line "Materials used in connection
 Results for accommod:
 Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact th": Students with disabilities
 Match to "accommodations and accessibility" in line "Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at Accommodation": Accommodations and Accessibility
+
+
+
+Output for exampleText.txt on 2020-10-28 12:05:13
+
+
+
+Output for exampleText.txt on 2020-10-28 12:29:01
+
+
+
+Output for exampleText.txt on 2020-10-28 12:32:55
+
+
+
+Output for exampleText.txt on 2020-10-28 13:50:15
+
+
+
+Output for exampleText.txt on 2020-10-28 13:53:41
+
+
+
+Output for exampleText.txt on 2020-10-28 13:54:31
+
+
+
+Output for exampleText.txt on 2020-10-28 13:59:51
+
+
+
+Output for exampleText.txt on 2020-10-28 14:04:26
+
+
+
+Output for exampleText.txt on 2020-10-28 14:05:26
+
+
+
+Output for exampleText.txt on 2020-10-28 14:06:03
+
+
+
+Output for exampleText.txt on 2020-10-28 14:06:34
+
+
+
+Output for exampleText.txt on 2020-10-28 14:11:48
+
+
+
+Output for exampleText.txt on 2020-10-28 14:14:56
+
+
+
+Output for exampleText.txt on 2020-10-28 14:18:48
+
+
+
+Output for exampleText.txt on 2020-10-28 14:19:31
+
+
+
+Output for exampleText.txt on 2020-10-28 14:20:28
+
+
+
+Output for exampleText.txt on 2020-10-28 14:22:07
+
+
+
+Output for exampleText.txt on 2020-10-28 14:22:37

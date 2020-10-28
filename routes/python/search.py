@@ -7,18 +7,35 @@ import ibm_db
 textFile = "exampleText.txt"#sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
 
-imb_db.connect("DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-dal09-08.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=gvg60726;PWD=rxwrr+gl4dzjhdcg;", "", "")
+checked = []
+
+conn = ibm_db.connect("DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-dal09-08.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=gvg60726;PWD=rxwrr+gl4dzjhdcg;", "", "")
 #conn = DB2.connect(dsn='sample', uid='gvg60726', pwd='rxwrr+gl4dzjhdcg')
 #curs = conn.cursor()
-#curs.execute('select checked from checked where checked != null' % (id),)
+quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
+quryChecked = ibm_db.exec_immediate(conn , "SELECT CHECKED FROM CHECKLIST;")
+#tabel = ibm_db.fetch_both(qury)
 #curs.close()
 #conn.close()
+#print(tabel)
 
-checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" ,
-           "otherpolicies" , "instrName" , "instrContact" , #"demoConsistant" ,
-           "assesMethod" , "assignments" , #"taskCrit" ,
-           "courseNum" , "format" , "attenPol" , "reqRead" , "acadHonest" ,
-           "teachAct" , "accommod" , ] #"diversity"]
+#while ibm_db.fetch_row(quryChecked) != False:
+    #print "And is: ",  ibm_db.result(quryChecked, "CHECKED")
+    
+while ibm_db.fetch_row(quryName) != False:
+    if(ibm_db.result(quryChecked, "CHECKED") == True):
+        checked.append(ibm_db.result(quryName, "ITEM_NAME"))
+    #print "The item name is: ",  ibm_db.result(quryName, "ITEM_NAME")
+    #print "And is: ",  ibm_db.result(quryChecked, "CHECKED")
+        
+
+#checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" ,
+#           "otherpolicies" , "instrName" , "instrContact" , #"demoConsistant" ,
+#           "assesMethod" , "assignments" , #"taskCrit" ,
+#           "courseNum" , "format" , "attenPol" , "reqRead" , "acadHonest" ,
+#           "teachAct" , "accommod" , ] #"diversity"]
+
+print(checked)
 
 keywords = {    #list of regex commands ment to seach for items
                 "courseDes":      ["course( )*description" , "course description" , "class description" , "course overview"] ,
@@ -108,7 +125,7 @@ def checkFileAnal():
     o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
 
-    s = open(textFile, encoding="utf-8")
+    s = open(textFile)#, encoding="utf-8")
 
     for line in s:
         result = re.search("@marist.edu" , line , re.IGNORECASE)
@@ -200,6 +217,10 @@ def getScore():
     print(missing)
     print()
 
+    #makes sure it never divides by 0
+    if(neededItems == 0):
+        neededItems = 1
+    
     percent = foundItems / neededItems
 
     print("Total Items = " + str(neededItems))
