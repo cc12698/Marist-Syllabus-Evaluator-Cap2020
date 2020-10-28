@@ -1017,3 +1017,95 @@ Match to "subject to copyright protection" in line "	Materials used in connectio
 Results for accommod:
 Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to co0ntrac the Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner.": Students with disabilities
 Match to "accommodations and accessibility" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to co0ntrac the Office of Accommodations and Accessibility at (845) 575-3274, Donnelly Hall 226 or via email at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner.": Accommodations and Accessibility
+
+
+
+Output for /Users/emilydoran/Marist-Syllabus-Evaluator-Cap2020/uploads/f2a9ef4b-5daf-4aaa-bf2f-f48a32e05b59.txt on 2020-10-27 23:26:28
+
+Results for courseDes:
+Match to "course( )*description" in line "Course Description and Objectives": Course Description
+Match to "course description" in line "Course Description and Objectives": Course Description
+
+Results for courseObj:
+Match to "course(.)*objective" in line "Course Description and Objectives": Course Description and Objective
+
+Results for courseCred:
+Match to "[0-9]( )*credit" in line "ENG 220L 112: Literature and Gender (3 credits)": 3 credit
+
+Results for preReq:
+
+Results for gradeDet:
+Match to "assessment" in line "Assessment": Assessment
+Match to "grading" in line "I will use the Gradebook tool on our iLearn site so that students can keep track of grades. Here are my grading": grading
+Match to "[0-9]([0-9])*( )*points" in line "iLearn) https://owl.english.purdue.edu/ for more information on MLA style. Each analysis is worth 100 points. ": 100 points
+Match to "evaluation" in line "of the learning community. All work presented to instructors for evaluation must reflect their own ideas and": evaluation
+Match to "evaluation" in line "6.   Permitting another student to substitute for oneself in an academic evaluation.": evaluation
+Match to "evaluation" in line "1.   Attempting to influence or change an academic evaluation, grade, or record by unfair means. This would": evaluation
+Match to "grading" in line "the grading system.": grading
+Match to "grading" in line "heading with your name or the peer grading will not be anonymous.": grading
+Match to "[0-9]([0-9])*( )*points" in line "                        multiple choice questions, worth 2 points each, and 5 short answer questions,                                ": 2 points
+Match to "[0-9]([0-9])*( )*points" in line "            worth 10 points each. The multiple choice will ask you directly about the gender                                       ": 10 points
+
+Results for otherpolicies:
+Match to "policy" in line "Cancellation Policy": Policy
+Match to "academic(.)*honesty" in line "Acts of academic dishonesty include, but are not limited to, the following actions:": academic dishonesty
+Match to "academic(.)*honesty" in line "Acts of academic dishonesty may result in penalties up to and including a report to the Student Conduct Office,": academic dishonesty
+Match to "policy" in line "previous section of the syllabus, Academic Integrity Policy.": Policy
+
+Results for instrName:
+Match to "Dr" in line "Instructor: Dr. Patricia Tarantello                                                                               Spring 2020                ": Dr
+Match to "Dr" in line "absent unless you have proper documentation.  However, the lowest grade will be dropped.  ": dr
+Match to "Dr" in line "Diversity and Inclusion Statement (The following statement was developed by Marist’s Dr. Tia Gaynor,": Dr
+Match to "professor" in line "Assistant Professor of Public Administration.)": Professor
+Match to "professor" in line "be reviewed by the Professor or maintained by the College unless and until the Turnitin process is completed.": Professor
+Match to "Dr" in line "Mon., Apr. 6                            Peer Review on First Drafts in class": Dr
+
+Results for instrContact:
+Match to "e(-| )mail:" in line "E-mail: patricia.f.tarantello@marist.edu                    ": E-mail:
+Match to "@marist.edu" in line "E-mail: patricia.f.tarantello@marist.edu                    ": @marist.edu
+Match to "@marist.edu" in line "at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a": @marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "assignments" in line "following assignments:": assignments
+Match to "bee" in line "F work is failing work. Assignment goals have not been met on a basic level.": bee
+Match to "assignments" in line "*Students will have the opportunity to revise the Fairy Tale Analysis and Gender Analysis assignments. The": assignments
+Match to "assignments" in line "Students are expected to participate in classroom discussion, in-class writing assignments, and group work": assignments
+Match to "assignments" in line "your convenience. If you’re struggling or feeling overwhelmed by readings, deadlines, writing assignments,": assignments
+Match to "assignments" in line "tests, examinations, or graded projects and assignments.": assignments
+Match to "bee" in line "5.   Submitting work that has been purchased, or borrowing from work submitted in a previous or concurrent": bee
+Match to "bee" in line "include altering academic work that has been resubmitted without indicating that the work has been altered.": bee
+Match to "bee" in line "2.   Submitting material (in whole or part) that has been prepared by another individual(s) or commercial": bee
+Match to "bee" in line "3.   Submitting work that has at any time been submitted to fulfill another academic requirement, either at": bee
+Match to "bee" in line "5.   Submitting data that have been altered or contrived in such a way as to be deliberately misleading.": bee
+Match to "assignments" in line "and will not be shared beyond Turnitin or used for any other purpose. Students must submit all assignments to": assignments
+
+Results for courseNum:
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "ENG 220L 112: Literature and Gender (3 credits)": 220L 112
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "ENG 220L 112: Literature and Gender (3 credits)": 220L
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "Attendance and Participation (100 pts)": Attendance
+Match to "absent" in line "absent unless you have proper documentation.  However, the lowest grade will be dropped.  ": absent
+Match to "attendance" in line "Attendance": Attendance
+Match to "attendance" in line "Attendance is mandatory.  This is a discussion-based course; everyone’s presence is always needed.  Unexcused": Attendance
+
+Results for reqRead:
+Match to "required(.)*text" in line "Required Texts": Required Text
+Match to "Textbook" in line "Gender Studies concepts and terminology as presented from the Gender textbook. Students should be sure to": textbook
+Match to "required(.)*text" in line "Students will be required to analyze a text of their choice and put together a 15 minute presentation explaining": required to analyze a text
+
+Results for acadHonest:
+Match to "cheating" in line "a)  Cheating includes, but is not limited to:": Cheating
+Match to "plagiarism" in line "f)   Plagiarism: using work not appropriately cited, including but not limited to:": Plagiarism
+
+Results for teachAct:
+Match to "Materials used in connection" in line "Please note, materials used in connection with the course may be subject to copyright protection.": materials used in connection
+Match to "subject to copyright protection" in line "Please note, materials used in connection with the course may be subject to copyright protection.": subject to copyright protection
+
+Results for accommod:
+Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact": Students with disabilities
+Match to "accommodations and accessibility" in line "the Office of Accommodations and Accessibility at (845)575-3274, Donnelly Hall 226 or via emai": Accommodations and Accessibility
