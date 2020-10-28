@@ -19,11 +19,11 @@ quryChecked = ibm_db.exec_immediate(conn , "SELECT CHECKED FROM CHECKLIST;")
 #conn.close()
 #print(tabel)
 
-#while ibm_db.fetch_row(quryChecked) != False:
-    #print "And is: ",  ibm_db.result(quryChecked, "CHECKED")
+while ibm_db.fetch_row(quryChecked) != False:
+    print "And is: ",  ibm_db.result(quryChecked, "CHECKED")
     
 while ibm_db.fetch_row(quryName) != False:
-    if(ibm_db.result(quryChecked, "CHECKED") == True):
+    if(ibm_db.result(quryChecked, "CHECKED") == False):
         checked.append(ibm_db.result(quryName, "ITEM_NAME"))
     #print "The item name is: ",  ibm_db.result(quryName, "ITEM_NAME")
     #print "And is: ",  ibm_db.result(quryChecked, "CHECKED")
@@ -113,6 +113,8 @@ keyToName = {   #empty dictionary of arrays to store any matches to analyize lat
         }
 
 missing = []
+
+score = ""
 
 cmdIdex = 0
 
@@ -273,10 +275,10 @@ class Output:
         self.missing = missing
 
 def makeOutput():
-    output = Output(score , missing)
-    jsonOutput = json.dumps(output)
-    #print(str(output))
+    #output = Output(score , missing)
+    jsonOutput = "{" + json.dumps(missing) + "," + getScore() + "}"
     print(jsonOutput)
     sys.stdout.flush()
     
 checkFileAnal()
+makeOutput()
