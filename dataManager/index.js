@@ -2,6 +2,7 @@ const multer = require("multer")
 var fs = require('fs');
 const config = require('../config');
 const db2 = require('../db');
+
 const AWS = require('aws-sdk');
 var cos = config.cos;
 var bodyParser = require('body-parser');
