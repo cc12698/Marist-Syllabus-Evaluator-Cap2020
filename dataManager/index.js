@@ -2,12 +2,11 @@ const multer = require("multer")
 var fs = require('fs');
 const config = require('../config');
 const db2 = require('../db');
-const cas = require('../cas');
+
 const AWS = require('aws-sdk');
 var cos = config.cos;
 var bodyParser = require('body-parser');
 var util = require('util');
-var CASAuthentication = require('node-cas-authentication');
 
 //store the uploaded file in uploads
 module.exports.storage = multer.diskStorage({
@@ -299,9 +298,3 @@ module.exports.addUser = ( doc ) => {
 
     return this.post( sql, [doc.USERNAME]);
 };
-
-// module.exports.casInst = new CASAuthentication({
-//     cas_url     : cas.cas_url,
-//     service_url : cas.service_url,
-//     return_to   : cas.return_to
-// });
