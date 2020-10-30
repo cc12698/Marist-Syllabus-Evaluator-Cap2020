@@ -2197,3 +2197,341 @@ Results for accommod:
 Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact the Office of Accommodations and Accessibility at (845)575-3274, Donnelly Hall 226 or via emai": Students with disabilities
 Match to "accommodations and accessibility" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact the Office of Accommodations and Accessibility at (845)575-3274, Donnelly Hall 226 or via emai": Accommodations and Accessibility
 Match to "accommodations and accessibility" in line "at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner. If you are currently working with or start working with the Office of Accommodations and Accessibility and will need special accommodations, please let me know early in the semester": Accommodations and Accessibility
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/11b8aad0-f910-4245-a062-1c0786c5eaf6.txt on 2020-10-29 18:30:04
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/b830c5d4-c0fb-443f-a0e3-9a2a048835b5.txt on 2020-10-29 19:39:16
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/b4767180-0017-4c52-8a01-e5af1945a675.txt on 2020-10-29 20:20:44
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "M 10/16Watch and take notes on the TED talk, “Enough with the Fear of Fat.” In your journal, respond to the following: In her talk, Drinkwater says that in her struggles to accept herself she learned that “living outside what the mainstream considers normal can be a frustrating and isolating place.” Do you think that it is difficult for people to live outside of the mainstream? Why or why not? Explain and assess Drinkwater’s solution. Is her solution applicable to other groups beyond people of size": Dr
+Match to "Dr" in line "We will be participating in a forum on migration with Dr. O’Sullivan’s FYS class during the class period": Dr
+Match to "Dr" in line "Week 14: Organizing and Draftin": Dr
+Match to "Dr" in line "W 11/29First draft of Identity Research Paper due. Bring in 2 hard copies to class (3 if you’d like my feedback)": dr
+Match to "Dr" in line "M 12/4Final draft of Identity Research Paper due. Turn in a hard copy and upload a copy to iLearn": dr
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/f633bdd0-5134-4fa0-ae6f-faf5db9c48e6.txt on 2020-10-29 20:21:34
+
+Results for courseDes:
+Match to "course( )*description" in line "COURSE DESCRIPTION:        This course explores the broad range of": COURSE DESCRIPTION
+Match to "course description" in line "COURSE DESCRIPTION:        This course explores the broad range of": COURSE DESCRIPTION
+
+Results for courseObj:
+Match to "objective(.)*course" in line "OBJECTIVES:    The objective of this course is to examine the": OBJECTIVES:    The objective of this course
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "required. No prerequisites.": prerequisite
+Match to "pre(.)*req" in line "required. No prerequisites.": prereq
+
+Results for gradeDet:
+Match to "grading:" in line "GRADING:                  50%     Weekly Assignments and Class": GRADING:
+Match to "grading" in line "GRADING:                  50%     Weekly Assignments and Class": GRADING
+Match to "assessment" in line "                                    25%     Midterm Assessmen": Assessment
+Match to "assessment" in line "                                    25%     Final Assessmen": Assessment
+Match to "assessment" in line "MIDTERM AND FINAL ASSESSMENT:  During the second week of": ASSESSMENT
+
+Results for otherpolicies:
+Match to "policy" in line "ACADEMIC HONESTY POLIC": POLICY
+Match to "academic(.)*honesty" in line "ACADEMIC HONESTY POLIC": ACADEMIC HONESTY
+Match to "academic(.)*honesty" in line "relating to academic honesty (please refer to the Marist College Student": academic honesty
+Match to "academic(.)*honesty" in line "academic honesty as defined in the Student Handbook. The instructor": academic honesty
+
+Results for instrName:
+Match to "Dr" in line "popular music.  Each criticism should concisely address lecture": dr
+Match to "Dr" in line "                                                Address the topic of racism and blackface": dr
+Match to "Dr" in line "Address the following issues: how are women portrayed by male": dr
+Match to "Dr" in line "This lecture will demonstrate the importance of a consumer driven": dr
+Match to "Dr" in line "modern media, music helps drive the narrative of those who create the": dr
+
+Results for instrContact:
+Match to "email(-|:)" in line "EMAIL:                   Michael.Napolitano@marist.ed": EMAIL:
+Match to "@marist.edu" in line "EMAIL:                   Michael.Napolitano@marist.ed": @marist.edu
+Match to "@marist.edu" in line "accommodations@marist.edu as soon as possible to better ensure that": @marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "assignments" in line "GRADING:                  50%     Weekly Assignments and Class": Assignments
+Match to "assignments" in line "WEEKLY ASSIGNMENTS/CLASS PARTICIPATION:  Throughout": ASSIGNMENTS
+Match to "assignments" in line "a number of presentation style assignments that will lead you up to your": assignments
+Match to "assignments" in line "Details for both the midterm and final assignments will be furnished in": assignments
+Match to "assignments" in line "Students agree that by taking this course all assignments are subject to": assignments
+Match to "assignments" in line "submission for textual similarity review to Turnitin.com. Assignments": Assignments
+
+Results for courseNum:
+Match to "[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" in line "MUS 242L200 – SPRING 2020                                                       ": 242L200
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "MUS 242L200 – SPRING 2020                                                       ": 242L
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+Match to "Textbook" in line "TEXTBOOK:    None required.  Materials will be distributed to the": TEXTBOOK
+Match to "text(.)*required" in line "TEXTBOOK:    None required.  Materials will be distributed to the": TEXTBOOK:    None required
+
+Results for acadHonest:
+Match to "academic honesty" in line "ACADEMIC HONESTY POLIC": ACADEMIC HONESTY
+Match to "academic honesty" in line "relating to academic honesty (please refer to the Marist College Student": academic honesty
+Match to "cheating" in line "for cheating and plagiarism). Students assume full responsibility for the": cheating
+Match to "plagiarism" in line "for cheating and plagiarism). Students assume full responsibility for the": plagiarism
+Match to "cheating" in line "Evidence of cheating or plagiarism will result in a grade of zero (0) for": cheating
+Match to "plagiarism" in line "Evidence of cheating or plagiarism will result in a grade of zero (0) for": plagiarism
+Match to "cheating" in line "that particular assignment. Multiple incidences of plagiarism or cheating": cheating
+Match to "plagiarism" in line "that particular assignment. Multiple incidences of plagiarism or cheating": plagiarism
+Match to "plagiarism" in line "PLAGIARISM PREVENTIO": PLAGIARISM
+Match to "academic honesty" in line "academic honesty as defined in the Student Handbook. The instructor": academic honesty
+Match to "plagiarism" in line "reserves the right to utilize electronic means to help prevent plagiarism.": plagiarism
+Match to "plagiarism" in line "detecting plagiarism in such documents. Additional information about": plagiarism
+
+Results for teachAct:
+
+Results for accommod:
+Match to "accommodations and accessibility" in line "The Marist College Office of Accommodations and Accessibility (OAA)": Accommodations and Accessibility
+Match to "Students with disabilities" in line "a complete education. Students with disabilities who believe they may": Students with disabilities
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/ad22807c-1b4f-4bc8-8b0b-98837a318535.txt on 2020-10-29 20:23:16
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "M 10/16Watch and take notes on the TED talk, “Enough with the Fear of Fat.” In your journal, respond to the following: In her talk, Drinkwater says that in her struggles to accept herself she learned that “living outside what the mainstream considers normal can be a frustrating and isolating place.” Do you think that it is difficult for people to live outside of the mainstream? Why or why not? Explain and assess Drinkwater’s solution. Is her solution applicable to other groups beyond people of size": Dr
+Match to "Dr" in line "We will be participating in a forum on migration with Dr. O’Sullivan’s FYS class during the class period": Dr
+Match to "Dr" in line "Week 14: Organizing and Draftin": Dr
+Match to "Dr" in line "W 11/29First draft of Identity Research Paper due. Bring in 2 hard copies to class (3 if you’d like my feedback)": dr
+Match to "Dr" in line "M 12/4Final draft of Identity Research Paper due. Turn in a hard copy and upload a copy to iLearn": dr
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/d4304b08-40ff-4470-bc97-faea9819d078.txt on 2020-10-29 20:24:24
+
+Results for courseDes:
+Match to "course( )*description" in line "Course Description": Course Description
+Match to "course description" in line "Course Description": Course Description
+
+Results for courseObj:
+Match to "learning outcomes" in line "Program Goals and Student Learning Outcomes": Learning Outcomes
+Match to "learning outcomes" in line "All of the goals and student learning outcomes of this course are motivated by the program goals": learning outcomes
+Match to "learning outcomes" in line "and student learning outcomes established by the Marist College Department of Mathematics. To": learning outcomes
+Match to "learning outcomes" in line "put these goals and student learning outcomes in context, the departmental program goals and": learning outcomes
+Match to "learning outcomes" in line "student learning outcomes are listed here:": learning outcomes
+Match to "learning outcomes" in line "Student learning outcomes:": learning outcomes
+Match to "learning outcomes" in line "Student learning outcomes:": learning outcomes
+Match to "learning outcomes" in line "Student learning outcomes:": learning outcomes
+Match to "learning outcomes" in line "Student learning outcomes:": learning outcomes
+Match to "course(.)*objective" in line "Course Objectives": Course Objective
+Match to "course(.)*objective" in line "that each course objective supports is indicated by the appropriate label as specified in the": course objective
+Match to "learning outcomes" in line "Department of Mathematics - Program Goals and Student Learning Outcomes section above. For": Learning Outcomes
+Match to "course(.)*objective" in line "The course has three main objectives:": course has three main objective
+Match to "objective(.)*course" in line "3.The third objective is to improve your problem solving abilities. In this course, we will": objective is to improve your problem solving abilities. In this course
+Match to "course(.)*objective" in line "course objective supports is indicated by the appropriate label as specified in the Department of": course objective
+Match to "learning outcomes" in line "Mathematics – Program Goals and Student Learning Outcomes section above.  For example, 3B": Learning Outcomes
+
+Results for courseCred:
+
+Results for preReq:
+Match to "pre(.)*requisite" in line "Prerequisites": Prerequisite
+Match to "pre(.)*req" in line "Prerequisites": Prereq
+
+Results for gradeDet:
+Match to "evaluation" in line "community. All work presented to instructors for evaluation must reflect their own ideas": evaluation
+Match to "assessment" in line "Outcome and Assessment:": Assessment
+
+Results for otherpolicies:
+Match to "academic(.)*honesty" in line "Academic Honesty": Academic Honesty
+Match to "policy" in line "We will follow the Marist College Academic Honesty Policy in your Student Handbook.": Policy
+Match to "academic(.)*honesty" in line "We will follow the Marist College Academic Honesty Policy in your Student Handbook.": Academic Honesty
+Match to "policy" in line "in the Marist Academic Integrity Policy (2016).” - Statement from Marist Academic": Policy
+Match to "policy" in line "Integrity policy": policy
+Match to "policy" in line "•Participation: Although there is no formal attendance policy, regular attendance and": policy
+
+Results for instrName:
+Match to "Dr" in line "            Instructor: Dr. Elizabeth Reid": Dr
+
+Results for instrContact:
+Match to "email(-|:)" in line "            Email: elizabeth.reid@marist.edu": Email:
+Match to "@marist.edu" in line "            Email: elizabeth.reid@marist.edu": @marist.edu
+Match to "@marist.edu" in line "Donnelly Hall 226, or via email at specserv@marist.edu as soon as possible to better": @marist.edu
+
+Results for assesMethod:
+
+Results for assignments:
+Match to "assignments" in line "•Assignments: There will be 10 graded assignments throughout the semester. ": Assignments
+Match to "assignments" in line "Assignments may include, but are not limited to, homework, quizzes, group work,": Assignments
+Match to "assignments" in line "etc.  Collectively, these assignments are worth 20% of your grade. ": assignments
+Match to "assignments" in line "Assignments        10 x 20 pts =": Assignments
+
+Results for courseNum:
+Match to "[0-9]{3}( )*(N|L|n|l)" in line "MATH 205L-111: Discrete Mathematics     Spring, 2018    ": 205L
+
+Results for format:
+
+Results for attenPol:
+Match to "attendance" in line "•Participation: Although there is no formal attendance policy, regular attendance and": attendance
+Match to "attendance(.)policy" in line "•Participation: Although there is no formal attendance policy, regular attendance and": attendance policy
+
+Results for reqRead:
+
+Results for acadHonest:
+Match to "academic honesty" in line "Academic Honesty": Academic Honesty
+Match to "academic honesty" in line "We will follow the Marist College Academic Honesty Policy in your Student Handbook.": Academic Honesty
+
+Results for teachAct:
+Match to "Materials used in connection" in line "“materials used in connection with the course may be subject to copyright protection” (17 USCS": materials used in connection
+Match to "subject to copyright protection" in line "“materials used in connection with the course may be subject to copyright protection” (17 USCS": subject to copyright protection
+
+Results for accommod:
+Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are": Students with disabilities
+Match to "accommodations and accessibility" in line "encouraged to contact the Office of Accommodations and Accessibility at (845)676-3274,": Accommodations and Accessibility
+
+
+
+Output for /Users/emilydoran/Capping/Marist-Syllabus-Evaluator-Cap2020/uploads/f0419a00-4623-4298-af8b-1b7b2aac7699.txt on 2020-10-29 20:25:03
+
+Results for courseDes:
+
+Results for courseObj:
+
+Results for courseCred:
+
+Results for preReq:
+
+Results for gradeDet:
+Match to "[0-9]([0-9])*( )*points" in line "Extra Credit Opportunity: If you would like to earn extra credit, you can read up to two of the stories we did not have a chance to get to and write a one page response reflecting on important themes, issues, and connections. You will get +5 points for a response and you can do two if you wish. The last day to submit extra credit is Friday, May 8 by 11:55pm": 5 points
+
+Results for otherpolicies:
+
+Results for instrName:
+Match to "Dr" in line "due by Sun., Apr. 5                             First Draft of Literary Analysi": Dr
+Match to "Dr" in line "Week Eleven: Revision and Final Drafting          ": Dr
+Match to "Dr" in line "due by TUES., Apr 7                          2 Peer Reviews of First Drafts           due by Sun., Apr 12                            Final Draft of Literary Analysis          ": Dr
+Match to "Dr" in line "Week Thirteen: EducatedRead Chs. 12-25 of Educate": dR
+
+Results for instrContact:
+
+Results for assesMethod:
+
+Results for assignments:
+
+Results for courseNum:
+
+Results for format:
+
+Results for attenPol:
+
+Results for reqRead:
+
+Results for acadHonest:
+
+Results for teachAct:
+
+Results for accommod:
