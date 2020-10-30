@@ -139,7 +139,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/index', function(req, res){
-  userSession = req.session;
+  userSession = req.session
   if(!userSession.username && !userSession.role) {
       req.session.redirectTo = '/index';
       res.redirect('/');
@@ -363,26 +363,62 @@ app.post('/uploadSyllabus', async (req, res) => {
           });
       } else {
           let uploadedFile = req.files.myFile;
-
           var dir = './uploads/';
-          if (!fs.existsSync(dir)){
-              fs.mkdirSync(dir);
-          }
+          if (fs.existsSync(dir)){
+           fs.rmdir(dir, { recursive: true }, (err) => {
+             if (err) {
+               throw err;
+             }
+             console.log(`${dir} is deleted!`);
+             fs.mkdirSync(dir);
+           });
+         }
           uploadedFile.mv(dir + uploadedFile.name);
 
           var mimetype = mime.lookup(uploadedFile.name);
 
           var tempPath = './uploads/' + uploadedFile.name;
           var bucketName = 'user-syl-' + userSession.userid;
+
           dm.uploadUserSyl(bucketName, tempPath, uploadedFile.name, mimetype, function(error){
             if(error){
+              console.log('hello fren')
               res.status(500).send(error);
             }
 
           });
           const test = await compPrep.postComparison();
           res.redirect('/result');
+      }
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
 
+app.post('/uploadSyllabus', async (req, res) => {
+    try {
+      if(!req.files) {
+          res.send({
+              status: false,
+              message: 'No file uploaded'
+          });
+      } else {
+          let uploadedFile = req.files.myFile;
+          var dir = './uploads/';
+          if (!fs.existsSync(dir)){
+              fs.mkdirSync(dir);
+          }
+          uploadedFile.mv(dir + uploadedFile.name);
+          var mimetype = mime.lookup(uploadedFile.name);
+          var tempPath = './uploads/' + uploadedFile.name;
+          var bucketName = 'user-syl-' + userSession.userid;
+          dm.uploadUserSyl(bucketName, tempPath, uploadedFile.name, mimetype, function(error){
+            if(error){
+              res.status(500).send(error);
+            }
+          });
+          const test = await compPrep.postComparison();
+          res.redirect('/result');
           //send response
           /*res.send({
               status: true,
@@ -393,63 +429,10 @@ app.post('/uploadSyllabus', async (req, res) => {
                   size: uploadedFile.size
               }
           });*/
-
       }
     } catch (err) {
         res.status(500).send(err);
     }
-});
-
-// Upload a Sample Syllabi *admins only*
-app.post('/uploadSampleSyl', cors(), (req,res,next) => {
-    // console.log(req.body);
-    var dir;
-    // console.log(req.files.sample_syl);
-    var mimetype = mime.lookup(req.files.sample_syl.name);
-
-    upload.single(req.files.sample_syl);
-    try {
-      if(!req.files) {
-          res.send({
-              status: false,
-              message: 'No file uploaded'
-          });
-      } else {
-          let uploadedFile = req.files.sample_syl;
-
-          dir = './temp/';
-          if (!fs.existsSync(dir)){
-              fs.mkdirSync(dir);
-          }
-          uploadedFile.mv(dir + uploadedFile.name);
-          //send response
-      }
-    } catch (err) {
-        res.status(500).send(err);
-    }
-
-    var tempPath = './temp/' + req.body.fileNameSyl;
-
-    // console.log(tempPath);
-
-    dm.uploadSampleSyl(tempPath, req.body.fileNameSyl, mimetype, function(error){
-      if(error){
-        res.status(500).send(error);
-      }
-      rimraf(dir, function () { console.log("done"); })
-      dm.getBucketContents(S3_BUCKET)
-        .then( (data) => {
-          let content = {};
-          content['syllabi'] = data;
-          // console.log(content);
-          res.redirect('modifySampleSyllabi');
-        })
-        .catch( (err) => {
-          var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
-          res.status(503).send(userErr);
-        });
-    });
-
 });
 
 // Remove a Sample Syllabi *admins only*

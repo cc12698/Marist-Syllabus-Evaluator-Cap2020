@@ -2197,3 +2197,131 @@ Results for accommod:
 Match to "Students with disabilities" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact the Office of Accommodations and Accessibility at (845)575-3274, Donnelly Hall 226 or via emai": Students with disabilities
 Match to "accommodations and accessibility" in line "Students with disabilities who believe they may need accommodations in this class are encouraged to contact the Office of Accommodations and Accessibility at (845)575-3274, Donnelly Hall 226 or via emai": Accommodations and Accessibility
 Match to "accommodations and accessibility" in line "at specserv@marist.edu as soon as possible to better ensure that such accommodations are implemented in a timely manner. If you are currently working with or start working with the Office of Accommodations and Accessibility and will need special accommodations, please let me know early in the semester": Accommodations and Accessibility
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\ed95ca29-3e96-4c67-9703-0aac970cd877.txt on 2020-10-29 18:43:26
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\b95b6a6e-0a0a-4d41-aa8a-6957d39c2b36.txt on 2020-10-29 18:47:59
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\e6a0abf5-3def-4b88-b315-8aad0a82331d.txt on 2020-10-29 18:55:58
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\87bdee87-ad63-49ec-ad0b-f9bcd8a14bd6.txt on 2020-10-29 19:25:20
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\7050e1b7-bcbd-4a81-815b-9134e6755d62.txt on 2020-10-29 19:26:18
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\ecd1fe69-6088-4d08-bcb8-f7be4a465e6a.txt on 2020-10-29 19:26:47
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\9f2161ba-57f9-44cf-a3f0-02d5c18fb14e.txt on 2020-10-29 19:58:01
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\c1a94e3f-975e-4186-a7b8-bb52980c6900.txt on 2020-10-29 19:59:16
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\435927b5-7395-4f2e-a16d-4a92c56dd955.txt on 2020-10-29 20:01:03
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\04eba16a-9d52-47c7-a8d0-afa46744a79e.txt on 2020-10-29 20:05:24
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\b5631786-738f-4e44-bcd2-ccdb8fd0d338.txt on 2020-10-29 20:05:41
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\a398feff-333d-4448-8627-8be71f8b2359.txt on 2020-10-29 20:05:59
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\d950a1c5-cc85-4c37-a6e9-17102edd48bf.txt on 2020-10-29 20:06:08
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\f05830cc-de48-42ef-8447-d5c5998ce1cb.txt on 2020-10-29 20:06:14
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\c68c5866-a418-4bea-aef8-ed7a1e13b4c0.txt on 2020-10-29 20:07:00
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\035902f7-342f-4c3c-97c5-0ec936ec0a1e.txt on 2020-10-29 20:07:06
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\dfd26b3b-0f5a-4da8-bec6-da5065b9d5f6.txt on 2020-10-29 20:07:12
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\b8e86a82-b470-4684-908e-c03667ebed67.txt on 2020-10-29 20:07:16
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\e52a1f5c-e1e0-435d-a98b-591ca60464aa.txt on 2020-10-29 20:07:39
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\86e1e53a-3885-47dd-94f8-24a58df31744.txt on 2020-10-29 20:13:49
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\8c5b26a1-0e3e-4ce5-88c5-758b28e68019.txt on 2020-10-29 20:13:57
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\05b84ab7-7895-462b-a295-a9e7ce85d19d.txt on 2020-10-29 20:15:26
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\54949fcf-1887-4b4e-b0b9-5b4f62bd2d5c.txt on 2020-10-29 20:17:21
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\fc2937cc-ab6f-4d74-a062-99779faa313a.txt on 2020-10-29 20:18:33
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\debe0c5f-5973-4c88-b22d-513a5fc60539.txt on 2020-10-29 20:18:56
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\d9fce950-4b1a-44ad-8f81-e92a845f4e73.txt on 2020-10-29 20:19:21
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\69bdf604-58ec-423f-9055-7d0fa05a6ecd.txt on 2020-10-29 20:19:32
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\27847ef8-edfa-4e01-b102-9960dd02cde3.txt on 2020-10-29 20:19:40
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\0695e6f4-7656-4725-87c2-968bda463a91.txt on 2020-10-29 20:20:07
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\50317828-2b18-4215-a01b-beff8c9d1c80.txt on 2020-10-29 20:20:16
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\060610aa-60a0-4209-9bc1-4e98232a9761.txt on 2020-10-29 20:25:20
+
+
+
+Output for C:\Users\Kevin\Documents\GitHub\Marist-Syllabus-Evaluator-Cap2020\uploads\17ac47a5-7a0f-415b-a6d6-1508cd8b9748.txt on 2020-10-29 20:26:17
