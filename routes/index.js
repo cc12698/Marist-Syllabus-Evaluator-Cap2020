@@ -242,7 +242,7 @@ app.get('/unauthorized', function(req, res){
 app.get('/help', function(req, res){
   userSession = req.session;
   if(!userSession.username && !userSession.role) {
-      req.session.redirectTo = '/result';
+      req.session.redirectTo = '/help';
       res.redirect('/');
   }
   else {
