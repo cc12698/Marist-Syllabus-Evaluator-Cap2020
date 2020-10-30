@@ -145,7 +145,7 @@ app.get('/index', function(req, res){
       res.redirect('/');
   }
   else{
-    res.render('../views/index')
+    res.render('../views/index.ejs')
   }
 });
 
@@ -371,23 +371,14 @@ app.post('/uploadSyllabus', async (req, res) => {
           var mimetype = mime.lookup(uploadedFile.name);
           var tempPath = './uploads/' + uploadedFile.name;
           var bucketName = 'user-syl-' + userSession.userid;
-          dm.uploadUserSyl(bucketName, tempPath, uploadedFile.name, mimetype, function(error){
-            if(error){
-              res.status(500).send(error);
-            }
-          });
-          const test = await compPrep.postComparison();
-          res.redirect('/result');
-          //send response
-          /*res.send({
-              status: true,
-              message: 'File is uploaded',
-              data: {
-                  name: uploadedFile.name,
-                  mimetype: uploadedFile.mimetype,
-                  size: uploadedFile.size
-              }
-          });*/
+          dm.uploadUserSyl(bucketName, tempPath, uploadedFile.name, mimetype)
+            .catch( (err) => {
+              res.status(503).send(err);
+            });
+
+            const test = await compPrep.postComparison();
+            res.redirect('/result');
+
       }
     } catch (err) {
         res.status(500).send(err);
