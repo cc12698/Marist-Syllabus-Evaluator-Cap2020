@@ -1,6 +1,7 @@
 import sys
 import re
 import datetime
+
 import json
 import ibm_db
 
@@ -270,6 +271,6 @@ def makeOutput():
     jsonOutput = "{" + json.dumps(missing) + "," + getScore() + "}"
     print(jsonOutput)
     sys.stdout.flush()
-    
+
 checkFileAnal()
 makeOutput()
