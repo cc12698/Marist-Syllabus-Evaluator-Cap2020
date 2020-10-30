@@ -4,7 +4,7 @@ import datetime
 import json
 import ibm_db
 
-textFile = "exampleText.txt"#sys.argv[1]#"exampleText.txt"
+textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
 
 checked = []
@@ -14,26 +14,17 @@ conn = ibm_db.connect("DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-dal09-08.servi
 #curs = conn.cursor()
 quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
 quryChecked = ibm_db.exec_immediate(conn , "SELECT CHECKED FROM CHECKLIST;")
-#tabel = ibm_db.fetch_both(qury)
-#curs.close()
-#conn.close()
-#print(tabel)
 
-while ibm_db.fetch_row(quryChecked) != False:
-    print "And is: ",  ibm_db.result(quryChecked, "CHECKED")
-    
-while ibm_db.fetch_row(quryName) != False:
-    if(ibm_db.result(quryChecked, "CHECKED") == False):
-        checked.append(ibm_db.result(quryName, "ITEM_NAME"))
-    #print "The item name is: ",  ibm_db.result(quryName, "ITEM_NAME")
-    #print "And is: ",  ibm_db.result(quryChecked, "CHECKED")
-        
+sql = "SELECT ITEM_NAME FROM CHECKLIST WHERE CHECKED = true"
+stmt = ibm_db.exec_immediate(conn, sql)
+tuple = ibm_db.fetch_tuple(stmt)
 
-#checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" ,
-#           "otherpolicies" , "instrName" , "instrContact" , #"demoConsistant" ,
-#           "assesMethod" , "assignments" , #"taskCrit" ,
-#           "courseNum" , "format" , "attenPol" , "reqRead" , "acadHonest" ,
-#           "teachAct" , "accommod" , ] #"diversity"]
+i = 0
+
+while tuple != False:
+    #print "Key: ", tuple[0]
+    checked.append(tuple[0])
+    tuple = ibm_db.fetch_tuple(stmt)
 
 print(checked)
 
@@ -123,8 +114,8 @@ def checkFileAnal():
     #print(keywords)
     now = datetime.datetime.now()
 
-    o = open(logFile, "a")
-    o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
+    #o = open(logFile, "a")
+    #o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
 
     s = open(textFile)#, encoding="utf-8")
@@ -144,7 +135,7 @@ def checkFileAnal():
 
     for key in keywords: #loops through entire dictionary
         if key in checked:
-            o.write("\n\nResults for " + key + ":")
+            #o.write("\n\nResults for " + key + ":")
             try:
                 for line in s: #loops through each line of sylibus
                     cmdIdex = 0
@@ -156,7 +147,7 @@ def checkFileAnal():
                             matches += 1
                             found[key].append(result)
                             match = line[result.span()[0] : result.span()[1]]
-                            o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
+                            #o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
 
                 s.seek(0) #sets file pointer back to the begining
             except:
