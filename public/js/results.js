@@ -12,7 +12,7 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-
+/*
 function getResults(){
     fetch('/api/getResults/').then(function(response){
       if(response.status != 200){
@@ -23,4 +23,4 @@ function getResults(){
       console.log("received back: " + data);
     });
   });
-}
+}*/

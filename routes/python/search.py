@@ -1,7 +1,7 @@
 import sys
 import re
 import datetime
-import DB2
+#import DB2
 
 textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
@@ -113,7 +113,7 @@ def checkFileAnal():
 
     if(result != None):
         result = result[result.index(".") + 1:result.index("@")]
-        
+
     keywords.get("instrName").push(result)
 
     s.seek(0)
@@ -253,5 +253,5 @@ def makeOutput():
     output = Output(score , missing)
     print(str(output))
     sys.stdout.flush()
-    
+
 checkFileAnal()
