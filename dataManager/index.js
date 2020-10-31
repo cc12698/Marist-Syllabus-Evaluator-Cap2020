@@ -208,22 +208,23 @@ module.exports.deleteUserSyllabi = (bucketName, fileName) => {
 module.exports.uploadUserSyl = (bucketName, filePath, fileName, mimetype) => {
   var fileName = fileName;
   var filePath = filePath;
+  console.log(filePath);//IF THIS IS REMOVED EVERYTHING WILL BREAK
   return new Promise( (resolve,reject) => {
     const uploadFile = () => {
     fs.readFile(filePath, (err, data) => {
-    if (err) reject(err);
-    const params = {
-             Bucket: bucketName, // pass your bucket name
-             Key: fileName, // file will be saved
-             Body: data,
-             ContentType: mimetype,
-             ACL: 'public-read'
-    };
-    cos.upload(params, function(s3Err, data) {
-      if (s3Err) throw s3Err
-      console.log(`File uploaded successfully at ${data.Location}`)
-      var location = data.Location;
-      resolve();
+      if (err) reject(err);
+      const params = {
+               Bucket: bucketName, // pass your bucket name
+               Key: fileName, // file will be saved
+               Body: data,
+               ContentType: mimetype,
+               ACL: 'public-read'
+      };
+      cos.upload(params, function(s3Err, data) {
+        if (s3Err) throw s3Err
+        console.log(`File uploaded successfully at ${data.Location}`)
+        var location = data.Location;
+        resolve();
         });
       });
     };
