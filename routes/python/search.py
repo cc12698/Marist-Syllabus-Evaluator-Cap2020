@@ -1,22 +1,33 @@
 import sys
 import re
 import datetime
-#import DB2
+
+import json
+import ibm_db
 
 textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
 
-#conn = DB2.connect(dsn='sample', uid='db2inst1', pwd='ibmdb2')
-#curs = conn.cursor()
-#curs.execute('select checked from checked where checked != null' % (id),)
-#curs.close()
-#conn.close()
+checked = []
 
-checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" ,
-           "otherpolicies" , "instrName" , "instrContact" , #"demoConsistant" ,
-           "assesMethod" , "assignments" , #"taskCrit" ,
-           "courseNum" , "format" , "attenPol" , "reqRead" , "acadHonest" ,
-           "teachAct" , "accommod" , ] #"diversity"]
+conn = ibm_db.connect("DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-dal09-08.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=gvg60726;PWD=rxwrr+gl4dzjhdcg;", "", "")
+#conn = DB2.connect(dsn='sample', uid='gvg60726', pwd='rxwrr+gl4dzjhdcg')
+#curs = conn.cursor()
+quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
+quryChecked = ibm_db.exec_immediate(conn , "SELECT CHECKED FROM CHECKLIST;")
+
+sql = "SELECT ITEM_NAME FROM CHECKLIST WHERE CHECKED = true"
+stmt = ibm_db.exec_immediate(conn, sql)
+tuple = ibm_db.fetch_tuple(stmt)
+
+i = 0
+
+while tuple != False:
+    #print "Key: ", tuple[0]
+    checked.append(tuple[0])
+    tuple = ibm_db.fetch_tuple(stmt)
+
+print(checked)
 
 keywords = {    #list of regex commands ment to seach for items
                 "courseDes":      ["course( )*description" , "course description" , "class description" , "course overview"] ,
@@ -95,6 +106,8 @@ keyToName = {   #empty dictionary of arrays to store any matches to analyize lat
 
 missing = []
 
+score = ""
+
 cmdIdex = 0
 
 def checkFileAnal():
@@ -102,19 +115,19 @@ def checkFileAnal():
     #print(keywords)
     now = datetime.datetime.now()
 
-    o = open(logFile, "a")
-    o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
+    #o = open(logFile, "a")
+    #o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
 
-    s = open(textFile, encoding="utf-8")
+    s = open(textFile)#, encoding="utf-8")
 
     for line in s:
         result = re.search("@marist.edu" , line , re.IGNORECASE)
 
     if(result != None):
         result = result[result.index(".") + 1:result.index("@")]
-
-    keywords.get("instrName").push(result)
+        
+    keywords.get("instrName").append(result)
 
     s.seek(0)
 
@@ -123,7 +136,7 @@ def checkFileAnal():
 
     for key in keywords: #loops through entire dictionary
         if key in checked:
-            o.write("\n\nResults for " + key + ":")
+            #o.write("\n\nResults for " + key + ":")
             try:
                 for line in s: #loops through each line of sylibus
                     cmdIdex = 0
@@ -135,7 +148,7 @@ def checkFileAnal():
                             matches += 1
                             found[key].append(result)
                             match = line[result.span()[0] : result.span()[1]]
-                            o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
+                            #o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
 
                 s.seek(0) #sets file pointer back to the begining
             except:
@@ -198,6 +211,10 @@ def getScore():
     print(missing)
     print()
 
+    #makes sure it never divides by 0
+    if(neededItems == 0):
+        neededItems = 1
+    
     percent = foundItems / neededItems
 
     print("Total Items = " + str(neededItems))
@@ -250,8 +267,10 @@ class Output:
         self.missing = missing
 
 def makeOutput():
-    output = Output(score , missing)
-    print(str(output))
+    #output = Output(score , missing)
+    jsonOutput = "{" + json.dumps(missing) + "," + getScore() + "}"
+    print(jsonOutput)
     sys.stdout.flush()
 
 checkFileAnal()
+makeOutput()
