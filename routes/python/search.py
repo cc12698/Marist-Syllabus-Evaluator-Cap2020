@@ -1,7 +1,6 @@
 import sys
 import re
 import datetime
-
 import json
 import ibm_db
 
@@ -126,7 +125,7 @@ def checkFileAnal():
 
     if(result != None):
         result = result[result.index(".") + 1:result.index("@")]
-
+        
     keywords.get("instrName").append(result)
 
     s.seek(0)
@@ -152,7 +151,8 @@ def checkFileAnal():
 
                 s.seek(0) #sets file pointer back to the begining
             except:
-                print("ERROR LINE COULD NOT BE READ")
+                pass
+                #print("ERROR LINE COULD NOT BE READ")
 
     #print("file checked, " + str(matches) + " matches found")
 
@@ -214,7 +214,7 @@ def getScore():
     #makes sure it never divides by 0
     if(neededItems == 0):
         neededItems = 1
-
+    
     percent = foundItems / neededItems
 
     #print("Total Items = " + str(neededItems))
