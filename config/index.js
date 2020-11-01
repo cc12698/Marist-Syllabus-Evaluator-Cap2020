@@ -3,6 +3,9 @@ require('dotenv').config();
 const AWS = require('aws-sdk');
 var util = require('util');
 
+const passport = require('passport')
+const WebAppStrategy = require('ibmcloud-appid').WebAppStrategy;
+
 var config = {
     endpoint: process.env.ENDPOINT,
     apiKeyId: process.env.API_KEY_ID,

@@ -26,7 +26,7 @@ while tuple != False:
     checked.append(tuple[0])
     tuple = ibm_db.fetch_tuple(stmt)
 
-print(checked)
+#print(checked)
 
 keywords = {    #list of regex commands ment to seach for items
                 "courseDes":      ["course( )*description" , "course description" , "class description" , "course overview"] ,
@@ -110,7 +110,7 @@ score = ""
 cmdIdex = 0
 
 def checkFileAnal():
-    print("checking file...")
+    #print("checking file...")
     #print(keywords)
     now = datetime.datetime.now()
 
@@ -153,10 +153,10 @@ def checkFileAnal():
             except:
                 print("ERROR LINE COULD NOT BE READ")
 
-    print("file checked, " + str(matches) + " matches found")
+    #print("file checked, " + str(matches) + " matches found")
 
     score = getScore()
-    print("Score: " + score)
+    #print("Score: " + score)
 
     return found
 
@@ -192,7 +192,7 @@ def checkFileFast():
     return found
 
 def getScore():
-    print("Score Calculateing")
+    #print("Score Calculateing")
 
     neededItems = 0
     foundItems = 0
@@ -206,9 +206,9 @@ def getScore():
             else:
                 missing.append(keyToName[key])
 
-    print("Missing elements:\n")
-    print(missing)
-    print()
+    #print("Missing elements:\n")
+    #print(missing)
+    #print()
 
     #makes sure it never divides by 0
     if(neededItems == 0):
@@ -216,9 +216,9 @@ def getScore():
     
     percent = foundItems / neededItems
 
-    print("Total Items = " + str(neededItems))
-    print("Found Items = " + str(foundItems))
-    print("% found = " + str(percent))
+    #print("Total Items = " + str(neededItems))
+    #print("Found Items = " + str(foundItems))
+    #print("% found = " + str(percent))
 
     if(percent >= 1):
         score = "A+"
@@ -270,6 +270,6 @@ def makeOutput():
     jsonOutput = "{" + json.dumps(missing) + "," + getScore() + "}"
     print(jsonOutput)
     sys.stdout.flush()
-    
+
 checkFileAnal()
 makeOutput()
