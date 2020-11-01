@@ -1,6 +1,7 @@
 import sys
 import re
 import datetime
+
 import json
 import ibm_db
 
@@ -125,7 +126,7 @@ def checkFileAnal():
 
     if(result != None):
         result = result[result.index(".") + 1:result.index("@")]
-        
+
     keywords.get("instrName").append(result)
 
     s.seek(0)
@@ -213,7 +214,7 @@ def getScore():
     #makes sure it never divides by 0
     if(neededItems == 0):
         neededItems = 1
-    
+
     percent = foundItems / neededItems
 
     #print("Total Items = " + str(neededItems))

@@ -1,6 +1,6 @@
 const spawn = require("child_process").spawn;
 const fs = require('fs');
-const path = require('path');
+const paths = require('path');
 const mammoth = require("mammoth");
 const PDFParser = require("pdf2json");
 const uuid = require('uuid-random')
@@ -10,19 +10,12 @@ const CloudConvert = require('cloudconvert');
 const https = require('https');
 const WordExtractor = require("word-extractor");
 
-exports.postComparison = async function(req, res){
-  const uuidConvert = await makeTXT();
-  const sent = await sentimentAnalyze.getAnalyzer(uuidConvert);
-  console.log(sent);
-}
 
-function makeTXT(){
+exports.makeTXT = function(path){
   try{
-    var directoryPath = path.normalize(__dirname + "/../../uploads");
+    var directoryPath = paths.normalize(__dirname + "/../../uploads");
     return new Promise((resolve, reject) => {
       fs.readdir(directoryPath, async function (err, files) {
-        var uuidCre = uuid();
-        var path  = './uploads/'+ uuidCre +'.txt';
         //listing all files using forEach
         for(const file of files){
           var allowDocx =  /(\.docx)$/i;
@@ -32,22 +25,16 @@ function makeTXT(){
           var filePath = "./uploads/" + file;
 
           if(allowDocx.exec(filePath)){
-            var result = await docx(filePath);
-            var text = result.value; // The raw text
-            fs.writeFile(path, text, (err) => {
-              if (err) throw err;
-              console.log('The file has been saved!');
-              return err ? reject(err) : resolve(path);
-            });
+            docx(filePath, path);
           }
           else if(allowDoc.exec(filePath)){
-            doc(filePath, uuidCre);
+            doc(filePath, path);
           }
           else if(allowPDF.exec(filePath)){
-            pdf(filePath, uuidCre);
+            pdf(filePath, path);
           }
           else if(allowPages.exec(filePath)){
-            pages(filePath, uuidCre);
+            pages(filePath, path);
           }
         }
       });
@@ -59,28 +46,36 @@ function makeTXT(){
 
 
 
-async function docx(file){
-  return mammoth.extractRawText({path: file})
+async function docx(file, path){
+  mammoth.extractRawText({path: file})
+    .then(function(result){
+      var text = result.value; // The raw text
+      fs.writeFile(path, text, (err) => {
+        if (err) throw err;
+        console.log('The file has been saved!');
+        sentimentAnalyze.getAnalyzer(path);
+      });
+    })
 }
 
-async function doc(file, uuid){
+async function doc(file, path){
   var extractor = new WordExtractor();
   var extracted = extractor.extract(file);
   extracted.then(function(result) {
     var text = result.getBody();
-    fs.writeFile('./uploads/'+ uuid +'.txt', text, (err) => {
+    fs.writeFile(path, text, (err) => {
       if (err) throw err;
       console.log('The file has been saved!');
     });
   });
 }
 
-async function pdf(file, uuid){
+async function pdf(file, path){
   var pdfParser = new PDFParser(this,1);
 
   pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError));
   pdfParser.on("pdfParser_dataReady", pdfData => {
-    fs.writeFile('./uploads/'+ uuid +'.txt', pdfParser.getRawTextContent(), (err) => {
+    fs.writeFile(path, pdfParser.getRawTextContent(), (err) => {
       if (err) throw err;
       console.log('The file has been saved!');
     });
@@ -89,7 +84,7 @@ async function pdf(file, uuid){
   pdfParser.loadPDF(file);
 }
 
-async function pages(file, uuid){
+async function pages(file, path){
   const cloudConvert = new CloudConvert('eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2NiZDkxMTcxYjdiY2M1MGUwMDhkNTg2YmI1ZWVkOGNjZjRkYzg5ZjkyYjc0YTlkZjdkNGY0ODExMTI5Yzk5OWM3NjU4NjlkYjk3OWVkZTYiLCJpYXQiOjE2MDI3MjE3ODEsIm5iZiI6MTYwMjcyMTc4MSwiZXhwIjo0NzU4Mzk1MzgxLCJzdWIiOiI0NTg0NTczMyIsInNjb3BlcyI6WyJ1c2VyLnJlYWQiLCJ1c2VyLndyaXRlIiwidGFzay5yZWFkIiwidGFzay53cml0ZSIsIndlYmhvb2sucmVhZCIsIndlYmhvb2sud3JpdGUiLCJwcmVzZXQucmVhZCIsInByZXNldC53cml0ZSJdfQ.Sa_mCj4F6P7n1TmfSREGOX_fiT2wUXBg8k93_ZmxU_CSPzDhU7s_4yW-UGZ1LfaB-PmZBgSM-6Ayh4ozOTGSeUjcrmyVfoobypCSZkMRhrFL2AOPamC93_q1YIS0QVSKMrQ6cjhp9f8K_LjC_kLdhS9hW8Bn0etYsJ4lqstvfbUeU6Ipr9H3ld4-p9kFbGH2R-8cpv0Lfx37_bBRjp__AUxDb3Lg18tfdiWGpJhIZFI2sCdHvhx7gjebQ8JgZ1sWDV9QKj8j1oWwPXv-VpOUx7UQ8k_xfNaYuOx_Uc-YQkdOhQe0t-t5bPcsh1Pf0s_uFIzN53QD_1zyJsxbzt_w0YqkwsUSqLjRzzAKQgHX27dUjJfgALrwbRrIHMhLCBLUt4fRoJPEKcC1ZD87PH_4li6QqaNdD48ky9vngI39j66W2ua-OQusWwrRm0Gn_DbSZKBYktu_SerkANAijp4YQV7Mped_AMRiFeB-6fLQtK81Tun-d9YDNsLnZtJWsl0J9NQ4URTM__LmmdtNwqkjT5sUH91qo_xrdRYsyjUHh3bflZRAgDIR-DcinWBtkL9jPDnJrZl_ItwLjDEuoANkGei98eENkeSaPGza-m6OcnKnmf7q1VbT-S-9CKqxQ7i1esq9XhIwdqD_xTtgF7JymFLGSvCntvvcXgaMh_XrEw4');
 
   let job = await cloudConvert.jobs.create({
@@ -121,7 +116,7 @@ async function pages(file, uuid){
   )[0];
   const outFile = exportTask.result.files[0];
 
-  const writeStream = fs.createWriteStream('./uploads/' + uuid + '.txt');
+  const writeStream = fs.createWriteStream(path);
   https.get(outFile.url, function (response) {
       response.pipe(writeStream);
   });

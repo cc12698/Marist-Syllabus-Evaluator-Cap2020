@@ -5,7 +5,7 @@ const fileUpload = require('express-fileupload');
 const dm = require('../dataManager');
 var multer = require('multer');
 const cors = require('cors');
-
+const uuid = require('uuid-random')
 var fs = require('fs');
 const  compPrep = require('./controllers/comparisonPrep');
 const config = require('../config');
@@ -15,7 +15,6 @@ var mime = require('mime-types');
 
 const session = require('express-session');
 var userSession;
-
 const passport = require('passport');
 const WebAppStrategy = require("ibmcloud-appid").WebAppStrategy;
 const userProfileManager = require("ibmcloud-appid").UserProfileManager;
@@ -145,6 +144,7 @@ app.get('/index', function(req, res){
       res.redirect('/');
   }
   else{
+    if (fs.existsSync('./uploads/')){ rimraf('./uploads/', function () {console.log("deleted");})}
     res.render('../views/index')
   }
 });
@@ -222,13 +222,14 @@ app.get('/mainmenuAdmin', function(req, res){
 });
 
 // Results Page After Submitting Syllabus
-app.get('/result', function(req, res){
+app.get('/result', async function(req, res){
   userSession = req.session;
   if(!userSession.username && !userSession.role) {
       req.session.redirectTo = '/result';
       res.redirect('/');
   }
   else {
+
       res.render('../views/results.ejs')
   }
 });
@@ -362,32 +363,32 @@ app.post('/uploadSyllabus', async (req, res) => {
               message: 'No file uploaded'
           });
       } else {
-          let uploadedFile = req.files.myFile;
-          var dir = './uploads/';
-          if (!fs.existsSync(dir)){
-              fs.mkdirSync(dir);
+        console.log('hello world!')
+        var dir = './uploads/';
+        let uploadedFile = req.files.myFile;
+        var uuidCre = uuid();
+        var pathsVal  = './uploads/'+ uuidCre +'.txt';
+        switch(0){
+          case 0:
+            console.log('0');
+            if (!fs.existsSync(dir)){ fs.mkdirSync(dir); console.log('created')}
+          case 1:
+            console.log('1');
+            uploadedFile.mv(dir + uploadedFile.name);
+            var mimetype = mime.lookup(uploadedFile.name);
+            var tempPath = './uploads/' + uploadedFile.name;
+            var bucketName = 'user-syl-' + userSession.userid;
+            dm.uploadUserSyl(bucketName, tempPath, uploadedFile.name, mimetype)
+                       .then( () => {
+                         res.redirect('/result');
+                       })
+                       .catch( (err) => {
+                         res.status(503).send(err);
+                       });
+          case 2:
+            console.log('2');
+            var test = compPrep.makeTXT(pathsVal);
           }
-          uploadedFile.mv(dir + uploadedFile.name);
-          var mimetype = mime.lookup(uploadedFile.name);
-          var tempPath = './uploads/' + uploadedFile.name;
-          var bucketName = 'user-syl-' + userSession.userid;
-          dm.uploadUserSyl(bucketName, tempPath, uploadedFile.name, mimetype, function(error){
-            if(error){
-              res.status(500).send(error);
-            }
-          });
-          const test = await compPrep.postComparison();
-          res.redirect('/result');
-          //send response
-          /*res.send({
-              status: true,
-              message: 'File is uploaded',
-              data: {
-                  name: uploadedFile.name,
-                  mimetype: uploadedFile.mimetype,
-                  size: uploadedFile.size
-              }
-          });*/
       }
     } catch (err) {
         res.status(500).send(err);
