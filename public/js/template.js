@@ -46,6 +46,14 @@ function createWord(){
   courseDes = document.getElementById("courseDes").value;
   insEmail = document.getElementById("insEmail").value;
   insPhone = document.getElementById("insPhone").value;
+  preReq = document.getElementById("preReq").value;
+  attenPol = document.getElementById("attenPol").value;
+  acadHonest = document.getElementById("acadHonest").value;
+  gradeDet = document.getElementById("gradeDet").value;
+  assignments = document.getElementById("assignments").value;
+  biblio = document.getElementById("biblio").value;
+  teachAct = document.getElementById("teachAct").value;
+  accommod = document.getElementById("accommod").value;
 
   doc.addSection({
     properties: {},
