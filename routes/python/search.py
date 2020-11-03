@@ -125,7 +125,7 @@ def checkFileAnal():
 
     if(result != None):
         result = result[result.index(".") + 1:result.index("@")]
-        
+
     keywords.get("instrName").append(result)
 
     s.seek(0)
@@ -214,7 +214,7 @@ def getScore():
     #makes sure it never divides by 0
     if(neededItems == 0):
         neededItems = 1
-    
+
     percent = foundItems / neededItems
 
     #print("Total Items = " + str(neededItems))
@@ -268,7 +268,7 @@ class Output:
 
 def makeOutput():
     #output = Output(score , missing)
-    jsonOutput = "{" + json.dumps(missing) + "," + getScore() + "}"
+    jsonOutput = '{ "Missing":' + json.dumps(missing) + ', "Grade":' + '"' + getScore() + '"' + "}"
     print(jsonOutput)
     sys.stdout.flush()
 

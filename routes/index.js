@@ -365,17 +365,14 @@ app.post('/uploadSyllabus', async (req, res) => {
               message: 'No file uploaded'
           });
       } else {
-        console.log('hello world!')
         var dir = './uploads/';
         let uploadedFile = req.files.myFile;
         var uuidCre = uuid();
         var pathsVal  = './uploads/'+ uuidCre +'.txt';
         switch(0){
           case 0:
-            console.log('0');
             if (!fs.existsSync(dir)){ fs.mkdirSync(dir); console.log('created')}
           case 1:
-            console.log('1');
             uploadedFile.mv(dir + uploadedFile.name);
             var mimetype = mime.lookup(uploadedFile.name);
             var tempPath = './uploads/' + uploadedFile.name;
@@ -388,8 +385,10 @@ app.post('/uploadSyllabus', async (req, res) => {
                          res.status(503).send(err);
                        });
           case 2:
-            console.log('2');
             var test = compPrep.makeTXT(pathsVal);
+            test.then(function(val){
+              console.log(val);
+            });
           }
       }
     } catch (err) {

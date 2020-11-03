@@ -9,8 +9,6 @@ const spawn = require("child_process").spawn;
 
 exports.getAnalyzer = async function(paths){
   try{
-    console.log('get analyzer called')
-    console.log(paths)
     var data = new Object;
     switch(0){
       case 0:
@@ -25,7 +23,6 @@ exports.getAnalyzer = async function(paths){
         //greater the number the more positive it is and vice versa
         data.output = await analyzer.getSentiment(arr)
     }
-    console.log(data)
     return data;
   }catch(error){
     console.log(error);
@@ -53,19 +50,20 @@ function txtToArray(paths){
 }
 
 function callSnek(paths){
-  var dataToSend;
-  var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
-  var pythonProcess = spawn('python', [pyPath, paths]);
-  pythonProcess.stdout.on('data', (data) => {
-    dataToSend = data.toString();
+  return new Promise((resolve, reject) => {
+    var dataToSend;
+    var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
+    var pythonProcess = spawn('python', [pyPath, paths]);
+    pythonProcess.stdout.on('data', (data) => {
+      resolve(JSON.parse(data));
+    });
   });
+}
 
-  pythonProcess.stdout.on('end', function(){
-    console.log("test: " + dataToSend);
-  });
-
-  pythonProcess.on('close', (code) => {
-    console.log(`child process close all stdio with code ${code}`);
-  });
-
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
 }
