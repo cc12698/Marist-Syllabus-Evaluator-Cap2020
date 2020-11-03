@@ -20,7 +20,14 @@ function createPDF(){
   courseDes = document.getElementById("courseDes").value;
   insEmail = document.getElementById("insEmail").value;
   insPhone = document.getElementById("insPhone").value;
-
+  preReq = document.getElementById("preReq").value;
+  attenPol = document.getElementById("attenPol").value;
+  acadHonest = document.getElementById("acadHonest").value;
+  gradeDet = document.getElementById("gradeDet").value;
+  assignments = document.getElementById("assignments").value;
+  biblio = document.getElementById("biblio").value;
+  teachAct = document.getElementById("teachAct").value;
+  accommod = document.getElementById("accommod").value;
 
   pdf.setFont("times" , "light")
 
@@ -33,6 +40,30 @@ function createPDF(){
   skipLine();
   write("Course Description:" , "bold");
   write(courseDes , "light");
+  skipLine();
+  write("Pre Requisites:" , "bold");
+  write(preReq , "light");
+  skipLine();
+  write("Attendance Policy:" , "bold");
+  write(attenPol , "light");
+  skipLine();
+  write("Statement on Academic Honesty:" , "bold");
+  write(acadHonest , "light");
+  skipLine();
+  write("Basis of Grade Determination:" , "bold");
+  write(gradeDet , "light");
+  skipLine();
+  write("Assignments:" , "bold");
+  write(assignments , "light");
+  skipLine();
+  write("Bibliographic Resources / Other Resources:" , "bold");
+  write(biblio , "light");
+  skipLine();
+  write("TEACH Act Disclosure:" , "bold");
+  write(teachAct , "light");
+  skipLine();
+  write("Accommodations & Assesibilty Statement:" , "bold");
+  write(accommod , "light");
   skipLine();
 
   pdf.save(InsName + "_" + courseName + "_syllabus.pdf");
