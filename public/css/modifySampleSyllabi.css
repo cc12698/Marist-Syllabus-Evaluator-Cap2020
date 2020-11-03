@@ -30,12 +30,15 @@
 		padding-right: 5px;
 }
 
+
 .inputfile:focus + label,
 .inputfile + label:hover {
     background-color: #bfc0c9;
 }
 
 .inputfile + label {
+	padding-top: 5px;
+	padding-bottom: 5px;
 	cursor: pointer; /* "hand" cursor */
 }
 
