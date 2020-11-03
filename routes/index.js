@@ -144,8 +144,10 @@ app.get('/index', function(req, res){
       res.redirect('/');
   }
   else{
+
     if (fs.existsSync('./uploads/')){ rimraf('./uploads/', function () {console.log("deleted");})}
-    res.render('../views/index')
+
+    res.render('../views/index.ejs')
   }
 });
 
