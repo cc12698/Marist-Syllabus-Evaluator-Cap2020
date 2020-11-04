@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DB_CONNECT_URL = os.getenv('DB_CONNECT_URL')
-# print(MY_ENV_VAR);
 
 textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
