@@ -4,12 +4,18 @@ import datetime
 import json
 import ibm_db
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+DB_CONNECT_URL = os.getenv('DB_CONNECT_URL')
+
 textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
 
 checked = []
 
-conn = ibm_db.connect("DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-dal09-08.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=gvg60726;PWD=rxwrr+gl4dzjhdcg;", "", "")
+conn = ibm_db.connect(DB_CONNECT_URL, "", "")
 #conn = DB2.connect(dsn='sample', uid='gvg60726', pwd='rxwrr+gl4dzjhdcg')
 #curs = conn.cursor()
 quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
