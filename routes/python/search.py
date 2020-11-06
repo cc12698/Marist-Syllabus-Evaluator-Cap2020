@@ -1,15 +1,38 @@
 import sys
 import re
 import datetime
+import json
+import ibm_db
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+DB_CONNECT_URL = os.getenv('DB_CONNECT_URL')
 
 textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
 
-checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" ,
-           "otherpolicies" , "instrName" , "instrContact" , #"demoConsistant" ,
-           "assesMethod" , "assignments" , #"taskCrit" ,
-           "courseNum" , "format" , "attenPol" , "reqRead" , "acadHonest" ,
-           "teachAct" , "accommod" , ] #"diversity"]
+checked = []
+
+conn = ibm_db.connect(DB_CONNECT_URL, "", "")
+#conn = DB2.connect(dsn='sample', uid='gvg60726', pwd='rxwrr+gl4dzjhdcg')
+#curs = conn.cursor()
+quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
+quryChecked = ibm_db.exec_immediate(conn , "SELECT CHECKED FROM CHECKLIST;")
+
+sql = "SELECT ITEM_NAME FROM CHECKLIST WHERE CHECKED = true"
+stmt = ibm_db.exec_immediate(conn, sql)
+tuple = ibm_db.fetch_tuple(stmt)
+
+i = 0
+
+while tuple != False:
+    #print "Key: ", tuple[0]
+    checked.append(tuple[0])
+    tuple = ibm_db.fetch_tuple(stmt)
+
+#print(checked)
 
 keywords = {    #list of regex commands ment to seach for items
                 "courseDes":      ["course( )*description" , "course description" , "class description" , "course overview"] ,
@@ -76,7 +99,7 @@ keyToName = {   #empty dictionary of arrays to store any matches to analyize lat
                 "biblio":         "Bibliographic resources/ Other resourcesincluding audio-visual aids" ,
                 "assignments":    "Assignments: Term papers, assignment synopses, examinations, etc." ,
                 "taskCrit":       "Demonstrate that the course meets time on task criteria,college-level, rigor, and credit granted only to those meeting these objectives" ,
-                "courseNum":      "Coursenumbermust be designated as L (liberal arts) or N (non-liberal arts)." ,
+                "courseNum":      "Course number must be designated as L (liberal arts) or N (non-liberal arts)." ,
                 "format":         "Classroom format (lecture, lab, discussion" ,
                 "attenPol":       "Attendance policy" ,
                 "reqRead":        "Semester required reading" ,
@@ -88,26 +111,37 @@ keyToName = {   #empty dictionary of arrays to store any matches to analyize lat
 
 missing = []
 
+score = ""
+
 cmdIdex = 0
 
 def checkFileAnal():
-    print("checking file...")
+    #print("checking file...")
     #print(keywords)
     now = datetime.datetime.now()
 
-    o = open(logFile, "a")
-    o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
+    #o = open(logFile, "a")
+    #o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
 
-    s = open(textFile, encoding="utf-8")
+    s = open(textFile)#, encoding="utf-8")
 
+    for line in s:
+        result = re.search("@marist.edu" , line , re.IGNORECASE)
+
+    if(result != None):
+        result = result[result.index(".") + 1:result.index("@")]
+
+    keywords.get("instrName").append(result)
+
+    s.seek(0)
 
     matches = 0
     cmdIdex = 0
 
     for key in keywords: #loops through entire dictionary
         if key in checked:
-            o.write("\n\nResults for " + key + ":")
+            #o.write("\n\nResults for " + key + ":")
             try:
                 for line in s: #loops through each line of sylibus
                     cmdIdex = 0
@@ -119,16 +153,17 @@ def checkFileAnal():
                             matches += 1
                             found[key].append(result)
                             match = line[result.span()[0] : result.span()[1]]
-                            o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
+                            #o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
 
                 s.seek(0) #sets file pointer back to the begining
             except:
-                print("ERROR LINE COULD NOT BE READ")
+                pass
+                #print("ERROR LINE COULD NOT BE READ")
 
-    print("file checked, " + str(matches) + " matches found")
+    #print("file checked, " + str(matches) + " matches found")
 
     score = getScore()
-    print("Score: " + score)
+    #print("Score: " + score)
 
     return found
 
@@ -164,7 +199,7 @@ def checkFileFast():
     return found
 
 def getScore():
-    print("Score Calculateing")
+    #print("Score Calculateing")
 
     neededItems = 0
     foundItems = 0
@@ -178,15 +213,19 @@ def getScore():
             else:
                 missing.append(keyToName[key])
 
-    print("Missing elements:\n")
-    print(missing)
-    print()
+    #print("Missing elements:\n")
+    #print(missing)
+    #print()
+
+    #makes sure it never divides by 0
+    if(neededItems == 0):
+        neededItems = 1
 
     percent = foundItems / neededItems
 
-    print("Total Items = " + str(neededItems))
-    print("Found Items = " + str(foundItems))
-    print("% found = " + str(percent))
+    #print("Total Items = " + str(neededItems))
+    #print("Found Items = " + str(foundItems))
+    #print("% found = " + str(percent))
 
     if(percent >= 1):
         score = "A+"
@@ -228,4 +267,16 @@ def getScore():
         score = "F"
         return "F"
 
+class Output:
+    def __init__(self , score , missing):
+        self.score = score
+        self.missing = missing
+
+def makeOutput():
+    #output = Output(score , missing)
+    jsonOutput = '{ "Missing":' + json.dumps(missing) + ', "Grade":' + '"' + getScore() + '"' + "}"
+    print(jsonOutput)
+    sys.stdout.flush()
+
 checkFileAnal()
+makeOutput()

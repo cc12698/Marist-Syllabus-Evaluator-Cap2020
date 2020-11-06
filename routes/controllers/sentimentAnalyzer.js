@@ -5,17 +5,25 @@ var Analyzer = natural.SentimentAnalyzer;
 var stemmer = natural.PorterStemmer;
 var analyzer = new Analyzer("English", stemmer, "afinn");
 var spellChecker = require('spellchecker');
+const spawn = require("child_process").spawn;
 
-exports.getAnalyzer = async function(uuid){
+exports.getAnalyzer = async function(paths){
   try{
-    var arr = await txtToArray(uuid);
-    var sc = await spellCheckFile(arr);
-    //if the number returned comes back negative it is a negative Statement
-    //if it is a positiver number it is positive
-    //greater the number the more positive it is and vice versa
-    var output = analyzer.getSentiment(arr)
-    console.log(output, sc);
-    return output;
+    var data = new Object;
+    switch(0){
+      case 0:
+        var arr = await txtToArray(paths);
+      case 1:
+        data.py = await callSnek(paths);
+      case 2:
+        data.sc = await spellCheckFile(arr);
+      case 3:
+        //if the number returned comes back negative it is a negative Statement
+        //if it is a positiver number it is positive
+        //greater the number the more positive it is and vice versa
+        data.output = await analyzer.getSentiment(arr)
+    }
+    return data;
   }catch(error){
     console.log(error);
   }
@@ -36,8 +44,26 @@ function spellCheckFile(arr){
   return mispelledObj;
 }
 
-function txtToArray(uuid){
-  var file = path.normalize(path.join(__dirname, '/../../uploads/'+ uuid +'.txt'));
-  var fileArray = fs.readFileSync(file,'utf8').split(" ");
+function txtToArray(paths){
+  var fileArray = fs.readFileSync(paths,'utf8').split(" ");
   return fileArray;
+}
+
+function callSnek(paths){
+  return new Promise((resolve, reject) => {
+    var dataToSend;
+    var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
+    var pythonProcess = spawn('python', [pyPath, paths]);
+    pythonProcess.stdout.on('data', (data) => {
+      resolve(JSON.parse(data));
+    });
+  });
+}
+
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
 }

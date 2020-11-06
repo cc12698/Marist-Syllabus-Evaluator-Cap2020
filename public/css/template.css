@@ -1,0 +1,54 @@
+#create-label{
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 150px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contain{
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+#description{
+  color: grey;
+  font-size: 16px;
+}
+
+.form-row{
+  padding-left: 10px;
+}
+
+.col-xs-12{
+  margin-top: 20px;
+}
+
+.button{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background-color: lightgrey;
+  border: 1px solid #A0A0A0;
+  font-weight: 600;
+}
+
+.button:hover{
+  background-color: #A0A0A0;
+}

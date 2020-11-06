@@ -2,6 +2,7 @@ const multer = require("multer")
 var fs = require('fs');
 const config = require('../config');
 const db2 = require('../db');
+
 const AWS = require('aws-sdk');
 var cos = config.cos;
 var bodyParser = require('body-parser');
@@ -190,6 +191,47 @@ module.exports.deleteSyllabi = (fileName) => {
     });
 }
 
+// Delete User Syllabi from COS
+module.exports.deleteUserSyllabi = (bucketName, fileName) => {
+    var params = {  Bucket: bucketName, Key: fileName };
+    return cos.deleteObject(params)
+      .promise()
+    .then((data) => {
+        return data.Contents;
+    })
+    .catch((e) => {
+        console.log(e);
+    });
+}
+
+// Upload User Syllabus
+module.exports.uploadUserSyl = (bucketName, filePath, fileName, mimetype) => {
+  var fileName = fileName;
+  var filePath = filePath;
+  console.log(filePath);//IF THIS IS REMOVED EVERYTHING WILL BREAK
+  return new Promise( (resolve,reject) => {
+    const uploadFile = () => {
+    fs.readFile(filePath, (err, data) => {
+      if (err) reject(err);
+      const params = {
+               Bucket: bucketName, // pass your bucket name
+               Key: fileName, // file will be saved
+               Body: data,
+               ContentType: mimetype,
+               ACL: 'public-read'
+      };
+      cos.upload(params, function(s3Err, data) {
+        if (s3Err) throw s3Err
+        console.log(`File uploaded successfully at ${data.Location}`)
+        var location = data.Location;
+        resolve();
+        });
+      });
+    };
+    uploadFile();
+  })
+}
+
 module.exports.updateChecklist = ( doc ) => {
     return new Promise( (resolve,reject) => {
 
@@ -236,18 +278,18 @@ module.exports.updateChecklist = ( doc ) => {
 // Create a new bucket for each user
 module.exports.createBucket = (bucketName)  => {
     console.log(`Creating new bucket: ${bucketName}`);
-    return module.exports.cos.createBucket({
+    return cos.createBucket({
         Bucket: bucketName,
-        ACL: 'public-read-write',
+        ACL: 'public-read',
         CreateBucketConfiguration: {
           LocationConstraint: 'us-south-standard'
         },
     }).promise()
     .then((() => {
-        console.log(`Bucket: ${bucketName} created!`);
+        return 'bucket created!';
     }))
     .catch((e) => {
-        console.error(`ERROR: ${e.code} - ${e.message}\n`);
+        return `ERROR: ${e.code} - ${e.message}\n`;
     });
 }
 

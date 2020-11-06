@@ -30,12 +30,15 @@
 		padding-right: 5px;
 }
 
+
 .inputfile:focus + label,
 .inputfile + label:hover {
     background-color: #bfc0c9;
 }
 
 .inputfile + label {
+	padding-top: 5px;
+	padding-bottom: 5px;
 	cursor: pointer; /* "hand" cursor */
 }
 
@@ -115,4 +118,17 @@ form{
 	font-weight: 600;
 	display: inline-block;
 	text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+  .contain{
+    width: 370px;
+    margin: auto;
+  }
+
+  .syl{
+  	width: 370px;
+		word-wrap: break-word;
+  }
+
 }
