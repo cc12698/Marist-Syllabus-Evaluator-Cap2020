@@ -372,6 +372,7 @@ app.post('/uploadSyllabus', async (req, res) => {
         switch(0){
           case 0:
             if (!fs.existsSync(dir)){ fs.mkdirSync(dir); console.log('created')}
+            console.log('I am awesome');
           case 1:
             uploadedFile.mv(dir + uploadedFile.name);
             var mimetype = mime.lookup(uploadedFile.name);
