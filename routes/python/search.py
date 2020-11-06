@@ -4,12 +4,18 @@ import datetime
 import json
 import ibm_db
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+DB_CONNECT_URL = os.getenv('DB_CONNECT_URL')
+
 textFile = sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
 
 checked = []
 
-conn = ibm_db.connect("DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-dal09-08.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=gvg60726;PWD=rxwrr+gl4dzjhdcg;", "", "")
+conn = ibm_db.connect(DB_CONNECT_URL, "", "")
 #conn = DB2.connect(dsn='sample', uid='gvg60726', pwd='rxwrr+gl4dzjhdcg')
 #curs = conn.cursor()
 quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
@@ -225,40 +231,40 @@ def getScore():
         score = "A+"
         return "A+"
     elif(percent >= .93):
-        socre = "A"
+        score = "A"
         return "A"
     elif(percent >= .89):
-        socre = "A-"
+        score = "A-"
         return "A-"
     elif(percent >= .85):
-        socre = "B+"
+        score = "B+"
         return "B+"
     elif(percent >= .82):
-        socre = "B"
+        score = "B"
         return "B"
     elif(percent >= .80):
-        socre = "B-"
+        score = "B-"
         return "B-"
     elif(percent >= .77):
-        socre = "C+"
+        score = "C+"
         return "C+"
     elif(percent >= .75):
-        socre = "C"
+        score = "C"
         return "C"
     elif(percent >= .72):
-        socre = "C-"
+        score = "C-"
         return "C-"
     elif(percent >= .69):
-        socre = "D+"
+        score = "D+"
         return "D+"
     elif(percent >= .65):
-        socre = "D"
+        score = "D"
         return "D"
     elif(percent >= .60):
-        socre = "D-"
+        score = "D-"
         return "D-"
     else:
-        socre = "F"
+        score = "F"
         return "F"
 
 class Output:
