@@ -192,40 +192,40 @@ def getScore():
         score = "A+"
         return "A+"
     elif(percent >= .93):
-        socre = "A"
+        score = "A"
         return "A"
     elif(percent >= .89):
-        socre = "A-"
+        score = "A-"
         return "A-"
     elif(percent >= .85):
-        socre = "B+"
+        score = "B+"
         return "B+"
     elif(percent >= .82):
-        socre = "B"
+        score = "B"
         return "B"
     elif(percent >= .80):
-        socre = "B-"
+        score = "B-"
         return "B-"
     elif(percent >= .77):
-        socre = "C+"
+        score = "C+"
         return "C+"
     elif(percent >= .75):
-        socre = "C"
+        score = "C"
         return "C"
     elif(percent >= .72):
-        socre = "C-"
+        score = "C-"
         return "C-"
     elif(percent >= .69):
-        socre = "D+"
+        score = "D+"
         return "D+"
     elif(percent >= .65):
-        socre = "D"
+        score = "D"
         return "D"
     elif(percent >= .60):
-        socre = "D-"
+        score = "D-"
         return "D-"
     else:
-        socre = "F"
+        score = "F"
         return "F"
 
 checkFileAnal()
