@@ -56,17 +56,10 @@ function callSnek(paths){
   return new Promise((resolve, reject) => {
     var dataToSend;
     var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
+    paths = path.normalize(path.join(__dirname, '/../../'+paths));
     var pythonProcess = spawn('python', [pyPath, paths]);
     pythonProcess.stdout.on('data', (data) => {
       resolve(JSON.parse(data));
     });
   });
-}
-
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
 }
