@@ -1,0 +1,2 @@
+ibm-db==3.0.2
+python-dotenv==0.15.0
