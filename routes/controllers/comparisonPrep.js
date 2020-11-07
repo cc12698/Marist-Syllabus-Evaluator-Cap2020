@@ -13,6 +13,7 @@ const WordExtractor = require("word-extractor");
 
 exports.makeTXT = function(path){
   try{
+    console.log('makeTxt called')
     var directoryPath = paths.normalize(__dirname + "/../../uploads");
     return new Promise((resolve, reject) => {
       fs.readdir(directoryPath, async function (err, files) {
@@ -34,7 +35,8 @@ exports.makeTXT = function(path){
             resolve(pdf(filePath, path));
           }
           else if(allowPages.exec(filePath)){
-            resolve(pages(filePath, path));
+            await pages(filePath, path);
+            resolve(sentimentAnalyze.getAnalyzer(path));
           }
         }
       });
@@ -61,13 +63,21 @@ async function docx(file, path){
 }
 
 async function doc(file, path){
+  var extractor = new WordExtractor();
   return new Promise((resolve, reject) => {
-    var extractor = new WordExtractor();
     var extracted = extractor.extract(file);
     extracted.then(function(result) {
       var text = result.getBody();
       fs.writeFile(path, text, (err) => {
         if (err) throw err;
+        var allowDoc =  /(\.doc)$/i;
+        console.log(file);
+        if(allowDoc.exec(file)){
+          fs.unlink(paths.normalize(__dirname + "/../."+file), function(err) {
+            if (err) throw err;
+            console.log('file deleted');
+          });
+        }
         console.log('The file has been saved!');
         resolve(sentimentAnalyze.getAnalyzer(path));
       });
@@ -128,12 +138,5 @@ async function pages(file, path){
     await new Promise((resolve, reject) => {
         writeStream.on('finish', resolve);
         writeStream.on('error', reject);
-        //resolve(sentimentAnalyze.getAnalyzer(path));
     });
-}
-
-function getPath(path){
-  new Promise((resolve, reject) => {
-    return fs.readdir(path, (err, filenames) => err != null ? reject(err) : resolve(filenames))
-  });
 }
