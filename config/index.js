@@ -1,4 +1,5 @@
 require('dotenv').config();
+const winston = require('winston');
 
 const AWS = require('aws-sdk');
 var util = require('util');
@@ -15,9 +16,53 @@ var config = {
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 };
 
+
+const logger = {
+    development: () => {
+        return winston.createLogger ({
+            level : process.env.LOG_LEVEL || 'debug',
+            transports: [
+                new ( winston.transports.Console)({
+                    colorize: true,
+                    timestamp: true,
+                    json: false
+                })
+            ]
+        });
+    },
+    production: () => {
+        return winston.createLogger ({
+            level : process.env.LOG_LEVEL || 'info',
+            transports: [
+                new ( winston.transports.Console)({
+                    colorize: true,
+                    timestamp: true,
+                    json: false
+                })
+            ]
+        });
+    },
+    test: () => {
+        return winston.createLogger ({
+            level : 'fatal',
+            transports: [
+                new ( winston.transports.Console)({
+                    colorize: true,
+                    timestamp: true,
+                    json: false
+                })
+            ]
+        });
+    }
+};
+
 module.exports = {
     dbConnections: process.env.DB_CONNECTIONS || 10,
-    dbConnectURL: process.env.DB_CONNECT_URL
+    dbConnectURL: process.env.DB_CONNECT_URL,
+    log: (env) => {
+        if(env) return logger[env]();
+        return logger[process.env.NODE_ENV || 'development']();
+    },
 };
 
 

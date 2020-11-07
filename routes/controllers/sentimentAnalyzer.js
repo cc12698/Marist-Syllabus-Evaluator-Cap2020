@@ -6,6 +6,8 @@ var stemmer = natural.PorterStemmer;
 var analyzer = new Analyzer("English", stemmer, "afinn");
 var spellChecker = require('spellchecker');
 const spawn = require("child_process").spawn;
+const config = require('../../config');
+const logger = config.log();
 
 exports.getAnalyzer = async function(paths){
   try{
@@ -23,9 +25,10 @@ exports.getAnalyzer = async function(paths){
         //greater the number the more positive it is and vice versa
         data.output = await analyzer.getSentiment(arr)
     }
+    logger.info(data);
     return data;
-  }catch(error){
-    console.log(error);
+  }catch(e){
+    logger.error(`ERROR: ${e.code} - ${e.message}\n`);
   }
 }
 
