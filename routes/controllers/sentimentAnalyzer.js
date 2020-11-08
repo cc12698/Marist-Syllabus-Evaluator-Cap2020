@@ -11,12 +11,19 @@ const logger = config.log();
 
 exports.getAnalyzer = async function(paths){
   try{
+    console.log('get Analyze')
     var data = new Object;
     switch(0){
       case 0:
         var arr = await txtToArray(paths);
       case 1:
-        data.py = await callSnek(paths);
+        var py = await callSnek(paths);
+        if(py == undefined){
+          data.py = 'err'
+        }
+        else{
+          data.py = py
+        }
       case 2:
         data.sc = await spellCheckFile(arr);
       case 3:
@@ -25,7 +32,7 @@ exports.getAnalyzer = async function(paths){
         //greater the number the more positive it is and vice versa
         data.output = await analyzer.getSentiment(arr)
     }
-    logger.info(data);
+    console.log(data)
     return data;
   }catch(e){
     logger.error(`ERROR: ${e.code} - ${e.message}\n`);
@@ -39,7 +46,7 @@ function spellCheckFile(arr){
     var spellCheckerTest = spellChecker.isMisspelled(arr[i]);
     if(spellCheckerTest){
       mispelled.push(arr[i]);
-      spellCheckArr.push(spellChecker.getCorrectionsForMisspelling(arr[i]));
+      //spellCheckArr.push(spellChecker.getCorrectionsForMisspelling(arr[i]));
     }
   }
   mispelledObj.mispelled = mispelled;
@@ -56,10 +63,12 @@ function callSnek(paths){
   return new Promise((resolve, reject) => {
     var dataToSend;
     var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
-    paths = path.normalize(path.join(__dirname, '/../../'+paths));
     var pythonProcess = spawn('python', [pyPath, paths]);
     pythonProcess.stdout.on('data', (data) => {
-      resolve(JSON.parse(data));
+      dataToSend = JSON.parse(data);
+    });
+    pythonProcess.on('close', function(code) {
+        resolve(dataToSend);
     });
   });
 }
