@@ -24,15 +24,27 @@
       </div>
       <button class="collapsible">Mis-spelled Words</button>
         <div class="contents">
-          
+          <table>
+            <% for(var i=0; i < data.sc.mispelled.length; i++) { %>
+              <tr>
+                <td><%= data['sc']['mispelled'][i]%></td>
+              </tr>
+              <% } %>
+            </table>
         </div>
       <button class="collapsible">Sentiment Analysis</button>
       <div class="contents">
-        <p><%= data['output']%></p>
+        <input type="range" id="myRange" min="1" max="100" value="<%= data['output']%>" class="slider" disabled>
       </div>
       <button class="collapsible">Missing Elements</button>
       <div class="contents">
-        <p><%= data['py']['Missing']%></p>
+        <table>
+          <% for(var i=0; i < data.py.Missing.length; i++) { %>
+            <tr>
+              <td><%= data['py']['Missing'][i]%></td>
+            </tr>
+            <% } %>
+          </table>
       </div>
     <%- include('partials/footer'); -%>
   </body>

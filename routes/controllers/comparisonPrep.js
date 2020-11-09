@@ -15,7 +15,6 @@ const logger = config.log();
 
 exports.makeTXT = function(path){
   try{
-    console.log('makeTxt called')
     var directoryPath = paths.normalize(__dirname + "/../../uploads");
     return new Promise((resolve, reject) => {
       fs.readdir(directoryPath, async function (err, files) {
@@ -67,8 +66,8 @@ async function docx(file, path){
 }
 
 async function doc(file, path){
-  var extractor = new WordExtractor();
   return new Promise((resolve, reject) => {
+    var extractor = new WordExtractor();
     var extracted = extractor.extract(file);
     extracted.then(function(result) {
       var text = result.getBody();

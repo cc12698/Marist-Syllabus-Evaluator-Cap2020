@@ -124,7 +124,7 @@ def checkFileAnal():
     #o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
 
-    s = open(textFile)#, encoding="utf-8")
+    s = open(textFile, encoding="utf-8")
 
     for line in s:
         result = re.search("@marist.edu" , line , re.IGNORECASE)

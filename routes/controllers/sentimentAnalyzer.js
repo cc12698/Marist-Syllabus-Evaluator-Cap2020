@@ -12,20 +12,23 @@ const logger = config.log();
 exports.getAnalyzer = async function(paths){
   try{
     var data = new Object;
-    switch(0){
-      case 0:
-        var arr = await txtToArray(paths);
-      case 1:
-        data.py = await callSnek(paths);
-      case 2:
-        // data.sc = await spellCheckFile(arr);
-      case 3:
-        //if the number returned comes back negative it is a negative Statement
-        //if it is a positiver number it is positive
-        //greater the number the more positive it is and vice versa
-        data.output = await analyzer.getSentiment(arr)
+    var arr = await txtToArray(paths);
+    var py = await callSnek(paths);
+    console.log(py);
+    if(py == undefined){
+      data.py = 'err'
+    }else{
+      data.py = py
     }
-    logger.info(data);
+    data.sc = await spellCheckFile(arr);
+    var sent = await analyzer.getSentiment(arr);
+    if(sent > .2){
+      sent = .2;
+    }else if(sent < -.2){
+      sent = -.2
+    }
+    data.output = ((sent-(-.2))/(.2-(-.2)))*100;
+    console.log(data)
     return data;
   }catch(e){
     logger.error(`ERROR: ${e.code} - ${e.message}\n`);
@@ -33,13 +36,14 @@ exports.getAnalyzer = async function(paths){
 }
 
 function spellCheckFile(arr){
+console.log('spell check called')
   var mispelled = [], spellCheckArr = [];
   var mispelledObj = new Object();
   for(var i = 0; i < arr.length; i++){
     var spellCheckerTest = spellChecker.isMisspelled(arr[i]);
     if(spellCheckerTest){
       mispelled.push(arr[i]);
-      spellCheckArr.push(spellChecker.getCorrectionsForMisspelling(arr[i]));
+      //spellCheckArr.push(spellChecker.getCorrectionsForMisspelling(arr[i]));
     }
   }
   mispelledObj.mispelled = mispelled;
@@ -48,6 +52,7 @@ function spellCheckFile(arr){
 }
 
 function txtToArray(paths){
+  console.log('txt to arr called')
   var fileArray = fs.readFileSync(paths,'utf8').split(" ");
   return fileArray;
 }
