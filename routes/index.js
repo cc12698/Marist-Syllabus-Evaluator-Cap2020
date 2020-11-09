@@ -376,20 +376,24 @@ app.post('/uploadSyllabus', async (req, res) => {
             var tempPath = './uploads/' + uploadedFile.name;
             var bucketName = 'user-syl-' + userSession.userid;
             dm.uploadUserSyl(bucketName, tempPath, uploadedFile.name, mimetype)
-                       .then( () => {
+             .then( () => {
 
-                         var test = compPrep.makeTXT(pathsVal);
-                         test.then(function(val){
-                           let content = {};
-                           content['data'] = val;
-                           res.render('../views/results.ejs', content)
-                         });
-                       })
-                       .catch( (err) => {
-                         res.status(503).send(err);
-                       });
+               var test = compPrep.makeTXT(pathsVal);
+               test.then(function(val){
+                   logger.info(val);
+                   let content = {};
+                   content['data'] = val;
+                   res.render('../views/results.ejs', content)
+                 })
+                 .catch( (err) => {
+                   res.status(503).send(err);
+                 });
+             })
+             .catch( (err) => {
+               res.status(503).send(err);
+             });
 
-                     }
+        }
       }
     } catch (err) {
         res.status(500).send(err);
