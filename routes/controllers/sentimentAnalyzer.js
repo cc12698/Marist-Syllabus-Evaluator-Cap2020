@@ -18,7 +18,7 @@ exports.getAnalyzer = async function(paths){
       case 1:
         data.py = await callSnek(paths);
       case 2:
-        data.sc = await spellCheckFile(arr);
+        // data.sc = await spellCheckFile(arr);
       case 3:
         //if the number returned comes back negative it is a negative Statement
         //if it is a positiver number it is positive
@@ -53,13 +53,17 @@ function txtToArray(paths){
 }
 
 function callSnek(paths){
+  console.log('spython called')
   return new Promise((resolve, reject) => {
     var dataToSend;
     var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
-    paths = path.normalize(path.join(__dirname, '/../../'+paths));
     var pythonProcess = spawn('python', [pyPath, paths]);
     pythonProcess.stdout.on('data', (data) => {
       resolve(JSON.parse(data));
     });
+    pythonProcess.stderr.on('data', (data) => {
+       console.log(data.toString());
+       reject(data.toString());
+   });
   });
 }

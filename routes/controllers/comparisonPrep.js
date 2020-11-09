@@ -76,12 +76,12 @@ async function doc(file, path){
         if (err) throw err;
         var allowDoc =  /(\.doc)$/i;
         console.log(file);
-        if(allowDoc.exec(file)){
-          fs.unlink(paths.normalize(__dirname + "/../."+file), function(err) {
-            if (err) throw err;
-            logger.info('file deleted');
-          });
-        }
+        // if(allowDoc.exec(file)){
+        //   fs.unlink(paths.normalize(__dirname + "/../."+file), function(err) {
+        //     if (err) throw err;
+        //     logger.info('file deleted');
+        //   });
+        // }
         logger.info('The file has been saved!');
         resolve(sentimentAnalyze.getAnalyzer(path));
       });

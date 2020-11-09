@@ -4,6 +4,18 @@ body {
     height: 100%;
     background: #fcfeff;
 }
+
+#help-img{
+  width: 33px;
+  height: 33px;
+  position: relative;
+  left: 10px;
+}
+
+#help-img:hover{
+  opacity: 0.8;
+}
+
 a {
     color: #008999;
     text-decoration: none;
