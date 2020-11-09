@@ -11,27 +11,23 @@ const logger = config.log();
 
 exports.getAnalyzer = async function(paths){
   try{
-    console.log('get Analyze')
     var data = new Object;
-    switch(0){
-      case 0:
-        var arr = await txtToArray(paths);
-      case 1:
-        var py = await callSnek(paths);
-        if(py == undefined){
-          data.py = 'err'
-        }
-        else{
-          data.py = py
-        }
-      case 2:
-        data.sc = await spellCheckFile(arr);
-      case 3:
-        //if the number returned comes back negative it is a negative Statement
-        //if it is a positiver number it is positive
-        //greater the number the more positive it is and vice versa
-        data.output = await analyzer.getSentiment(arr)
+    var arr = await txtToArray(paths);
+    var py = await callSnek(paths);
+    console.log(py);
+    if(py == undefined){
+      data.py = 'err'
+    }else{
+      data.py = py
     }
+    data.sc = await spellCheckFile(arr);
+    var sent = await analyzer.getSentiment(arr);
+    if(sent > .2){
+      sent = .2;
+    }else if(sent < -.2){
+      sent = -.2
+    }
+    data.output = ((sent-(-.2))/(.2-(-.2)))*100;
     console.log(data)
     return data;
   }catch(e){
@@ -40,6 +36,7 @@ exports.getAnalyzer = async function(paths){
 }
 
 function spellCheckFile(arr){
+console.log('spell check called')
   var mispelled = [], spellCheckArr = [];
   var mispelledObj = new Object();
   for(var i = 0; i < arr.length; i++){
@@ -55,20 +52,23 @@ function spellCheckFile(arr){
 }
 
 function txtToArray(paths){
+  console.log('txt to arr called')
   var fileArray = fs.readFileSync(paths,'utf8').split(" ");
   return fileArray;
 }
 
 function callSnek(paths){
+  console.log('spython called')
   return new Promise((resolve, reject) => {
     var dataToSend;
     var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
     var pythonProcess = spawn('python', [pyPath, paths]);
     pythonProcess.stdout.on('data', (data) => {
-      dataToSend = JSON.parse(data);
+      resolve(JSON.parse(data));
     });
-    pythonProcess.on('close', function(code) {
-        resolve(dataToSend);
-    });
+    pythonProcess.stderr.on('data', (data) => {
+       console.log(data.toString());
+       reject(data.toString());
+   });
   });
 }

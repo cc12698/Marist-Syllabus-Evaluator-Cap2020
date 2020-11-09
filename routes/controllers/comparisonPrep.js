@@ -66,8 +66,8 @@ async function docx(file, path){
 }
 
 async function doc(file, path){
-  var extractor = new WordExtractor();
   return new Promise((resolve, reject) => {
+    var extractor = new WordExtractor();
     var extracted = extractor.extract(file);
     extracted.then(function(result) {
       var text = result.getBody();
