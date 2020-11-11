@@ -12,6 +12,7 @@ const config = require('../config');
 var upload = multer({ dest: 'uploads/' })
 var rimraf = require("rimraf");
 var mime = require('mime-types');
+const logger = config.log();
 
 const session = require('express-session');
 var userSession;
@@ -79,7 +80,6 @@ app.get('/api/user', function(req, res){
 
 app.get('/', function(req, res) {
   userSession = req.session;
-
   if(!userSession.username && !userSession.role) {
       userSession = req.session;
       // var username = req.body.username.split('@');
@@ -144,9 +144,7 @@ app.get('/index', function(req, res){
       res.redirect('/');
   }
   else{
-
-    if (fs.existsSync('./uploads/')){ rimraf('./uploads/', function () {console.log("deleted");})}
-
+    if (fs.existsSync('./uploads/')){ rimraf('./uploads/', function () {logger.info('deleted');})}
     res.render('../views/index.ejs')
   }
 });
@@ -371,26 +369,31 @@ app.post('/uploadSyllabus', async (req, res) => {
         var pathsVal  = './uploads/'+ uuidCre +'.txt';
         switch(0){
           case 0:
-            if (!fs.existsSync(dir)){ fs.mkdirSync(dir); console.log('created')}
-            console.log('I am awesome');
+            if (!fs.existsSync(dir)){ fs.mkdirSync(dir); logger.info('created')}
           case 1:
             uploadedFile.mv(dir + uploadedFile.name);
             var mimetype = mime.lookup(uploadedFile.name);
             var tempPath = './uploads/' + uploadedFile.name;
             var bucketName = 'user-syl-' + userSession.userid;
             dm.uploadUserSyl(bucketName, tempPath, uploadedFile.name, mimetype)
-                       .then( () => {
-                         res.redirect('/result');
-                       })
-                       .catch( (err) => {
-                         res.status(503).send(err);
-                       });
-          case 2:
-            var test = compPrep.makeTXT(pathsVal);
-            test.then(function(val){
-              console.log(val);
-            });
-          }
+             .then( () => {
+
+               var test = compPrep.makeTXT(pathsVal);
+               test.then(function(val){
+                   logger.info(val);
+                   let content = {};
+                   content['data'] = val;
+                   res.render('../views/results.ejs', content)
+                 })
+                 .catch( (err) => {
+                   res.status(503).send(err);
+                 });
+             })
+             .catch( (err) => {
+               res.status(503).send(err);
+             });
+
+        }
       }
     } catch (err) {
         res.status(500).send(err);

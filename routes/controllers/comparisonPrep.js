@@ -9,6 +9,8 @@ const sentimentAnalyze = require("./sentimentAnalyzer");
 const CloudConvert = require('cloudconvert');
 const https = require('https');
 const WordExtractor = require("word-extractor");
+const config = require('../../config');
+const logger = config.log();
 
 
 exports.makeTXT = function(path){
@@ -34,13 +36,14 @@ exports.makeTXT = function(path){
             resolve(pdf(filePath, path));
           }
           else if(allowPages.exec(filePath)){
-            resolve(pages(filePath, path));
+            await pages(filePath, path);
+            resolve(sentimentAnalyze.getAnalyzer(path));
           }
         }
       });
     })
-  }catch(err){
-    console.log('err: ' + err);
+  }catch(e){
+    logger.error(`ERROR: ${e.code} - ${e.message}\n`);
   }
 }
 
@@ -52,8 +55,10 @@ async function docx(file, path){
       .then(function(result){
         var text = result.value; // The raw text
         fs.writeFile(path, text, (err) => {
-          if (err) throw err;
-          console.log('The file has been saved!');
+          if (err){
+            logger.error(`ERROR: ${err.code} - ${err.message}\n`);
+          }
+          logger.info('The file has been saved!');
           resolve(sentimentAnalyze.getAnalyzer(path));
         });
       });
@@ -68,7 +73,15 @@ async function doc(file, path){
       var text = result.getBody();
       fs.writeFile(path, text, (err) => {
         if (err) throw err;
-        console.log('The file has been saved!');
+        var allowDoc =  /(\.doc)$/i;
+        console.log(file);
+        // if(allowDoc.exec(file)){
+        //   fs.unlink(paths.normalize(__dirname + "/../."+file), function(err) {
+        //     if (err) throw err;
+        //     logger.info('file deleted');
+        //   });
+        // }
+        logger.info('The file has been saved!');
         resolve(sentimentAnalyze.getAnalyzer(path));
       });
     });
@@ -81,8 +94,10 @@ async function pdf(file, path){
     pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError));
     pdfParser.on("pdfParser_dataReady", pdfData => {
       fs.writeFile(path, pdfParser.getRawTextContent(), (err) => {
-        if (err) throw err;
-        console.log('The file has been saved!');
+        if (err){
+          logger.error(`ERROR: ${err.code} - ${err.message}\n`);
+        }
+        logger.info('The file has been saved!');
         resolve(sentimentAnalyze.getAnalyzer(path));
       });
     });
@@ -128,12 +143,5 @@ async function pages(file, path){
     await new Promise((resolve, reject) => {
         writeStream.on('finish', resolve);
         writeStream.on('error', reject);
-        //resolve(sentimentAnalyze.getAnalyzer(path));
     });
-}
-
-function getPath(path){
-  new Promise((resolve, reject) => {
-    return fs.readdir(path, (err, filenames) => err != null ? reject(err) : resolve(filenames))
-  });
 }

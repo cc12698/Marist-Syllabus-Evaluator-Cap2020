@@ -7,6 +7,7 @@ const AWS = require('aws-sdk');
 var cos = config.cos;
 var bodyParser = require('body-parser');
 var util = require('util');
+const logger = config.log();
 
 //store the uploaded file in uploads
 module.exports.storage = multer.diskStorage({
@@ -157,6 +158,7 @@ module.exports.getBucketContents = (bucketName) => {
 module.exports.uploadSampleSyl = (filePath, fileName, mimetype, callback) => {
   var fileName = fileName;
   var filePath = filePath;
+  console.log(filePath);//IF THIS IS REMOVED EVERYTHING WILL BREAK
   const uploadFile = () => {
   fs.readFile(filePath, (err, data) => {
   if (err) callback(err);
@@ -169,7 +171,7 @@ module.exports.uploadSampleSyl = (filePath, fileName, mimetype, callback) => {
   };
   cos.upload(params, function(s3Err, data) {
   if (s3Err) throw s3Err
-  console.log(`File uploaded successfully at ${data.Location}`)
+  logger.info(`File uploaded successfully at ${data.Location}`)
   var location = data.Location;
   return callback();
 
@@ -209,10 +211,15 @@ module.exports.uploadUserSyl = (bucketName, filePath, fileName, mimetype) => {
   var fileName = fileName;
   var filePath = filePath;
   console.log(filePath);//IF THIS IS REMOVED EVERYTHING WILL BREAK
+  logger.info(filePath);
   return new Promise( (resolve,reject) => {
     const uploadFile = () => {
     fs.readFile(filePath, (err, data) => {
       if (err) reject(err);
+
+      // // Needed to ensure that data is not undefined
+      var content = data;
+      processFile(content);
       const params = {
                Bucket: bucketName, // pass your bucket name
                Key: fileName, // file will be saved
@@ -222,7 +229,7 @@ module.exports.uploadUserSyl = (bucketName, filePath, fileName, mimetype) => {
       };
       cos.upload(params, function(s3Err, data) {
         if (s3Err) throw s3Err
-        console.log(`File uploaded successfully at ${data.Location}`)
+        logger.info(`File uploaded successfully at ${data.Location}`)
         var location = data.Location;
         resolve();
         });
@@ -230,6 +237,10 @@ module.exports.uploadUserSyl = (bucketName, filePath, fileName, mimetype) => {
     };
     uploadFile();
   })
+}
+
+function processFile(content) {
+    console.log(content);
 }
 
 module.exports.updateChecklist = ( doc ) => {

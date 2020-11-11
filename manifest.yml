@@ -1,7 +1,8 @@
 applications:
 - domain: null
   host: null
-  memory: 256M
+  # memory: 512MB
+  disk_quota: 2048MB
   name: syllabus-eval
   command: npm run dev
   random-route: true
