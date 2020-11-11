@@ -34,28 +34,28 @@ while tuple != False:
 
 #print(checked)
 
-keywords = {    #list of regex commands ment to seach for items
+keywords = {    #list of regex commands meant to seach for items
                 "courseDes":      ["course( )*description" , "course description" , "class description" , "course overview"] ,
                 "courseObj":      ["objective(.)*course" , "course(.)*objective" , "course(.)*expectations" , "expectations(.)*course" , "learning outcomes" , "learning objectives"] ,
                 "courseCred":     ["[0-9]( )*credit" , "number of credits"] , #need to investigate
                 "preReq":         ["pre(.)*requisite" , "pre(.)*req"] ,
                 "gradeDet":       ["grading:" , "[0-9]([0-9])*( )*points" , "assessment" , "grading" , "evaluation" , "grade allocation"] ,
                 "otherpolicies":  ["policy" , "policies" , "academic(.)*honesty"] ,
-                "instrName":      ["professor" , "Dr"] ,
-                "instrContact":   ["e(-| )mail:" , "contact:" , "email(-|:)" , "@marist.edu"] ,
+                "instrName":      ["professor" , "dr", "ph(.)d", "phd", "professor", "instructor"] ,
+                "instrContact":   ["e(-| )mail:" , "contact:" , "email(-|:)" , "@marist.edu", "gmail"] ,
                 "demoConsistant": [] , # not sure if this can be checked with keywords
-                "assesMethod":    ["grading(.)*method"] ,
+                "assesMethod":    ["grading(.)*method", "grading"] ,
                 "rubrics":        ["rubric"] , # may be missing
                 "biblio":         ["bibliography"] ,
                 "assignments":    ["assignments" , "bee"] ,
                 "taskCrit":       [] ,
                 "courseNum":      ["[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" , "course( )*number" , "class( )*number" , "[0-9]{3}( )*(N|L|n|l)"] ,
-                "format":         ["remote(.)course" , "online(.)course" , "hybrid(.)course" , "zoom" , "webex" , "in(-| |.)person)"] ,
-                "attenPol":       ["attendance" , "attendance(.)policy" , "absent"] ,
-                "reqRead":        ["required(.*)read" , "read(.*)required" , "Textbook" , "ISBN" , "test(.)*course" , "doi" , "course materials" , "required(.)*text" , "text(.)*required"] ,
+                "format":         ["in(-| |.)person", "WebEx", "video" , "zoom", "video", "remote(.)course" , "online(.)course" , "hybrid", "hybrid(.)course" , "zoom" , "video"] ,
+                "attenPol":       ["attendance" , "attendance(.)policy" , "absent", "participation"] ,
+                "reqRead":        ["required(.*)read" , "read(.*)required" , "Textbook" , "ISBN" , "test(.)*course" , "doi" , "course materials" , "required(.)*text" , "text(.)*required", "text"] ,
                 "acadHonest":     ["academic honesty" , "cheating" , "plagiarism"] ,
                 "teachAct":       ["Materials used in connection" , "subject to copyright protection"] ,
-                "accommod":       ["Students with disabilities" , "accommodations and accessibility"] ,
+                "accommod":       ["Students with disabilities" , "accommodations", "accessibility"] ,
                 "diversity":      ["diversity"] , # not technically req
             }
 
@@ -85,27 +85,27 @@ found = {   #empty dictionary of arrays to store any matches to analyize later
         }
 
 keyToName = {   #empty dictionary of arrays to store any matches to analyize later
-                "courseDes":      "Course description" ,
-                "courseObj":      "Course objectives" ,
+                "courseDes":      "Course Description" ,
+                "courseObj":      "Course Objectives" ,
                 "courseCred":     "Credits allocated to course" ,
                 "preReq":         "Pre-requisites" ,
                 "gradeDet":       "Basis of grade determination  (please state if there are none)" ,
-                "otherpolicies":  "Other course policies related to integrity ofcredit" ,
-                "instrName":      "Instructors name" ,
-                "instrContact":   "Instructor contact information" ,
-                "demoConsistant": "Syllabi are demonstrably consistent with comparable courses at other institutionsand embed the content and skill expectations of professional associations in field" , # not sure if this can be checked with keywords
+                "otherpolicies":  "Other course policies related to integrity of credit" ,
+                "instrName":      "Instructor's name" ,
+                "instrContact":   "Instructor's contact information" ,
+                "demoConsistant": "Syllabi are demonstrably consistent with comparable courses at other institutions and embed the content and skill expectations of professional associations in field" , # not sure if this can be checked with keywords
                 "assesMethod":    "Method of assessment: Indicate a measured way to determine student success and learning outcomes" ,
                 "rubrics":        "Rubrics at course and project levels" , # may be missing
-                "biblio":         "Bibliographic resources/ Other resourcesincluding audio-visual aids" ,
+                "biblio":         "Bibliographic resources/ Other resources, including audio-visual aids" ,
                 "assignments":    "Assignments: Term papers, assignment synopses, examinations, etc." ,
-                "taskCrit":       "Demonstrate that the course meets time on task criteria,college-level, rigor, and credit granted only to those meeting these objectives" ,
+                "taskCrit":       "Demonstrate that the course meets time on task criteria, college-level, rigor, and credit granted only to those meeting these objectives" ,
                 "courseNum":      "Course number must be designated as L (liberal arts) or N (non-liberal arts)." ,
-                "format":         "Classroom format (lecture, lab, discussion" ,
+                "format":         "Classroom format (lecture, lab, discussion)" ,
                 "attenPol":       "Attendance policy" ,
                 "reqRead":        "Semester required reading" ,
                 "acadHonest":     "Statement on academic honesty" ,
                 "teachAct":       "TEACH Act disclosure" ,
-                "accommod":       "Accommodations & Assesibilty Statement" ,
+                "accommod":       "Accommodations & Accessibility Statement" ,
                 "diversity":      "Statement on diversity" , # not technically req
         }
 
@@ -132,7 +132,7 @@ def checkFileAnal():
     if(result != None):
         result = result[result.index(".") + 1:result.index("@")]
 
-    keywords.get("instrName").append(result)
+    #keywords.get("instrName").append(result)
 
     s.seek(0)
 
