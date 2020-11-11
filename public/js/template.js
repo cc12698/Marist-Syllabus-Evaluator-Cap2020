@@ -56,7 +56,7 @@ function createPDF(){
   write("Assignments:" , "bold");
   write(assignments , "light");
   skipLine();
-  write("Bibliographic Resources / Other Resources:" , "bold");
+  write("Sources / Other Resources:" , "bold");
   write(biblio , "light");
   skipLine();
   write("TEACH Act Disclosure:" , "bold");
@@ -122,6 +122,69 @@ function createWord(){
             }),
             new docx.TextRun("").break(),
             new docx.TextRun(courseDes),
+            new docx.TextRun("").break(),
+            new docx.TextRun({
+              text: "Pre Requisites",
+              bold: true,
+            }),
+            new docx.TextRun("").break(),
+            new docx.TextRun(preReq),
+            new docx.TextRun("").break(),
+            new docx.TextRun("").break(),
+            new docx.TextRun({
+              text: "Attendence Policy",
+              bold: true,
+            }),
+            new docx.TextRun("").break(),
+            new docx.TextRun(attenPol),
+            new docx.TextRun("").break(),
+            new docx.TextRun("").break(),
+            new docx.TextRun({
+              text: "Statement on Academic Honesty",
+              bold: true,
+            }),
+            new docx.TextRun("").break(),
+            new docx.TextRun(acadHonest),
+            new docx.TextRun("").break(),
+            new docx.TextRun("").break(),
+            new docx.TextRun({
+              text: "Basis of Grade Determination",
+              bold: true,
+            }),
+            new docx.TextRun("").break(),
+            new docx.TextRun(gradeDet),
+            new docx.TextRun("").break(),
+            new docx.TextRun("").break(),
+            new docx.TextRun({
+              text: "Assignments",
+              bold: true,
+            }),
+            new docx.TextRun("").break(),
+            new docx.TextRun(assignments),
+            new docx.TextRun("").break(),
+            new docx.TextRun("").break(),
+            new docx.TextRun({
+              text: "Sources",
+              bold: true,
+            }),
+            new docx.TextRun("").break(),
+            new docx.TextRun(biblio),
+            new docx.TextRun("").break(),
+            new docx.TextRun("").break(),
+            new docx.TextRun({
+              text: "TEACH Act Disclosure",
+              bold: true,
+            }),
+            new docx.TextRun("").break(),
+            new docx.TextRun(teachAct),
+            new docx.TextRun("").break(),
+            new docx.TextRun("").break(),
+            new docx.TextRun({
+              text: "Accommadations & Accesibility Statement",
+              bold: true,
+            }),
+            new docx.TextRun("").break(),
+            new docx.TextRun(accommod),
             ],
           }),
         ],

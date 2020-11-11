@@ -28,7 +28,7 @@
     "natural": "^2.1.5",
     "node-cas-authentication": "0.0.15",
     "node-gyp": "^7.1.2",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.6",
     "passport": "^0.4.1",
     "path": "^0.12.7",
     "pdf2json": "^1.2.0",

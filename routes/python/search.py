@@ -3,34 +3,41 @@ import re
 import datetime
 import json
 import ibm_db
-
 import os
-from dotenv import load_dotenv
-load_dotenv()
+import io
+import dotenv
+
+debug = False
+
+dotenv.load_dotenv()
 
 DB_CONNECT_URL = os.getenv('DB_CONNECT_URL')
 
-textFile = sys.argv[1]#"exampleText.txt"
+textFile = "exampleText.txt"#sys.argv[1]#"exampleText.txt"
 logFile = "foundLog.txt"
 
 checked = []
 
-conn = ibm_db.connect(DB_CONNECT_URL, "", "")
-#conn = DB2.connect(dsn='sample', uid='gvg60726', pwd='rxwrr+gl4dzjhdcg')
-#curs = conn.cursor()
-quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
-quryChecked = ibm_db.exec_immediate(conn , "SELECT CHECKED FROM CHECKLIST;")
+if(debug):
+    checked = ["courseDes" , "courseObj" , "courseCred" , "preReq" , "gradeDet" , "otherpolicies" , "instrName" , "instrContact" ,
+               "demoConsistant" , "assesMethod" , "rubrics" , "biblio" , "assignments" , "taskCrit" , "courseNum" , "format" , "attenPol" ,
+               "reqRead" , "acadHonest" , "teachAct" , "accommod" , "diversity"]
+else:
 
-sql = "SELECT ITEM_NAME FROM CHECKLIST WHERE CHECKED = true"
-stmt = ibm_db.exec_immediate(conn, sql)
-tuple = ibm_db.fetch_tuple(stmt)
+    conn = ibm_db.connect(DB_CONNECT_URL, "", "")
+    quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
+    quryChecked = ibm_db.exec_immediate(conn , "SELECT CHECKED FROM CHECKLIST;")
 
-i = 0
-
-while tuple != False:
-    #print "Key: ", tuple[0]
-    checked.append(tuple[0])
+    sql = "SELECT ITEM_NAME FROM CHECKLIST WHERE CHECKED = true"
+    stmt = ibm_db.exec_immediate(conn, sql)
     tuple = ibm_db.fetch_tuple(stmt)
+
+    i = 0
+
+    while tuple != False:
+        #print "Key: ", tuple[0]
+        checked.append(tuple[0])
+        tuple = ibm_db.fetch_tuple(stmt)
 
 #print(checked)
 
@@ -120,19 +127,29 @@ def checkFileAnal():
     #print(keywords)
     now = datetime.datetime.now()
 
-    #o = open(logFile, "a")
-    #o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
-
+    if(debug):
+        o = open(logFile, "a")
+        o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
     s = open(textFile, encoding="utf-8")
 
     for line in s:
         result = re.search("@marist.edu" , line , re.IGNORECASE)
 
-    if(result != None):
-        result = result[result.index(".") + 1:result.index("@")]
+        if(result != None):
+            break
 
-    #keywords.get("instrName").append(result)
+    #o.write("Here!" + result)
+
+    if(result != None):
+        match = result.string
+        match = match[match.index(".") + 1:match.index("@")]
+
+        if(debug):
+            o.write("\nName Identified: " + match)
+
+        if(match != ""):
+            keywords.get("instrName").append(match)
 
     s.seek(0)
 
@@ -141,7 +158,8 @@ def checkFileAnal():
 
     for key in keywords: #loops through entire dictionary
         if key in checked:
-            #o.write("\n\nResults for " + key + ":")
+            if(debug):
+                o.write("\n\nResults for " + key + ":")
             try:
                 for line in s: #loops through each line of sylibus
                     cmdIdex = 0
@@ -153,7 +171,8 @@ def checkFileAnal():
                             matches += 1
                             found[key].append(result)
                             match = line[result.span()[0] : result.span()[1]]
-                            #o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
+                            if(debug):
+                                o.write("\nMatch to \"" + i + "\" in line \"" + line[0 : -2] + "\": " + match)
 
                 s.seek(0) #sets file pointer back to the begining
             except:
