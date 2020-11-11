@@ -4,6 +4,7 @@ import datetime
 import json
 import ibm_db
 import os
+import io
 import dotenv
 
 debug = False
@@ -24,8 +25,6 @@ if(debug):
 else:
 
     conn = ibm_db.connect(DB_CONNECT_URL, "", "")
-    #conn = DB2.connect(dsn='sample', uid='gvg60726', pwd='rxwrr+gl4dzjhdcg')
-    #curs = conn.cursor()
     quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
     quryChecked = ibm_db.exec_immediate(conn , "SELECT CHECKED FROM CHECKLIST;")
 
@@ -132,8 +131,8 @@ def checkFileAnal():
         o = open(logFile, "a")
         o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
-
-    s = open(textFile)#, encoding="utf-8")
+    #s = io.open(textFile, "r" ,encoding="utf-8")
+    s = open(textFile) #, encoding="utf-8")
 
     for line in s:
         result = re.search("@marist.edu" , line , re.IGNORECASE)
