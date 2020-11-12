@@ -60,15 +60,20 @@ function txtToArray(paths){
 function callSnek(paths){
   console.log('spython called')
   return new Promise((resolve, reject) => {
-    var dataToSend;
+    var dataToSend = '';
     var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
-    var pythonProcess = spawn('python', [pyPath, paths]);
+    var pythonProcess = spawn('python3', [pyPath, paths]);
     pythonProcess.stdout.on('data', (data) => {
-      resolve(JSON.parse(data));
+      dataToSend += data;
     });
     pythonProcess.stderr.on('data', (data) => {
        console.log(data.toString());
        reject(data.toString());
    });
+   pythonProcess.on('close', function (code) {
+     console.log(dataToSend);
+      resolve(JSON.parse(dataToSend));
+  });
+
   });
 }
