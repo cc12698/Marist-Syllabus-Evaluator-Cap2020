@@ -7,7 +7,7 @@ const pdf = new jsPDF();
 const doc = new docx.Document();
 
 var x = 10;
-var y = 10;
+var y = 20;
 
 var font = "times";
 
@@ -197,19 +197,23 @@ function createWord(){
   });
 }
 
+function write(s){
+  write(s , "light" , 12);
+}
+
 function write(s , style){
+  write(s , style , 12);
+}
+
+function write(s , style , fSize){
   //for pdf
-  if(style == "light"){
-    pdf.setFont(font , "light")
-  }
-  else if(style == "bold"){
-    pdf.setFont(font , "bold")
-  }
+  pdf.setFont(font , style);
+  pdf.setFontSize(fSize);
 
   var lines = pdf.splitTextToSize(s , 180);
   pdf.text(lines , x , y);
 
-  y += 6 * lines.length;
+  y += 6 * lines.lengthb + fontBuff(fsize);
 
 /*
   //for word
@@ -239,6 +243,15 @@ function write(s , style){
       });
   }
 */
+}
+
+function fontBuff(f){
+  if (f <= 12){
+    return 0;
+  }
+  else{
+    return (f - 12);
+  }
 }
 
 function skipLine(){

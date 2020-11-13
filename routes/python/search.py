@@ -13,8 +13,8 @@ dotenv.load_dotenv()
 
 DB_CONNECT_URL = os.getenv('DB_CONNECT_URL')
 
-textFile = sys.argv[1]#"exampleText.txt"
-logFile = "foundLog.txt"
+textFile = "exampleText.txt"
+logFile = sys.argv[1]"foundLog.txt"
 
 checked = []
 
@@ -50,12 +50,12 @@ keywords = {    #list of regex commands meant to seach for items
                 "otherpolicies":  ["policy" , "policies" , "academic(.)*honesty"] ,
                 "instrName":      ["professor" , "dr", "ph(.)d", "phd", "professor", "instructor"] ,
                 "instrContact":   ["e(-| )mail:" , "contact:" , "email(-|:)" , "@marist.edu", "gmail"] ,
-                "demoConsistant": [] , # not sure if this can be checked with keywords
+                "demoConsistant": ["demonstrably consistant"] , # not sure if this can be checked with keywords
                 "assesMethod":    ["grading(.)*method", "grading"] ,
                 "rubrics":        ["rubric"] , # may be missing
-                "biblio":         ["bibliography"] ,
+                "biblio":         ["bibliography" , "sources"] ,
                 "assignments":    ["assignments" , "bee"] ,
-                "taskCrit":       [] ,
+                "taskCrit":       ["task criteria" , "college level"] ,
                 "courseNum":      ["[0-9]{3}( |_)*(N|L|n|l)( |_)*[0-9]{3}" , "course( )*number" , "class( )*number" , "[0-9]{3}( )*(N|L|n|l)"] ,
                 "format":         ["in(-| |.)person", "WebEx", "video" , "zoom", "video", "remote(.)course" , "online(.)course" , "hybrid", "hybrid(.)course" , "zoom" , "video"] ,
                 "attenPol":       ["attendance" , "attendance(.)policy" , "absent", "participation"] ,
@@ -131,7 +131,7 @@ def checkFileAnal():
         o = open(logFile, "a")
         o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
-    s = open(textFile, encoding="utf-8")
+    s = open(textFile)#, encoding="utf-8")
 
     for line in s:
         result = re.search("@marist.edu" , line , re.IGNORECASE)
