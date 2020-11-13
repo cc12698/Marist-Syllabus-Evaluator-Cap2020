@@ -89,6 +89,8 @@ module.exports.queryWithParams = (sql,values,options) => {
     });
 };
 
+
+// Used to perform DB post request for DB2 on cloud
 module.exports.post = ( sql, parameters ) => {
 
     return new Promise( (resolve,reject) => {
@@ -118,13 +120,14 @@ module.exports.post = ( sql, parameters ) => {
     });
 };
 
-
+// Get all users from DB
 module.exports.getUsers = () => {
     let sql = 'SELECT * FROM user';
 
     return this.queryWithParams(sql);
 };
 
+// Get the info about the logged in user
 module.exports.getUserInfo = (username) => {
     let sql = 'SELECT * FROM user WHERE upper(username) = ?';
 
@@ -155,6 +158,8 @@ module.exports.getBucketContents = (bucketName) => {
     });
 }
 
+
+// Upload a sample syllabi to COS *admin only*
 module.exports.uploadSampleSyl = (filePath, fileName, mimetype, callback) => {
   var fileName = fileName;
   var filePath = filePath;
@@ -165,7 +170,7 @@ module.exports.uploadSampleSyl = (filePath, fileName, mimetype, callback) => {
   const params = {
            Bucket: 'sample-syl', // pass your bucket name
            Key: fileName, // file will be saved
-           Body: data,
+           Body: fs.createReadStream(filePath),
            ContentType: mimetype,
            ACL: 'public-read'
   };
@@ -181,6 +186,7 @@ module.exports.uploadSampleSyl = (filePath, fileName, mimetype, callback) => {
   uploadFile();
 }
 
+// Delete a syllabi either from sample or user saved
 module.exports.deleteSyllabi = (fileName) => {
     var params = {  Bucket: 'sample-syl', Key: fileName };
     return cos.deleteObject(params)
@@ -223,7 +229,7 @@ module.exports.uploadUserSyl = (bucketName, filePath, fileName, mimetype) => {
       const params = {
                Bucket: bucketName, // pass your bucket name
                Key: fileName, // file will be saved
-               Body: data,
+               Body: fs.createReadStream(filePath),
                ContentType: mimetype,
                ACL: 'public-read'
       };
@@ -243,6 +249,7 @@ function processFile(content) {
     console.log(content);
 }
 
+// Update the checklist of items to be searched for *admin only*
 module.exports.updateChecklist = ( doc ) => {
     return new Promise( (resolve,reject) => {
 
