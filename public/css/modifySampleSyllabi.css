@@ -69,6 +69,29 @@
 	background-color: #bfc0c9;
 }
 
+.removeAll {
+	margin-top: 10px;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-size: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+  font-weight: 600;
+  background-color: lightgrey;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+	height: 38px;
+}
+
+.removeAll:hover{
+	background-color: #bfc0c9;
+}
+
 .samplesyl{
   /* padding-left: 20px; */
 	color: black;
