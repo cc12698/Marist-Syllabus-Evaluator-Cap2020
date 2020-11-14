@@ -186,7 +186,7 @@ module.exports.uploadSampleSyl = (filePath, fileName, mimetype, callback) => {
   uploadFile();
 }
 
-// Delete a syllabi either from sample or user saved
+// Delete a sample syllabi
 module.exports.deleteSyllabi = (fileName) => {
     var params = {  Bucket: 'sample-syl', Key: fileName };
     return cos.deleteObject(params)
@@ -317,3 +317,27 @@ module.exports.addUser = ( doc ) => {
 
     return this.post( sql, [doc.USERNAME]);
 };
+
+// Empty Bucket of User Syl
+module.exports.emptyBucket = (bucket) => {
+    return cos.listObjects({Bucket: bucket}, function (err, data) {
+        if (err) {
+            console.log("error listing bucket objects "+err);
+            return;
+        }
+        var items = data.Contents;
+        for (var i = 0; i < items.length; i += 1) {
+            var params = {Bucket: bucket, Key: items[i].Key};
+            module.exports.deleteUserSyllabi(bucket, items[i].Key)
+        }
+    }).promise()
+    .then((() => {
+        return 'bucket emptied!';
+    }))
+    .catch((e) => {
+        return `ERROR: ${e.code} - ${e.message}\n`;
+    });
+
+}
+
+// module.exports.emptyBucket('user-syl-49')

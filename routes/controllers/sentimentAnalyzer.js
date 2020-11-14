@@ -36,11 +36,14 @@ exports.getAnalyzer = async function(paths){
 }
 
 function spellCheckFile(arr){
-console.log('spell check called')
+  console.log('spell check called')
+  const checker = new spellChecker.Spellchecker();
+  checker.setSpellcheckerType(spellChecker.ALWAYS_USE_SYSTEM);
+  checker.setDictionary('en-US',spellChecker.getDictionaryPath())
   var mispelled = [], spellCheckArr = [];
   var mispelledObj = new Object();
   for(var i = 0; i < arr.length; i++){
-    var spellCheckerTest = spellChecker.isMisspelled(arr[i]);
+    var spellCheckerTest = checker.isMisspelled(arr[i]);
     if(spellCheckerTest){
       mispelled.push(arr[i]);
       //spellCheckArr.push(spellChecker.getCorrectionsForMisspelling(arr[i]));
