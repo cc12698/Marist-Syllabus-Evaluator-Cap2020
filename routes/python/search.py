@@ -14,7 +14,7 @@ dotenv.load_dotenv()
 DB_CONNECT_URL = os.getenv('DB_CONNECT_URL')
 
 textFile = "exampleText.txt"
-logFile = sys.argv[1]"foundLog.txt"
+logFile = sys.argv[1]#"foundLog.txt"
 
 checked = []
 

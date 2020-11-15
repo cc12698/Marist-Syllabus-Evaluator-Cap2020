@@ -6,6 +6,7 @@
 3. cd to Marist-Syllabus-Evaluator-Cap2020 directory
 4. Run `npm install`
 5. Run `npm install -g nodemon`
+6. Pip install dotenv & ibm_db
 
 ## Running Code
 1. Run `npm run dev`

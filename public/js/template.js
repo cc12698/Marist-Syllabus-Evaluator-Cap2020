@@ -198,20 +198,20 @@ function createWord(){
 }
 
 function write(s){
-  write(s , "light" , 12);
+  write(s , "light" , 12 , x);
 }
 
 function write(s , style){
-  write(s , style , 12);
+  write(s , style , 12 , x);
 }
 
-function write(s , style , fSize){
+function write(s , style , fSize , xStart){
   //for pdf
   pdf.setFont(font , style);
   pdf.setFontSize(fSize);
 
   var lines = pdf.splitTextToSize(s , 180);
-  pdf.text(lines , x , y);
+  pdf.text(lines , xStart , y);
 
   y += 6 * lines.lengthb + fontBuff(fsize);
 
