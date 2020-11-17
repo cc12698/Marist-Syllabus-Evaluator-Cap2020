@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel = "stylesheet" type = "text/css" href = "/css/help.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" value="notranslate">
+  <body>
+    <%- include('partials/header'); -%>
+    <div id = "contain">
+      <h1><u>User Guide:</u></h1>
+
+      <h2><u>Admin tools:</u></h2>
+
+      <h5 class="header">EDIT SAMPLE SYLLABI</h5>
+      <p class="desc">
+        Admins can edit the sample syllabi shown to normal users via this page. To add a new sample syllabus, click the add button and select your document. Once selected, click the upload button to upload the syllabus to the sample page. To remove a syllabus from the same syllabi page, simply click the X found on the left hand side of the files.
+      </p>
+
+      <h5 class="header">MODIFY CHECKLIST</h5>
+      <p class="desc">
+        Admins can edit the syllabus requirements via this page. If syllabi only need a certain few requirements, this can be applied here. In order to add or remove a requirement, simply click the checkbox to the left of the requirements.
+      </p>
+
+      <h2><u>User tools:</u></h2>
+
+      <h5 class="header">UPLOAD SYLLABUS</h5>
+      <p class = "desc">
+        User syllabi are uploaded and graded via this page. Users can upload their syllabus by clicking the upload icon and selecting their document, or simply by dragging their document and dropping it on the upload box.
+      </p>
+
+      <h5 class="header">CREATE A SYLLABUS</h5>
+      <p class = "desc">
+        Users can build a regulation compliant syllabus via this page. To do so, users should type each sections information, which will then be formatted properly, and can be downloaded when finished via the download button on the bottom of the page.
+      </p>
+
+      <h5 class="header">SAMPLE SYLLABI</h5>
+      <p class = "desc">
+        This page offers pre-built, regulation compliant syllabi for viewing purposes. To view a sample, simply click on the name of the sample that you would like to view.
+      </p>
+
+      <h5 class="header">MY SYLLABI</h5>
+      <p class="desc">
+        Users can view their uploaded syllabi via this page. To upload a new syllabus, simply head to the <strong>upload syllabus</strong> page and upload via there. When uploaded, the syllabus will show up on this page. To download a .doc file syllabus, simply click the syllabus name. To download a .pdf syllabus, click the syllabus, which will then open in a new tab, and save as from there.
+      </p>
+
+    </div>
+    <%- include('partials/footer'); -%>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.matchHeight.js" type="text/javascript"></script>
+  </body>
+</html>

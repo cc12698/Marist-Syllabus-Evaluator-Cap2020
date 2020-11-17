@@ -38,7 +38,7 @@ exports.getAnalyzer = async function(paths){
 function spellCheckFile(arr){
   console.log('spell check called')
   const checker = new spellChecker.Spellchecker();
-  checker.setSpellcheckerType(spellChecker.ALWAYS_USE_SYSTEM);
+  checker.setSpellcheckerType(spellChecker.ALWAYS_USE_HUNSPELL);
   checker.setDictionary('en-US',spellChecker.getDictionaryPath())
   var mispelled = [], spellCheckArr = [];
   var mispelledObj = new Object();

@@ -246,8 +246,13 @@ app.get('/help', function(req, res){
       req.session.redirectTo = '/result';
       res.redirect('/');
   }
-  else {
-      res.render('../views/help.ejs')
+  else{
+    if(userSession.role == 'admin'){
+      res.render('../views/helpAdmin.ejs');
+    }
+    else{
+      res.render('../views/helpUser.ejs');
+    }
   }
 });
 
