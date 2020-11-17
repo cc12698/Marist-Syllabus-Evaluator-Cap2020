@@ -8,6 +8,7 @@
   text-align: left;
   outline: none;
   font-size: 15px;
+  position: center;
 }
 
 .active, .collapsible:hover {
@@ -24,7 +25,6 @@
 
 .score{
   display:inline-block;
-  /*width:200px;*/
   font-size: 350%;
 }
 
@@ -70,4 +70,9 @@
   height: 25px;
   background: #4CAF50;
   cursor: pointer;
+}
+
+.data{
+  width: 75%;
+  margin: auto;
 }
