@@ -155,6 +155,38 @@
           </div>
         </div>
 
+        <div class="row form-row" style="margin-right: 0px">
+          <div class="col-sm-3 col-sm-offset-3 col-xs-12" style="background-color:#E0DEDE;" margin: auto;>
+            <h4>Font</h4>
+
+            <input type="radio" id="times" name="font" value="times">
+            <label for="times">times</label>
+            <input type="radio" id="helvetica" name="font" value="helvetica">
+            <label for="helvetica">helvetica</label>
+            <input type="radio" id="courier" name="font" value="courier">
+            <label for="courier">courier</label>
+          </div>
+        </div>
+
+        <div class="row form-row" style="margin-right: 0px">
+          <div class="col-sm-3 col-sm-offset-3 col-xs-12" style="background-color:#EEEEEE;" margin: auto;>
+            <h4>logo style</h4>
+
+            <input type="radio" id="circle" name="logo" value="circle">
+            <label for="circle">circle</label>
+            <input type="radio" id="sport" name="logo" value="sport">
+            <label for="sport">sport</label>
+<!--              <input type="radio" id="simple" name="logo" value="simple">
+            <label for="simple">simple</label> -->
+          </div>
+        </div>
+
+        <div class="col-sm-offset-3">
+          <button onclick="createPDF()" class=button>Download as PDF</button>
+          <button onclick="createWord()" class=button>Download as Docx</button>
+        </div>
+      </div>
+
         <div class="col-sm-offset-3">
           <button onclick="createPDF()" class=button>Download as PDF</button>
           <button onclick="createWord()" class=button>Download as Docx</button>
