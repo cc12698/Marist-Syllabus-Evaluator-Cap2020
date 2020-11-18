@@ -246,8 +246,13 @@ app.get('/help', function(req, res){
       req.session.redirectTo = '/result';
       res.redirect('/');
   }
-  else {
-      res.render('../views/help.ejs')
+  else{
+    if(userSession.role == 'admin'){
+      res.render('../views/helpAdmin.ejs');
+    }
+    else{
+      res.render('../views/helpUser.ejs');
+    }
   }
 });
 
@@ -371,6 +376,8 @@ app.post('/uploadSyllabus', async (req, res) => {
           case 0:
             if (!fs.existsSync(dir)){ fs.mkdirSync(dir); logger.info('created')}
           case 1:
+            upload.single(req.files.myFile);
+
             uploadedFile.mv(dir + uploadedFile.name);
             var mimetype = mime.lookup(uploadedFile.name);
             var tempPath = './uploads/' + uploadedFile.name;
@@ -494,6 +501,19 @@ app.post('/deleteUserSyl', cors(), (req,res,next) => {
           var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
           res.status(503).send(userErr);
         });
+    })
+    .catch( (err) => {
+      var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};
+      res.status(503).send(userErr);
+    });
+});
+
+// Delete a User Saved Syllabus
+app.post('/removeAll', cors(), (req,res,next) => {
+  var bucketName = 'user-syl-' + userSession.userid;
+  dm.emptyBucket(bucketName)
+    .then(() => {
+      res.redirect('userSyllabi')
     })
     .catch( (err) => {
       var userErr = { 'code': 503, 'message':'An error has occurred retrieving bucket contents.'};

@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+}
+
+.desc{
+  text-align: left;
+  font-size: 16px;
+}
+#contain{
+  width: 70%;
+  margin: auto;
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.header{
+  font-weight: 900;
+  font-size: 18px;
+}
+
+h1{
+  padding-top: 10px;
+}

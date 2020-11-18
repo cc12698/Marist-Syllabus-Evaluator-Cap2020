@@ -26,6 +26,10 @@
         </div>
       <% } %>
 
+      <% if(syllabi.length > 0) { %>
+        <button class="removeAll" name="removeAll">REMOVE ALL</button>
+      <% } %>
+
     </div>
     <%- include('partials/footer'); -%>
   </body>
