@@ -32,3 +32,5 @@ cellphone
 https
 http
 gradebook
+www
+pgs
