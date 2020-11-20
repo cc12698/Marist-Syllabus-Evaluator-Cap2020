@@ -10,7 +10,6 @@ const config = require('../../config');
 const logger = config.log();
 const spell = require('spell-checker-js')
 spell.load('en');
-spell.load('cus');
 var numArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 exports.getAnalyzer = async function(paths){
   try{
@@ -39,15 +38,22 @@ function spellCheckFile(arr){
       misSpell.push(spell.check(arr[i])[0]);
     }
   }
-
+  console.log(misSpell.length)
   for(var v = 0; v < misSpell.length; v++){
-      if(misSpell[v].match("[0-9]") != null){
-	       console.log('fired');
-        misSpell.splice(v, 1);
+    for(var z = 0; z < numArr.length; z++){
+      if(misSpell[v].includes(numArr[z])){
+        misSpell[v] = null;
+        break;
+        }
       }
     }
-  
-  return misSpell;
+
+    var filtered = misSpell.filter(function (el) {
+      return el != null;
+    });
+    console.log(filtered.length);
+    console.log(filtered);
+  return filtered;
 }
 
 function txtToArray(paths){
