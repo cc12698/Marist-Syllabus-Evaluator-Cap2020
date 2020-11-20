@@ -4,12 +4,12 @@ const natural = require('natural');
 var Analyzer = natural.SentimentAnalyzer;
 var stemmer = natural.PorterStemmer;
 var analyzer = new Analyzer("English", stemmer, "afinn");
-//var spellChecker = require('spellchecker');
 const spawn = require("child_process").spawn;
 const config = require('../../config');
 const logger = config.log();
 const spell = require('spell-checker-js')
 spell.load('en');
+spell.load({ input: './newDic.txt' });
 var numArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 exports.getAnalyzer = async function(paths){
   try{
