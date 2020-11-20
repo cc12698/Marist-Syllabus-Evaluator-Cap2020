@@ -4,22 +4,18 @@ const natural = require('natural');
 var Analyzer = natural.SentimentAnalyzer;
 var stemmer = natural.PorterStemmer;
 var analyzer = new Analyzer("English", stemmer, "afinn");
-var spellChecker = require('spellchecker');
+//var spellChecker = require('spellchecker');
 const spawn = require("child_process").spawn;
 const config = require('../../config');
 const logger = config.log();
-
+const spell = require('spell-checker-js')
+spell.load('en');
+var numArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 exports.getAnalyzer = async function(paths){
   try{
     var data = new Object;
     var arr = await txtToArray(paths);
-    var py = await callSnek(paths);
-    console.log(py);
-    if(py == undefined){
-      data.py = 'err'
-    }else{
-      data.py = py
-    }
+    data.py = await callSnek(paths);
     data.sc = await spellCheckFile(arr);
     var sent = await analyzer.getSentiment(arr);
     if(sent > .2){
@@ -36,22 +32,28 @@ exports.getAnalyzer = async function(paths){
 }
 
 function spellCheckFile(arr){
-  console.log('spell check called')
-  const checker = new spellChecker.Spellchecker();
-  checker.setSpellcheckerType(spellChecker.ALWAYS_USE_HUNSPELL);
-  checker.setDictionary('en-US',spellChecker.getDictionaryPath())
-  var mispelled = [], spellCheckArr = [];
-  var mispelledObj = new Object();
+  var misSpell = [];
   for(var i = 0; i < arr.length; i++){
-    var spellCheckerTest = checker.isMisspelled(arr[i]);
-    if(spellCheckerTest){
-      mispelled.push(arr[i]);
-      //spellCheckArr.push(spellChecker.getCorrectionsForMisspelling(arr[i]));
+    if(spell.check(arr[i]).length !== 0){
+      misSpell.push(spell.check(arr[i])[0]);
     }
   }
-  mispelledObj.mispelled = mispelled;
-  mispelledObj.spellCheckArr = spellCheckArr;
-  return mispelledObj;
+  console.log(misSpell.length)
+  for(var v = 0; v < misSpell.length; v++){
+    for(var z = 0; z < numArr.length; z++){
+      if(misSpell[v].includes(numArr[z])){
+        misSpell[v] = null;
+        break;
+        }
+      }
+    }
+
+    var filtered = misSpell.filter(function (el) {
+      return el != null;
+    });
+    console.log(filtered.length);
+    console.log(filtered);
+  return filtered;
 }
 
 function txtToArray(paths){
@@ -65,18 +67,17 @@ function callSnek(paths){
   return new Promise((resolve, reject) => {
     var dataToSend = '';
     var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
-    var pythonProcess = spawn('python3', [pyPath, paths]);
+    var pythonProcess = spawn('python', [pyPath, paths]);
     pythonProcess.stdout.on('data', (data) => {
       dataToSend += data;
-    });
+      });
     pythonProcess.stderr.on('data', (data) => {
        console.log(data.toString());
        reject(data.toString());
-   });
+     });
    pythonProcess.on('close', function (code) {
-     console.log(dataToSend);
+     //console.log(dataToSend);
       resolve(JSON.parse(dataToSend));
-  });
-
+    });
   });
 }
