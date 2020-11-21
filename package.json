@@ -42,6 +42,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "npm run dev",
     "dev": "nodemon routes/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
