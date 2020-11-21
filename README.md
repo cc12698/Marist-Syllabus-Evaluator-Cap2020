@@ -5,8 +5,10 @@
 2. In terminal, clone repository `git clone https://github.com/cc12698/Marist-Syllabus-Evaluator-Cap2020`
 3. Using the `cd` command, change the directory to the Marist-Syllabus-Evaluator-Cap2020 folder (you can copy the folder path by opening it and clicking the address bar at the top).
 4. Type `docker build -t syl .`
-5. Type `docker run -p 8080:8080 syl`
-6. Open browser and visit http://localhost:8080/
+
+### Running Code
+1. Type `docker run -p 8080:8080 syl`
+2. Open browser and visit http://localhost:8080/
 
 ## Run Code Locally Without Docker
 
