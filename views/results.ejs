@@ -22,22 +22,10 @@
             <p><%= data['py']['Grade']%></p>
         </div>
       </div>
-      <button class="collapsible">Mis-spelled Words</button>
-        <div class="contents">
-          <table>
-            <% for(var i=0; i < data.sc.mispelled.length; i++) { %>
-              <tr>
-                <td><%= data['sc']['mispelled'][i]%></td>
-              </tr>
-              <% } %>
-            </table>
-        </div>
-      <button class="collapsible">Sentiment Analysis</button>
-      <div class="contents">
-        <input type="range" id="myRange" min="1" max="100" value="<%= data['output']%>" class="slider" disabled>
-      </div>
+    <div class = "data">
       <button class="collapsible">Missing Elements</button>
       <div class="contents">
+        <p></p>
         <table>
           <% for(var i=0; i < data.py.Missing.length; i++) { %>
             <tr>
@@ -45,6 +33,31 @@
             </tr>
             <% } %>
           </table>
+        <p></p>
+      </div>
+      <button class="collapsible">Sentiment Analysis</button>
+      <div class="contents">
+        <p></p>
+        <input type="range" id="myRange" min="1" max="100" value="<%= data['output']%>" class="slider" disabled>
+        <p style="text-align:left;" class="big">
+          -
+          <span style="float:right;">
+              +
+          </span>
+      </p>
+      </div>
+      <button class="collapsible">Misspelled Words</button>
+        <div class="contents">
+          <p></p>
+          <table>
+            <% for(var i=0; i < data.sc.length; i++) { %>
+              <tr>
+                <td><%= data['sc'][i]%></td>
+              </tr>
+              <% } %>
+            </table>
+            <p></p>
+        </div>
       </div>
     <%- include('partials/footer'); -%>
   </body>

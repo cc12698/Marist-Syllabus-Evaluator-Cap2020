@@ -8,10 +8,23 @@
   text-align: left;
   outline: none;
   font-size: 15px;
+  position: center;
 }
 
 .active, .collapsible:hover {
   background-color: #555;
+}
+
+.collapsible:after {
+  content: '\003E';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\0056";
 }
 
 .contents {
@@ -24,7 +37,6 @@
 
 .score{
   display:inline-block;
-  /*width:200px;*/
   font-size: 350%;
 }
 
@@ -61,7 +73,7 @@
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #4CAF50;
+  background: #B31B1B;
   cursor: pointer;
 }
 
@@ -70,4 +82,13 @@
   height: 25px;
   background: #4CAF50;
   cursor: pointer;
+}
+
+.data{
+  width: 75%;
+  margin: auto;
+}
+
+.big{
+  font-size: 20px;
 }
