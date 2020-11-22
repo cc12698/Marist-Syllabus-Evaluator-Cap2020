@@ -1,6 +1,8 @@
 # Marist-Syllabus-Evaluator-Cap2020
 
 ## Run Code Locally With Docker
+
+### Getting Started
 1. Install Docker on Machine https://docs.docker.com/get-docker/
 2. In terminal, clone repository `git clone https://github.com/cc12698/Marist-Syllabus-Evaluator-Cap2020`
 3. Using the `cd` command, change the directory to the Marist-Syllabus-Evaluator-Cap2020 folder (you can copy the folder path by opening it and clicking the address bar at the top).
