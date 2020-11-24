@@ -191,7 +191,7 @@
     //const docx = require("docx");
     //import * as fs from "fs";
 
-    const pdf = new jsPDF();
+    var pdf = new jsPDF();
     const doc = new docx.Document();
 
     const lineLen = 100;
@@ -205,6 +205,13 @@
     //section = "";
 
     function createPDF(){
+
+      x = 10;
+      y = 20;
+
+      console.log("y = " + y);
+
+      pdf = new jsPDF();
 
       const BODY = 12;
       const TITLE = 20;
@@ -304,7 +311,6 @@
       skipLine();
 
       pdf.save(InsName + "_" + courseName + "_syllabus.pdf");
-
     }
 
     function createWord(){
@@ -558,6 +564,8 @@
 */
 
     function write(s , style , fSize , xStart){
+      console.log("y = " + y)
+
       //for pdf
       //console.log("text: " + s);
       //console.log("style: " + style);

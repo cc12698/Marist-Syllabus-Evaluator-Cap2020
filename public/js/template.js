@@ -16,6 +16,11 @@ var font = "";
 
 function createPDF(){
 
+  x = 10;
+  y = 20;
+
+  pdf = new jsPDF();
+
   const BODY = 12;
   const TITLE = 20;
 
