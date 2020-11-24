@@ -1,5 +1,8 @@
 # Marist-Syllabus-Evaluator-Cap2020
 
+## View Working Application on Cloud
+https://syllabus-eval.us-south.cf.appdomain.cloud/
+
 ## Run Code Locally With Docker
 
 ### Getting Started
