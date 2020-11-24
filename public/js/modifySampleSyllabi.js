@@ -4,6 +4,7 @@ Array.prototype.forEach.call( inputs, function( input )
 	var label	 = input.nextElementSibling,
 		labelVal = label.innerHTML;
 
+		//get uploaded sample syl name
 	input.addEventListener( 'change', function( e )
 	{
 		var fileName = '';

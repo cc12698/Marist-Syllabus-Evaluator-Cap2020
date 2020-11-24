@@ -1,3 +1,4 @@
+// redirect back to login after logout
 window.setTimeout(function(){
 
         // Move to a new location or you can do something else

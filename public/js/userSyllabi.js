@@ -1,3 +1,4 @@
+// event listener for when user clicks an X to remove syl
 $(document).on("click", '.remove',function(){
   var filename = $(this).attr("name");
   fetch('/deleteUserSyl',
@@ -20,10 +21,15 @@ $(document).on("click", '.remove',function(){
   });
 });
 
+// event listener for when user clicks remove All
+// calls function to have popup
 $(document).on("click", '.removeAll',function(){
   confirmRemoveAll();
 });
 
+
+// confirms user wants to remove all saved syllabi
+// calls post if user confirms 
 function confirmRemoveAll() {
   var r = confirm("Are you sure you want to remove all saved syllabi?\nThis action cannot be undone.");
   if (r == true) {
