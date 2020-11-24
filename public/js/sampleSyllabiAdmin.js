@@ -1,3 +1,4 @@
+// event listener for when admin clicks an X to remove syl
 $(document).on("click", '.remove',function(){
   var filename = $(this).attr("name");
   fetch('/deleteSampleSyl',
