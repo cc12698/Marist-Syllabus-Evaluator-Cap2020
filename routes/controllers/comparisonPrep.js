@@ -12,7 +12,8 @@ const WordExtractor = require("word-extractor");
 const config = require('../../config');
 const logger = config.log();
 
-
+//makeTXT reads the uploads folder and pulls the file type
+//then makes a call to the specific txt conversion function
 exports.makeTXT = function(path){
   try{
     var directoryPath = paths.normalize(__dirname + "/../../uploads");
@@ -48,7 +49,7 @@ exports.makeTXT = function(path){
 }
 
 
-
+//converts docx to txt files and call sentimentAnalyze
 async function docx(file, path){
   return new Promise((resolve, reject) => {
     mammoth.extractRawText({path: file})
@@ -65,6 +66,7 @@ async function docx(file, path){
     });
 }
 
+//convert doc to txt file using word extractor and calls sentimentAnalyze
 async function doc(file, path){
   return new Promise((resolve, reject) => {
     var extractor = new WordExtractor();
@@ -88,6 +90,7 @@ async function doc(file, path){
   });
 }
 
+//convert pdf to txt using pdfParser and call sentimentAnalyze
 async function pdf(file, path){
   return new Promise((resolve, reject) => {
     var pdfParser = new PDFParser(this,1);
@@ -105,6 +108,7 @@ async function pdf(file, path){
   });
 }
 
+//convert pages to txt, using cloud convert api, you only have 25 converts a day
 async function pages(file, path){
     const cloudConvert = new CloudConvert(process.env.CLOUD_CONVERT_KEY);
 
