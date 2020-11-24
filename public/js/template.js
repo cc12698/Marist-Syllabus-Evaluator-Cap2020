@@ -1,7 +1,7 @@
 //const docx = require("docx");
 //import * as fs from "fs";
 
-const pdf = new jsPDF();
+var pdf = new jsPDF();
 const doc = new docx.Document();
 
 const lineLen = 100;
