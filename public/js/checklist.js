@@ -1,3 +1,4 @@
+// get all checked elements for *admin* edit checklist
 function check(checked = true) {
     const cbs = document.querySelectorAll('input[type=checkbox]');
     cbs.forEach((cb) => {
