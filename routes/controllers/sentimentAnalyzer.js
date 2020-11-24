@@ -11,6 +11,7 @@ const spell = require('spell-checker-js')
 spell.load('en');
 spell.load({ input: './newDic.txt' });
 var numArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+//calls several analysis functions to return to the results page
 exports.getAnalyzer = async function(paths){
   try{
     var data = new Object;
@@ -23,6 +24,7 @@ exports.getAnalyzer = async function(paths){
     }else if(sent < -.2){
       sent = -.2
     }
+    //normalizes the sentiment analysis data
     data.output = ((sent-(-.2))/(.2-(-.2)))*100;
     console.log(data)
     return data;
@@ -31,6 +33,7 @@ exports.getAnalyzer = async function(paths){
   }
 }
 
+//returns an array of misSpelled words
 function spellCheckFile(arr){
   var misSpell = [];
   for(var i = 0; i < arr.length; i++){
@@ -56,12 +59,14 @@ function spellCheckFile(arr){
   return filtered;
 }
 
+//converts the txt file to an array of words to be analyzed
 function txtToArray(paths){
   console.log('txt to arr called')
   var fileArray = fs.readFileSync(paths,'utf8').split(" ");
   return fileArray;
 }
 
+//calls the python program in order to do the main analysis portion and to return a grade
 function callSnek(paths){
   console.log('spython called')
   return new Promise((resolve, reject) => {
