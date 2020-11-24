@@ -3,31 +3,29 @@ import re
 import datetime
 import json
 import ibm_db
-
 import os
 from dotenv import load_dotenv
-load_dotenv()
 
-DB_CONNECT_URL = os.getenv('DB_CONNECT_URL')
+load_dotenv() #loads DB passowrd from env file
 
-textFile = sys.argv[1]#"exampleText.txt"
-logFile = "foundLog.txt"
+DB_CONNECT_URL = os.getenv('DB_CONNECT_URL') #creates DB connection
 
-checked = []
+textFile = sys.argv[1] #sylibus being passed in
+logFile = "foundLog.txt" #optional log file for debugging
+
+checked = [] #array of checked elemets to search for
 
 conn = ibm_db.connect(DB_CONNECT_URL, "", "")
-#conn = DB2.connect(dsn='sample', uid='gvg60726', pwd='rxwrr+gl4dzjhdcg')
-#curs = conn.cursor()
 quryName = ibm_db.exec_immediate(conn , "SELECT ITEM_NAME FROM CHECKLIST;")
 quryChecked = ibm_db.exec_immediate(conn , "SELECT CHECKED FROM CHECKLIST;")
 
-sql = "SELECT ITEM_NAME FROM CHECKLIST WHERE CHECKED = true"
+sql = "SELECT ITEM_NAME FROM CHECKLIST WHERE CHECKED = true" #SQL statement
 stmt = ibm_db.exec_immediate(conn, sql)
-tuple = ibm_db.fetch_tuple(stmt)
+tuple = ibm_db.fetch_tuple(stmt) #gets tupple from DB
 
 i = 0
 
-while tuple != False:
+while tuple != False: #loops through tuple to make checked array
     #print "Key: ", tuple[0]
     checked.append(tuple[0])
     tuple = ibm_db.fetch_tuple(stmt)
@@ -109,13 +107,13 @@ keyToName = {   #empty dictionary of arrays to store any matches to analyize lat
                 "diversity":      "Statement on diversity" , # not technically req
         }
 
-missing = []
+missing = [] #list of missing elements
 
-score = ""
+score = "" #makes score global var
 
 cmdIdex = 0
 
-def checkFileAnal():
+def checkFileAnal(): #check file analysis, will continue to check past the first match
     #print("checking file...")
     #print(keywords)
     now = datetime.datetime.now()
@@ -124,12 +122,12 @@ def checkFileAnal():
     #o.write("\n\n\n\nOutput for " + textFile + " on " + now.strftime("%Y-%m-%d %H:%M:%S")) #text file will be the sylibus being evaluated
 
 
-    s = open(textFile, encoding="utf-8")
+    s = open(textFile, encoding="utf-8") #opens text file
 
-    for line in s:
+    for line in s: #finds e-mail address to identify teachers name
         result = re.search("@marist.edu" , line , re.IGNORECASE)
 
-    if(result != None):
+    if(result != None): #isolates teachers name
         result = result[result.index(".") + 1:result.index("@")]
 
     #keywords.get("instrName").append(result)
@@ -168,7 +166,7 @@ def checkFileAnal():
     return found
 
 
-def checkFileFast():
+def checkFileFast(): #discontinued function to opmimize speed, turned out to not be an issue
     print("checking file...")
     #print(keywords)
 
@@ -198,14 +196,14 @@ def checkFileFast():
     print("file checked, " + str(matches) + " matches found")
     return found
 
-def getScore():
+def getScore(): #gets the socre
     #print("Score Calculateing")
 
     neededItems = 0
     foundItems = 0
     score = ""
 
-    for key in keywords:
+    for key in keywords: #totals missing and found items
         if key in checked:
             neededItems += 1
             if(len(found[key]) != 0):
@@ -227,7 +225,7 @@ def getScore():
     #print("Found Items = " + str(foundItems))
     #print("% found = " + str(percent))
 
-    if(percent >= 1):
+    if(percent >= 1): #grade scale
         score = "A+"
         return "A+"
     elif(percent >= .93):
@@ -272,7 +270,7 @@ class Output:
         self.score = score
         self.missing = missing
 
-def makeOutput():
+def makeOutput(): #prints out json object for results page to read
     #output = Output(score , missing)
     jsonOutput = '{ "Missing":' + json.dumps(missing) + ', "Grade":' + '"' + getScore() + '"' + "}"
     print(jsonOutput)
