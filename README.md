@@ -7,7 +7,7 @@ https://syllabus-eval.us-south.cf.appdomain.cloud/
 
 ### Getting Started
 1. Install Docker on Machine https://docs.docker.com/get-docker/
-2. In terminal, clone repository `git clone https://github.com/cc12698/Marist-Syllabus-Evaluator-Cap2020`
+2. Once Docker is installed and running, in terminal, clone repository `git clone https://github.com/cc12698/Marist-Syllabus-Evaluator-Cap2020`
 3. Using the `cd` command, change the directory to the Marist-Syllabus-Evaluator-Cap2020 folder (you can copy the folder path by opening it and clicking the address bar at the top).
 4. Create a file in the general Marist-Syllabus-Evaluator-Cap2020 folder named `.env` (with no file extension)
 5. Copy and paste content from `env.txt` to `.env` file
