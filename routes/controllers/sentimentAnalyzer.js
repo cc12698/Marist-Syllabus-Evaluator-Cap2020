@@ -72,7 +72,7 @@ function callSnek(paths){
   return new Promise((resolve, reject) => {
     var dataToSend = '';
     var pyPath = path.normalize(path.join(__dirname, '/../python/search.py'));
-    var pythonProcess = spawn('python', [pyPath, paths]);
+    var pythonProcess = spawn('python3', [pyPath, paths]);
     pythonProcess.stdout.on('data', (data) => {
       dataToSend += data;
       });
