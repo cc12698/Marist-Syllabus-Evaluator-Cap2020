@@ -17,6 +17,8 @@ https://syllabus-eval.us-south.cf.appdomain.cloud/
 1. Type `docker run -p 8080:8080 syl`
 2. Open browser and visit http://localhost:8080/
 
+Note: Once these commands are run successfully, you can open the application by launching it through Docker Desktop and you do not need to use any terminal commands.
+
 ## Run Code Locally Without Docker
 
 ### Getting Started
