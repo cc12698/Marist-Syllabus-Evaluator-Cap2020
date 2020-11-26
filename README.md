@@ -3,7 +3,7 @@
 ## View Working Application on Cloud
 https://syllabus-eval.us-south.cf.appdomain.cloud/
 
-## Run Code Locally With Docker
+## Run Code Locally With Docker (Recommended)
 
 ### Getting Started
 1. Install Docker on Machine https://docs.docker.com/get-docker/
