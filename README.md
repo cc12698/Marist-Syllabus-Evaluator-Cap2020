@@ -17,6 +17,11 @@ https://syllabus-eval.us-south.cf.appdomain.cloud/
 1. Type `docker run -p 8080:8080 syl`
 2. Open browser and visit http://localhost:8080/
 
+<<<<<<< HEAD
+=======
+Note: Once these commands are run once, you can use the site without command prompt by opening Docker Desktop and starting the "syl" container you just created.
+
+>>>>>>> 6d3f70fb1e7a9fdbfc32856c2e9bf97e506bea0b
 ## Run Code Locally Without Docker
 
 ### Getting Started
