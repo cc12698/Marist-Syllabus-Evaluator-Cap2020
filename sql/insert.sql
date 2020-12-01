@@ -79,7 +79,7 @@ INSERT INTO CHECKLIST (CHECKLIST_ID, ITEM_NAME, ITEM_DESC, CHECKED)
     VALUES (CHECKLIST_SEQ.NEXTVAL, 'teachAct', 'TEACH Act Disclosure', false) ;
 
 INSERT INTO CHECKLIST (CHECKLIST_ID, ITEM_NAME, ITEM_DESC, CHECKED)
-    VALUES (CHECKLIST_SEQ.NEXTVAL, 'accommod', 'Accommodations & Assesibilty Statement', false) ;
+    VALUES (CHECKLIST_SEQ.NEXTVAL, 'accommod', 'Accommodations & Accessibility Statement', false) ;
 
 INSERT INTO CHECKLIST (CHECKLIST_ID, ITEM_NAME, ITEM_DESC, CHECKED)
     VALUES (CHECKLIST_SEQ.NEXTVAL, 'diversity', 'Statement on Diversity', false) ;
