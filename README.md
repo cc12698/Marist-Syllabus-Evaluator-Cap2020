@@ -38,7 +38,7 @@ Note: Once these commands are run successfully, you can open the application by 
 1. Type `npm run dev` into the Command Prompt
 2. Open browser and visit http://localhost:8080/
 
-## Other Resources
+## Other Resources (Documentation Folder)
 - The `PythonVersionControlGuide.docx` file in this repository is intended for users who wish to run locally without Docker while having multiple versions of Python installed. The document has steps describing how to control which version of Python the PATH is connected to, allowing you to point the application to the correct version of Python without uninstalling other versions (Windows Only).
 - The `SystemGuide.docx` file in this repository is a copy of the Help Page accessible in the application by clicking the question mark in the top right. It describes how to use every part of the system.
 
