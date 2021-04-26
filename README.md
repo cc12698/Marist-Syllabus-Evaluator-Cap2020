@@ -1,5 +1,8 @@
 # Marist-Syllabus-Evaluator-Cap2020
 
+## About
+This project was used for educational purposes at Marist College. It serves as a syllabus analysis system and validates uploaded syllabi for compliance according to the college, as well as New York State requirements. It analyzes Word Documents, PDFs, and Pages files and outputs potentially missing elements in the document and generates a score based on the quality of the syllabus. 
+
 ## View Working Application on Cloud
 https://syllabus-eval.us-south.cf.appdomain.cloud/
 
